@@ -6,7 +6,7 @@ title: About Me
 
 Hi! I'm <ruby>林<rp>(</rp><rt>lín</rt><rp>)</rp> 浩<rp>(</rp><rt>hào</rt><rp>)</rp>宇<rp>(</rp><rt>yǔ</rt><rp>)</rp></ruby>. You can also call me Chris.
 
-My current __interests__ include but are not limited to: Distributed System Security and Applied Crytography. I work in Blockchain industry and have __experience__ with Blockchain Proof-of-Work, Peer-to-Peer Communication, Cryptocurrency Wallet, Script Language and Smart Contract, Atomic Swap and Chain Interoperability. 
+I work in Blockchain industry and my current __interests__ include but are not limited to: Distributed System Security and Applied Crytography.
 
 My SNS accounts:
 
@@ -27,11 +27,11 @@ My SNS accounts:
         - implement other mining-related functionalities in bytomd (the bytomd daemon node), including set-mining-address and set-coinbase-arbitrary
     - chain-interoperability-related:
         - __take charge of__ bystack's chain interoperability, mainly cross-chain transactions and two-way peg federation
+    - TSS related:
+        + __take charge of__ Bytom's TSS usage in cross-chain federation
     * wallet-related:
         - work as core developer of blockcenter, a semi-centralized crypto-currency wallet back-end server, supporting mutiple blockchains and assets on them
-            + take part in the architecture design
-            + get highly involved in the database scheme design
-            + get highly involved in the implementation and optimization 
+        - design and implement a key management service for Bytom DEX
         - implement wallet related functionalities in bytomd, including global transaction index and version update mechanism
     * p2p-related:
         * __take charge of__ the PreCogs Projects, discovering and monitoring global bytomd nodes status
@@ -46,6 +46,8 @@ My SNS accounts:
         * AFT is a new conference, of which [the committee](https://aft.acm.org/committees) chairs includes: Ittai Abraham (_VMware research_), Ittay Eyal (_Technion_) & Emin Gün Sirer (_Cornell University_).
         * See Emin Gün Sirer's [tweet](https://twitter.com/el33th4xor/status/1186211608596533248) on Our presentation in ETH Zürich.
         * Based on this paper, we propose [EIP-2266](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-2266.md).
+- [_VRF-based mining_](https://github.com/DEX-ware/vrf-mining/blob/master/paper/main.pdf), _co-author_
+    + the most decentralized mining protocol by far, to our best knowledge
 - [_go语言公链开发实战_](https://book.douban.com/subject/34659372/), _reviewer_
 - https://github.com/ChrisLinn/blockchain-cheatsheet, _author & maintainer_
 - https://github.com/rust-interview, _maintainer_
