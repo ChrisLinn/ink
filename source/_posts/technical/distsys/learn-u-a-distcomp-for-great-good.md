@@ -135,12 +135,12 @@ BASE: 对CAP中一致性和可用性权衡的结果
         * (Informal) When decisions are made by any two correct nodes, they decide on non-conflicting transactions.
         * 诚实的节点对合法交易将达成统一的 (consistent) 意见
     + liveness
-        * (Informal) ![](http://latex.codecogs.com/gif.latex?T)-Liveness: each honest node terminates and outputs a value at the end of ![](http://latex.codecogs.com/gif.latex?T).
-            - The value of ![](http://latex.codecogs.com/gif.latex?T) depends on the research problems and protocols.
+        * (Informal) $T$-Liveness: each honest node terminates and outputs a value at the end of $T$.
+            - The value of $T$ depends on the research problems and protocols.
         * 一笔合法交易在合理时间长度内会被确认
     + total ordering
         * taken from [BEAT: Asynchronous BFT made practical (DRZ18)](https://www.csee.umbc.edu/~hbzhang/files/beat.pdf)
-        > If a correct replica has delivered ![](http://latex.codecogs.com/gif.latex?m_1, m_2, \dots ,m_s) and another correct replica has delivered ![](http://latex.codecogs.com/gif.latex?m'_1, m'_2, \dots , m'_{s'}), then ![](http://latex.codecogs.com/gif.latex?m_i = m'_i) for ![](http://latex.codecogs.com/gif.latex?1 \leq i \leq min(s, s')).
+        > If a correct replica has delivered $m_1, m_2, \dots , m_s$ and another correct replica has delivered $m'_1, m'_2, \dots , m'_{s'}$, then $m_i = m'_i$ for $1 \leq i \leq min(s, s')$.
 + [SMR vs NoSQL vs Blockchain](https://rink1969.github.io/Blockchain-consistency_model)
     * replicated data structure一致性这么弱，是因为 replicated data structure选择了高可靠性，一致性自然要弱一些。
     * 区块链跟一般意义上的replicated data structure还不太一样，区块链是通过atomic broadcast来同步(写操作)，其一致性在整个大类里面是最强的。
@@ -218,10 +218,8 @@ __TODO:__
         * 怀疑primary节点出错时, 进行 View change
             - 防止backup节点无限地等待请求的执行。
             - 确保即使当前的primary节点出错，整个系统也能继续运行。
-        * [PBFT 中 assume 了 weak synchrony](https://www.usenix.org/legacy/events/osdi99/full_papers/castro/castro_html/node3.html#SECTION00030000000000000000):
-        > it must rely on synchrony to provide liveness
-        + HoneyBadgerBFT 提出了改进，说 PBFT 的 liveness assumption 不 practical
-        > guarantees liveness without making any timing assumptions
+        * [PBFT 中 assume 了 weak synchrony](https://www.usenix.org/legacy/events/osdi99/full_papers/castro/castro_html/node3.html#SECTION00030000000000000000): "it must rely on synchrony to provide liveness"
+        + HoneyBadgerBFT 提出了改进，说 PBFT 的 liveness assumption 不 practical : "guarantees liveness without making any timing assumptions"
             + HoneyBadgerBFT 还是太慢
     + Tendermint BFT
         * elastico: "tendermint is essentially a variant of PBFT"
@@ -230,11 +228,11 @@ __TODO:__
         * [Asynchronous Byzantine agreement protocols](https://dl.acm.org/citation.cfm?id=806743) by Bracha
             - 存在的问题是 scalability
                 + 对于 transactions of size B
-                    * bracha 的通信复杂度是 ![](http://latex.codecogs.com/gif.latex?O(n^2*B))
-                    * HoneyBadgerBFT 的是 ![](http://latex.codecogs.com/gif.latex?O(n*B))
+                    * bracha 的通信复杂度是 $O(n^2*B)$
+                    * HoneyBadgerBFT 的是 $O(n*B)$
                         + HoneyBadgerBFT 用的是 erasure-coded broadcast
                             * small client-load 时可以考虑使用 bracha broadcast 来代替，throughput 更大，lantency 更低
-                    * [BEAT](https://dl.acm.org/citation.cfm?id=3243812) 的是 ![](http://latex.codecogs.com/gif.latex?O(B))
+                    * [BEAT](https://dl.acm.org/citation.cfm?id=3243812) 的是 $O(B)$
                         - CCS'18 (ACM Conference on Computer and Communications Security 安全顶会)
 
 ### Sybil Attack 女巫攻击
@@ -250,47 +248,47 @@ PoW 其实只是 membership 的门槛，  nakamoto consensus 除了 PoW 其实�
 ## Consensus
 
 * [苏黎世理工 课程讲义](https://disco.ethz.ch/courses/podc_allstars/lecture/chapter16.pdf)
-> There are ![](http://latex.codecogs.com/gif.latex?n) nodes, of which at most ![](http://latex.codecogs.com/gif.latex?f) might be faulty (or Byzantine). Each node ![](http://latex.codecogs.com/gif.latex?P_i) starts with an input value (say ![](http://latex.codecogs.com/gif.latex?u_i)). The nodes must decide one of those values (say ![](http://latex.codecogs.com/gif.latex?v_i)), satisfying three properties: Agreement, Validity and Termination.
+    + "There are $n$ nodes, of which at most $f$ might be faulty (or Byzantine). Each node $P_i$ starts with an input value (say $u_i$). The nodes must decide one of those values (say $v_i$), satisfying three properties: Agreement, Validity and Termination."
     + 教科书上的
         * Agreement
             - All correct processes must agree on the same value.
-            - For any two honest players ![](http://latex.codecogs.com/gif.latex?P_i) and ![](http://latex.codecogs.com/gif.latex?P_j), ![](http://latex.codecogs.com/gif.latex?v_i = v_j).
+            - For any two honest players $P_i$ and $P_j$, $v_i = v_j$.
         * Validity
             - The decision value must be the input value of a node.
-            - ![](http://latex.codecogs.com/gif.latex?\forall i: u_i \in \langle v_i \rangle).
+            - $\forall i: u_i \in \langle v_i \rangle$.
         * Termination
             - (Informal) All correct nodes terminate in finite time.
             - All the honest players terminate with probability 1.
     + 这几年新提出的
         * Linearity
             - First proposed in [HotStuff](https://arxiv.org/abs/1803.05069).
-            - Any correct leader sends only ![](http://latex.codecogs.com/gif.latex?O(n)) messages to drive a protocol to consensus.
+            - Any correct leader sends only $O(n)$ messages to drive a protocol to consensus.
         * Responsiveness
             - First defined in [Hybrid Consensus](https://eprint.iacr.org/2016/917.pdf).
                 - DISC'17 (International Symposium on Distributed Computing 分布式计算理论顶会)
             - (Informal) The transaction confirmation time depends only on the network’s actual delay, but not on any a-prior known upper-bound.
-            - A consensus protocol is responsive if nodes can reach the consensus in time depending only on the network’s actual ![](http://latex.codecogs.com/gif.latex?\delta) (message delays), not on the loose upper bound ![](http://latex.codecogs.com/gif.latex?\Delta) (known upper bound on message delays).
+            - A consensus protocol is responsive if nodes can reach the consensus in time depending only on the network’s actual $\delta$ (message delays), not on the loose upper bound $\Delta$ (known upper bound on message delays).
 
 ## Blockchain Properties
 
 - Common prefix (Consistency)
-    + ![](http://latex.codecogs.com/gif.latex?k)-common-preifx
+    + $k$-common-preifx
         * First proposed in [The bitcoin backbone protocol: Analysis and applications (GKL15)](https://eprint.iacr.org/2014/765.pdf).
-            - For any pair of honest players ![](http://latex.codecogs.com/gif.latex?P_1), ![](http://latex.codecogs.com/gif.latex?P_2) adopting the chains ![](http://latex.codecogs.com/gif.latex?C_1), ![](http://latex.codecogs.com/gif.latex?C_2) at rounds ![](http://latex.codecogs.com/gif.latex?r_1 \leq r_2), it holds that ![](http://latex.codecogs.com/gif.latex?\mathcal{C}_{1}^{\lceil k} \preceq \mathcal{C}_2).
-    + ![](http://latex.codecogs.com/gif.latex?T)-consistency
-        * [Analysis of the blockchain protocol in asynchronous networks (PSS17)](https://eprint.iacr.org/2016/454.pdf) refines Common Prefix to ![](http://latex.codecogs.com/gif.latex?T)-Consistency in order to provide a black-box reduction.
+            - For any pair of honest players $P_1, P_2$ adopting the chains $C_1, C_2$ at rounds $r_1 \leq r_2$, it holds that $\mathcal{C}_{1}^{\lceil k} \preceq \mathcal{C}_2$.
+    + $T$-consistency
+        * [Analysis of the blockchain protocol in asynchronous networks (PSS17)](https://eprint.iacr.org/2016/454.pdf) refines Common Prefix to $T$-Consistency in order to provide a black-box reduction.
             - Eurocrypt'17 密码学顶会
             - Ouroboros 和 DFINITY 等项目的论文 __均以此模型和部分结论为基础进行安全性证明__
-                + 适合区块链的一致性应该是要求诚实的参与者在不考虑潜在的一小部分的，![](http://latex.codecogs.com/gif.latex?T) 个在链末端的“未确认的”块的情况下，对当前的链达成一致
-                    * 只需证明 ![](http://latex.codecogs.com/gif.latex?T)-consistency 不能保持的概率相对于 ![](http://latex.codecogs.com/gif.latex?T) 可以 __被忽略__
+                + 适合区块链的一致性应该是要求诚实的参与者在不考虑潜在的一小部分的，$T$ 个在链末端的“未确认的”块的情况下，对当前的链达成一致
+                    * 只需证明 $T$-consistency 不能保持的概率相对于 $T$ 可以 __被忽略__
 * Chain growth
-    + ![](http://latex.codecogs.com/gif.latex?(\tau, s))-Chain growth
-        * For any honest party ![](http://latex.codecogs.com/gif.latex?P) with chain ![](http://latex.codecogs.com/gif.latex?C), it holds that for any  ![](http://latex.codecogs.com/gif.latex?s) rounds there are at least ![](http://latex.codecogs.com/gif.latex?\tau \cdot s) blocks added to the chain of ![](http://latex.codecogs.com/gif.latex?P).
-        * 以相对于 ![](http://latex.codecogs.com/gif.latex?T) __压倒性__ (overwhelming) 的概率，在任意时刻，诚实参与者的链在过去的 ![](http://latex.codecogs.com/gif.latex?T/g) 轮中，至少增长了 ![](http://latex.codecogs.com/gif.latex?T) 个消息。称 ![](http://latex.codecogs.com/gif.latex?g) 为该协议的 chain growth.
+    + $(\tau, s)$-Chain growth
+        * For any honest party $P$ with chain $C$, it holds that for any  $s$ rounds there are at least $\tau \cdot s$ blocks added to the chain of $P$.
+        * 以相对于 $T$ __压倒性__ (overwhelming) 的概率，在任意时刻，诚实参与者的链在过去的 $T/g$ 轮中，至少增长了 $T$ 个消息。称 $g$ 为该协议的 chain growth.
 - Chain quality (Fairness)
-    + ![](http://latex.codecogs.com/gif.latex?(\mu, k))-Chain quality (Fairness)
-        * The proportion of blocks in any ![](http://latex.codecogs.com/gif.latex?k)-long subsequence produced by the adversary is less than ![](http://latex.codecogs.com/gif.latex?\mu \cdot k), where ![](http://latex.codecogs.com/gif.latex?\mu) is the portion of mining power controlled by the adversary.
-        * 以相对于 ![](http://latex.codecogs.com/gif.latex?T) 压倒性的概率，任意诚实参与者的链中的连续  ![](http://latex.codecogs.com/gif.latex?T) 个消息中，诚实参与者提供的消息所占比例至少为 ![](http://latex.codecogs.com/gif.latex?\mu)，称 ![](http://latex.codecogs.com/gif.latex?\mu) 为该协议的 chain quality 。
+    + $(\mu, k)$-Chain quality (Fairness)
+        * The proportion of blocks in any $k$-long subsequence produced by the adversary is less than $\mu \cdot k$, where $\mu$ is the portion of mining power controlled by the adversary.
+        * 以相对于 $T$ 压倒性的概率，任意诚实参与者的链中的连续  $T$ 个消息中，诚实参与者提供的消息所占比例至少为 $\mu$，称 $\mu$ 为该协议的 chain quality 。
 
 ## Propagation
 
