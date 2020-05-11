@@ -1,3 +1,0 @@
-#+title: lickorish
-
-* a-representation-of-orientable-combinatorial-3-manifolds

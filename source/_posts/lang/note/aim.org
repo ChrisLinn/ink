@@ -1,3 +1,0 @@
-  - My aim of programming language design
-    is to explore the usage of 'proposition as type'
-    for algebraic topological purpose.

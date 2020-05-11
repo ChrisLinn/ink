@@ -1,2 +1,0 @@
-- quit showing off randomly
-  publish things systemly

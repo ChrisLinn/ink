@@ -1,16 +1,4 @@
 #!/usr/bin/env bash
 
-function up {
-    hexo clean && hexo generate && \
-        now switch xieyuheng && now -n inner deploy public --prod
-}
-
-function main {
-    for TASK in "$@"
-    do
-        "$TASK"
-    done
-    exit
-}
-
-main "$@"
+hexo clean && hexo generate && \
+        now switch chrislinn && now -n ink deploy public --prod

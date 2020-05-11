@@ -1,5 +1,0 @@
-#+title: An Introduction to Clifford Algebras and Spinors
-
-- by Jayme Vaz, Jr. and Roldão da Rocha, Jr., 2016
-
-* ><
