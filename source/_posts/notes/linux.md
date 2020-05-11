@@ -1,3 +1,7 @@
+---
+title: Linux Notes
+---
+
 # Linux Notes
 
 <!-- ex_nolevel -->

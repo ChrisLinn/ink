@@ -1,3 +1,7 @@
+---
+title: Golang 高性能编程指南
+---
+
 # Golang 高性能编程指南
 
 Revision v0.01

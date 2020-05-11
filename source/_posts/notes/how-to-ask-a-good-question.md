@@ -1,3 +1,7 @@
+---
+title: How to Ask a Good Question
+---
+
 # How to Ask a Good Question
 
 <!-- ex_nonav -->

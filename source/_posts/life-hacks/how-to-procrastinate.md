@@ -1,3 +1,7 @@
+---
+title: How to Procrastinate Properly
+---
+
 # How to Procrastinate Properly
 
 > How to Ruin Your Life Efficiently

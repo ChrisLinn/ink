@@ -1,3 +1,7 @@
+---
+title: 目录
+---
+
 - [Home / 首页](/home)
 - [Contents / 目录](/contents)
 * Technical
@@ -14,7 +18,7 @@
     - [如何学习编程](/technical/programming)
 * Notes
     - blockchain
-        + [(WIP) Coinbugs: 区块链代码实现中的常见漏洞](/notes/blockchain/coinbugs)
+        + [(WIP) Coinbugs - 区块链代码实现中的常见漏洞](/notes/blockchain/coinbugs)
     * [我读哈耶克](/notes/hayek)
     - [How to Ask a Good Question](/notes/how-to-ask-a-good-question)
     - [How to Procrastinate Properly](/life-hacks/how-to-procrastinate)

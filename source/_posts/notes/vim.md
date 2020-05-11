@@ -1,3 +1,7 @@
+---
+title: Vim Notes
+---
+
 # Vim Notes
 
 ## Setup

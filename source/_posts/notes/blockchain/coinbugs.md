@@ -1,4 +1,8 @@
-# Coinbugs: 区块链代码实现中的常见漏洞
+---
+title: Coinbugs - 区块链代码实现中的常见漏洞
+---
+
+# Coinbugs - 区块链代码实现中的常见漏洞
 
 由 [Whitepaper - Coinbugs: Enumerating Common Blockchain Implementation-Level Vulnerabilities](https://research.nccgroup.com/2020/03/26/whitepaper-coinbugs-enumerating-common-blockchain-implementation-level-vulnerabilities/) 翻译总结而来。
 
