@@ -14,10 +14,10 @@ title: 搞 MPC 和 ZKP 的基础密码学面试
 
 满足:
 
-+ 封闭性：如果 ![](http://latex.codecogs.com/gif.latex?a,b \in G)，则 ![](http://latex.codecogs.com/gif.latex?ab \in G)
-+ 结合律： 如果 ![](http://latex.codecogs.com/gif.latex?a,b,c \in G)，则 ![](http://latex.codecogs.com/gif.latex?(ab)c =a(bc))
-+ 单位元：集合中存在一个元素 ![](http://latex.codecogs.com/gif.latex?I)，保证 ![](http://latex.codecogs.com/gif.latex?aI = Ia = a)，对所有的 ![](http://latex.codecogs.com/gif.latex?a \in G) 都成立
-+ 逆元：对每个集合的元素 ![](http://latex.codecogs.com/gif.latex?a \in G)，存在对应的 ![](http://latex.codecogs.com/gif.latex?b = a^{-1})，保证 ![](http://latex.codecogs.com/gif.latex?ab = ba = I)。
++ 封闭性：如果 $a,b \in G$，则 $ab \in G$
++ 结合律： 如果 $a,b,c \in G$，则 $(ab)c =a(bc)$
++ 单位元：集合中存在一个元素 $I$，保证 $aI = Ia = a$，对所有的 $a \in G$ 都成立
++ 逆元：对每个集合的元素 $a \in G$，存在对应的 $b = a^{-1}$，保证 $ab = ba = I$。
 
 _另外，有一个叫 类群 (class group) 的东西，和 二元二次型 (Binary quadratic form) 以及 虚二次数域 (Imaginary Quadratic Number Fields) 相关，在 1) 零知识证明 (比如 zkSNARK 的 Marlin 协议中用它来构造 Polynomial commitment) 和 2) 累加器 (用于替代 merkle tree，快速同步快速验证) 中很有用，这个到时值得单独拿出来讲讲。_
 
@@ -26,7 +26,7 @@ _另外，有一个叫 类群 (class group) 的东西，和 二元二次型 (Bin
 满足交换律，故阿贝尔群又叫交换群 (commutative group)。
 
 #### 循环群 (cyclic group)
-存在一个元素  ![](http://latex.codecogs.com/gif.latex?g) (生成元，generator)，群中所有元素都可以由生成元的幂运算获得。
+存在一个元素  $g$ (生成元，generator)，群中所有元素都可以由生成元的幂运算获得。
 
 #### 循环群 vs 阿贝尔群
 循环群都是阿贝尔群，不是所有的阿贝尔群都是循环群。
@@ -56,8 +56,8 @@ _另外，有一个叫 类群 (class group) 的东西，和 二元二次型 (Bin
 #### 理想 (ideal)
 理想是一种特殊的子环。在子环的基础上满足：
 
-+ 如果 ![](http://latex.codecogs.com/gif.latex?B) 是 ![](http://latex.codecogs.com/gif.latex?A) 的一个理想，那么对于任何 ![](http://latex.codecogs.com/gif.latex?a \in A)，![](http://latex.codecogs.com/gif.latex?b \in B)，存在 ![](http://latex.codecogs.com/gif.latex?ab \in B)（左理想），并且 ![](http://latex.codecogs.com/gif.latex?ba \in B)（右理想）。
-    * 注意环中乘法不一定可交换，所以 ![](http://latex.codecogs.com/gif.latex?ab) 和 ![](http://latex.codecogs.com/gif.latex?ba) 不同。
++ 如果 $B$ 是 $A$ 的一个理想，那么对于任何 $a \in A, b \in B$，存在 $ab \in B$（左理想），并且 $ba \in B$（右理想）。
+    * 注意环中乘法不一定可交换，所以 $ab$ 和 $ba$ 不同。
 
 每个环至少有两个理想，这两个理想也被称为平凡理想:
 
@@ -108,7 +108,7 @@ https://andrea.corbellini.name/2015/05/17/elliptic-curve-cryptography-a-gentle-i
 
 椭圆曲线是一系列满足如下方程的点:
 
-![](http://latex.codecogs.com/gif.latex?y^2 = x^3 + ax + b,\ 4a^3 + 27b^2 \ne 0)
+$y^2 = x^3 + ax + b,\ 4a^3 + 27b^2 \ne 0$
 
 该方程被称作 椭圆曲线的 Weierstrass 方程。
 
@@ -131,15 +131,14 @@ https://andrea.corbellini.name/2015/05/17/elliptic-curve-cryptography-a-gentle-i
 
 
 ### 实数上椭圆曲线的加法计算
-计算 ![](http://latex.codecogs.com/gif.latex?P + Q) 的方法: 连接 ![](http://latex.codecogs.com/gif.latex?Q) 和  ![](http://latex.codecogs.com/gif.latex?Q) 画一条直线，与椭圆曲线的另一个交点为 ![](http://latex.codecogs.com/gif.latex?R)，![](http://latex.codecogs.com/gif.latex?P + Q) 的结果就是 ![](http://latex.codecogs.com/gif.latex?R) 的逆。（![](http://latex.codecogs.com/gif.latex?P + Q + R = 0)，![](http://latex.codecogs.com/gif.latex?P + Q = - R)
-）
+计算 $P + Q$ 的方法: 连接 $P$ 和  $Q$ 画一条直线，与椭圆曲线的另一个交点为 $R$，$P + Q$ 的结果就是 $R$ 的逆。（$P + Q + R = 0, P + Q = - R$）
 
 ### 标量乘法
 简单方法：逐次相乘
 
-快捷方法: 比如计算 ![](http://latex.codecogs.com/gif.latex?nP, n = 105)
+快捷方法: 比如计算 $nP, n = 105$
 
-因为 ![](http://latex.codecogs.com/gif.latex?n = 105_{(10%29} = 10010111_{(2%29} = 2^7 + 2^4 + 2^2 + 2^1 + 2^0), 所以可以将 ![](http://latex.codecogs.com/gif.latex?P) 反复乘2，按标志位加和。
+因为 $n = 105_{(10)} = 10010111_{(2)} = 2^7 + 2^4 + 2^2 + 2^1 + 2^0$, 所以可以将 $P$ 反复乘2，按标志位加和。
 
 ### 有限域上的椭圆曲线
 
@@ -159,14 +158,14 @@ https://andrea.corbellini.name/2015/05/17/elliptic-curve-cryptography-a-gentle-i
 略
 
 #### 离散对数问题
-已知两个在 子群 上的点 ![](http://latex.codecogs.com/gif.latex?P) 和 ![](http://latex.codecogs.com/gif.latex?Q = kP)，求解  ![](http://latex.codecogs.com/gif.latex?k) 是非常困难的问题，目前没有多项式时间的求解算法。
+已知两个在 子群 上的点 $P$ 和 $Q = kP$，求解  $k$ 是非常困难的问题，目前没有多项式时间的求解算法。
 
 ### secp256k1 不如 Curve25519 安全，那为什么比特币还用 secp256k1?
 因为那时候 Curve25519 还没出世。
 
 ### 椭圆曲线 secp256k1 与 secp256r1
 
-曲线 secp256k1 的名字来自于密码学标准文档 [SEC2](https://www.secg.org/sec2-v2.pdf) , 其中 “sec” 是 “Standards For Efficient Cryptography” 缩写, “p” 表示椭圆曲线参数定义在 有限域 ![](http://latex.codecogs.com/gif.latex?\mathbb{F}_p) 上, “256” 表示该有限域中元素的比特长度为 256, “k” 表示这是一条 Koblitz 曲线, 而 “1” 表示这是满足前述条件的第一条 (实际上也是唯一的) 推荐的曲线. Koblitz 曲线在密码学文献中通常指代定义在特征为 2 的有限域上 ![](http://latex.codecogs.com/gif.latex?\mathbb{F}_{2^m}, m\in\mathbb{Z}) 的椭圆曲线, [Gallant, Lamber 和 Vanstone1 在 CRYPTO 2001 的论文](https://www.iacr.org/archive/crypto2001/21390189.pdf) 中泛化了 Koblitz 曲线的含义, 也包括定义在大素数上 ![](http://latex.codecogs.com/gif.latex?\mathbb{F}_p) 上具备高效可计算自同态特性的椭圆曲线。
+曲线 secp256k1 的名字来自于密码学标准文档 [SEC2](https://www.secg.org/sec2-v2.pdf) , 其中 “sec” 是 “Standards For Efficient Cryptography” 缩写, “p” 表示椭圆曲线参数定义在 有限域 $\mathbb{F}_p$ 上, “256” 表示该有限域中元素的比特长度为 256, “k” 表示这是一条 Koblitz 曲线, 而 “1” 表示这是满足前述条件的第一条 (实际上也是唯一的) 推荐的曲线. Koblitz 曲线在密码学文献中通常指代定义在特征为 2 的有限域上 $\mathbb{F}_{2^m}, m \in \mathbb{Z}$ 的椭圆曲线, [Gallant, Lamber 和 Vanstone1 在 CRYPTO 2001 的论文](https://www.iacr.org/archive/crypto2001/21390189.pdf) 中泛化了 Koblitz 曲线的含义, 也包括定义在大素数上 $\mathbb{F}_p$ 上具备高效可计算自同态特性的椭圆曲线。
 
 自同态映射可以加速 ECDSA 签名验证过程。
 
@@ -198,37 +197,30 @@ EdDSA (Edwards-curve Digital Signature Algorithm) 签名机制是这个研究方
 
 广泛使用的 EdDSA 签名机制是基于哈希函数 SHA-512 和椭圆曲线 Edwards25519 的 Ed25519 签名机制。 扭曲爱德华曲线 Edwards25519 双向有理等价于蒙哥马利曲线 Curve25519, 提供大约 128 比特的安全强度 (与 secp256k1 和 secp256r1 安全强度一致)。
 
-Curve25519 是 Bernstein7 在 2005 年为了提升 ECDH 密钥交换协议 (Elliptic Curve
-Diffie-Hellman Key Agreement) 效率而提出的蒙哥马利曲线
+Curve25519 是 Bernstein7 在 2005 年为了提升 ECDH 密钥交换协议 (Elliptic Curve Diffie-Hellman Key Agreement) 效率而提出的蒙哥马利曲线
 
 在 2005 年的论文中 Curve25519 实际上用来指代 ECDH 密钥交换协议, 然而后来多使用 Curve25519 指代底层的椭圆曲线, 用 X25519 指代基于 Curve25519 的 ECDH 密钥协议
 
-Curve25519 是基于素数域 ![](http://latex.codecogs.com/gif.latex?\mathbb{F}_q, q = 2^{255} - 19) 上的蒙哥马利曲线.
-Curve25519 曲线双向有理等价于 (Bira-tional Equivalent) 扭曲爱德华曲线 (Twisted Edwards Curves) Edwards25519.
-而这条扭曲爱德华曲线则同构于 (Isomorphic) 爱德华曲线 (
-Edwards Curves) untwisted-Edwards25519。
+Curve25519 是基于素数域 $\mathbb{F}_q, q = 2^{255} - 19$ 上的蒙哥马利曲线.
+Curve25519 曲线双向有理等价于 (Bira-tional Equivalent) 扭曲爱德华曲线 (Twisted Edwards Curves) Edwards25519. 而这条扭曲爱德华曲线则同构于 (Isomorphic) 爱德华曲线 (Edwards Curves) untwisted-Edwards25519。
 
 **X25519 直接构建在 Curve25519** 之上, 而 **Ed25519 构建在 Edwards25519** 之上, 并且 Curve25519 和 Twisted-Edwards25519 是双向有理等价的。 这是因为 ECDH 协议和 EdDSA 协议计算过程中重度依赖的点群运算不同, 这是为更好的适配的上层协议而刻意选择的中层的椭圆曲线点的表示的结果。
 
 #### 蒙哥马利曲线与爱德华曲线
-secp256k1/secp256r1 的 Short Weierstrass 形式的椭圆曲线表示: ![](http://latex.codecogs.com/gif.latex?y^2 = x^3 + ax + b)
+secp256k1/secp256r1 的 Short Weierstrass 形式的椭圆曲线表示: $y^2 = x^3 + ax + b$
 
-蒙哥马利曲线: ![](http://latex.codecogs.com/gif.latex?Y^2 = X^3 + AX^2 + X)
+蒙哥马利曲线: $Y^2 = X^3 + AX^2 + X$
 
-爱德华曲线: ![](http://latex.codecogs.com/gif.latex?x^2+y^2 = 1  + dx^2y^2)。
-2008 年 Bernstein 等人指出有限域上只有一小部分椭圆曲线能够表示为爱德华曲
-线, 并进一步提出了更为广义的扭曲爱德华曲线 (Twisted Edwards Curves)。
+爱德华曲线: $x^2+y^2 = 1  + dx^2y^2$。
+2008 年 Bernstein 等人指出有限域上只有一小部分椭圆曲线能够表示为爱德华曲线, 并进一步提出了更为广义的扭曲爱德华曲线 (Twisted Edwards Curves)。
 
-扭曲爱德华曲线: ![](http://latex.codecogs.com/gif.latex?-X^2+Y^2 = 1 - dX^2Y^2)
+扭曲爱德华曲线: $-X^2+Y^2 = 1 - dX^2Y^2$
 
-Short Weierstrass, 蒙哥马利曲线以及爱德华曲线都可以通过符号代换与广义 Weierstrass 曲线 ![](http://latex.codecogs.com/gif.latex?y^2 + a_1xy + a_3y = x^3 + a_2x^2 + a_4x + a_6) 相互转换。
+Short Weierstrass, 蒙哥马利曲线以及爱德华曲线都可以通过符号代换与广义 Weierstrass 曲线 $y^2 + a_1xy + a_3y = x^3 + a_2x^2 + a_4x + a_6$ 相互转换。
 
-X25519 和 Ed25519 的做依赖的点的运算都可以转换成为 Weierstrass 曲线上的
-点运算, 然而使用特定的曲线形式, 对于高效安全的 X25519 或者 Ed25519 大有裨益. 以
-twist-Edwards25519 为例, 其上的点的加法运算是完备的 (Complete)，并且单位元为点 (0, 1)， 简洁优雅。且构造椭圆曲线的加法点群时无需引入一个假想的无穷远点来满足群的条件。相比之下，Short Weierstrass 形式下椭圆曲线点加运算则需进行各种边界条
-件判断。
+X25519 和 Ed25519 的做依赖的点的运算都可以转换成为 Weierstrass 曲线上的点运算, 然而使用特定的曲线形式, 对于高效安全的 X25519 或者 Ed25519 大有裨益. 以 twist-Edwards25519 为例, 其上的点的加法运算是完备的 (Complete)，并且单位元为点 (0, 1)， 简洁优雅。且构造椭圆曲线的加法点群时无需引入一个假想的无穷远点来满足群的条件。相比之下，Short Weierstrass 形式下椭圆曲线点加运算则需进行各种边界条件判断。
 
-Edwards25519 是定义在有限域 ![](http://latex.codecogs.com/gif.latex?\mathbb{F}_q, p = 2^{255} - 19) 上选用参数 ![](http://latex.codecogs.com/gif.latex?a = -1, d = \frac{121665}{121666}) 的扭曲爱德华曲线: ![](http://latex.codecogs.com/gif.latex?-x^2 + y^2 \equiv 1 - (121665/121666%29x^2y^2 \mod p)
+Edwards25519 是定义在有限域 $\mathbb{F}_q, p = 2^{255} - 19$ 上选用参数 $a = -1, d = \frac{121665}{121666}$ 的扭曲爱德华曲线: $-x^2 + y^2 \equiv 1 - (121665/121666)x^2y^2 \mod p$
 
 EdDSA 签名机制的优势:
 
