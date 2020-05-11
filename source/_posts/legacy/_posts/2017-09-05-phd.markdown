@@ -1,0 +1,106 @@
+---
+layout:     post
+title:      "[DRAFT杂乱笔记] PhD Proposal"
+date:       2017-09-05 01:50:00
+author:     "LiqueurTofu"
+header-img: "img/home-bg-art.jpg"
+catalog:    true
+tags:
+    - DRAFT杂乱笔记
+---
+
+<br>
+
+# Verification and Analysis in Ethereum Smart Contacts
++ resources
+    * [evm-lang-design](https://github.com/evm-lang-design/evm-lang-design)
+    * [ethereum-formal-verification-overview](https://github.com/pirapira/ethereum-formal-verification-overview)
+        - [Yoichi Hirai](https://github.com/pirapira)
++ behaviour
+    * verify
+        - functions as expected
+        - termination
+    * not malicious
+    * no vulnerbility
++ safer language
+    * Ethereum extract programs from blocks
+
+The study and the applications of Blockchain, a distributed ledger using cryptography to guarantee user anonymity, data integrity and decentralization, which protect users from the risk of having a trusted central authority compromised, is prominent for the recent years.
+
+Ethereum is a smart contract and decentralized application platform using blockchain technology. A smart contract is an autonomous script or program that can carry out the direct transaction of value between agents. By building a blockchain with a built-in Turing-complete programming language, Ethereum provides the user the ability to write smart contracts and decentralized applications where they can create their own arbitrary rules for ownership, transaction formats and state transition functions, while the ledger of a cryptocurrency, i.e. blockchain here, can be thought of as a state transition system, where there is a "state" consisting of the ownership status of all existing coins and a "state transition function" that takes a state and a transaction and outputs a new state which is the result. The smart contracts are stored in the Ethereum blockchain and executed later by the Ethereum Virtual Machine.
+
+However, since the smart contracts are actually programs, they also suffer the risk of being mis-written or exploited. This research is aiming at bringing the verification and analysis mechanism to Ethereum smart contacts. 
+
+To accomplish this goal, it is required to design a tool to analyse the behaviour of a smart contact in Ethereum, including:
+
++ whether the program can terminate;
++ whether the program can function as expected;
++ is there any vulnerability in the program;
++ and is there any malicious activities.
+
+The language used in Ethereum is a Turing-complete language. A Turing-complete language is a language that can simulate all Turing machine, which means that it can be used to solve any computation problem, i.e, a program can be written in it to find an answer to the problem. Although there will be bound for each computation in terms of time and memory, the time and storage for the entire program are unbounded, therefore, there is no guarantee regarding runtime or memory. A STARTGAS value needs to be specified in a transaction in Ethereum, to represent the maximum number of computational steps the transaction execution is allowed to take. It is designed to protect the system against denial-of-service caused by or recursive calling or infinite-length loops. 
+
+However, if the execution takes longer than the allowed computation steps, the transaction is reverted but fees are still paid, and the computation resource has also been wasted. And this cannot protect from gas limit attacks, because an attacker can create an infinite loop to force the miner to keep computing for such a long time that by the time computation finishes a few more blocks will have come out and it will not be possible for the miner to include the transaction to claim the fee. 
+
+Therefore, it will be more efficient and more secure if analysing the contract before running it.
+
+The code in Ethereum contracts is written in a low-level, stack-based bytecode language, referred to as "Ethereum virtual machine code" or "EVM code". Usually, a user uses a high-level language, such as Solity, LLL and Serpent, which can be translated to "EVM code", to create smart contacts on Ethereum blockchain. And Solidity, a contract-oriented programming language inspired by Javascript, is currently the most popular one. This research focuses on implementing the verification and anlysis on the bytecode level for compatibility purpose, and also interested in analysing smart contracts written in Solity before being compiled for efficiency purpose. 
+
+And potentially, an alternation is to design a new and safer language to bring security, simplicity and auditability to Ethereum smart contracts. For example, removing modifiers and operator overloading makes it less likely to write mis-leading codes, while removing class inheritance improves readability.
+
+In conclusion, this research aims at bringing verification and analysis to ethereum smart contacts, which can carry out transactions between peers and provide data integrity and trustability.
+
+
+# Economic modeling of Double-spending
++ Inspired by [Analysis of hashrate-based double-spending](https://bitcointalk.org/index.php?topic=130222.msg1392408#msg1392408)
+    * [report](https://bitcoil.co.il/Doublespend.pdf)
+    * Double-spending requires having more than half of the network hashrate?
+    * Waiting for confirmations offers meaningful protection against an attacker with majority hashrate?
+    * There is something special about 6 confirmations, and/or it grants absolute protection?
+    * The important factor is the amount of time spent waiting for confirmations, rather than the number of blocks?
++ need to illustrate
+    * what am I going to do (more clearly)
+    
+As discussed in __Analysis of hashrate-based double-spending__ by Meni Rosenfeld, the time between blocks in blockchain can affect the economics of double-spending in bitcoin, as increasing it slightly improves the security with a given number of confirmations, with increasing the effective value of a block reward and hence the maximal safe value. Even with majority hashrate an attack might not be economical despite the guaranteed success. However, by the time hashrate becomes dominant, because of its exponential dependence on the number of confirmations, increasing the time between blocks worsens the security for a given wait time.
+
+Meni assumes that:
+
++ An attacker with majority hashrate can not only double-spend any transaction
+at no cost (above the cost of running the mining hardware normally).
++ He can reject all blocks which are not his own, earning the entire coin generation reward himself.
++ He can also exclude all transactions, disrupting the operation of the payment network. The honest miners, who no longer receive any rewards, would quit due to lack of incentive.
++ A double-spending attack can be carried against more than one merchant. Payments can be simultaneously sent to k different merchants, with the same branch invalidating all of them.
++ If the attack succeeds, all blocks found during the process will be valid, and the attacker will get for them the same reward as if he had not committed an attack (or possibly more). If the attack fails, and the attacker has found o blocks during it, each with a block reward of B, those blocks will be rejected and the attacker will lose a total value of oB.
+
+The economic model discussed by Meni Rosenfeld is a simplified one, assuming:
+
++ From each merchant products will be purchased with a cost of v, which is assumed equal for all merchants. 
++ The products bought may not be completely liquid, and their value to the attacker may be less than v, which is denoted by αv for some 0 < α ≤ 1 and α is assumed to be fixed. And therefore, the attacker will obtain kαv worth of goods whether the attack succeeds or fails. If it fails, however, he will have to pay out kv.
++ There is a tradeoff between k and α. There are only so many opportunities to extract value with sufficient anonymity to avoid prosecution. As the attacker tries to target more merchants, he will have to settle for decreasingly liquid assets. In-person transactions put timing constraints which again make it more difficult to target other merchants simultaneously.
++ There is also a tradeoff between k and v, as kv must be less than the attacker’s total available capital. However, this is less of a concern, as the primary costs of the attack are likely to be loss of value and the block rewards, not the time value of money. The main limitation on v is that higher values will cause the merchant to protect himself by waiting for more confirmations.
++ The attacker gives up after finding 20 blocks without successfully catching up. 
++ The best configuration the attacker manages to achieve is α = 1, k = 5. 
+
+However, a more accurate model should consider the reward of possibly completing the attack versus the risk of compounding the losses, so as to determine an optimal stopping point and use the average blocks found until reaching that point. 
+
+As pointed by Meni, successful double-spending is possible with any attacker hashrate. There is no need for a majority to carry out double-spending attack. The probability of success depends on the number of confirmations and not on the amount of time waited. Waiting for more confirmations exponentially decreases the probability of double-spending success. The decay rate depends on the attacker's relative hashrate. No amount of confirmations will reduce the success rate to 0. If the attacker controls more hashrate than the honest network, no amount of confirmations will reduce the success rate below 100%. The default figure of 6 confirmations is chosen based on the assumption that an attacker is unlikely to amass more than 10% of the hashrate, and that a negligible risk of less than 0.1% is acceptable while both these figures are arbitrary, however.
+
+These lead to that, 6 confirmations are overkill for casual attackers, and at the same time powerless against more dedicated attackers with much more than 10% hashrate.
+
+Therefore, a more accurate economic model needs to be came up with, so that a more appropriate number of confirmations can be discorvered, by comparing the maximal safe transaction value, which is related to both the attacker’s hashrate and the number of confirmations.
+
+# Web Application Vulnerability Analysis
++ JavaScript
+    * X
+    * static analysis
+        - hard, js is dynamic
+    * dynamic analysis
+        - more like testing, logging
+        - hard to design and do symbolic way
+
+# Web Assembly Development & Analysis
++ LLVM
++ translated to one common language
+
+# Intrusion Detection via Machine Learning
++ X

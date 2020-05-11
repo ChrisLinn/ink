@@ -1,0 +1,41 @@
+---
+layout:     post
+title:      "[DRAFT杂乱笔记] Cryptography"
+date:       2017-09-10 20:32:00
+author:     "LiqueurTofu"
+header-img: "img/home-bg-art.jpg"
+catalog:    true
+tags:
+    - DRAFT杂乱笔记
+---
+
+<br>
+
+# Cipher
++ Classical Ciphers
++ Modern Ciphers
+    * type of key used
+        - symmetric
+            + DES
+            + AES
+        - asymmetric
+            + [RSA](#rsa)
+    * type of input data
+        - block ciphers
+        - stream ciphers
+
+# RSA
+
+# Chinese Remainder Theorem
+
+# Kerberos
+
+# Blockchain
++ double-spending attack
++ 51% attack
++ via ISP
+    * BGP, 边界网关协议
+        - partition attack, 分区攻击
+            + 如果说一家互联网服务提供商（ISP）是比特币网络重要组成部分中的唯一路径，那么一个黑洞就可以阻止双方（区块链和网络路由基础设施）互相交流。虽然这两座“岛屿”还会继续处理交易和挖掘新的比特币，但是当入侵者再将这两者联合起来，那你就只能丢弃你开采的比特币、你的交易和采矿收入了。
+        - delayed attack, 延迟攻击
+            + 而在某种程度上，其实延迟攻击才是最坏的情况。研究人员说，因为不像分区攻击，延迟攻击是没有办法被检测到的。商户们在遭遇到这种攻击后，容易重复消费。矿工们的交易处理能力也将被浪费，普通的节点将无法在区块链的最新版本中传播。

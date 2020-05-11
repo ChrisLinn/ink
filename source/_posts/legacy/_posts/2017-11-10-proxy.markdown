@@ -1,0 +1,46 @@
+---
+layout:     post
+title:      "[DRAFT杂乱笔记] Proxy"
+date:       2017-11-10 11:10:00
+author:     "LiqueurTofu"
+header-img: "img/home-bg-art.jpg"
+catalog:    true
+tags:
+    - DRAFT杂乱笔记
+---
+
+<br>
+<!-- 
+# streisand
++ localhost
+    * have to choose this
+        - need SSH login
+    * then fail Tor and hence give up Tor
+    * L2TP/IPSec
+        - fail and is blocked
+    * wireguard
+        - fail
+    * openconnect(Cisco AnyConnect)
+        - fail
+        - dangerous
+    * Tor
+        - fail
+    * Socks5
+        - fail
+    * Shadowsocks
+        - slow but working
+    * OpenVPN with Stunnel
+        - good
+
+# INTANG
+Good.
+
+# wireguard
+Fail to config.
+
+# L2TP/IPSec
+Blocked.
+
+# IKEv2
+Only for key exchange.
+ -->
