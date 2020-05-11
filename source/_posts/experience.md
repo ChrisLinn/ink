@@ -3,6 +3,11 @@ title: Experience
 ---
 
 # Experience
+
+Mainly: Blockchain Proof-of-Work, Peer-to-Peer Communication, Cryptocurrency Wallet, Script Language and Smart Contract, Atomic Swap and Chain Interoperability.
+
+---
+
 + Blockchain Engineer @ [bytom](https://github.com/Bytom/), _March 2018 – Present_
     * PoW-related:
         - optimize bytom's PoW algorithm, from __900+ ms to 100+ ms__

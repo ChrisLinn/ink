@@ -4,7 +4,7 @@ title: About Me
 
 # About Me
 
-<ruby>林<rp>(</rp><rt>lín</rt><rp>)</rp> 浩<rp>(</rp><rt>hào</rt><rp>)</rp>宇<rp>(</rp><rt>yǔ</rt><rp>)</rp></ruby> (Chris) is a software engineer working in Blockchain industry. His current __interests__ include but are not limited to: Distributed System Security and Applied Crytography. He / him.
+<ruby>林<rp>(</rp><rt>lín</rt><rp>)</rp> 浩<rp>(</rp><rt>hào</rt><rp>)</rp>宇<rp>(</rp><rt>yǔ</rt><rp>)</rp></ruby> (Chris) is a software engineer working in Blockchain industry. His current interests include but are not limited to: __Distributed System Security__ and __Applied Crytography__. He / him.
 
 
 ## SNS accounts:
