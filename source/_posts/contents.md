@@ -24,11 +24,11 @@ title: 目录
     * [Hayek / 我读哈耶克](/notes/hayek)
     - [How to Ask a Good Question / 提问](/notes/how-to-ask-a-good-question)
     - [How to Procrastinate Properly / 拖延症](/life-hacks/how-to-procrastinate)
-    - [Linux](/notes/linux)
-    - [Sublime Text](/notes/subl)
-    - [Vim](/notes/vim)
-    * [《苏菲的世界》笔记](/notes/sophies-world)
+    - [Linux / 我用 Linux](/notes/linux)
+    - [Sublime Text / 我用 Sublime Text](/notes/subl)
+    - [Vim / 我用 Vim](/notes/vim)
+    * [Sophie's World / 《苏菲的世界》笔记](/notes/sophies-world)
 + Misc / 随笔
-    * [我也谈写作](/mics/writing)
-    * [《上海堡垒》读后感](/mics/once-upon-a-time-in-Shanghai)
+    * [Writing / 我也谈写作](/mics/writing)
+    * [Shanghai Fortress / 《上海堡垒》读后感](/mics/once-upon-a-time-in-Shanghai)
 <!-- * 自我提升 -->
