@@ -216,7 +216,7 @@ secp256k1/secp256r1 的 Short Weierstrass 形式的椭圆曲线表示: $y^2 = x^
 
 扭曲爱德华曲线: $-X^2 + Y^2 = 1 - d X^2 Y^2$
 
-Short Weierstrass, 蒙哥马利曲线以及爱德华曲线都可以通过符号代换与广义 Weierstrass 曲线 $y^2 + a_1xy + a_3y = x^3 + a_2x^2 + a_4x + a_6$ 相互转换。
+Short Weierstrass, 蒙哥马利曲线以及爱德华曲线都可以通过符号代换与广义 Weierstrass 曲线 $y^2 + a_1 xy + a_3 y = x^3 + a_2 x^2 + a_4 x + a_6$ 相互转换。
 
 X25519 和 Ed25519 的做依赖的点的运算都可以转换成为 Weierstrass 曲线上的点运算, 然而使用特定的曲线形式, 对于高效安全的 X25519 或者 Ed25519 大有裨益. 以 twist-Edwards25519 为例, 其上的点的加法运算是完备的 (Complete)，并且单位元为点 (0, 1)， 简洁优雅。且构造椭圆曲线的加法点群时无需引入一个假想的无穷远点来满足群的条件。相比之下，Short Weierstrass 形式下椭圆曲线点加运算则需进行各种边界条件判断。
 
