@@ -140,7 +140,7 @@ BASE: 对CAP中一致性和可用性权衡的结果
         * 一笔合法交易在合理时间长度内会被确认
     + total ordering
         * taken from [BEAT: Asynchronous BFT made practical (DRZ18)](https://www.csee.umbc.edu/~hbzhang/files/beat.pdf)
-        > If a correct replica has delivered $m_1, m_2, \dots , m_s$ and another correct replica has delivered $m'_1, m'_2, \dots , m'_{s'}$, then $m_i = m'_i$ for $1 \leq i \leq min(s, s')$.
+        > If a correct replica has delivered $m_1, m_2, \dots , m_s$ and another correct replica has delivered $m_1', m_2', \dots , m_{s'}'$, then $m_i = m_i'$ for $1 \leq i \leq min(s, s')$.
 + [SMR vs NoSQL vs Blockchain](https://rink1969.github.io/Blockchain-consistency_model)
     * replicated data structure一致性这么弱，是因为 replicated data structure选择了高可靠性，一致性自然要弱一些。
     * 区块链跟一般意义上的replicated data structure还不太一样，区块链是通过atomic broadcast来同步(写操作)，其一致性在整个大类里面是最强的。
