@@ -20,8 +20,7 @@ title: Coinbugs - 区块链代码实现中的常见漏洞
 事实上，对一个协议的实现，实际上是对一个协议的一门方言 dialect 的实现
 
 + [Towards a formal theory of computer insecurity: a languagetheoretic approach](https://www.youtube.com/watch?v=AqZNebWoqnc)
-+ Postel's law
-    > Be liberal in what you accept and conservative in what you send
++ Postel's law: "Be liberal in what you accept and conservative in what you send"
 
 </br>
 
@@ -34,6 +33,10 @@ title: Coinbugs - 区块链代码实现中的常见漏洞
     * 不过后来升级到 levelDB 就不需要考虑这个了。
 + 等等
 
+</br>
+
+__所以实现 同等性 很难。__
+
 #### 例子
 
 + *geth* vs *Parity* state update 不同, [当 out-of-gas exception 时是否能成功 revert empty account deletions](https://blog.ethereum.org/2016/11/25/security-alert-11242016-consensus-bug-geth-v1-4-19-v1-5-2/)
@@ -42,7 +45,6 @@ title: Coinbugs - 区块链代码实现中的常见漏洞
 个人觉得，就算是软分叉也会有这些问题。
 
 #### 反思
-
 文档作为 spec 其实是不够的，实际如何 implement 才最有可信力。
 
 比如说 bitcoin 的代码才是最准确的文档。
@@ -56,8 +58,7 @@ title: Coinbugs - 区块链代码实现中的常见漏洞
 比如说 bitcoin OpenSSL's ECDSA signature handling 就导致过两次共识问题:
 <!-- % see last section? -->
 + [OpenSSL 1.0.0p / 1.0.1k incompatible, causes blockchain rejection](https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2015-January/007097.html)
-    > ASN.1 是一个 序列化 抽象对象的标准，编码的标准包括 BER (Basic Encoding Rules), DER (Distinguised Encoding Rules), PER (Packed Encoding Rules) 等等。BER 编码结果不固定，DER 编码结果则固定。
-    
+    + ASN.1 是一个 序列化 抽象对象的标准，编码的标准包括 BER (Basic Encoding Rules), DER (Distinguised Encoding Rules), PER (Packed Encoding Rules) 等等。BER 编码结果不固定，DER 编码结果则固定。
     * OpenSSL 验证 ECDSA 签名的函数 `ecdsa_verify` 本来既接受 BER 又接受 DER，但从 [这个 commit](https://github.com/openssl/openssl/commit/85cfc188c06bd046420ae70dd6e302f9efe022a) 以后就只接受 DER 编码签名。（这是为了防止 [CVE-2014-8275](https://nvd.nist.gov/vuln/detail/CVE-2014-8275)，即防止 利用 BER 编码绕过黑名单。）
     * 问题是，如果一些节点升级了 OpenSSL 而另一些节点没有升级的话，就会导致网络分割：如果挖到了一个 BER-有效 但 DER-无效 的签名签的区块，升级之前的节点会认为该区块有效，升级之后的节点会拒绝掉这个区块。
 + [Disclosure: consensus bug indirectly solved by BIP66](https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2015-July/009697.html)
@@ -84,23 +85,31 @@ title: Coinbugs - 区块链代码实现中的常见漏洞
 上述分析讲述的是针对区块 hash 而言，对于交易 hash 也是同样的道理。
 
 ### 意外或未成熟的分叉导致的网络分割
-WIP
-
 新 PR 有可能改变 validation rule，或者改变了但自己不知道。
 
-+ https://github.com/mit-dci/cash-disclosure/blob/master/bitcoin-cash-disclosure-04252018.txt
-+ https://github.com/bitcoin/bips/blob/master/bip-0050.mediawiki
++ [bitcoin-cash-disclosure-04252018](https://github.com/mit-dci/cash-disclosure/blob/master/bitcoin-cash-disclosure-04252018.txt)
++ [BIP 50](https://github.com/bitcoin/bips/blob/master/bip-0050.mediawiki)
 
 需要检查 client 做了什么可能会影响 consensus rules，以及底层调用库的升级有没有可能会影响 consensus rules。
 
-If the PR is a forking upgrade: A network transition to a new ruleset can happen in several ways, options
-include:
-- Flagday cutover activation
-- Miner signaled activation
+</br>
 
-<!-- 
+如果真的升级:
+- Flagday cutover activation (User Activated Soft Fork, UASF)
+- Miner signaled activation (Miner Activated Soft Fork, MASF)
+    + BIP 34, BIP 9
+- combined
+    + BIP 8
 
- -->
+也要保证 
++ Pre-activation legacy rules consistency
++ Post-activation updated rules consistency
+    + 如 [ABC Bug Explained](https://old.reddit.com/r/btc/comments/bp1xj3/abc_bug_explained/) 提到 bitcoin cash 新引入 op_code 但忘了考虑 mempool
+
+#### 反思
+如何尽量避免这类问题?
+
+仔细对比 旧结构、旧函数 有没有在 新代码 中被使用，或 新代码 有没有影响 旧的规则。
 
 ### Netsplit via branch confusion
 WIP
