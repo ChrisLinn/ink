@@ -21,7 +21,6 @@ title: 搞 MPC 和 ZKP 的基础密码学面试
 
 _另外，有一个叫 类群 (class group) 的东西，和 二元二次型 (Binary quadratic form) 以及 虚二次数域 (Imaginary Quadratic Number Fields) 相关，在 1) 零知识证明 (比如 zkSNARK 的 Marlin 协议中用它来构造 Polynomial commitment) 和 2) 累加器 (用于替代 merkle tree，快速同步快速验证) 中很有用，这个到时值得单独拿出来讲讲。_
 
-
 #### 阿贝尔群 (Abelian group) 
 满足交换律，故阿贝尔群又叫交换群 (commutative group)。
 
@@ -101,7 +100,6 @@ _另外，有一个叫 类群 (class group) 的东西，和 二元二次型 (Bin
 + 有限域中所有非零元素的集合的每个有限子群都是循环群。
 
 ## 椭圆曲线
-
 https://andrea.corbellini.name/2015/05/17/elliptic-curve-cryptography-a-gentle-introduction/
 
 两条平行线有没有交点？黎曼几何里面有：交点在无穷远。
@@ -113,7 +111,6 @@ $y^2 = x^3 + ax + b,\ 4a^3 + 27b^2 \ne 0$
 该方程被称作 椭圆曲线的 Weierstrass 方程。
 
 ### 基于椭圆曲线的群定义
-
 在椭圆曲线的基础上，可以定义一个加法群：
 
 + 所有椭圆曲线上的点就是这个群里的元素
@@ -160,18 +157,15 @@ $y^2 = x^3 + ax + b,\ 4a^3 + 27b^2 \ne 0$
 #### 离散对数问题
 已知两个在 子群 上的点 $P$ 和 $Q = kP$，求解  $k$ 是非常困难的问题，目前没有多项式时间的求解算法。
 
-### secp256k1 不如 Curve25519 安全，那为什么比特币还用 secp256k1?
-因为那时候 Curve25519 还没出世。
-
-### 椭圆曲线 secp256k1 与 secp256r1
-
+### ECDSA
+#### 椭圆曲线 secp256k1 与 secp256r1
 曲线 secp256k1 的名字来自于密码学标准文档 [SEC2](https://www.secg.org/sec2-v2.pdf) , 其中 “sec” 是 “Standards For Efficient Cryptography” 缩写, “p” 表示椭圆曲线参数定义在 有限域 $\mathbb{F}_p$ 上, “256” 表示该有限域中元素的比特长度为 256, “k” 表示这是一条 Koblitz 曲线, 而 “1” 表示这是满足前述条件的第一条 (实际上也是唯一的) 推荐的曲线.
 
 Koblitz 曲线在密码学文献中通常指代定义在特征为 2 的有限域上 $\mathbb{F}_{2^m}, m \in \mathbb{Z}$ 的椭圆曲线, [Gallant, Lamber 和 Vanstone1 在 CRYPTO 2001 的论文](https://www.iacr.org/archive/crypto2001/21390189.pdf) 中泛化了 Koblitz 曲线的含义, 也包括定义在大素数上 $\mathbb{F}_p$ 上具备高效可计算自同态特性的椭圆曲线。
 
 自同态映射可以加速 ECDSA 签名验证过程。
 
-### ECDSA 签名机制应用中的安全隐患
+#### ECDSA 签名机制应用中的安全隐患
 1. 如果 k 值泄露, 则任何知道该随机数值的人可以使用该随机数产生签名值恢复私钥
 2. 用相同私钥和 k 对两个消息进行签名, 则任何人都可以通过两个签名值恢复出私钥
     + 由于安全的随机数发生器实现的困难性与程序员正确使用随机数的困难性, 业界由随机产生 k 逐渐切换为利用 [RFC 6979](https://tools.ietf.org/html/rfc6979) 中推荐的方式
@@ -186,11 +180,14 @@ Koblitz 曲线在密码学文献中通常指代定义在特征为 2 的有限域
 7. 不需要提供签名消息的情况下, 任何人可以根据任意签名值伪造对应私钥的签名值
     + Craig Wright (澳本聪) 曾经利用此原理通过伪造 Satoshi Nakamoto 的签名值, 进而宣称自己为中本聪
 
-### ECDSA 签名机制可以根据签名推算出公钥
+#### ECDSA 签名机制可以根据签名推算出公钥
 进而减少交易体积（不需要存公钥）。ETH 中这么干了，BTC 没这么干。
 
-### 为什么说 ECDSA 签名 不是 deterministics 的?
+#### 为什么说 ECDSA 签名 不是 deterministics 的?
 签名算法里面有个 随机数k，每次签出来的名可能不一样
+
+#### secp256k1 不如 Curve25519 安全，那为什么比特币还用 secp256k1?
+因为那时候 Curve25519 还没出世。
 
 ### EdDSA
 由上面的 ECDSA 签名机制应用中的安全隐患 说明不够安全， 虽然 自同态映射可以加速 ECDSA 签名验证过程，但也说明不是天然就是快。
