@@ -112,9 +112,8 @@ ECDH 的实际交互过程部署中需要着重考虑对接收到的 **临时公
 </br>
 
 X25519 (相比其他的 ECDH) 引入了扩域上的椭圆曲线点群使所有的 $x \in \mathbb{F}_p$ 都是合法的公钥，__省去__ 繁重的公钥合法性验证。
-</br>
 
-[X25519 中可以不验](https://cr.yp.to/ecdh.html):
++ [X25519 中可以不验](https://cr.yp.to/ecdh.html)
 + tendermint 中出问题是因为 Handshake Malleability，忘了校验 消息摘要 并 abort，中间人可以注入低阶临时公钥, 则 X25519 密钥协商得到的值 $g^{xy}$ 会是全零的值 (见上述 将最低 3 比特清零), 导致中间人攻击
 - TLS 1.3 和 Noise 协议中做了
 
