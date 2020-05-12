@@ -17,7 +17,7 @@ title: 搞 MPC 和 ZKP 的基础密码学面试
 + 封闭性：如果 $a,b \in G$，则 $ab \in G$
 + 结合律： 如果 $a,b,c \in G$，则 $(ab)c =a(bc)$
 + 单位元：集合中存在一个元素 $I$，保证 $aI = Ia = a$，对所有的 $a \in G$ 都成立
-+ 逆元：对每个集合的元素 $a \in G$，存在对应的 $b = a^{-1}$，保证 $ab = ba = I$。
++ 逆元：对每个集合的元素 $a \in G$，存在对应的 $b = a^{-1}$，保证 $ab = ba = I$
 
 _另外，有一个叫 类群 (class group) 的东西，和 二元二次型 (Binary quadratic form) 以及 虚二次数域 (Imaginary Quadratic Number Fields) 相关，在 1) 零知识证明 (比如 zkSNARK 的 Marlin 协议中用它来构造 Polynomial commitment) 和 2) 累加器 (用于替代 merkle tree，快速同步快速验证) 中很有用，这个到时值得单独拿出来讲讲。_
 
@@ -165,7 +165,9 @@ $y^2 = x^3 + ax + b,\ 4a^3 + 27b^2 \ne 0$
 
 ### 椭圆曲线 secp256k1 与 secp256r1
 
-曲线 secp256k1 的名字来自于密码学标准文档 [SEC2](https://www.secg.org/sec2-v2.pdf) , 其中 “sec” 是 “Standards For Efficient Cryptography” 缩写, “p” 表示椭圆曲线参数定义在 有限域 $\mathbb{F}_p$ 上, “256” 表示该有限域中元素的比特长度为 256, “k” 表示这是一条 Koblitz 曲线, 而 “1” 表示这是满足前述条件的第一条 (实际上也是唯一的) 推荐的曲线. Koblitz 曲线在密码学文献中通常指代定义在特征为 2 的有限域上 $\mathbb{F}_{2^m}, m \in \mathbb{Z}$ 的椭圆曲线, [Gallant, Lamber 和 Vanstone1 在 CRYPTO 2001 的论文](https://www.iacr.org/archive/crypto2001/21390189.pdf) 中泛化了 Koblitz 曲线的含义, 也包括定义在大素数上 $\mathbb{F}_p$ 上具备高效可计算自同态特性的椭圆曲线。
+曲线 secp256k1 的名字来自于密码学标准文档 [SEC2](https://www.secg.org/sec2-v2.pdf) , 其中 “sec” 是 “Standards For Efficient Cryptography” 缩写, “p” 表示椭圆曲线参数定义在 有限域 $\mathbb{F}_p$ 上, “256” 表示该有限域中元素的比特长度为 256, “k” 表示这是一条 Koblitz 曲线, 而 “1” 表示这是满足前述条件的第一条 (实际上也是唯一的) 推荐的曲线.
+
+Koblitz 曲线在密码学文献中通常指代定义在特征为 2 的有限域上 $\mathbb{F}_{2^m}, m \in \mathbb{Z}$ 的椭圆曲线, [Gallant, Lamber 和 Vanstone1 在 CRYPTO 2001 的论文](https://www.iacr.org/archive/crypto2001/21390189.pdf) 中泛化了 Koblitz 曲线的含义, 也包括定义在大素数上 $\mathbb{F}_p$ 上具备高效可计算自同态特性的椭圆曲线。
 
 自同态映射可以加速 ECDSA 签名验证过程。
 
