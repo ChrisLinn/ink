@@ -266,12 +266,14 @@ https://github.com/longcpp/CryptoInAction/blob/master/bitcoin-hd-wallet/191210-b
 ## Paillier
 Paillier 是一种原生支持加法同态的非对称加密体系。能同时支持 语义安全 (semantically secure) 和 加法同态 (additively homomorphic)；RSA 只能取其一。
 
+## semantically secure
 semantically secure: 见到密文也不能获得更多信息。
-Any probabilistic, polynomial-time algorithm (PPTA) that is given the ciphertext of a certain message {\displaystyle m}m (taken from any distribution of messages), and the message's length, cannot determine any partial information on the message with probability non-negligibly higher than all other PPTA's that only have access to the message length (and not the ciphertext).
+
+Any probabilistic, polynomial-time algorithm (PPTA) that is given the ciphertext of a certain message $m$ (taken from any distribution of messages), and the message's length, cannot determine any partial information on the message with probability non-negligibly higher than all other PPTA's that only have access to the message length (and not the ciphertext).
+
 This concept is the computational complexity analogue to Shannon's concept of **perfect secrecy**. Perfect secrecy means that the ciphertext reveals no information at all about the plaintext, whereas semantic security implies that any information.
-Then it turns out that there is a simpler notion - indistinguishability - that is equivalent to semantic security. This notion is easier to work with, so everyone uses that one, to the extent that semantic security is often identified with indistinguishability.
 
-
+A simpler notion - **indistinguishability** - that is equivalent to semantic security, and easier to work with.
 
 ## 应用题
 
