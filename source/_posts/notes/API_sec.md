@@ -156,7 +156,7 @@ end
 + 一般复杂的系统会选择 centralized 或 object-based 模式。
 + 简单的则可以用 route-based 或 ad-hoc。
 
-</br>
+<br>
 除了这些设计模式外，一些通用的建议：
 
 + 确定 use cases 及其所需要的 认证检查

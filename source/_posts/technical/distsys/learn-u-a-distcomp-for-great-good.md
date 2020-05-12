@@ -4,7 +4,7 @@ title: Learn You a Distributed Computing for Great Good!
 
 # Learn You a Distributed Computing for Great Good!
 
-Revision v0.09
+Revision v0.10
 
 这份笔记大部分是 [我](https://chrislinn.ink/) 从 [韩神](https://github.com/SebastianElvis) 和 [邱巨](https://priewienv.me/) 处抄袭、总结或与他们请教而来；如果有任何错误，那肯定是我搞错了，与大腿们无关。
 
@@ -52,7 +52,7 @@ Revision v0.09
 
 ## FLP Impossibility
 
-https://groups.csail.mit.edu/tds/papers/Lynch/jacm85.pdf
+[论文](https://groups.csail.mit.edu/tds/papers/Lynch/jacm85.pdf)中提到:
 
 > In an asynchronous model with crash failures, it is impossible to find a consensus algorithm that would satisfy safety, liveness and fault tolerance.
 
@@ -60,7 +60,7 @@ https://groups.csail.mit.edu/tds/papers/Lynch/jacm85.pdf
 
 这是因为想要达到 fault tolerance 就要能可靠地检测 failure，但是在异步网络中这是不可能的（就算只检测一个节点失败）。
 
-FLP 基于的假设：
+### FLP 基于的假设
 
 + 异步
     * 没有时钟、不能时间同步、不能使用超时、不能探测失败、消息可任意延迟、消息可乱序
@@ -71,9 +71,11 @@ FLP 基于的假设：
     * 但其实 omission failure 和 Byzantine failure 也包含了 crash failure，所以对于 omission failure 和 Byzantine failure 也适用
 + 失败进程数量最多只有一个
 
+### 与 Paxos 矛盾吗
+
 Paxos 算法的场景比 FLP 的系统模型还要松散：异步通信，允许消息丢失（通信不健壮）。Paxos 中存在活锁，理论上的活锁会导致 Paxos 算法无法满足 Termination 属性，也就不算一个正确的一致性算法。Lamport 自己也承认这一点，并建议通过 Leader 来代替 Paxos 中的 Proposer，而 Leader 则通过随机或其他方式来选定（Paxos 中假如随机过程会极大降低 FLP 发生的概率）。但仍不影响 Paxos 被认为最伟大最牛的一致性算法。
 
-Paxos is correct only in partially synchronous settings. It will lose termination in async, but will terminate once the network becones partilally sync.  https://groups.csail.mit.edu/tds/papers/DePrisco/WDAG97.pdf
+具体来说，Paxos 在 partially synchronous 下是正确的。在 async 下则不满足 termination。不过一旦网络重新恢复 partilally sync，Paxos 又能 terminate。([WDAG97](https://groups.csail.mit.edu/tds/papers/DePrisco/WDAG97.pdf))
 
 ## Protocols
 
