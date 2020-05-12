@@ -18,7 +18,12 @@ title: 目录
     * Programming Language / 程序设计语言
         - [High performance GoLang / golang 高性能笔记](/technical/PL/hp-golang)
     - [Programming / 如何学习编程](/technical/programming)
++ Misc / 随笔
+    * [Writing / 我也谈写作](/mics/writing)
+    * [Shanghai Fortress / 《上海堡垒》读后感](/mics/once-upon-a-time-in-Shanghai)
 * Notes / 笔记
+    - Programming / 编程
+        + [API security / 安全 API 的设计模式](/notes/API_sec)
     - Blockchain / 区块链
         + [(WIP) Coinbugs / 区块链代码实现中的常见漏洞](/notes/blockchain/coinbugs)
     * [Hayek / 我读哈耶克](/notes/hayek)
@@ -28,7 +33,4 @@ title: 目录
     - [Sublime Text / 我用 Sublime Text](/notes/subl)
     - [Vim / 我用 Vim](/notes/vim)
     * [Sophie's World / 《苏菲的世界》笔记](/notes/sophies-world)
-+ Misc / 随笔
-    * [Writing / 我也谈写作](/mics/writing)
-    * [Shanghai Fortress / 《上海堡垒》读后感](/mics/once-upon-a-time-in-Shanghai)
 <!-- * 自我提升 -->
