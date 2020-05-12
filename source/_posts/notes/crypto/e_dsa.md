@@ -7,9 +7,16 @@ title: E某DSA
 
 ## ECDSA
 ### 椭圆曲线 secp256k1 与 secp256r1
-曲线 secp256k1 的名字来自于密码学标准文档 [SEC2](https://www.secg.org/sec2-v2.pdf) , 其中 “sec” 是 “Standards For Efficient Cryptography” 缩写, “p” 表示椭圆曲线参数定义在 有限域 $\mathbb{F}_p$ 上, “256” 表示该有限域中元素的比特长度为 256, “k” 表示这是一条 Koblitz 曲线, 而 “1” 表示这是满足前述条件的第一条 (实际上也是唯一的) 推荐的曲线.
+曲线 secp256k1 的名字来自于密码学标准文档 [SEC2](https://www.secg.org/sec2-v2.pdf) , 其中
++ “sec” 是 “Standards For Efficient Cryptography” 缩写
++ “p” 表示椭圆曲线参数定义在 有限域 $\mathbb{F}_p$ 上
++ “256” 表示该有限域中元素的比特长度为 256
++ “k” 表示这是一条 Koblitz 曲线
+    + Koblitz 曲线在密码学文献中通常指代定义在特征为 2 的有限域上 $\mathbb{F}_{2^m}, m \in \mathbb{Z}$ 的椭圆曲线
+        + [Gallant, Lamber 和 Vanstone1 在 CRYPTO 2001 的论文](https://www.iacr.org/archive/crypto2001/21390189.pdf) 中泛化了 Koblitz 曲线的含义, 也包括定义在大素数上 $\mathbb{F}_p$ 上具备高效可计算自同态特性的椭圆曲线。
+            + 自同态映射可以加速 ECDSA 签名验证过程。
++ “1” 表示这是满足前述条件的第一条 (实际上也是唯一的) 推荐的曲线.
 
-Koblitz 曲线在密码学文献中通常指代定义在特征为 2 的有限域上 $\mathbb{F}_{2^m}, m \in \mathbb{Z}$ 的椭圆曲线, [Gallant, Lamber 和 Vanstone1 在 CRYPTO 2001 的论文](https://www.iacr.org/archive/crypto2001/21390189.pdf) 中泛化了 Koblitz 曲线的含义, 也包括定义在大素数上 $\mathbb{F}_p$ 上具备高效可计算自同态特性的椭圆曲线。自同态映射可以加速 ECDSA 签名验证过程。
 
 ### ECDSA 签名机制应用中的安全隐患
 1. 如果 k 值泄露, 则任何知道该随机数值的人可以使用该随机数产生签名值恢复私钥
@@ -21,7 +28,8 @@ Koblitz 曲线在密码学文献中通常指代定义在特征为 2 的有限域
     + RFC 6979 中通过利用待签名消息 m 和私钥 d 等信息给出了一种确定性派生 k 的方式
 4. 相同私钥和 k 同时用于 ECDSA 签名和 Schnorr 签名时, 任何人都能够恢复出私钥
 5. ECDSA 签名值的可锻造性
-    + 交易 ID 的不唯一会导致根据交易 ID 追踪交 易状态时出现安全隐患. 假设追踪的是携带签名值 σ 的交易的 ID, 而上链的交易中包含的 σ ′ (具有不同的交易的 ID), 则在数字货币交易所处理用户的提币操作时, 当一笔提币已经成功时, 根据交易 ID 进行交易状态跟踪的业务逻辑会认为提币操作失败. 倘若还设置了超时重试机制, 会导致交易所资产的损失。
+    + 交易 ID 的不唯一会导致根据交易 ID 追踪交 易状态时出现安全隐患.
+        * 假设追踪的是携带签名值 σ 的交易的 ID, 而上链的交易中包含的 σ ′ (具有不同的交易的 ID), 则在数字货币交易所处理用户的提币操作时, 当一笔提币已经成功时, 根据交易 ID 进行交易状态跟踪的业务逻辑会认为提币操作失败. 倘若还设置了超时重试机制, 会导致交易所资产的损失。
 6. 签名值通常采用的 DER 编码由于编码值并不唯一也会造成区块链网络的分裂
 7. 不需要提供签名消息的情况下, 任何人可以根据任意签名值伪造对应私钥的签名值
     + Craig Wright (澳本聪) 曾经利用此原理通过伪造 Satoshi Nakamoto 的签名值, 进而宣称自己为中本聪
@@ -83,6 +91,8 @@ X25519 和 Ed25519 的做依赖的点的运算都可以转换成为 Weierstrass 
 
 ### X25519
 X25519 是在 Curve25519 上的 **仅基于 x 坐标** 的 ECDH 密钥协议。
+
+仅利用椭圆曲线点的 x 坐标构建 ECDH 的想法最初来自于 Victor Miller 在 1985 年发表的奠基性文章 ["Use of elliptic curves in cryptography"](https://link.springer.com/content/pdf/10.1007/3-540-39799-X_31.pdf)
 
 __TODO:__ ECDH 的实际部署中需要着重考虑的是对接收到的消息的检查. 
 
