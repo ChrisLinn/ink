@@ -53,10 +53,7 @@ VRF 可以用来作为一种哈希的方法，就像它名字中表明的一样�
 
 __Q:__ 去中心化 挖矿我以前有听说过，比如 P2Pool 什么的。这个相比起来有什么好处呢？
 
-__A:__ P2Pool 容易被引入算力攻击， 并且网络延迟严重，出块效率很差。事实上 P2Pool 已经好几年没出块了。我们也和现有的其他协议进行了对比，包括 SmartPool，2P-PoW，stratumV2 用的 BetterHash，还有 Andrew Miller 的 non-outsourceable scratch-off puzzle，得出的结论是我们比他们的更好。详见 https://hackmd.io/@ZcwjuAe3RUCFVPrXtvriPQ/S1YM1KZWI#Related-work
-
-简单来说:
-
+__A:__ P2Pool 容易被引入算力攻击， 并且网络延迟严重，出块效率很差。事实上 P2Pool 已经好几年没出块了。我们也和现有的其他协议进行了对比，包括 SmartPool，2P-PoW，stratumV2 用的 BetterHash，还有 Andrew Miller 的 non-outsourceable scratch-off puzzle，得出的结论是我们比他们的更好。详见 https://hackmd.io/@ZcwjuAe3RUCFVPrXtvriPQ/S1YM1KZWI#Related-work , 简单来说:
 + SmartPool
     * 需要链支持智能合约
 + BetterHash & 2P-PoW
@@ -64,13 +61,19 @@ __A:__ P2Pool 容易被引入算力攻击， 并且网络延迟严重，出块�
 * Andrew Miller's
     - 构造麻烦，而且他的协议只能使矿池丢失这个块挖到的币，我们的会导致矿池直接丢失私钥。
 
+</br>
+
 __Q:__ 我看了一下 2P-PoW，他们用私钥进行签名 来算哈希，这样不也能达到如果想算 PoW 必须知道私钥的效果吗，为什么要用 VRF，有什么意义？
 
 __A:__ 2P-PoW 只是一个提案，事实上没有一个真正的 construction。他们的问题在于，他们需要 一个 deteministic 的签名函数，而在 椭圆曲线上找不到这样的 签名函数：椭圆曲线的签名函数引入了一个随机数，来保证安全性。那么同一个 nonce，每次签出来的名不一样，就可以碰撞出 满足难度的结果。这样也就是可以通过签名来算 哈希，而现有的签名函数又不是 memory-hard 的（一般会想用 memory-hard 的函数来抗 ASIC），这样就无法针对性地设计PoW算法，如果直接使用签名函数来算哈希的话整个 PoW 都会变成 非 memory-hard 的。
 
+</br>
+
 __Q:__ 这个好像不能完美解决 ASIC 问题吧？
 
 __A:__ 需要选用合适的 h1 h2。
+
+</br>
 
 __Q:__ 私池自己挖呢？
 
