@@ -640,7 +640,7 @@ fcitx 的 preedit 好像会搞掉 sublime？ 干掉它！
 ```bash
 subl ~/.config/fcitx/config
 
-#TriggerKey=CTRL_SPACE
+# TriggerKey=CTRL_SPACE
 # TriggerKey=CTRL_ALT_SHIFT_SUPER_I
 TriggerKey=
 UseExtraTriggerKeyOnlyWhenUseItToInactivate=False
