@@ -5,6 +5,8 @@ title: E某DSA
 # E某DSA
 整理自 [Crypto In Action](https://github.com/longcpp/CryptoInAction)
 
+ElGamal 签名机制是在椭圆曲线密码学诞生之前提出的, 签名值较大。Schnorr 提出了可以看做是 ElGamal 签名机制变种的 Schonrr 签名机制, 大大缩短签名值的长度。而数字签名算法 DSA 是吸收了 Schnorr 签名设计思想的另一种 ElGamal 签名机制的变种签名机制。基于椭圆曲线的 DSA 方案即为熟知的 ECDSA。
+
 ## ECDSA
 ### 椭圆曲线 secp256k1 与 secp256r1
 曲线 secp256k1 的名字来自于密码学标准文档 [SEC2](https://www.secg.org/sec2-v2.pdf) , 其中
@@ -90,11 +92,41 @@ X25519 和 Ed25519 的做依赖的点的运算都可以转换成为 Weierstrass 
 + EdDSA 能抵抗碰撞, 底层哈希函数的碰撞不会破坏 EdDSA 签名机制 (PureEdDSA). 
 
 ### X25519
+#### 仅基于 x 坐标
+
 X25519 是在 Curve25519 上的 **仅基于 x 坐标** 的 ECDH 密钥协议。
 
 仅利用椭圆曲线点的 x 坐标构建 ECDH 的想法最初来自于 Victor Miller 在 1985 年发表的奠基性文章 ["Use of elliptic curves in cryptography"](https://link.springer.com/content/pdf/10.1007/3-540-39799-X_31.pdf)
 
-__TODO:__ ECDH 的实际部署中需要着重考虑的是对接收到的消息的检查. 
+#### 临时公钥点的检查
+ECDH 的实际交互过程部署中需要着重考虑对接收到的 **临时公钥点的检查**, 否则 可能导致私钥被盗。(见 [Hankerson, Darrel, Alfred J. Menezes, and Scott Vanstone. ”Guide to elliptic curve cryptography.” Computing Reviews 46, no. 1 (2005): 13] 中 4.3 小节):
++ 收到的点不是无穷远点
+    * small subgroup 攻击
+        - X25519 实现中已经考虑了 small subgroup 攻击
+            + Curve25519 曲线的余因子为 8
+                * 将最低 3 比特清零
+                * 保证私钥值是 8 的倍数
++ 点的坐标是底层素数域的中的元素并且确实是椭圆曲线方程上的点
+    * invalid-curve 攻击
+
+</br>
+
+X25519 (相比其他的 ECDH) 引入了扩域上的椭圆曲线点群使所有的 $x \in \mathbb{F}_p$ 都是合法的公钥，__省去__ 繁重的公钥合法性验证。
+</br>
+
+[X25519 中是可以不验的](https://cr.yp.to/ecdh.html):
++ tendermint 中出问题是因为 Handshake Malleability，忘了校验 消息摘要 并 abort，中间人可以注入低阶临时公钥, 则 X25519 密钥协商得到的值 $g^{xy}$ 会是全零的值 (见上述 将最低 3 比特清零), 导致中间人攻击
+- TLS 1.3 和 Noise 协议中做了
+
+#### 常量时间实现
+X25519 对 **常量时间** 实现非常友好:
++ 非 constant time 可能泄露私钥信息 (侧信道攻击)
+    * 椭圆曲线点群运算的常量时间是非常困难的
+        * 而对特定实现添加侧信道防护通常会显著降低代码的执行速度
+* [但 X25519 也不是完全防侧信道攻击](https://infoscience.epfl.ch/record/223794/files/32_1.pdf)
+
+
+与 secp256k1/secp256r1 等曲线的私钥可以在某个区间内连续取值 (整数值) 不同, 曲线 Curve25519 上的私钥并 **不是某个区间内的连续取值**, 这是为了规避余因子不为 1 可能引发的安全隐患, 但同时也部分影响了曲线的应用方式, 尤其是当希望在 Ed25519 签名算法上实现 **BIP-32** 时
 
 ## ECDSA 与 Ed25519 有什么区别与联系?
 没有联系，虽然都是椭圆曲线上的。Ed25519 属于 EdDSA，但是 ECDSA 与 EdDSA 也没有关系。ECDSA 是一个又慢又不够安全的过时设计，EdDSA 是一个 更快更安全的现代设计。
