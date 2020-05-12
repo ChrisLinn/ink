@@ -10,13 +10,13 @@ title: 安全 API 的设计模式
 
 内部代码的设计模式基本就反应了大型软件的安全性。
 
-如果代码可以被危险地内部访问，安全性问题就会在不检查安全性时在外部体现出来：
+如果代码可以被危险地内部访问，安全性问题就会在不检查安全性时在外部体现出来，包括：
 
 + 验证绕过
 + 提权
 + 攻击其他用户
 
-APIs 应该强制要求访问数据时的安全性。良好的设计可以减小出问题的概率。
+所以 APIs 应该强制要求访问数据时的安全性。良好的设计可以减小出问题的概率。
 
 ## 常见的认证内部设计模式
 ### Ad-hoc (专用方法)
@@ -39,9 +39,7 @@ def get_message(context, message_id):
 
 __基本可以认为这种模式等于没有防护。__
 
-对于审计来说，这种模式其实很难系统性地审计，手动测试还差不多。
-
-[AutoRepeater](https://github.com/nccgroup/AutoRepeater) 和 [Autorize](https://portswigger.net/bappstore/f9bbac8c4acf4aefa4d7dc92a991af2f) 可以有助于进行测试。
+对于审计来说，这种模式其实很难系统性地审计，手动测试还差不多。[AutoRepeater](https://github.com/nccgroup/AutoRepeater) 和 [Autorize](https://portswigger.net/bappstore/f9bbac8c4acf4aefa4d7dc92a991af2f) 可以有助于进行测试。
 
 ### Route-based (基于路由)
 每个路由显式声明访问这个路由所需要的权限。
