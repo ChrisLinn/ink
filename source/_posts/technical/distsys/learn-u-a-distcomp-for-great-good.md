@@ -313,7 +313,8 @@ PoW 其实只是 membership 的门槛，  nakamoto consensus 除了 PoW 其实�
 + [BIP 152](https://github.com/bitcoin/bips/blob/master/bip-0152.mediawiki)
 + [BloXroute](https://bloxroute.com/wp-content/uploads/2019/11/bloXrouteWhitepaper.pdf)
 + [FIBRE](https://bitcoinfibre.org/)
-
++ Graphene: efficient interactive set reconciliation applied to blockchain propagation
++ https://github.com/AmarRSingh/NotThatNetworking_Research
 
 ## 一些攻击
 
