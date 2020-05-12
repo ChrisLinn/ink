@@ -39,19 +39,19 @@ string 的值是不可变的，`[]byte` 是可变的。string 可读性强，但
 
 另外: 使用 string 作为映射键是很常见的，但我们通常有的是一个 `[]byte`.
 编译器针对这种情况实现了特定的优化:
-```
+```go
 var m map[string]string
 v, ok := m[string(bytes)]
 ```
 但不会对下列代码进行优化:
-```
+```go
 key := string(bytes)
 val, ok := m[key]
 ```
 
 #### 避免 string concatenation
 version 1:
-```
+```go
 s := request.ID
 s += " " + client.Addr().String()
 s += " " + time.Now().String()
@@ -59,19 +59,19 @@ r = s
 ```
 
 version 2:
-```
+```go
 var b bytes.Buffer
 fmt.Fprintf(&b, "%s %v %v", request.ID, client.Addr(), time.Now())
 r = b.String()
 ```
 
 version 3:
-```
+```go
 r = fmt.Sprintf("%s %v %v", request.ID, client.Addr(), time.Now())
 ```
 
 version 4:
-```
+```go
 b := make([]byte, 0, 40)
 b = append(b, request.ID...)
 b = append(b, ' ')
@@ -82,7 +82,7 @@ r = string(b)
 ```
 
 version 5:
-```
+```go
 var b strings.Builder
 b.WriteString(request.ID)
 b.WriteString(" ")
@@ -96,7 +96,7 @@ bench test 发现 version 4 最快最省，version 1 & 5一般，version 2 & 3 �
 
 ### 预分配 slice
 `append` 很方便，但很浪费。
-```
+```go
 func main() {
     b := make([]int, 1024)
     b = append(b, 99)
@@ -109,18 +109,18 @@ func main() {
 
 ### 减少 allocation
 方法一(bad): **始终**分配缓冲区，从而给GC带来压力。
-```
+```go
 func (r *Reader) Read() ([]byte, error)
 ```
 
 方法二(good): 接收一个 `[]byte` 缓冲区，填充给定的缓冲区，并返回读取的字节数。
-```
+```go
 func (r *Reader) Read(buf []byte) (int, error)
 ```
 
 ### `*sync.Pool`
 `sync.Pool` 类型可以用来重用公共对象, **避免new**，减少内存分配，降低GC压力。没有固定大小或最大容量。(注意：里面的值可能随时被回收。)
-```
+```go
 var pool = sync.Pool{
     New: func() interface{} {
         return make([]byte, 4096)
@@ -186,7 +186,7 @@ func processRequest(work *Work) {
 `defer` 的开销很大, 因为它要记录 `defer` 参数的 闭包。
 
 `defer mu.Unlock()` 相当于:
-```
+```go
 defer func() {
         mu.Unlock()
 }()
