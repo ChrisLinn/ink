@@ -220,8 +220,12 @@ __TODO:__
         * 怀疑primary节点出错时, 进行 View change
             - 防止backup节点无限地等待请求的执行。
             - 确保即使当前的primary节点出错，整个系统也能继续运行。
-        * [PBFT 中 assume 了 weak synchrony](https://www.usenix.org/legacy/events/osdi99/full_papers/castro/castro_html/node3.html#SECTION00030000000000000000): "it must rely on synchrony to provide liveness"
-        + HoneyBadgerBFT 提出了改进，说 PBFT 的 liveness assumption 不 practical : "guarantees liveness without making any timing assumptions"
+        * [PBFT 中 assume 了 weak synchrony](https://www.usenix.org/legacy/events/osdi99/full_papers/castro/castro_html/node3.html#SECTION00030000000000000000)
+            > it must rely on synchrony to provide liveness
+
+        + HoneyBadgerBFT 提出了改进，说 PBFT 的 liveness assumption 不 practical
+            > guarantees liveness without making any timing assumptions
+
             + HoneyBadgerBFT 还是太慢
     + Tendermint BFT
         * elastico: "tendermint is essentially a variant of PBFT"

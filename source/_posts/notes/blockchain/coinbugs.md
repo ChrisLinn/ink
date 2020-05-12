@@ -7,28 +7,32 @@ title: Coinbugs - 区块链代码实现中的常见漏洞
 由 [Whitepaper - Coinbugs: Enumerating Common Blockchain Implementation-Level Vulnerabilities](https://research.nccgroup.com/2020/03/26/whitepaper-coinbugs-enumerating-common-blockchain-implementation-level-vulnerabilities/) 翻译总结而来。
 
 ## 网络分割
+网络分割有可能导致 **双花**。因为当网络重新统一时，其中一个网络的交易会被回滚，如果黑客能设法不让交易转发到原链就有可能实现双花。所以网络分割有可能是 **最重要** 的一种攻击向量。
 
 ### 不同客户端实现造成的网络分割
+#### 原因
+不同客户端实现有可能对区块验证的判断逻辑不同，进而导致网络分割。
 
-不同客户端实现有可能对区块验证的判断逻辑不同，进而导致网络分割。本质上是客户端的 equivalence **同等性** 问题。
+本质上是客户端的 equivalence **同等性** 问题。
 
-值得强调的是，网络分割有可能导致 **双花**。因为当网络重新统一时，其中一个网络的交易会被回滚，如果黑客能设法不让交易转发到原链就有可能实现双花。所以网络分割有可能是 **最重要** 的一种攻击向量。
+</br>
 
-#### 对一个协议的实现，实际上是对一个协议的一门方言 dialect 的实现
+事实上，对一个协议的实现，实际上是对一个协议的一门方言 dialect 的实现
 
 + [Towards a formal theory of computer insecurity: a languagetheoretic approach](https://www.youtube.com/watch?v=AqZNebWoqnc)
-+ Postel's law: "Be liberal in what you accept and conservative in what you send"
++ Postel's law
+    > Be liberal in what you accept and conservative in what you send
 
-#### consensus rules 不可知
+</br>
 
-Pieter Wuille 解释过：[实际的 consensus rules 事实上是不可知的](https://bitcoin.stackexchange.com/questions/54878/why-is-it-so-hard-for-alt-clients-to-implement-bitcoin-core-consensus-rules) (尤其是对于区块验证这种 context/state-dependent 的事情)。比如:
+而且 Pieter Wuille 解释过，[实际的 consensus rules 事实上是不可知的](https://bitcoin.stackexchange.com/questions/54878/why-is-it-so-hard-for-alt-clients-to-implement-bitcoin-core-consensus-rules) (尤其是对于区块验证这种 context/state-dependent 的事情)。比如:
 
-+ Uncompressed, compressed, hybrid public keys。
++ Uncompressed, compressed, hybrid public keys
     * bitcoin 原本的版本只支持 uncompressed。但事实上 当时普遍使用 openssl 进行验证，已经可以支持 compressed。
-+ The BDB lock limit。
++ The BDB lock limit
     * [之前的设置当遇到一个有很多 inputs 的交易时会不够](https://github.com/bitcoin/bips/blob/master/bip-0050.mediawiki)。
     * 不过后来升级到 levelDB 就不需要考虑这个了。
-+ ...
++ 等等
 
 #### 例子
 
@@ -48,20 +52,18 @@ Pieter Wuille 解释过：[实际的 consensus rules 事实上是不可知的](h
 ### 运行环境差异造成的网络分割
 就算只有一种客户端实现, 运行环境不同也可能导致执行结果不同。(架构 32-bit vs 64-bit, 操作系统, 时间/地区设置, 配置...)。另外依赖的系统库版本也有可能不同（甚至没有固定住版本、开启了自动升级）。
 
+#### 例子
 比如说 bitcoin OpenSSL's ECDSA signature handling 就导致过两次共识问题:
 <!-- % see last section? -->
 + [OpenSSL 1.0.0p / 1.0.1k incompatible, causes blockchain rejection](https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2015-January/007097.html)
+    > ASN.1 是一个 序列化 抽象对象的标准，编码的标准包括 BER (Basic Encoding Rules), DER (Distinguised Encoding Rules), PER (Packed Encoding Rules) 等等。BER 编码结果不固定，DER 编码结果则固定。
+    
+    * OpenSSL 验证 ECDSA 签名的函数 `ecdsa_verify` 本来既接受 BER 又接受 DER，但从 [这个 commit](https://github.com/openssl/openssl/commit/85cfc188c06bd046420ae70dd6e302f9efe022a) 以后就只接受 DER 编码签名。（这是为了防止 [CVE-2014-8275](https://nvd.nist.gov/vuln/detail/CVE-2014-8275)，即防止 利用 BER 编码绕过黑名单。）
+    * 问题是，如果一些节点升级了 OpenSSL 而另一些节点没有升级的话，就会导致网络分割：如果挖到了一个 BER-有效 但 DER-无效 的签名签的区块，升级之前的节点会认为该区块有效，升级之后的节点会拒绝掉这个区块。
 + [Disclosure: consensus bug indirectly solved by BIP66](https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2015-July/009697.html)
+    + 第二次的事件虽然不是由于 OpenSSL 版本不同导致，但因为 ASN.1 BER 编码标准真的很复杂，而 OpenSSL 的 BER parser 在不同的平台 (Windows/Linux/MacOS and 32-bit/64-bit) 上会行为不一致，导致精心构造的 ECDSA 签名在不同的平台上有可能验证结果不一样，进而导致区块链分叉。
 
-> ASN.1 是一个 序列化 抽象对象的标准，编码的标准包括 BER (Basic Encoding Rules), DER (Distinguised Encoding Rules), PER (Packed Encoding Rules) 等等。BER 编码结果不固定，DER 编码结果则固定。
-
-OpenSSL 验证 ECDSA 签名的函数 `ecdsa_verify` 本来既接受 BER 又接受 DER，但从 [这个 commit](https://github.com/openssl/openssl/commit/85cfc188c06bd046420ae70dd6e302f9efe022a) 以后就只接受 DER 编码签名。
-（这是为了防止 [CVE-2014-8275](https://nvd.nist.gov/vuln/detail/CVE-2014-8275)，即防止 利用 BER 编码绕过黑名单。）
-
-问题是，如果一些节点升级了 OpenSSL 而另一些节点没有升级的话，就会导致网络分割：如果挖到了一个 BER-有效 但 DER-无效 的签名签的区块，升级之前的节点会认为该区块有效，升级之后的节点会拒绝掉这个区块。
-
-第二次的事件虽然不是由于 OpenSSL 版本不同导致，但因为 ASN.1 BER 编码标准真的很复杂，而 OpenSSL 的 BER parser 在不同的平台 (Windows/Linux/MacOS and 32-bit/64-bit) 上会行为不一致，导致精心构造的 ECDSA 签名在不同的平台上有可能验证结果不一样，进而导致区块链分叉。
-
+#### 反思
 编写一个区块链客户端应该尽量避免受执行环境影响。
 
 如何尽量避免这类问题?

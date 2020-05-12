@@ -1,7 +1,7 @@
 #  Honest majority
 
 + Majority is not enough: Bitcoin mining is vulnerable
-    * 日蚀攻击， 51% -> 33%
+    * 日蚀攻击， 51 -> 33
 + Fact and Fiction: Challenging the honest majority assumption of permissionless blockchains.
     * https://eprint.iacr.org/2019/752
 + Fine-grained cryptography
