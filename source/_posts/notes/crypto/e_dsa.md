@@ -114,7 +114,7 @@ ECDH 的实际交互过程部署中需要着重考虑对接收到的 **临时公
 X25519 (相比其他的 ECDH) 引入了扩域上的椭圆曲线点群使所有的 $x \in \mathbb{F}_p$ 都是合法的公钥，__省去__ 繁重的公钥合法性验证。
 </br>
 
-[X25519 中是可以不验的](https://cr.yp.to/ecdh.html):
+[X25519 中可以不验](https://cr.yp.to/ecdh.html):
 + tendermint 中出问题是因为 Handshake Malleability，忘了校验 消息摘要 并 abort，中间人可以注入低阶临时公钥, 则 X25519 密钥协商得到的值 $g^{xy}$ 会是全零的值 (见上述 将最低 3 比特清零), 导致中间人攻击
 - TLS 1.3 和 Noise 协议中做了
 
@@ -125,8 +125,16 @@ X25519 对 **常量时间** 实现非常友好:
         * 而对特定实现添加侧信道防护通常会显著降低代码的执行速度
 * [但 X25519 也不是完全防侧信道攻击](https://infoscience.epfl.ch/record/223794/files/32_1.pdf)
 
-
+## Curve25519/Edwards25519 余因子 (Cofactor) 问题
 与 secp256k1/secp256r1 等曲线的私钥可以在某个区间内连续取值 (整数值) 不同, 曲线 Curve25519 上的私钥并 **不是某个区间内的连续取值**, 这是为了规避余因子不为 1 可能引发的安全隐患, 但同时也部分影响了曲线的应用方式, 尤其是当希望在 Ed25519 签名算法上实现 **BIP-32** 时
+
+另外余因子为 8 导致 CryptoNote 协议中构建 RingCT 交易时引入了安全漏洞 (secp256r1/secp256k1 曲线的余因子为 1 故无此隐患) 导致双花。Edwards25519 本用于 EdDSA，被 Monero 挪作他用 (XEdDSA) 。
+
+是否存在方法能够既享用 Curve25519/Edwards25519 的优势, 又能够解放上层密码协议的设计?
++ Mike Hamberg 提出的 **Decaf** 方法 能够在特定条件下从余因子为 **4** 的非素数阶的点群上” 萃取” 出素数阶的点群.
+    + 无法直接应用于 Curve25519/Edwards25519 因它们余因子为 8
+        * Isis Agora Lovecruft 和 Henry de Valence 提出 **Ristretto** 技术通过扩展 Decaf 技术可以从余因子为 **8** 的非素数阶点群萃取出素数阶点群
+            * 作用于 Curve25519 得到的素数阶点群记为 ristretto255
 
 ## ECDSA 与 Ed25519 有什么区别与联系?
 没有联系，虽然都是椭圆曲线上的。Ed25519 属于 EdDSA，但是 ECDSA 与 EdDSA 也没有关系。ECDSA 是一个又慢又不够安全的过时设计，EdDSA 是一个 更快更安全的现代设计。
