@@ -1,8 +1,10 @@
 ---
-title: E*DSA
+title: E某DSA
 ---
 
-# E*DSA
+# E某DSA
+整理自 [Crypto In Action](https://github.com/longcpp/CryptoInAction)
+
 ## ECDSA
 ### 椭圆曲线 secp256k1 与 secp256r1
 曲线 secp256k1 的名字来自于密码学标准文档 [SEC2](https://www.secg.org/sec2-v2.pdf) , 其中 “sec” 是 “Standards For Efficient Cryptography” 缩写, “p” 表示椭圆曲线参数定义在 有限域 $\mathbb{F}_p$ 上, “256” 表示该有限域中元素的比特长度为 256, “k” 表示这是一条 Koblitz 曲线, 而 “1” 表示这是满足前述条件的第一条 (实际上也是唯一的) 推荐的曲线.
