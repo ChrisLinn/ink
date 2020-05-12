@@ -14,23 +14,30 @@ title: Coinbugs - 区块链代码实现中的常见漏洞
 
 值得强调的是，网络分割有可能导致 **双花**。因为当网络重新统一时，其中一个网络的交易会被回滚，如果黑客能设法不让交易转发到原链就有可能实现双花。所以网络分割有可能是 **最重要** 的一种攻击向量。
 
-但事实上，对一个协议的实现，实际上是对一个协议的一门方言 dialect 的实现：
+#### 对一个协议的实现，实际上是对一个协议的一门方言 dialect 的实现
 
 + [Towards a formal theory of computer insecurity: a languagetheoretic approach](https://www.youtube.com/watch?v=AqZNebWoqnc)
 + Postel's law: "Be liberal in what you accept and conservative in what you send"
 
-况且......Pieter Wuille 解释过: ["consensus rules 实际上是怎样的" 事实上是不可知的](https://bitcoin.stackexchange.com/questions/54878/why-is-it-so-hard-for-alt-clients-to-implement-bitcoin-core-consensus-rules) (尤其是对于区块验证这种 context/state-dependent 的事情)。比如:
+#### consensus rules 不可知
 
-+ Uncompressed, compressed, hybrid public keys。bitcoin 原本的版本只支持 uncompressed。但事实上 当时普遍使用 openssl 进行验证，已经可以支持 compressed。
-+ The BDB lock limit。[之前的设置当遇到一个有很多 inputs 的交易时会不够](https://github.com/bitcoin/bips/blob/master/bip-0050.mediawiki)。(不过后来升级到 levelDB 就不需要考虑这个了。)
+Pieter Wuille 解释过：[实际的 consensus rules 事实上是不可知的](https://bitcoin.stackexchange.com/questions/54878/why-is-it-so-hard-for-alt-clients-to-implement-bitcoin-core-consensus-rules) (尤其是对于区块验证这种 context/state-dependent 的事情)。比如:
+
++ Uncompressed, compressed, hybrid public keys。
+    * bitcoin 原本的版本只支持 uncompressed。但事实上 当时普遍使用 openssl 进行验证，已经可以支持 compressed。
++ The BDB lock limit。
+    * [之前的设置当遇到一个有很多 inputs 的交易时会不够](https://github.com/bitcoin/bips/blob/master/bip-0050.mediawiki)。
+    * 不过后来升级到 levelDB 就不需要考虑这个了。
 + ...
 
-例子：
+#### 例子
 
 + *geth* vs *Parity* state update 不同, [当 out-of-gas exception 时是否能成功 revert empty account deletions](https://blog.ethereum.org/2016/11/25/security-alert-11242016-consensus-bug-geth-v1-4-19-v1-5-2/)
 + 处理有问题的 `SIGHASH_SINGLE` 交易时, *bitcoin-ruby* 的实现是对的，但关键是 *bitcoin-core* 本身的实现是错的。(一些 edge case 可能一开始考虑不到)
 
 个人觉得，就算是软分叉也会有这些问题。
+
+#### 反思
 
 文档作为 spec 其实是不够的，实际如何 implement 才最有可信力。
 
