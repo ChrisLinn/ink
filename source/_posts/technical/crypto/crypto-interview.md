@@ -161,9 +161,7 @@ $y^2 = x^3 + ax + b,\ 4a^3 + 27b^2 \ne 0$
 #### 椭圆曲线 secp256k1 与 secp256r1
 曲线 secp256k1 的名字来自于密码学标准文档 [SEC2](https://www.secg.org/sec2-v2.pdf) , 其中 “sec” 是 “Standards For Efficient Cryptography” 缩写, “p” 表示椭圆曲线参数定义在 有限域 $\mathbb{F}_p$ 上, “256” 表示该有限域中元素的比特长度为 256, “k” 表示这是一条 Koblitz 曲线, 而 “1” 表示这是满足前述条件的第一条 (实际上也是唯一的) 推荐的曲线.
 
-Koblitz 曲线在密码学文献中通常指代定义在特征为 2 的有限域上 $\mathbb{F}_{2^m}, m \in \mathbb{Z}$ 的椭圆曲线, [Gallant, Lamber 和 Vanstone1 在 CRYPTO 2001 的论文](https://www.iacr.org/archive/crypto2001/21390189.pdf) 中泛化了 Koblitz 曲线的含义, 也包括定义在大素数上 $\mathbb{F}_p$ 上具备高效可计算自同态特性的椭圆曲线。
-
-自同态映射可以加速 ECDSA 签名验证过程。
+Koblitz 曲线在密码学文献中通常指代定义在特征为 2 的有限域上 $\mathbb{F}_{2^m}, m \in \mathbb{Z}$ 的椭圆曲线, [Gallant, Lamber 和 Vanstone1 在 CRYPTO 2001 的论文](https://www.iacr.org/archive/crypto2001/21390189.pdf) 中泛化了 Koblitz 曲线的含义, 也包括定义在大素数上 $\mathbb{F}_p$ 上具备高效可计算自同态特性的椭圆曲线。自同态映射可以加速 ECDSA 签名验证过程。
 
 #### ECDSA 签名机制应用中的安全隐患
 1. 如果 k 值泄露, 则任何知道该随机数值的人可以使用该随机数产生签名值恢复私钥
@@ -192,37 +190,42 @@ Koblitz 曲线在密码学文献中通常指代定义在特征为 2 的有限域
 ### EdDSA
 由上面的 ECDSA 签名机制应用中的安全隐患 说明不够安全， 虽然 自同态映射可以加速 ECDSA 签名验证过程，但也说明不是天然就是快。
 
-EdDSA (Edwards-curve Digital Signature Algorithm) 签名机制是这个研究方向上的成果. EdDSA 签名机制是定义在 Edwards25519 曲线上的变种 Schnorr 签名, 其设计初衷是在不牺牲安全性的前提下提升签名/验签速度, 并同时解决前述的 ECDSA 在应用方面存在的一些问题。
+EdDSA (Edwards-curve Digital Signature Algorithm) 签名机制是这个研究方向上的成果. 
 
-广泛使用的 EdDSA 签名机制是基于哈希函数 SHA-512 和椭圆曲线 Edwards25519 的 Ed25519 签名机制。 扭曲爱德华曲线 Edwards25519 双向有理等价于蒙哥马利曲线 Curve25519, 提供大约 128 比特的安全强度 (与 secp256k1 和 secp256r1 安全强度一致)。
+EdDSA 签名机制是定义在 **Edwards25519 曲线上的变种 Schnorr 签名**, 其设计初衷是在不牺牲安全性的前提下提升签名/验签速度, 并同时解决前述的 ECDSA 在应用方面存在的一些问题。
 
+广泛使用的 EdDSA 签名机制是基于哈希函数 SHA-512 和椭圆曲线 Edwards25519 的 Ed25519 签名机制。
+
+#### Curve25519 vs Edwards25519
 Curve25519 是 Bernstein7 在 2005 年为了提升 ECDH 密钥交换协议 (Elliptic Curve Diffie-Hellman Key Agreement) 效率而提出的蒙哥马利曲线
 
 在 2005 年的论文中 Curve25519 实际上用来指代 ECDH 密钥交换协议, 然而后来多使用 Curve25519 指代底层的椭圆曲线, 用 X25519 指代基于 Curve25519 的 ECDH 密钥协议
 
+**X25519 直接构建在 Curve25519** 之上, 而 **Ed25519 构建在 Edwards25519** 之上, 并且 Curve25519 和 Twisted-Edwards25519 是双向有理等价的。
+这是因为 ECDH 协议和 EdDSA 协议计算过程中重度依赖的点群运算不同, 这是为更好的适配的上层协议而刻意选择的中层的椭圆曲线点的表示的结果。
+
 Curve25519 是基于素数域 $\mathbb{F}_q, q = 2^{255} - 19$ 上的蒙哥马利曲线.
-Curve25519 曲线双向有理等价于 (Bira-tional Equivalent) 扭曲爱德华曲线 (Twisted Edwards Curves) Edwards25519. 而这条扭曲爱德华曲线则同构于 (Isomorphic) 爱德华曲线 (Edwards Curves) untwisted-Edwards25519。
 
-**X25519 直接构建在 Curve25519** 之上, 而 **Ed25519 构建在 Edwards25519** 之上, 并且 Curve25519 和 Twisted-Edwards25519 是双向有理等价的。 这是因为 ECDH 协议和 EdDSA 协议计算过程中重度依赖的点群运算不同, 这是为更好的适配的上层协议而刻意选择的中层的椭圆曲线点的表示的结果。
+Curve25519 曲线双向有理等价于 (Bira-tional Equivalent) 扭曲爱德华曲线 (Twisted Edwards Curves) Edwards25519. 而这条扭曲爱德华曲线则同构于 (Isomorphic) 爱德华曲线 (Edwards Curves) untwisted-Edwards25519, 提供大约 128 比特的安全强度 (与 secp256k1 和 secp256r1 安全强度一致)。
 
-#### 蒙哥马利曲线与爱德华曲线
-secp256k1/secp256r1 的 Short Weierstrass 形式的椭圆曲线表示: $y^2 = x^3 + ax + b$
+#### 椭圆曲线表示
+secp256k1/secp256r1 的 **Short Weierstrass** 形式的椭圆曲线表示: $y^2 = x^3 + ax + b$
 
-蒙哥马利曲线: $Y^2 = X^3 + AX^2 + X$
+**蒙哥马利曲线**: $Y^2 = X^3 + AX^2 + X$
 
-爱德华曲线: $x^2 + y^2 = 1  + d x^2 y^2$。
+**爱德华曲线**: $x^2 + y^2 = 1  + d x^2 y^2$。
+
 2008 年 Bernstein 等人指出有限域上只有一小部分椭圆曲线能够表示为爱德华曲线, 并进一步提出了更为广义的扭曲爱德华曲线 (Twisted Edwards Curves)。
 
-扭曲爱德华曲线: $-X^2 + Y^2 = 1 - d X^2 Y^2$
+**扭曲爱德华曲线**: $-X^2 + Y^2 = 1 - d X^2 Y^2$
 
-Short Weierstrass, 蒙哥马利曲线以及爱德华曲线都可以通过符号代换与广义 Weierstrass 曲线 $y^2 + a_1 xy + a_3 y = x^3 + a_2 x^2 + a_4 x + a_6$ 相互转换。
+Short Weierstrass, 蒙哥马利曲线以及爱德华曲线都可以通过符号代换与 **广义 Weierstrass 曲线** $y^2 + a_1 xy + a_3 y = x^3 + a_2 x^2 + a_4 x + a_6$ 相互转换。
 
 X25519 和 Ed25519 的做依赖的点的运算都可以转换成为 Weierstrass 曲线上的点运算, 然而使用特定的曲线形式, 对于高效安全的 X25519 或者 Ed25519 大有裨益. 以 twist-Edwards25519 为例, 其上的点的加法运算是完备的 (Complete)，并且单位元为点 (0, 1)， 简洁优雅。且构造椭圆曲线的加法点群时无需引入一个假想的无穷远点来满足群的条件。相比之下，Short Weierstrass 形式下椭圆曲线点加运算则需进行各种边界条件判断。
 
-Edwards25519 是定义在有限域 $\mathbb{F}_q, p = 2^{255} - 19$ 上选用参数 $a = -1, d = \frac{121665}{121666}$ 的扭曲爱德华曲线: $-x^2 + y^2 \equiv 1 - (121665/121666)x^2 y^2 \mod p$
+**Edwards25519** 是定义在有限域 $\mathbb{F}_q, p = 2^{255} - 19$ 上选用参数 $a = -1, d = \frac{121665}{121666}$ 的扭曲爱德华曲线: $-x^2 + y^2 \equiv 1 - (121665/121666)x^2 y^2 \mod p$
 
-EdDSA 签名机制的优势:
-
+#### EdDSA 签名机制的优势:
 + 在多种计算平台上都能达到较高的性能; 
 + 签名过程中不需要唯一的随机数,能够避免随机数引发的安全问题; 
 + 对于侧信道攻击等具有更好的免疫效果; 
