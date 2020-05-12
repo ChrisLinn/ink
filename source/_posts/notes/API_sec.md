@@ -89,7 +89,6 @@ end
 # Safe APIs replace direct ORM calls
 # These methods are usually not handwritten, but this shows the logic
 def safe_read_message(user, message_id)
-
     # Unsafe direct ORM call, not used outside of this method
     message = Message.unsafe_find(message_id)
 
