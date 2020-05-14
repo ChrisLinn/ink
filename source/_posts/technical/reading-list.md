@@ -42,6 +42,7 @@
     - https://github.com/zhenlohuang/awesome-distributed-systems
     - https://github.com/theanalyst/awesome-distributed-systems
     - https://github.com/heidi-ann/distributed-consensus-reading-list
+    - http://dancres.github.io/Pages/
     - https://github.com/alangibson/awesome-crdt
     - https://research.nccgroup.com/
     - https://github.com/SebastianElvis/distributed-computing-lecture-notes/
