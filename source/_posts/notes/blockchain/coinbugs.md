@@ -94,7 +94,7 @@ __所以实现 同等性 很难。__
 
 </br>
 
-如果真的升级:
+如果真的升级，升级方式包括:
 - Flagday cutover activation (User Activated Soft Fork, UASF)
 - Miner signaled activation (Miner Activated Soft Fork, MASF)
     + BIP 34, BIP 9
@@ -112,7 +112,11 @@ __所以实现 同等性 很难。__
 仔细对比 旧结构、旧函数 有没有在 新代码 中被使用，或 新代码 有没有影响 旧的规则。
 
 ### Netsplit via branch confusion
-WIP
+#### 原因
+处理临时分叉链时数据混了
+#### 例子
++ [Security alert [Implementation of BLOCKHASH instruction in C++ and Go clients can potentially cause consensus issue – Fixed. Please update.]](https://blog.ethereum.org/2015/10/22/security-alert-implementation-of-blockhash-instruction-in-c-and-go-clients-can-potentially-cause-consensus-issue-fixed-please-update/)
++ [Where can I learn more about BIP30; namely the exploit and the background discussion?](https://bitcoin.stackexchange.com/questions/5903/where-can-i-learn-more-about-bip30-namely-the-exploit-and-the-background-discus/5905)
 
 ## 不正确的时间戳验证
 WIP
