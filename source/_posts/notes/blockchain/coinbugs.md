@@ -119,16 +119,37 @@ __所以实现 同等性 很难。__
 + [Where can I learn more about BIP30; namely the exploit and the background discussion?](https://bitcoin.stackexchange.com/questions/5903/where-can-i-learn-more-about-bip30-namely-the-exploit-and-the-background-discus/5905)
 
 ## 不正确的时间戳验证
-WIP
++ 如果特意设为区块时间戳的 lower bound，在其将要过期的那一瞬间，可能被一些节点接受，但过一会才收到的别的节点会不接受，就会导致网络分割
+    * 另外一个很有意思的攻击是，如果正好取了 maximal possible value 那就可以导致后续区块无法被添加
++ [Time Warp attack](https://bitcointalk.org/index.php?topic=43692.msg521772#msg521772)
++ [Time Jacking attack](http://culubas.blogspot.com/2011/05/timejacking-bitcoin_802.html)
 
 ## 整型数溢出漏洞
-WIP
+略
 
 ## Merkle 树实现漏洞
 WIP
 
 ## 区块或交易处理时导致的存储资源耗尽
-WIP
++ [狂发孤儿块](https://bitcointalk.org/index.php?topic=23266.0)
+    * solved in [bbde1e99c89392](https://github.com/bitcoin/bitcoin/commit/bbde1e99c89392)
++ 狂挖上古区块的分叉
++ [July 2015 flood attack](https://en.bitcoin.it/wiki/July_2015_flood_attack)
++ [CVE-2012-3789](https://en.bitcoin.it/wiki/CVE-2012-3789)
 
 ## 区块或交易处理时导致的 CPU 资源耗尽
-WIP
++ [CVE-2012-3789](https://en.bitcoin.it/wiki/CVE-2012-3789#Patching_vulnerability_2)
++ [CVE-2010-5138](https://en.bitcoin.it/wiki/Common_Vulnerabilities_and_Exposures#CVE-2010-5138)
+    * [New Bitcoin vulnerability: A transaction that takes at least 3 minutes to verify](https://bitcointalk.org/?topic=140078)
++ [New quadratic delays in Bitcoin scripts](https://bitslog.com/2017/04/17/new-quadratic-delays-in-bitcoin-scripts/#comment-13027)
++ [A Bitcoin transaction that takes 5 hours to verify](https://bitslog.com/2017/01/08/a-bitcoin-transaction-that-takes-5-hours-to-verify/)
++ [Denial of Service via Algorithmic Complexity Attacks](https://www.cs.auckland.ac.nz/~mcw/Teaching/refs/misc/denial-of-service.pdf) 中也有很多例子
+
+## P2P 网络贷款耗尽/spam
++ [CVE-2013-4627](https://www.cvedetails.com/cve/CVE-2013-4627/)
+    * [Buggy CVE-2013-4627 patch, open new vectors of attack](https://bitcointalk.org/index.php?topic=258770.0;prev_next=prev)
+
+### Mitigations
++ 反序列化时丢弃垃圾数据
++ 消息大小限制
++ 消息在 relay 之前应该先反序列化加序列化再发送出去
