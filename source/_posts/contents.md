@@ -26,6 +26,8 @@ title: 目录
         + [API security / 安全 API 的设计模式](/notes/API_sec)
     - cryptography / 密码学
         - [E*DSA / 椭圆曲线签名](/notes/crypto/e_dsa)
+    - Blockchain / 区块链
+        + [Coinbugs / 区块链代码实现中的常见漏洞](/notes/blockchain/coinbugs)
     * [Hayek / 我读哈耶克](/notes/hayek)
     - [How to Ask a Good Question / 提问](/notes/how-to-ask-a-good-question)
     - [How to Procrastinate Properly / 拖延症](/life-hacks/how-to-procrastinate)
