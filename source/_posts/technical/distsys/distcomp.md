@@ -4,7 +4,19 @@
 ## Curriculum
 
 + https://github.com/SebastianElvis/sharding-bib
-+ MIT 6.852
++ https://github.com/ChrisLinn/ink/tree/master/source/_posts/assets/IntroductionToReliableAndSecur_Book_2011.pdf
++ http://read.pudn.com/downloads95/ebook/386159/Distributed.Algorithms.pdf
++ MIT
+    * https://learning-modules.mit.edu/materials/index.html?uuid=/course/6/fa15/6.852#materials
+        - 6.852
+        - Distributed Algorithms
+    * http://nil.lcs.mit.edu/6.S974/
+        - 6.S974
+        - Decentralized Applications
+        - 偏理论
+    * https://pdos.csail.mit.edu/6.824/
+        * 6.824
+        - distributed system
 + ethz
     * https://disco.ethz.ch/courses/ss04/distcomp/
     * https://disco.ethz.ch/courses/ss03/distcomp/
@@ -12,10 +24,22 @@
     * https://disco.ethz.ch/courses/distsys/
 + princeton
     * https://www.cs.princeton.edu/courses/archive/fall18/cos418/schedule.html
-+ MIT 6.S974
-    * theoretical
-+ MIT 6.824
-    * distributed system
++ CMU
+    * https://www.cs.cmu.edu/~dga/15-712/F14
++ EPFL
+    * https://dcl.epfl.ch/site/education/ca_2019
+        - Concurrent Algorithms
+    * https://dcl.epfl.ch/site/education/da
+        - Distributed Algorithms
++ Yale
+    * http://www.cs.yale.edu/homes/aspnes/classes/465/notes.pdf
+        * Distributed Computing
+- Duke
+    + https://sites.duke.edu/compsci590_04_f2019/schedule/
+        * Consensus Protocols in Distributed Computing and Blockchains
+- MPI-SWS
+    + http://courses.mpi-sws.org/ds-ws16/schedule.html
+        * Distributed Systems
 + talent-plan
 + https://github.com/aphyr/distsys-class
 
