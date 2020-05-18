@@ -43,7 +43,9 @@
     - https://github.com/theanalyst/awesome-distributed-systems
     - https://github.com/heidi-ann/distributed-consensus-reading-list
     - http://dancres.github.io/Pages/
+    - https://github.com/rxin/db-readings
     - https://github.com/alangibson/awesome-crdt
+    - https://github.com/pingcap/talent-plan
     - https://research.nccgroup.com/
     - https://github.com/SebastianElvis/distributed-computing-lecture-notes/
     - https://github.com/denisnazarov/awesome-crypto-trackers
