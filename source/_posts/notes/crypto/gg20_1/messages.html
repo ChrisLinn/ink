@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Exported Data</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <script src="js/script.js" type="text/javascript">
+
+  </script>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <div class="content">
+
+     <div class="text bold">
+KZen-Research 
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+12 May 2020
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6672">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+GK
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="12.05.2020 05:11:26">
+05:11
+       </div>
+
+       <div class="from_name">
+Georgios Konstantopoulos
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6638" onclick="return GoToMessage(6638)">this message</a>
+       </div>
+
+       <div class="text">
+<a href="https://t.me/sgoldfed">@sgoldfed</a> are you going to be open sourcingf the impl? looks super cool
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6673">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+S
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="12.05.2020 05:19:00">
+05:19
+       </div>
+
+       <div class="from_name">
+Steven Goldfeder 
+       </div>
+
+       <div class="text">
+I expect there to be high quality open source implementations soon (from <a href="https://t.me/Omershlo">@Omershlo</a> and likely others as well). I won’t be open sourcing mine directly since the code is not security audited and I’ve learned my lesson from past experiences that people tend to ignore even very prominent disclaimers. <br><br>The good news is that the protocol has a lot in common with gg18 (my implementation forked the Binance one)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6674">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="12.05.2020 05:27:21">
+05:27
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6673" onclick="return GoToMessage(6673)">this message</a>
+       </div>
+
+       <div class="text">
+Btw, I might be mistaken but I never encountered an implementation of MPC protocol with identifiable abort. GG20 is a new and challenging design space for us. Makes me happy 🙂
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6675">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+vh
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="12.05.2020 05:28:50">
+05:28
+       </div>
+
+       <div class="from_name">
+vitaliy hnatyk
+       </div>
+
+       <div class="text">
+and hopefully as IoT friendly as gg18 is😊
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6676">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+S
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="12.05.2020 05:45:40">
+05:45
+       </div>
+
+       <div class="from_name">
+Steven Goldfeder 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6674" onclick="return GoToMessage(6674)">this message</a>
+       </div>
+
+       <div class="text">
+Most of the generic techniques that I’m aware of are not very efficient so makes sense!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6677">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="12.05.2020 05:52:29">
+05:52
+       </div>
+
+       <div class="text">
+To answer a few questions I’ve gotten privately:<br><br>Our most recent work on threshold DSA is on eprint, although it has been circulating in the community since February. We have two main results: one-round online signing, and identifiable aborts. The latter allows the parties to identify (and &quot;punish&quot;) the parties responsible for a DoS attack (which are inevitable in protocols with honest minority). None of the previous proposals achieve that. The one-round online techniques are similar to the ones in the recent paper of Canetti et al (which does not achieve identifiable aborts) -- main difference is that we focus on minimizing computation and identifiable abort while they focus on minimizing rounds and proactive security. Both papers start from our previous work on threshold DSA (CCS&apos;18) and we are excited to see that work spawning so much interesting research. 
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6678">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DL
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="12.05.2020 14:14:53">
+14:14
+       </div>
+
+       <div class="from_name">
+Daniel Lehnberg
+       </div>
+
+       <div class="text">
+Very exciting developments!
+       </div>
+
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </body>
+
+</html>
