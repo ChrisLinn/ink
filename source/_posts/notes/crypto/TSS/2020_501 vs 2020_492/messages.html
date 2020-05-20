@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Exported Data</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <script src="js/script.js" type="text/javascript">
+
+  </script>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <div class="content">
+
+     <div class="text bold">
+KZen-Research 
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+6 May 2020
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6573">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+PC
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2020 02:32:50">
+02:32
+       </div>
+
+       <div class="from_name">
+PaulCSP@ Cryptospherium.com
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6569" onclick="return GoToMessage(6569)">this message</a>
+       </div>
+
+       <div class="text">
+Do you mean larger set? Or difficult to find?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6574">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2020 02:53:49">
+02:53
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="text">
+Initial analysis on the two new threshold ECDSA papers that came out last week: (1) Fast Threshold ECDSA with Honest Majority (<a href="https://eprint.iacr.org/2020/501.pdf">https://eprint.iacr.org/2020/501.pdf</a>) and (2) UC Non-Interactive, Proactive, Threshold ECDSA (<a href="https://eprint.iacr.org/2020/492.pdf">https://eprint.iacr.org/2020/492.pdf</a>)<br><br>- Both papers are proving security in the UC framework. This is actually not a first for threshold ECDSA (and not a second).  <br>- (1) works in the honest majority setting (like 3 out of 7, 4 out of 9 and so on). <br>- (1) works best in the pre-processing model (non interactive) MPC with abort. <br>- (1) nevertheless there is also a full online version and fairness can be enabled (because of honest majority it’s possible). <br>- (1) UC security. They built a dedicated ideal functionality, so practically there is no need for security assumptions at all.  This is the best security so far for threshold ECDSA<br>- (1) I recommend reading the proofs in the appendix. The protocol is extremely simple and the paper describes the proofs like in a text book, really great for studying how proof works. <br>- (1) To conclude: the simplest protocol so far, also the fastest, caveat - honest majority. <br>- (2) wow<br>- (2) In its essence, after you peel off 50 pages, there is a nice idea on how to improve GG signing by adding ZKP basically on everything (this is called GMW compiling ). <br>- (2) now back to the 50 pages. As you know Cannetti is the inventor of UC. One of the most famous UC ideal functionality is of a digital signature, which looks nothing like digital signature but models precisely what digital signature should be. In this paper Cannetti et al. are providing a threshold variant of this F_sig and build a protocol that UC-realize this functionality. This is brilliant.<br>- (2) is also non-interactive <br>- (2) also provides a built in (yet expensive) way to rotate the secret shares. <br>- (2) I would argue that the distance of making this protocol accountable is not far at all<br>- (2) The downside: heavy computation is required. Heavier than GG.<br>- (2) Security assumptions is like GG (Pailller, RSA, ECDSA), however, the proof in completely different and on top of being UC which means the threshold ECDSA will work in a large system, GG security proof was not tight (same way as Lindell 2P ECDSA)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6575">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+NM
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2020 03:08:59">
+03:08
+       </div>
+
+       <div class="from_name">
+Nik Mak
+       </div>
+
+       <div class="text">
+I just want two specify that although (2) is more expensive than G&amp;G (about twice as expensive) it&apos;s also less than half the rounds in the interactive variant.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6576">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2020 03:10:36">
+03:10
+       </div>
+
+       <div class="text">
+And latency is arguably the most time consuming resource, for many application
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6577">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2020 03:10:58">
+03:10
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="text">
+I completely agree.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6578">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+u
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2020 03:13:07">
+03:13
+       </div>
+
+       <div class="from_name">
+udi 
+       </div>
+
+       <div class="text">
+Thanks for a very nice summary 😇
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6579">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic4" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AM
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2020 03:17:04">
+03:17
+       </div>
+
+       <div class="from_name">
+Anish Mohammed
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6574" onclick="return GoToMessage(6574)">this message</a>
+       </div>
+
+       <div class="text">
+thanks very much, its a great summary
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6580">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+PC
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2020 03:24:44">
+03:24
+       </div>
+
+       <div class="from_name">
+PaulCSP@ Cryptospherium.com
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6574" onclick="return GoToMessage(6574)">this message</a>
+       </div>
+
+       <div class="text">
+Are these two  applicable to real world usage? For (1) and (2)<br>Q: for (1) Are there honesty between criminals as thief,hackers that exploded the assumption that Honesty will prevail? Ex: they can gather 5/7 signatures by forced, etc so how to overcome that?<br>Q for (2) : how can security be robust when it is to slow and costly that usability will be obsolete by that time?<br>Is it possible to provide some good use case please?<br><br>Thank you for excellent summary :)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6581">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2020 04:12:56">
+04:12
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6580" onclick="return GoToMessage(6580)">this message</a>
+       </div>
+
+       <div class="text">
+For (1) the threshold assumption for honest majority says that at least n/2+1 parties are honest. <br>For (2) it is known  that threshold ecdsa can work for real world use cases like key management for the blockchain. In fact , the mentioned protocol is actually an improvement over existing ones
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6582">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+u
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2020 04:19:14">
+04:19
+       </div>
+
+       <div class="from_name">
+udi 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6580" onclick="return GoToMessage(6580)">this message</a>
+       </div>
+
+       <div class="text">
+You can see the approximated running time of (2) in the appendix (naive implementation: (1 sec signing, 3 sec refresh etc). it&apos;s very reasonable times for a cryptocurrency wallet under regular usage, though maybe not high-frequency signing
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6583">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+PC
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2020 04:25:48">
+04:25
+       </div>
+
+       <div class="from_name">
+PaulCSP@ Cryptospherium.com
+       </div>
+
+       <div class="text">
+Thank you sirs
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6584">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+CC
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2020 09:18:53">
+09:18
+       </div>
+
+       <div class="from_name">
+CY Chuang
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6574" onclick="return GoToMessage(6574)">this message</a>
+       </div>
+
+       <div class="text">
+👍
+       </div>
+
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </body>
+
+</html>
