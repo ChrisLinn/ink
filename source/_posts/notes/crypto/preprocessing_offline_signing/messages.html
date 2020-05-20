@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Exported Data</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <script src="js/script.js" type="text/javascript">
+
+  </script>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <div class="content">
+
+     <div class="text bold">
+KZen-Research 
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+3 May 2020
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6482">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2020 13:22:57">
+13:22
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="text">
+Square grants - they have some relevant ones for this group (Rust, new key management for bitcoin) <a href="https://medium.com/@squarecrypto/square-crypto-grants-for-everybody-93d614f5fd0e">https://medium.com/@squarecrypto/square-crypto-grants-for-everybody-93d614f5fd0e</a> <br>If relevant to someone I can help get in touch with Steve
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6483">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+J
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2020 13:23:51">
+13:23
+       </div>
+
+       <div class="from_name">
+JP 
+       </div>
+
+       <div class="text">
+<a href="https://t.me/Omershlo">@Omershlo</a> do you think is possible to create an accumulated threshold scheme (with no trusted dealer) that is compatible with ECDSA? Or is the one already?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6484">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2020 13:28:46">
+13:28
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="text">
+<a href="https://t.me/jpthorbjornsen">@jpthorbjornsen</a> what is accumulated threshold scheme ?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6485">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+J
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2020 13:29:47">
+13:29
+       </div>
+
+       <div class="from_name">
+JP 
+       </div>
+
+       <div class="text">
+Ie, instead of requiring interactivity (such as GG18), it is more like BLS, where part-signatures can be submitted asynchronous and then summed once the threshold is attained in order to spend
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6486">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2020 13:33:24">
+13:33
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="text">
+If you work in a model with preprocessing  (parties can work offline without knowing the message)- it is possible to have 1 round signature when the message is known. There are few papers that show it. Actually the last 3 papers on threshold ECDSA makes it possible
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6487">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+J
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2020 13:41:39">
+13:41
+       </div>
+
+       <div class="from_name">
+JP 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6486" onclick="return GoToMessage(6486)">this message</a>
+       </div>
+
+       <div class="text">
+thanks. This makes sense. Parties present to sign the final round and it requires far less communication overhead. Those papers - shall I just scroll up this chat to find?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6488">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2020 13:42:31">
+13:42
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6457" onclick="return GoToMessage(6457)">this message</a>
+       </div>
+
+       <div class="text">
+got one
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6489">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2020 13:42:45">
+13:42
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6487" onclick="return GoToMessage(6487)">this message</a>
+       </div>
+
+       <div class="text">
+Exactly, but this model is not good for all use cases (for example it is not good for wallets)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6490">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2020 13:44:05">
+13:44
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6487" onclick="return GoToMessage(6487)">this message</a>
+       </div>
+
+       <div class="text">
+<a href="https://eprint.iacr.org/2019/889">https://eprint.iacr.org/2019/889</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6491">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+CL
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2020 13:53:21">
+13:53
+       </div>
+
+       <div class="from_name">
+Chris Lin
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6489" onclick="return GoToMessage(6489)">this message</a>
+       </div>
+
+       <div class="text">
+cool.  would like to know more about why it&apos;s not suitable for wallets.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6492">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2020 13:57:46">
+13:57
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6491" onclick="return GoToMessage(6491)">this message</a>
+       </div>
+
+       <div class="text">
+Because users in a wallet come and go , you cannot assume they will stick enough time  to run the preprocessing or if they do that they actually going to make a transaction. <br><br>Claudio paper in the link above and also the paper JP pointed to use a setup which makes more sense: servers that are always online and run preprocessing all the time, then when they get a request on a message to sign from a client , they will use the offline materiel and therefore need only one round
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6493">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+CL
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2020 13:58:48">
+13:58
+       </div>
+
+       <div class="from_name">
+Chris Lin
+       </div>
+
+       <div class="text">
+thx!👌🏻👌🏻👌🏻
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6494">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+KG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2020 13:59:31">
+13:59
+       </div>
+
+       <div class="from_name">
+Kobi Gurkan
+       </div>
+
+       <div class="text">
+<a href="https://t.me/Omershlo">@Omershlo</a> can you clarify what this preprocessing includes? is it about being the same signers? or is it usable only for N messages?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6495">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2020 14:06:04">
+14:06
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6494" onclick="return GoToMessage(6494)">this message</a>
+       </div>
+
+       <div class="text">
+It is a protocol the signers can run without knowing the message to be sign, it works only with the same signers (threshold of them) and a single message.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6496">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+u
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2020 15:20:47">
+15:20
+       </div>
+
+       <div class="from_name">
+udi 
+       </div>
+
+       <div class="text">
+Under reasonable assumptions, you can concurrently preprocess for many future messages
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6497">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+KG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2020 15:21:28">
+15:21
+       </div>
+
+       <div class="from_name">
+Kobi Gurkan
+       </div>
+
+       <div class="text">
+ok cool, thanks both!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6498">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2020 15:21:32">
+15:21
+       </div>
+
+       <div class="text">
+but it’s preprocessing per message
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6499">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+u
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2020 15:22:41">
+15:22
+       </div>
+
+       <div class="from_name">
+udi 
+       </div>
+
+       <div class="text">
+Yes, and per each authorized t/n signers set
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6500">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+GK
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2020 15:24:05">
+15:24
+       </div>
+
+       <div class="from_name">
+Georgios Konstantopoulos
+       </div>
+
+       <div class="text">
+I guess the preprocessing means pre computing the nonce per message
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6501">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+u
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2020 15:24:15">
+15:24
+       </div>
+
+       <div class="from_name">
+udi 
+       </div>
+
+       <div class="text">
+Sharing preprocess data between sets could lead to devastating results
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6502">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+GK
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2020 15:24:18">
+15:24
+       </div>
+
+       <div class="from_name">
+Georgios Konstantopoulos
+       </div>
+
+       <div class="text">
+Which at its core is what makes tecdsa and others interactive
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6503">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+KG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2020 15:30:56">
+15:30
+       </div>
+
+       <div class="from_name">
+Kobi Gurkan
+       </div>
+
+       <div class="text">
+ah I see
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6504">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+GK
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2020 15:31:42">
+15:31
+       </div>
+
+       <div class="from_name">
+Georgios Konstantopoulos
+       </div>
+
+       <div class="text">
+You&apos;d have to commit to your share of the nonce tho
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6505">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2020 15:32:43">
+15:32
+       </div>
+
+       <div class="text">
+I think the general direction of non interactive tecdsa/Schnorr involves computing a nonce locally and binding yourself to it without revealing it
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6506">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+KG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2020 15:37:39">
+15:37
+       </div>
+
+       <div class="from_name">
+Kobi Gurkan
+       </div>
+
+       <div class="text">
+cool thanks <a href="https://t.me/gakonst">@gakonst</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6507">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+u
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2020 15:53:24">
+15:53
+       </div>
+
+       <div class="from_name">
+udi 
+       </div>
+
+       <div class="text">
+Correct, but it&apos;s not just the nonce, but all relevant data to compute a valid sig
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message6508">
+
+      <div class="body details">
+top invited top
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </body>
+
+</html>
