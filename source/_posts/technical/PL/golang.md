@@ -14,6 +14,8 @@
 + https://github.com/jakescript/go-bible
 + https://github.com/dgryski/go-perfbook
 + __https://github.com/yangwenmai/learning-golang__
++ https://github.com/inancgumus/learngo
++ https://github.com/hantmac/Mastering_Go_Second_Edition_Zh_CN
 + https://github.com/hoanhan101/ultimate-go
 + https://github.com/quii/learn-go-with-tests
 + https://github.com/qichengzx/gopher-reading-list-zh_CN
