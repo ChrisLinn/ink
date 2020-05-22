@@ -17,6 +17,8 @@
     * https://pdos.csail.mit.edu/6.824/
         * 6.824
         - distributed system
+        - https://github.com/chaozh/MIT-6.824
+        - https://github.com/feixiao/Distributed-Systems
 + ethz
     * https://disco.ethz.ch/courses/ss04/distcomp/
     * https://disco.ethz.ch/courses/ss03/distcomp/
