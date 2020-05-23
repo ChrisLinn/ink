@@ -71,8 +71,6 @@
 + teivah / golang-good-code-bad-code
 + https://github.com/coldnight/go-memory-allocator-visual-guide
 + https://github.com/Workiva/go-datastructures
-+ feixiao / Distributed-Systems
-+ chaozh / MIT-6.824
 + https://github.com/avelino/awesome-go
 + https://github.com/jobbole/awesome-go-cn
 + https://github.com/astaxie/build-web-application-with-golang
@@ -88,6 +86,7 @@
 + https://github.com/teh-cmc/go-internals
 + https://github.com/changkun/go-under-the-hood
 + https://github.com/gobyexample-cn/gobyexample
++ https://github.com/geektutu/7days-golang
 
 
 ## CSP 并发模型, communicating sequential processes

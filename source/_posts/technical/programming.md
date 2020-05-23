@@ -158,6 +158,7 @@ title: 如何学习编程
         - 场景考虑是否全面
         - 是否便于别人理解、上手
     * https://github.com/shieldfy/API-Security-Checklist
+    * https://github.com/smodnix/31-days-of-API-Security-Tips
     * [API 杂谈](https://mp.weixin.qq.com/s?__biz=MzA4ODgwNjk1MQ==&mid=2653788337&idx=1&sn=96f41ec3de2a622e7bb1746f744a1305&chksm=8bfdbbf9bc8a32ef4b86b23fe8ca77a3ed8dbbd73501a2f2dd4783347bd664a084778cb0378e)
         - 有时候我们为了支持某一个功能，似乎不得不增加一个很违反设计的接口；而有时候我们为了保证 API 绝对规范，似乎又不得不放弃对某一些功能的直接支持，因此功能只能通过迭代调用或 client 端预处理来实现。
             + 这种设计上的取舍，通常只有列出所有可行的方案，从简单的设计到繁杂的设计，然后通过分析各种使用实例的频率和使用某种设计时的复杂度，从实际的系统需求入手，尽可能让常用的功能得到最简单直接的支持，而一定程度上 “牺牲” 一些极少用到的功能。反复推敲系统场景，尽可能取得一个合理的折衷。
