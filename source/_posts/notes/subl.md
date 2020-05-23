@@ -219,8 +219,15 @@ You can also take a look at [my __Sublime Text 3__ config](https://bitbucket.org
 - spell check
     + F6
 
-# Latex formula
+# Latex
+## Latex formula
 + http://latex.codecogs.com/
 + https://www.codecogs.com/latex/eqneditor.php
 + http://www.sciweavers.org/free-online-latex-equation-editor
 + http://www.sciweavers.org/tex2img.php?eq=1%2Bsin%28mc%5E2%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=
+
+## Latex symbol
++ https://www.caam.rice.edu/~heinken/latex/symbols.pdf
+
+## Latex table
++ https://www.tablesgenerator.com/
