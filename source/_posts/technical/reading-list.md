@@ -35,6 +35,7 @@
     - https://distsys.substack.com/
     - https://decentralizedthoughts.github.io/
     - https://blog.cryptographyengineering.com/
+    - https://ethresear.ch/u/sebastianelvis/summary
     - https://www.the-paper-trail.org/
     - https://www.lightbluetouchpaper.org/
     * https://medium.com/consensys-diligence
