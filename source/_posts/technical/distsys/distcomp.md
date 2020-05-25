@@ -111,3 +111,5 @@ bracha 存在的问题是 scalability: 对于 transactions of size B
     * https://www.sciencedirect.com/science/article/pii/0890540190900149
 + Principles of Eventual Consistency
     + https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/final-printversion-10-5-14.pdf
++ 'Eventual' is earlier than 'immediate', D Dolev - ‎1982
++ Families of consensus algorithms, Amotz Bar-Noy, Danny Dolev - 1988
