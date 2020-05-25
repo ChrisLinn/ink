@@ -4,7 +4,7 @@ title: Learn You a Distributed Computing for Great Good!
 
 # Learn You a Distributed Computing for Great Good!
 
-Revision v0.10
+Revision v0.11
 
 这份笔记大部分是 [我](https://chrislinn.ink/) 从 [韩神](https://github.com/SebastianElvis) 和 [邱巨](https://priewienv.me/) 处抄袭、总结或与他们请教而来；如果有任何错误，那肯定是我搞错了，与大腿们无关。
 
@@ -49,33 +49,6 @@ Revision v0.10
                 * Linearizability for read and write 是 “atomic consistency”, 是 __CAP 中的 C__
 + Availability 可用性
 + Partition tolerance 分区容错性
-
-## FLP Impossibility
-
-[论文](https://groups.csail.mit.edu/tds/papers/Lynch/jacm85.pdf)中提到:
-
-> In an asynchronous model with crash failures, it is impossible to find a consensus algorithm that would satisfy safety, liveness and fault tolerance.
-
-在异步通信场景，即使只有一个进程失败，也没有任何算法能保证非失败进程达到 safety & liveness，也就是说没法达到共识 (consensus problem cannot be solved)。
-
-这是因为想要达到 fault tolerance 就要能可靠地检测 failure，但是在异步网络中这是不可能的（就算只检测一个节点失败）。
-
-### FLP 基于的假设
-
-+ 异步
-    * 没有时钟、不能时间同步、不能使用超时、不能探测失败、消息可任意延迟、消息可乱序
-+ 通信健壮
-    * 只要进程非失败，消息虽会被无限延迟，但最终会被送达；并且消息仅会被送达一次（无重复）
-+ fail-stop
-    * 只有 crash failure 宕机错误 
-    * 但其实 omission failure 和 Byzantine failure 也包含了 crash failure，所以对于 omission failure 和 Byzantine failure 也适用
-+ 失败进程数量最多只有一个
-
-### 与 Paxos 矛盾吗
-
-Paxos 算法的场景比 FLP 的系统模型还要松散：异步通信，允许消息丢失（通信不健壮）。Paxos 中存在活锁，理论上的活锁会导致 Paxos 算法无法满足 Termination 属性，也就不算一个正确的一致性算法。Lamport 自己也承认这一点，并建议通过 Leader 来代替 Paxos 中的 Proposer，而 Leader 则通过随机或其他方式来选定（Paxos 中假如随机过程会极大降低 FLP 发生的概率）。但仍不影响 Paxos 被认为最伟大最牛的一致性算法。
-
-具体来说，Paxos 在 partially synchronous 下是正确的。在 async 下则不满足 termination。不过一旦网络重新恢复 partilally sync，Paxos 又能 terminate。([WDAG97](https://groups.csail.mit.edu/tds/papers/DePrisco/WDAG97.pdf))
 
 ## Protocols
 
@@ -185,6 +158,7 @@ __TODO:__
     * 1/2 in sync, 1/3 in async?
 + PBFT paper section 3
 
+
 ## Network Assumption
 
 + Synchrony
@@ -250,7 +224,6 @@ PoW 中出块其实就是 block producer 的 election, 通过 PoW 使 block prod
 PoW 其实只是 membership 的门槛，  nakamoto consensus 除了 PoW 其实还和 longest chain 紧密相关。（Assume honest 节点占大多数，于是他们出块更快，更容易占据更长链。）
 
 
-
 ## Consensus
 
 * [苏黎世理工 课程讲义](https://disco.ethz.ch/courses/podc_allstars/lecture/chapter16.pdf)
@@ -295,6 +268,45 @@ PoW 其实只是 membership 的门槛，  nakamoto consensus 除了 PoW 其实�
     + $(\mu, k)$-Chain quality (Fairness)
         * The proportion of blocks in any $k$-long subsequence produced by the adversary is less than $\mu \cdot k$, where $\mu$ is the portion of mining power controlled by the adversary.
         * 以相对于 $T$ 压倒性的概率，任意诚实参与者的链中的连续  $T$ 个消息中，诚实参与者提供的消息所占比例至少为 $\mu$，称 $\mu$ 为该协议的 chain quality 。
+
+
+## 一些结论
+### FLP Impossibility
+
+[论文](https://groups.csail.mit.edu/tds/papers/Lynch/jacm85.pdf)中提到:
+
+> In an asynchronous model with crash failures, it is impossible to find a consensus algorithm that would satisfy safety, liveness and fault tolerance.
+
+在异步通信场景，即使只有一个进程失败，也没有任何算法能保证非失败进程达到 safety & liveness，也就是说没法达到共识 (consensus problem cannot be solved)。
+
+这是因为想要达到 fault tolerance 就要能可靠地检测 failure，但是在异步网络中这是不可能的（就算只检测一个节点失败）。
+
+#### FLP 基于的假设
+
++ 异步
+    * 没有时钟、不能时间同步、不能使用超时、不能探测失败、消息可任意延迟、消息可乱序
++ 通信健壮
+    * 只要进程非失败，消息虽会被无限延迟，但最终会被送达；并且消息仅会被送达一次（无重复）
++ fail-stop
+    * 只有 crash failure 宕机错误 
+    * 但其实 omission failure 和 Byzantine failure 也包含了 crash failure，所以对于 omission failure 和 Byzantine failure 也适用
++ 失败进程数量最多只有一个
+
+#### 与 Paxos 矛盾吗
+
+Paxos 算法的场景比 FLP 的系统模型还要松散：异步通信，允许消息丢失（通信不健壮）。Paxos 中存在活锁，理论上的活锁会导致 Paxos 算法无法满足 Termination 属性，也就不算一个正确的一致性算法。Lamport 自己也承认这一点，并建议通过 Leader 来代替 Paxos 中的 Proposer，而 Leader 则通过随机或其他方式来选定（Paxos 中假如随机过程会极大降低 FLP 发生的概率）。但仍不影响 Paxos 被认为最伟大最牛的一致性算法。
+
+具体来说，Paxos 在 partially synchronous 下是正确的。在 async 下则不满足 termination。不过一旦网络重新恢复 partilally sync，Paxos 又能 terminate。[[WDAG97]](https://groups.csail.mit.edu/tds/papers/DePrisco/WDAG97.pdf)<!-- Revisiting the Paxos algorithm -->
+
+### LF82
+
+同步共识如果有 f 个节点崩溃就需要至少执行 $f+1$ 轮 [[LF82]](https://lamport.azurewebsites.net/pubs/trans.pdf)<!-- Byzantine Generals and Transaction Commit Protocols -->
+
+### DR82? DR85?
+
++ deterministic consensus needs $\Omega(f^2)$ (也就是 $O(f^2)$ ?) messages [[DR85]](https://dl.acm.org/doi/pdf/10.1145/2455.214112)<!-- Bounds on information exchange for Byzantine agreement -->
++ __TODO:__ Cannot solve Broadcast against omission adversary with just $(f/2)^2$ messages
+
 
 ## Propagation
 
