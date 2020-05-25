@@ -104,3 +104,10 @@ bracha 存在的问题是 scalability: 对于 transactions of size B
 + https://www.jianshu.com/p/ae462a2d49a8
 + https://studygolang.com/articles/14731
 + http://blog.betacat.io/post/raft-implementation-in-etcd/
+
+
+### Misc
++ Knowledge and common knowledge in a Byzantine environment: Crash failures
+    * https://www.sciencedirect.com/science/article/pii/0890540190900149
++ Principles of Eventual Consistency
+    + https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/final-printversion-10-5-14.pdf
