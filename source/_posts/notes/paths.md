@@ -111,8 +111,11 @@
     + solidity tools
 + [Roger Wattenhofer](https://disco.ethz.ch/members/wroger)
 + [Emin Gün Sirer](http://www.cs.cornell.edu/people/egs/)
++ Ren Ling
+    * 他的 paper 都好想好好读读
 + [Ittay Eyal](http://webee.technion.ac.il/people/ittay/)
 + Ittai Abraham
++ [Elaine Shi](http://elaineshi.com/)
 + Lindel
 + Oded
 + Dan Boneh
@@ -123,6 +126,7 @@
 + Rachid Guerraoui
 + [Ben Ficsh](https://sites.google.com/site/benafisch/)
 + [Benedikt Bünz](https://crypto.stanford.edu/~buenz/)
++ [Pratyush Mishra](http://people.eecs.berkeley.edu/~pratyushmishra)
 + heming cui
 + junfeng yang
 + Udaya Parampalli
