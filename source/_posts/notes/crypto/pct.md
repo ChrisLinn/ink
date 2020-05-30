@@ -7,10 +7,8 @@
 + https://www.apple.com/covid19/contacttracing
 + https://github.com/DP-3T/documents
 + https://github.com/degregat/ppdt
-+ PACT: Privacy-Sensitive Protocols And Mechanisms for Mobile Contact Tracing
-    * https://arxiv.org/pdf/2004.03544.pdf
-+ Pandemic Contact Tracing Apps: DP-3T, PEPP-PT NTK, and ROBERT from a Privacy Perspective
-    * https://eprint.iacr.org/2020/489
++ [PACT: Privacy-Sensitive Protocols And Mechanisms for Mobile Contact Tracing](https://arxiv.org/pdf/2004.03544.pdf)
++ [Pandemic Contact Tracing Apps: DP-3T, PEPP-PT NTK, and ROBERT from a Privacy Perspective](https://eprint.iacr.org/2020/489)
 + [Decentralized Privacy-Preserving Proximity Tracing](https://arxiv.org/abs/2005.12273)
 + https://blog.cryptographyengineering.com/2019/06/05/how-does-apple-privately-find-your-offline-devices/
 + https://www.lightbluetouchpaper.org/2020/04/12/contact-tracing-in-the-real-world/
