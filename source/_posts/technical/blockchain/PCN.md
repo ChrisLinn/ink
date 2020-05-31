@@ -8,6 +8,22 @@
     - 缺点是只允许有限数量的状态更新
         + layer 1 和用户都需要付出更高的成本，因为通道必须定时关闭和开启。
 * Decker-Russell-Osuntokun 结构的 eltoo
+    - doesn't need to store all old state but just the current state
     - Replace by Version
     - 需要在比特币中引入一个新的操作码 SIGHASH_NOINPUT
+        + will ignore the prevout
+    - 有些开发者诟病
+        + channel breaches are not discouraged without penality
+
+## Watch Tower
+
+## Scriptless Scripts / 2 party ECDSA
+Schnorr 签名也可达到这个效果，所以 Scriptless Scripts 很可能不会被实现???
+
+用了 homomorphic Paillier encryption
+
+## Schnorr Signatures / Musig
++ Linear signature Scheme
++ ability to hide complex scripts / contracts
+
 
