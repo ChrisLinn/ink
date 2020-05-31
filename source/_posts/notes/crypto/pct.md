@@ -5,6 +5,7 @@
 + https://mobile.twitter.com/moxie/status/1248707315626201088
 + https://sunblaze-ucb.github.io/privacy/papers/epione.pdf
 + https://www.apple.com/covid19/contacttracing
++ https://www.cdc.gov/coronavirus/2019-ncov/php/open-america/contact-tracing-resources.html
 + https://github.com/DP-3T/documents
 + https://github.com/degregat/ppdt
 + [PACT: Privacy-Sensitive Protocols And Mechanisms for Mobile Contact Tracing](https://arxiv.org/pdf/2004.03544.pdf)
