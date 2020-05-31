@@ -5,6 +5,7 @@
 + taxonomy
 + novel
 + trivial
++ a priori
 + simple yet elusive until now
 + trivial?
 + without loss of generality
