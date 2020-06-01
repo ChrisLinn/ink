@@ -170,3 +170,4 @@ application_key = HMAC-SHA256(key=master_key, "Social Graph Encryption")
     + application_key: 可以根据不同的 app 从 master_key 派生
     + `r2` is random, we can regenerate others but we will need to restore `r2` 
         * 用 `auth_key` 加密存储 `c2`
++ https://dchest.com/2020/05/25/improving-storage-of-password-encrypted-secrets-in-end-to-end-encrypted-apps/
