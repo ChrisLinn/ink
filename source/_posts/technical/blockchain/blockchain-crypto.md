@@ -36,6 +36,7 @@ https://eprint.iacr.org/2018/1188/20181210:211743 uses some basic group theory t
     * 也可以用
         * RSA group, trusted setup
         * class group, trusted setup
+            - 亦可用于 zkp???
 
 ## PCD
 + https://www.michaelstraka.com/posts/recursivesnarks/
