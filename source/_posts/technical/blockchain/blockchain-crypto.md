@@ -17,16 +17,11 @@ stealth address 这些则和很多相关，暂时不感兴趣。
 
 
 ## class group
-https://www.michaelstraka.com/posts/classgroups/
-
 https://hackmd.io/@olivierbbb/r10VpNPZU
 
 https://github.com/Chia-Network/vdf-competition/blob/master/classgroups.pdf
 
 https://blog.goodaudience.com/deep-dive-on-rsa-accumulators-230bc84144d9
-
-https://crypto.stanford.edu/pbc/notes/
-
 
 
 https://eprint.iacr.org/2018/1188/20181210:211743 uses some basic group theory to build a dynamic accumulator:
