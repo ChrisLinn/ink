@@ -8,7 +8,7 @@ also see:
 + https://github.com/Chia-Network/vdf-competition/blob/master/classgroups.pdf
 + https://blog.goodaudience.com/deep-dive-on-rsa-accumulators-230bc84144d9?gi=b5fa21147b56
 
-我觉得主要就是 VDF, accumulator, polynomial commitments, zkp, PCD 这些。zkp 所属其实又比较复杂，PCD 中可能使用 ZKP。
+我觉得主要就是 VDF, accumulator, polynomial commitments, zkp, PCD 这些。zkp 所属其实又比较复杂，PCD 和 polynomial commitments 中可能使用 ZKP。
 
 然后里面又有基本工具:
 
