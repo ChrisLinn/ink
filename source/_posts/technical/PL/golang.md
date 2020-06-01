@@ -87,6 +87,7 @@
 + https://github.com/changkun/go-under-the-hood
 + https://github.com/gobyexample-cn/gobyexample
 + https://github.com/geektutu/7days-golang
++ http://github.com/shomali11/go-interview
 
 
 ## CSP 并发模型, communicating sequential processes
