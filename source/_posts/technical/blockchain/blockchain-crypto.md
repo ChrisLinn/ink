@@ -27,5 +27,14 @@ https://blog.goodaudience.com/deep-dive-on-rsa-accumulators-230bc84144d9
 
 https://crypto.stanford.edu/pbc/notes/
 
+
+
+https://eprint.iacr.org/2018/1188/20181210:211743 uses some basic group theory to build a dynamic accumulator:
++ create a vector commitment data structure analogous to Merkle trees (O(logn) )
++ constant-sized inclusion proofs
+
 ## PCD
-https://www.michaelstraka.com/posts/recursivesnarks/
++ https://www.michaelstraka.com/posts/recursivesnarks/
++ https://eprint.iacr.org/2020/499
+
+
