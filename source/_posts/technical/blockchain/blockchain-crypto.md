@@ -14,3 +14,18 @@ schnorr signature (我感觉我甚至想写一篇 scriptless script is doom...) 
 Private_information_retrieval 这个亦有意义，涉及 intersection、交易撮合？
 
 stealth address 这些则和很多相关，暂时不感兴趣。
+
+
+## class group
+https://www.michaelstraka.com/posts/classgroups/
+
+https://hackmd.io/@olivierbbb/r10VpNPZU
+
+https://github.com/Chia-Network/vdf-competition/blob/master/classgroups.pdf
+
+https://blog.goodaudience.com/deep-dive-on-rsa-accumulators-230bc84144d9
+
+https://crypto.stanford.edu/pbc/notes/
+
+## PCD
+https://www.michaelstraka.com/posts/recursivesnarks/
