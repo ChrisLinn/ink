@@ -9,7 +9,7 @@ also see https://ethresear.ch/t/when-do-we-need-cryptography-in-blockchain-space
 + RSA, class group, GUO
 + polynomial commitments?
 
-schnorr signature 感觉也挺有意义, 衍生到各种 DSA 相关。ZEC 他们搞了一堆。
+schnorr signature (我感觉我甚至想写一篇 scriptless script is doom...) 感觉也挺有意义, 衍生到各种 DSA 相关。ZEC 他们搞了一堆。
 
 Private_information_retrieval 这个亦有意义，涉及 intersection、交易撮合？
 
