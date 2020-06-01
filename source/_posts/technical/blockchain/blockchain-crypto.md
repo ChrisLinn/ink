@@ -32,6 +32,10 @@ https://crypto.stanford.edu/pbc/notes/
 https://eprint.iacr.org/2018/1188/20181210:211743 uses some basic group theory to build a dynamic accumulator:
 + create a vector commitment data structure analogous to Merkle trees (O(logn) )
 + constant-sized inclusion proofs
++ 用了 GUO, 依赖于 RSA assumption
+    * 也可以用
+        * RSA group, trusted setup
+        * class group, trusted setup
 
 ## PCD
 + https://www.michaelstraka.com/posts/recursivesnarks/
