@@ -175,3 +175,7 @@ application_key = HMAC-SHA256(key=master_key, "Social Graph Encryption")
             * 同时 c2 要有了 auth_key 才能访问
         * 但是要防止穷举，所以用 SGX 做了失败尝试次数限定
 + https://dchest.com/2020/05/25/improving-storage-of-password-encrypted-secrets-in-end-to-end-encrypted-apps/
+    * 这篇文章的分析不错
+    * 结论可以看:
+        - ![](https://dchest.files.wordpress.com/2020/05/img_0140.png)
+        * ![](https://dchest.files.wordpress.com/2020/05/img_0139.png?w=1024)
