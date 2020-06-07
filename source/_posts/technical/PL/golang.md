@@ -35,6 +35,7 @@
 + https://github.com/bvwells/go-patterns
 + https://github.com/senghoo/golang-design-pattern
 + https://github.com/sevenelevenlee/go-patterns
++ https://github.com/gustavocd/dao-pattern-in-go
 + https://github.com/chai2010/go2-book/blob/master/README.md
 + https://github.com/cch123/golang-notes
     * Go runtime source code analysis(zh-cn)
@@ -85,6 +86,7 @@
 + https://github.com/xmge/gonote
 + https://github.com/teh-cmc/go-internals
 + https://github.com/changkun/go-under-the-hood
++ https://github.com/chai2010/go-ast-book
 + https://github.com/gobyexample-cn/gobyexample
 + https://github.com/geektutu/7days-golang
 
