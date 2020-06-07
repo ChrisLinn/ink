@@ -146,3 +146,7 @@ MPC secure channel:
 
 + 亦可参考 [PacktPublishing/Security-with-Go 的 Cryptography 章节代码](https://github.com/PacktPublishing/Security-with-Go/tree/master/Chapter06)
     * [目录](https://www.packtpub.com/networking-and-servers/security-go)
+
+---
+https://github.com/veeral-patel/learn-security-engineering
+How I'm learning to build secure systems

@@ -259,6 +259,7 @@ title: 如何学习编程
     * https://github.com/captn3m0/google-sre-ebook
     * 一个框架师需要大量的项目经验，超级长的编码时间。坚持正确的方法和一个融洽配合的团队。国外的架构师都是大胡子，而国内程序员到30岁，老婆就催着要去做管理岗位了。和研发工作拼智商不同，架构师就拼的是经验，没大胡子没五六十岁很难成为xx之父这个级别。
 + https://ebi.readthedocs.io/en/latest/
++ https://github.com/veeral-patel/learn-security-engineering
 + **service interfaces**
     * All teams must expose their **data and functionality** through service interfaces
     * [no interprocess communication](https://mp.weixin.qq.com/s?__biz=MzA3NDM0ODQwMw==&mid=208859872&idx=1&sn=0b3efde37aefc57d9603bd214b9a76f0)
