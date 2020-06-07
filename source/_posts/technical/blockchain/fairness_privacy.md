@@ -168,5 +168,14 @@ master_key      = HMAC-SHA256(key=c1, c2)
 application_key = HMAC-SHA256(key=master_key, "Social Graph Encryption")
 ```
     + application_key: 可以根据不同的 app 从 master_key 派生
+    + master_key 光知道 用户密码是无法恢复的，还要知道 random 的 c2
     + `r2` is random, we can regenerate others but we will need to restore `r2` 
-        * 用 `auth_key` 加密存储 `c2`
+        * 服务器存 c2，用户自己记得 user_passphrase，这样换设备等时就能恢复 master_key
+            * 用 `auth_key` 加密存储 `c2`
+            * 同时 c2 要有了 auth_key 才能访问
+        * 但是要防止穷举，所以用 SGX 做了失败尝试次数限定
++ https://dchest.com/2020/05/25/improving-storage-of-password-encrypted-secrets-in-end-to-end-encrypted-apps/
+    * 这篇文章的分析不错
+    * 结论可以看:
+        - ![](https://dchest.files.wordpress.com/2020/05/img_0140.png)
+        * ![](https://dchest.files.wordpress.com/2020/05/img_0139.png?w=1024)

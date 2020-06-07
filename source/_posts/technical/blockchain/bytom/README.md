@@ -70,7 +70,9 @@
     * https://btcpayserver.org/
         - https://github.com/btcpayserver
 + TSS
+    * https://github.com/Bytom/ofmf/pull/539/files
 * KMS
+    - 量化委托
     - https://learn.hashicorp.com/vault
     - [Universal Private Key Management for Cryptocurrencies](https://github.com/ChrisLinn/chrislinn.ink/tree/master/assets/Universal+Private+Key+Management+for+Cryptocurrencies-draft23.pdf)
     - 互联网企业安全架构建设
