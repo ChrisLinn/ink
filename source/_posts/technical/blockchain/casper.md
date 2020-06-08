@@ -14,7 +14,7 @@
 + https://ethresear.ch/t/ethereum-casper-ffg-pos-like-all-pos-consensus-protocols-is-vulnerable-to-bribery-censorship-attacks/6646
 + https://ethresear.ch/t/non-attributable-censorship-attack-on-fraud-proof-based-layer2-protocols/6492
 + https://github.com/zack-bitcoin/amoveo/blob/a807dd26a5af156b8890474df7f709b0ddbe07cf/docs/other_blockchains/ethereum_casper_ffg.md
-+ [Peer Review: CBC Casper](https://medium.com/@muneeb/peer-review-cbc-casper-30840a98c89a)
++ [Peer Review - CBC Casper](https://medium.com/@muneeb/peer-review-cbc-casper-30840a98c89a)
 + [Formal Analysis of the CBC Casper Consensus Algorithm with TLA+](https://blog.trailofbits.com/2019/10/25/formal-analysis-of-the-cbc-casper-consensus-algorithm-with-tla)
 
 
