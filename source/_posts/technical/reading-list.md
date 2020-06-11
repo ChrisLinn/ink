@@ -164,6 +164,7 @@
 * http://www.shuizilong.com/house/
 * https://ice1000.org/
 * __https://himself65.com/__
++ https://algorithmicfairness.wordpress.com/
 * https://zhehao.top/
 * http://wjp2013.github.io/
 * https://www.cryptologie.net/
