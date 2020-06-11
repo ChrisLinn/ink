@@ -26,3 +26,6 @@ He once posted "Another Look at Byzantine Fault Tolerance" and later decided to 
 He also posted [Another Look at ALGORAND](https://arxiv.org/abs/1905.04463) but received justification from algorand community: his assumptions might be wrong.
 - https://forum.algorand.org/t/broken-algorand-fork-free-property-another-look-at-algorand/1044
 - https://forum.algorand.org/t/algorand-consensus-is-ba-not-necessary/837/3
+
+2020/6/13 updated:
++ he withdraws "Another Look at CBC Casper Consensus Protocol" again
