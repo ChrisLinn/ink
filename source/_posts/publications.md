@@ -16,7 +16,7 @@ title: Publications
             * [Privacy-Preserving Cross-Chain Atomic Swaps](http://fc20.ifca.ai/wtsc/WTSC2020/WTSC20_paper_20.pdf)
                 * [Maurice Herlihy](https://scholar.google.com/citations?user=Ezrt3pkAAAAJ&hl=zh-CN)
             - [XChange: A Blockchain-based Mechanism for Generic Asset Trading In Resource-constrained Environments](https://arxiv.org/abs/2004.05046)
-                * [Johan Pouwelse](https://scholar.google.com/citations?user=pprQKjUAAAAJ&hl=zh-CN)
+                * [Johan Pouwelse](https://scholar.google.com/citations?user=pprQKjUAAAAJ&hl=zh-CN) also co-auth []()
         * See Emin Gün Sirer's [tweet](https://twitter.com/el33th4xor/status/1186211608596533248) on Our presentation in ETH Zürich.
         * [We got attention from d5000](https://bitcointalk.org/index.php?topic=5251998.0)
         -->
