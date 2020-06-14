@@ -37,11 +37,10 @@ see "gg20_2"
 ## comparison
 + https://medium.com/blockchain-at-berkeley/alternative-signatures-schemes-14a563d9d562
 + https://medium.com/cryptoadvance/bls-signatures-better-than-schnorr-5a7fe30ea716
++ all based on decisional DH
++ 尽管其中一些技术适用于所有曲线，但有必要考虑曲线效率和辅助因子选择等问题。
 
-all based on decisional DH
-
-尽管其中一些技术适用于所有曲线，但有必要考虑曲线效率和辅助因子选择等问题。
-
+### summary
 + tECDSA
 + tBLS
     * based on pairing
