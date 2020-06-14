@@ -179,3 +179,10 @@ application_key = HMAC-SHA256(key=master_key, "Social Graph Encryption")
     * 结论可以看:
         - ![](https://dchest.files.wordpress.com/2020/05/img_0140.png)
         * ![](https://dchest.files.wordpress.com/2020/05/img_0139.png?w=1024)
+
+## Stealth Addresses, Anonymous/Confidential Transactions, CoinJoin
++ https://ethresear.ch/t/open-problem-improving-stealth-addresses/7438/9
++ https://eprint.iacr.org/2020/548
+    * https://dl.acm.org/doi/pdf/10.1145/3321408.3321573?download=true
++ https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2020-June/017969.html
+    * https://github.com/zkSNACKs/WabiSabi/releases/latest/download/WabiSabi.pdf
