@@ -33,3 +33,36 @@ see "2020_501 vs 2020_492"
 
 ### 2020/498 vs GG20
 see "gg20_2"
+
+## comparison
++ https://medium.com/blockchain-at-berkeley/alternative-signatures-schemes-14a563d9d562
++ https://medium.com/cryptoadvance/bls-signatures-better-than-schnorr-5a7fe30ea716
+
+all based on decisional DH
+
+尽管其中一些技术适用于所有曲线，但有必要考虑曲线效率和辅助因子选择等问题。
+
++ tECDSA
++ tBLS
+    * based on pairing
+        - cons: assumption of pairing
+            + https://www.math.uwaterloo.ca/~ajmeneze/publications/pairings.pdf
+            + https://eprint.iacr.org/2016/223.pdf
+    * verification 10x slower than ECDSA
+    * 自带多签
+        - 不需要多轮通信
+            - 聚合很方便
+                - 而且还能将区块中的所有签名组合为单个签名！
+                    + 由矿工去聚合？虽然最后聚合出来只有一个结果且 size 小，但是聚合过程 pairing 开销大？
+            * 大签名集的情况下非常有效
++ schnorr
+    * was patented, satoshi missed it
+    * efficient verification
+        - 可以批量验证
+    * 自带多签
+        - 不适合扩展到大签名集
+            + we need to make a merkle tree of public keys that can get pretty large for large m and n. (Merkle Multisig)
+            - 需要多轮通信
+    * With signature aggregation we have to rely on random number generator
+        * we can’t choose random point R deterministically like we do in ECDSA
+        * 如果你使用确定性K，它允许黑客获得我们的私钥
