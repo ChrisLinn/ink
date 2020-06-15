@@ -224,6 +224,8 @@ Sharding 协议中决定将节点分配至哪个 shard 时可能使用 Randomnes
 
 __答：__ 不同算法中在 SNARK 和 虚拟机中 所需的验证时间不一样。比如 SHA256 是 EVM < SNARK，Pedersen Commitment 是 SNARK < EVM。
 
+also see: https://ethresear.ch/t/gas-and-circuit-constraint-benchmarks-of-binary-and-quinary-incremental-merkle-trees-using-the-poseidon-hash-function/
+
 ## 密码学工程安全性
 
 1. 下面这个检查密码是否相等的代码有什么问题？
