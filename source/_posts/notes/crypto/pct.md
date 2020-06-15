@@ -15,3 +15,4 @@
 + https://www.lightbluetouchpaper.org/2020/04/12/contact-tracing-in-the-real-world/
 + https://github.com/enigmampc/SafeTrace
 + https://github.com/eyalr0/HashomerCryptoRef
++ https://github.com/vteague/contactTracing
