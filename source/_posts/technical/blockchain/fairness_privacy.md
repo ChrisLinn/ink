@@ -157,16 +157,16 @@ Atomic Swap 的一些解释说明。论文rephrase可用。
 
 ## 如何安全地保存密码？
 + https://signal.org/blog/secure-value-recovery/
-```
-stretched_key = Argon2(passphrase=user_passphrase, output_length=32)
+    ```
+    stretched_key = Argon2(passphrase=user_passphrase, output_length=32)
 
-auth_key    = HMAC-SHA256(key=stretched_key, "Auth Key")
-c1          = HMAC-SHA256(key=stretched_key, "Master Key Encryption")
-c2          = Secure-Random(output_length=32)
+    auth_key    = HMAC-SHA256(key=stretched_key, "Auth Key")
+    c1          = HMAC-SHA256(key=stretched_key, "Master Key Encryption")
+    c2          = Secure-Random(output_length=32)
 
-master_key      = HMAC-SHA256(key=c1, c2)
-application_key = HMAC-SHA256(key=master_key, "Social Graph Encryption")
-```
+    master_key      = HMAC-SHA256(key=c1, c2)
+    application_key = HMAC-SHA256(key=master_key, "Social Graph Encryption")
+    ```
     + application_key: 可以根据不同的 app 从 master_key 派生
     + master_key 光知道 用户密码是无法恢复的，还要知道 random 的 c2
     + `r2` is random, we can regenerate others but we will need to restore `r2` 
