@@ -151,3 +151,4 @@ MPC secure channel:
 ---
 
 + [How I'm learning to build secure systems](https://github.com/veeral-patel/learn-security-engineering)
++ https://www.chosenplaintext.ca/articles/beginners-guide-constant-time-cryptography.html
