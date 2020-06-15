@@ -10,16 +10,17 @@ His work/project experience can be found [here](/experience), and the publicatio
 
 He/him.
 
-## SNS accounts:
+## SNS accounts
 
 + GitHub
     + [main account](https://github.com/ChrisLinn)
     + [alt account](https://github.com/HAOYUatHZ)
 + [LinkedIn](http://linkedin.com/in/haoyu-lin-239474123)
++ [twitter](https://twitter.com/LongBlackFlat)
 + [豆瓣](https://www.douban.com/people/NanderFour/)
 
 
-## Friends:
+## Friends
 
 + [Runchao HAN](https://github.com/SebastianElvis)
 + [Jyuwan WONG](https://www.douban.com/people/10566855/)
