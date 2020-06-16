@@ -46,6 +46,7 @@
     - http://dancres.github.io/Pages/
     - https://github.com/rxin/db-readings
     - https://github.com/alangibson/awesome-crdt
+    - https://simpleaswater.com/
     - https://github.com/pingcap/talent-plan
     - https://research.nccgroup.com/
     - https://github.com/SebastianElvis/distributed-computing-lecture-notes/
