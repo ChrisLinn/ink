@@ -49,3 +49,22 @@ __对比__：原来的 普通 utxo 如果被标记为 未花费，数据库中�
 除了在构建交易时 填写 federation 的脚本，在虚拟机验证时 也要检验交易中的脚本 是不是 federation 的脚本。否则 攻击者可以构建一个交易 替换掉 脚本，自行进行签名－－这样能过虚拟机，而又因为转入侧链交易是新建了 spending output 并进行花费，这样就凭空给自己印了钱。
 
 当然其实也可以通过spv检测主链交易来避免这个问题。
+
+<!-- 
+
+## 扩展阅读
++ [SoK: Communication Across Distributed Ledgers](https://eprint.iacr.org/2019/1128)
++ [About Blockchain Interoperability](https://eprint.iacr.org/2020/643)
++ [A Survey on Blockchain Interoperability: Past, Present, and Future Trends](https://arxiv.org/abs/2005.14282)
++ [Cross-chain Deals and Adversarial Commerce](https://arxiv.org/abs/1905.09743)
++ [Cross-Chain Payment Protocols with Success Guarantees](https://arxiv.org/abs/1912.04513)
++ [Atomic Cross-Chain Swaps](https://arxiv.org/abs/1801.09515)
++ [Cross-chain Transactions](https://www.researchgate.net/publication/341297894_Cross-chain_Transactions)
++ [FairSwap: How to fairly exchange digital goods](https://eprint.iacr.org/2018/740)
++ [On the impossibility of fair exchange without a trusted third party](https://www.cs.utexas.edu/~shmat/courses/cs395t_fall04/pagnia.pdf)
++ [Enabling Cross-chain Transactions: A Decentralized Cryptocurrency Exchange Protocol](https://arxiv.org/abs/2005.03199)
+    + runchao says that this work relies on a committee so may not be a good one 
++ [Smart Contracts on the Move](https://arxiv.org/abs/2004.05933)
+
+
+-->
