@@ -1,3 +1,7 @@
+---
+title: Randomness
+---
+
 # Randomness
 
 来源: https://blog.priewienv.me/post/randomness-blockchain-1/
@@ -63,6 +67,18 @@
 
 ## VDF
 see: https://blog.priewienv.me/post/verifiable-delay-function-1/
+
+### cVDF
+
+https://eprint.iacr.org/2019/619.pdf
+
+#### (incremental) PoSW vs cVDF
+a PoSW enables generating a publicly verifiable proof of some computation (rather than a specific function with a unique output) that is guaranteed to
+have taken a long time. 
+
+(Incremental) PoSWs do not satisfy (computational) uniqueness, which is a major downside for many applications (see [BBBF18] for several examples). 
+
+cVDF enable verifiably outsourcing VDF computation.
 
 ### RSA Groups assumption
 Everyone seems to love VDFs, but the complexity theory around them is a bit underwhelming — why do they only work against adversaries with a polynomial compute advantage?
