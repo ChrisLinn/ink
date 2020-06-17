@@ -43,6 +43,8 @@
     - https://github.com/zhenlohuang/awesome-distributed-systems
     - https://github.com/theanalyst/awesome-distributed-systems
     - https://github.com/heidi-ann/distributed-consensus-reading-list
+    - https://rustie.xyz/notes/
+        + https://github.com/rustielin/Blockchain-Notes
     - http://dancres.github.io/Pages/
     - https://github.com/rxin/db-readings
     - https://github.com/alangibson/awesome-crdt
