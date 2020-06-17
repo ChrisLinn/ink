@@ -68,9 +68,7 @@ title: Randomness
 ## VDF
 see: https://blog.priewienv.me/post/verifiable-delay-function-1/
 
-### cVDF
-
-https://eprint.iacr.org/2019/619.pdf
+### [cVDF](https://eprint.iacr.org/2019/619.pdf)
 
 #### (incremental) PoSW vs cVDF
 a PoSW enables generating a publicly verifiable proof of some computation (rather than a specific function with a unique output) that is guaranteed to
