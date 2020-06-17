@@ -11,6 +11,7 @@
 + GoCollaborate / src
 
 ## list
++ https://github.com/golang/talks
 + https://github.com/jakescript/go-bible
 + https://github.com/dgryski/go-perfbook
 + __https://github.com/yangwenmai/learning-golang__
