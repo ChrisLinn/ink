@@ -1,5 +1,12 @@
 # TLA+
 
+* https://github.com/tlaplus/DrTLAPlus
+- https://github.com/mryndzionek/tlaplus_specs
++ https://ethresear.ch/t/modelling-a-state-channel-protocol-using-tla/7534
+    * https://blog.statechannels.org/breaking-state-channels/
+    * https://github.com/statechannels/tla-specs
++ https://blog.trailofbits.com/2019/10/25/formal-analysis-of-the-cbc-casper-consensus-algorithm-with-tla/
+    * https://github.com/crytic/whipstaff
 + https://github.com/dgpv/SASwap_TLAplus_spec
     * some other test framework
         - A test framework for linearizability check with Go
