@@ -111,6 +111,11 @@
         - 白振轩
         - https://github.com/nkbai
     - http://sebastianelvis.github.io
+    - https://blog.miator.net/
+        + https://github.com/lichray
+        + https://stldevs.com/developers/lichray
+        + https://www.douban.com/people/lichray/
+        + https://reviews.llvm.org/p/lichray/
     - https://xieyuheng.github.io
     - https://www.driftluo.com/
     - http://wayslog.com/
