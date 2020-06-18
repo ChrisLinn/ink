@@ -116,6 +116,7 @@
         + https://stldevs.com/developers/lichray
         + https://www.douban.com/people/lichray/
         + https://reviews.llvm.org/p/lichray/
+    - http://maskray.me/
     - https://xieyuheng.github.io
     - https://www.driftluo.com/
     - http://wayslog.com/
