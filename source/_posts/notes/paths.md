@@ -261,15 +261,18 @@ security的论文 实验和出成果都不难, 工业界比学术界领先, 论�
 ## 区块链的文章都发在哪几个会
 http://www.conferenceranks.com/ ,randA & rankB
 
-+ 三大密码会Eurocrypt, CRYPTO, Asiacrypt
++ 三大密码会 Eurocrypt, CRYPTO, Asiacrypt
     * Real World Crypto Symposium?
 + 四大安全会CCS, IEEE S&P, Usenix Security, NDSS
     + EuroS&P 现在也是了
-+ 操作系统会OSDI, SOSP
++ 操作系统会 OSDI, SOSP
 + 计算机网络的会 NSDI, Infocom, Sigcomm
 + 分布式计算理论的几个会 PODC, DISC, OPODIS
 + 隐私的会议 PETS
-+ VLDB
++ 数据库
+    + ACM SIGMOD
+    + VLDB
+    + ICDE
 + FC (Financial Cryptography) (A~B)
 + 软工
     * xl: 区块链软工一般和安全挂钩,所以最好的应该就是安全顶会, 发在软工顶会反而还比较难, 但是现在有一种怪现象就是 不是漏洞，明明是软工问题，但却因为是智能合约的，就硬说成是漏洞
