@@ -116,17 +116,23 @@
 + [Ittay Eyal](http://webee.technion.ac.il/people/ittay/)
 + Ittai Abraham
 + [Elaine Shi](http://elaineshi.com/)
-+ Lindel
-+ Oded
 + Dan Boneh
++ Yehuda Lindell
++ Oded Goldreich
 + [Jonathan Katz](https://www.cs.umd.edu/~jkatz)
 + [Matthew Green](https://isi.jhu.edu/~mgreen/)
+* [David Evans](http://www.cs.virginia.edu/~evans/)
++ [Mike Rosulek](http://web.engr.oregonstate.edu/~rosulekm/)
+    * https://eecs.oregonstate.edu/people/rosulek-mike
 + [Aniket Kate](https://www.cs.purdue.edu/homes/akate/)
 + [Foteini Baldimtsi](http://www.baldimtsi.com/)
 + Rachid Guerraoui
 + [Ben Ficsh](https://sites.google.com/site/benafisch/)
 + [Benedikt Bünz](https://crypto.stanford.edu/~buenz/)
 + [Pratyush Mishra](http://people.eecs.berkeley.edu/~pratyushmishra)
++ Claudio Orlandi
++ Luca de Feo
++ Seres István András
 + heming cui
 + junfeng yang
 + Udaya Parampalli
