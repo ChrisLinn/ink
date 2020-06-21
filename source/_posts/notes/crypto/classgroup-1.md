@@ -91,7 +91,11 @@ __Note.__ Not all complex numbers are algebraic. Those that aren't are called __
 **[HY: 代数的 和、乘积、商 都还是代数的]** It is a [fact][algebraic numbers form a field wiki] that the sum, product and quotient of algebraic numbers is still algebraic.
 > __Theorem.__ The set $\overline{\Bbb{Q}}$ of all complex algebraic numbers forms a subfield of $\Bbb{C}$.
 
-__Note.__ This is not _a priori_ obvious. Take $\alpha=\sqrt{5}+\frac12\frac1{\sqrt{3}}$: individually $\sqrt{5}$ and $\frac1{\sqrt{3}}$ are algebraic (they are roots of $X^2-5$ and $X^2-\frac1{3}$ respectively). To see that their $\Bbb{Q}$-linear combination $\alpha$ is algebraic we need to come up with a (nonzero) rational polynomial $P$ annihilating $\alpha$. We see that $\alpha^2=\frac{61}{12} - \frac{\sqrt{15}}3$ so that $\alpha$ is a root of $$P=\Big(X^2-\frac{61}{12}\Big)^2-\frac{5}3 = X^4-\frac{61}6 X^2 + \frac{3481}{144}$$ Since $\alpha$ is a root of this rational polynomial, we see that $\alpha$ is algebraic. Doing similar manipulations by hand for more complicated expressions quickly becomes complicated.
+__Note.__ This is not _a priori_ obvious. Take $\alpha=\sqrt{5}+\frac12\frac1{\sqrt{3}}$: individually $\sqrt{5}$ and $\frac1{\sqrt{3}}$ are algebraic (they are roots of $X^2-5$ and $X^2-\frac1{3}$ respectively). To see that their $\Bbb{Q}$-linear combination $\alpha$ is algebraic we need to come up with a (nonzero) rational polynomial $P$ annihilating **[HY: 消去]** $\alpha$. We see that $\alpha^2=\frac{61}{12} - \frac{\sqrt{15}}3$ so that $\alpha$ is a root of
+
+$$P=\Big(X^2 - \frac{61}{12}\Big)^2 - \frac{5}{3} = X^4 - \frac{61}{6} X^2 + \frac{3481}{144}$$
+
+Since $\alpha$ is a root of this rational polynomial, we see that $\alpha$ is algebraic. Doing similar manipulations by hand for more complicated expressions quickly becomes complicated.
 
 __Note.__ Chasing denominators in a rational polynomial $P$ killing a particular algebraic number, we may assume the polynomials $P$ to have integer coefficients. For instance, returning to $\alpha=\sqrt{5}+\frac12\frac1{\sqrt{3}}$, we see that it is also a root of $144X^4-1464 X^2 + 3481\in\Bbb{Z}[X]$
 
