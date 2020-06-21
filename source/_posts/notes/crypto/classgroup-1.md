@@ -17,9 +17,9 @@ These notes grew out of an effort to understand the basics of __class groups 类
 * Lattices 格 (ideal lattices 理想格 or derived from  groups of units of rings of integers),
 
 and to a lesser extent (it seems),
-* Orders 秩 (in Imaginary Quadratic Number Fields associated with elliptic curves).
+* Orders 阶 (in Imaginary Quadratic Number Fields associated with elliptic curves).
 
-**[HY: 介绍 classgroup 需要先介绍整数环，同时也会介绍 orders 秩 和 lattice 格]** Discussing the abstract theory of rings of integers is a necessary (?) prerequesite to properly introducing __class groups__; __orders__ and __lattices__ will be mentioned along the way.
+**[HY: 介绍 classgroup 需要先介绍整数环，同时也会介绍 orders 阶 和 lattice 格]** Discussing the abstract theory of rings of integers is a necessary (?) prerequesite to properly introducing __class groups__; __orders__ and __lattices__ will be mentioned along the way.
 
 Definitions will be given in due time. In the meantime, ...
 
@@ -27,15 +27,15 @@ Definitions will be given in due time. In the meantime, ...
 
 Let's stick to the three topics introduced above.
 
-In cryptographic applications, __class groups__ are seen as a __source of groups of unknown order__ (GUO). Recall that the __order__ of a finite group $G$ is its cardinality 势、基 as a set. GUOs have been considered in the construction of candidate __Verifiable Delay Functions__ (VDF) and __Cryptographic Accumulators__. They can also serve for as __target groups for (polynomial) commitment schemes__.
+In cryptographic applications, __class groups__ are seen as a __source of groups of unknown order__ (GUO **[HY: 未知阶的群?]**). Recall that the __order__ of a finite group 有限群 $G$ is its cardinality **[HY: 势? 基?]** as a set. GUOs have been considered in the construction of candidate __Verifiable Delay Functions 可验证延迟函数__ (VDF) and __Cryptographic Accumulators 密码学累加器__. They can also serve for as __target groups for (polynomial) commitment schemes 多项式承诺方案__.
 
-RSA groups $(\Bbb{Z}/N\Bbb{Z})^\times$[^RSA_modulus] provide an alternative family of GUOs[^RSA_are_GUO]. However, generating RSA moduli $N=pq$ requires either a trusted party[^RSA_trust] or a non-trivial multiparty computation. Generating class groups[^cl_grp_gen] $\mathcal{Cl}(d)$ on the other hand "[only][square free test]" requires generating large negative square free public integers $d$. Taking $d=-p$ for a large prime $p$ is a viable option.
+RSA groups $(\Bbb{Z}/N\Bbb{Z})^\times$[^RSA_modulus] **[HY: 原来 RSA group 这么写]** provide an alternative family of GUOs[^RSA_are_GUO]. **[HY: RSA 模数生成方案的缺点]** However, generating RSA moduli 模数 $N=pq$ requires either a trusted party[^RSA_trust] or a non-trivial multiparty computation. Generating class groups[^cl_grp_gen] $\mathcal{Cl}(d)$ on the other hand "[only][square free test]" requires generating large negative square free public integers $d$. Taking $d=-p$ for a large prime $p$ is a viable option.
 [^RSA_are_GUO]: computing their order is equivalent to factoring $N=pq$, and is a difficult problem
 
 For crypto applications the workflow for generating class groups[^of_quad_num_fields] is summed up below:
 ![](https://i.imgur.com/pHAvcDd.jpg)
-Understanding what comes out at the other end is challenging! A lot is known about these groups, but what matters most to GUO-type applications is that:
-* these are __always finite abelian groups__ (finiteness is a difficult theorem)
+Understanding what comes out at the other end is challenging! A lot is known about these groups, but what matters most to GUO-type applications is that **[HY: GUO-type applications 的重点难点]**:
+* these are __always finite abelian groups 有限阿贝尔群__ (finiteness 有限性 is a difficult theorem)
 * and computing their order (i.e. size) is __hard__.
 
 [^of_quad_num_fields]: of quadratic number fields
@@ -43,16 +43,16 @@ Understanding what comes out at the other end is challenging! A lot is known abo
 [^cl_grp_gen]: of Imaginary Quadratic Number Fields $K=\Bbb{Q}(\sqrt{d})$, $d<0$
 [^RSA_modulus]: where $N=pq$ is the product of two large primes.
 
-__Note.__ For potential applications to VDFs, see [Wesolovski's paper][Wesolovski] and [Boneh, Bünz and Fish's survey][BBF VDF survey]. Applications of GUOs and class groups in particular to cryptographic accumulators are discussed in [Bonej, Bünz and Fish][BBF Accumulators]'s paper on the subject. [DARK][DARK], a transparent polynomial comitment scheme, uses GUOs.
+__Note.__ **[HY: 一些具体应用的例子]** For potential applications to VDFs, see [Wesolovski's paper][Wesolovski] and [Boneh, Bünz and Fish's survey][BBF VDF survey]. Applications of GUOs and class groups in particular to cryptographic accumulators are discussed in [Bonej, Bünz and Fish][BBF Accumulators]'s paper on the subject. [DARK][DARK], a transparent polynomial comitment scheme, uses GUOs.
 
 
 __[Lattice based cryptography][lattice based cryptography wiki]__ aims to take advantage of [computationally difficult problems][lattice problems wiki] related to lattices[^lattices_defn]. A potentially important feature of this kind of cryptography is its conjectural resistance to quantum computers. It turns out that number fields are a breeding ground for nontrivial lattices[^lattice_methods]. They crop up naturally in two distinct ways:
-* as ideals of rings of integers $\mathcal{O}_K$,
+* as ideals 理想 of rings of integers $\mathcal{O}_K$,
 * as the Log-unit lattice $\mathrm{Log}_K(\mathcal{O}_K^\times)$.
 
 [^lattice_methods]: and lattice methods play a significant role in ANT.
 
-__Orders__[^unrelated_order] and __rings of integers__ also make a double-take-worthy appearance in [isogeny-based cryptography][isogeny based crypto Luca de Feo], a subdomain of elliptic curve cryptography. When $E/\Bbb{F}_q$ is an ordinary elliptic curve over a finite field $\Bbb{F}_q$, its ring of endomorphisms $\mathcal{O}=\mathrm{End}(E)$ is an __order__ in an imaginary quadratic number field $K=\Bbb{Q}(\sqrt{D})$ associated to the (isogney class of the) curve $E$. The class group $\mathcal{Cl}(\mathcal{O})$ of invertible ideals of $\mathrm{End}(E)$ acts on the isogeny graph of curves defined over $\Bbb{F}_q$ isogenous to $E$ (isogeny graph). One can thus traverse this graph using ideals for transportation. These are considered to be [hard homogeneous spaces][Hard Homogeneous Spaces], and can house Diffie-Hellman-type key exchanges.
+__Orders__[^unrelated_order] and __rings of integers__ also make a double-take-worthy appearance in [isogeny-based cryptography][isogeny based crypto Luca de Feo] **[HY: 基于同源的密码学]**, a subdomain of elliptic curve cryptography. When $E/\Bbb{F}_q$ is an ordinary elliptic curve over a finite field $\Bbb{F}_q$, its ring of endomorphisms 自同态 $\mathcal{O}=\mathrm{End}(E)$ is an __order__ in an imaginary quadratic number field $K=\Bbb{Q}(\sqrt{D})$ associated to the (isogney class of the) curve $E$. The class group $\mathcal{Cl}(\mathcal{O})$ of invertible ideals of $\mathrm{End}(E)$ acts on the isogeny graph of curves defined over $\Bbb{F}_q$ isogenous to $E$ (isogeny graph). One can thus traverse this graph using ideals for transportation. These are considered to be [hard homogeneous spaces][Hard Homogeneous Spaces], and can house Diffie-Hellman-type key exchanges.
 
 [^lattices_defn]: discrete, spanning subgroups $\Lambda\subset\Bbb{R}^n$.
 [^unrelated_order]: no relation with the order a group introduced earlier.
@@ -61,7 +61,7 @@ __Orders__[^unrelated_order] and __rings of integers__ also make a double-take-w
 
 These notes contain a somewhat informal exposition of some basic topics in algebraic number theory as well as pointers as to how these are relevant to cryptography. The reader will find _no proofs_ here, only assertions and my attempts at motivating the theory. __My goal is to swiftly take the reader from the definition of algebraic integers to that of class groups__. In keeping with that philosophy, I have tried to keep all theorems, lemmas, propositions and definitions _short_ and written in plain english whenever possible. 
 
-However, __motivation is key__, and I have tried to follow some guiding threads. The angle that made the most sense to me[^no_originality] is that of __prime-ness: what does it mean to be  prime?__ and __factorization: when/how can one extend the standard theory of prime factorization of integers to other number systems?__
+However, __motivation is key__, and I have tried to follow some guiding threads. The angle that made the most sense to me[^no_originality] is that of __prime-ness 素性: what does it mean to be  prime?__ and __factorization: when/how can one extend the standard theory of prime factorization of integers to other number systems [HY: factorization 不仅可以用于整数]?__
 
 [^no_originality]: and which is invariably discussed in pretty much every other text on the subject
 
