@@ -139,7 +139,7 @@ The pictures below, taken from wikipedia, represent certain subsets of algebraic
 
 > __Definition.__ A __number field__ is a field[^of_char_zero] $K$ that is also a finite dimensional rational vector space: $\dim_\Bbb{Q}K<\infty$.
 
-In other words, $K$ is a field[^of_char_zero] and there exist elements $\alpha_1,\dots,\alpha_d\in K$ such that any element $x\in K$ can be expressed as $$x=\sum_{k=1}^dr_k\cdot\alpha_k$$ for some rational numbers $r_1,\dots,r_d\in\Bbb{Q}$. Here $d\geq\dim_{\Bbb{Q}}K$. 
+In other words, $K$ is a field[^of_char_zero] and there exist elements $\alpha_1,\dots,\alpha_d\in K$ such that any element $x\in K$ can be expressed as $$x=\sum_{k=1}^dr_k\cdot\alpha_k$$ for some rational numbers $r_1,\dots,r_d\in\Bbb{Q}$. Here $d\geq\dim_{\Bbb{Q}}K$. **[HY: 不太清楚这里为什么是 $\geq$]**
 
 Elementary linear algebra shows that
 > __Lemma.__ All elements of a number field $K$ are algebraic.
@@ -152,7 +152,7 @@ Elementary linear algebra shows that
 
 Examples are plentiful. For instance subfields of the complex numbers such as $$\Bbb{Q}(\sqrt{2})=\{a+b\sqrt{2}\mid a,b\in\Bbb{Q}\}\quad\text{or}\quad\Bbb{Q}(i)=\{a+bi\mid a,b\in\Bbb{Q}\}$$ One easily verifies that these subsets of $\Bbb{C}$ are subfields: they are stable under addition and product, contain the unit $1$, and are stable under taking inverses.
 
-__Note.__ We called these examples "concrete" as they are realized as subfields of the complex numbers. It can be useful to consider "abstract" number fields, number fields obtained by formally adjoining roots of polynomial equations.
+__Note.__ We called these examples "concrete" as they are realized as subfields of the complex numbers. It can be useful to consider "abstract" number fields, number fields obtained by formally adjoining roots of polynomial equations. **[HY: "concrete" vs "abstract"]**
 
 ### The right equations 
 
