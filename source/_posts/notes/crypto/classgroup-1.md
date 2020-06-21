@@ -109,15 +109,15 @@ All algebraic integers are algebraic numbers, but not all algebraic numbers are 
 
 > __Lemma.__ A rational number is an algebraic integer _iff_ it is an integer.
 
-Thus "$\sqrt{d}$" for $d\in\Bbb{Z}$ is an algebraic integer, as a root of the monic integer polynomial $X^2-d$, but $\frac23$ is not. **[HY: 所以 $\sqrt{2}$ 是代数整数?]**
+Thus "$\sqrt{d}$" for $d\in\Bbb{Z}$ is an algebraic integer, as a root of the monic integer polynomial $X^2-d$, but $\frac23$ is not. **[HY: 所以 $\sqrt{2}$ 是代数整数? 是的...]**
 
 ### ... Form a Ring
 
-The example of rational algebraic integers shows that quotients of algebraic integers usually aren't algebraic integers (algebraic numbers, yes, but not algebraic integers in general). However, sums and products are:
+**[HY: 代数整数的商不是代数整数。]** The example of rational algebraic integers shows that quotients of algebraic integers usually aren't algebraic integers (algebraic numbers, yes, but not algebraic integers in general). However, sums and products are:
 
 > __Theorem.__ The set $\mathcal{O}_\Bbb{C}$ of all complex algebraic integers is a subring of $\overline{\Bbb{Q}}$.
 
-Again, this is not _a priori_ obvious, see for instance Atiyah and MacDonald's [Introduction to Commutative Algebra][Atiyah MacDonald], chapter 5, for a general result. As a challenge, the reader may try to compute a monic, integer coefficient polynomial annihilating $\sqrt[3]{2}+i$ from scratch. It's doable, but it's painful[^I_asked_WA] : )
+Again, this is not _a priori_ obvious, see for instance Atiyah and MacDonald's [Introduction to Commutative 交换 Algebra][Atiyah MacDonald], chapter 5, for a general result. As a challenge, the reader may try to compute a monic, integer coefficient polynomial annihilating $\sqrt[3]{2}+i$ from scratch. It's doable, but it's painful[^I_asked_WA] : )
 
 [^I_asked_WA]: according to Wolfram Alpha, $P=X^6 + 3 X^4 - 4 X^3 + 3 X^2 + 12 X + 5$ does the job.
 
@@ -143,6 +143,8 @@ In other words, $K$ is a field[^of_char_zero] and there exist elements $\alpha_1
 
 Elementary linear algebra shows that
 > __Lemma.__ All elements of a number field $K$ are algebraic.
+
+**[HY: 向量空间和加法乘法各个律的关系，和”代数的“的关系。]**
 
 [^of_char_zero]: Of characteristic zero
 
