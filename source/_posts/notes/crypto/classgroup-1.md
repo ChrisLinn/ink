@@ -1,8 +1,8 @@
 ---
-title: Class Group 1
+title: Class Group (1)
 ---
 
-# Class Group 1
+# Class Group (1)
 
 ###### tags: `study notes` `class groups` `number theory`
 
@@ -61,9 +61,9 @@ __Orders__[^unrelated_order] and __rings of integers__ also make a double-take-w
 
 These notes contain a somewhat informal exposition of some basic topics in algebraic number theory as well as pointers as to how these are relevant to cryptography. The reader will find _no proofs_ here, only assertions and my attempts at motivating the theory. __My goal is to swiftly take the reader from the definition of algebraic integers to that of class groups__. In keeping with that philosophy, I have tried to keep all theorems, lemmas, propositions and definitions _short_ and written in plain english whenever possible. 
 
-**[HY: 原来素性测试不仅有随机算法，还有确定性算法，还能达到多项式时间，see https://zh.wikipedia.org/wiki/%E7%B4%A0%E6%80%A7%E6%B5%8B%E8%AF%95]**
-
 However, __motivation is key__, and I have tried to follow some guiding threads. The angle that made the most sense to me[^no_originality] is that of __prime-ness 素性: what does it mean to be  prime?__ and __factorization: when/how can one extend the standard theory of prime factorization of integers to other number systems?__ **[HY: factorization 不仅可以用于整数]**
+
+**[HY: 原来素性测试不仅有随机算法，还有确定性算法，还能达到多项式时间，see https://zh.wikipedia.org/wiki/%E7%B4%A0%E6%80%A7%E6%B5%8B%E8%AF%95]**
 
 [^no_originality]: and which is invariably discussed in pretty much every other text on the subject
 
@@ -73,14 +73,14 @@ __Note.__ I discovered rather late in the writing process (thanks to Thomas Piel
 
 ## Algebraic Numbers 代数数 and Algebraic Integers 代数整数
 
-> In this section we define (complex) algebraic integers. In the sequel we will restrict to those algebraic integers that reside in small subfields of $\Bbb{C}$ or, more generally, in abstract number fields.
+> In this section we define (complex) algebraic integers **[HY: 复代数整数]**. In the sequel we will restrict to those algebraic integers that reside in small subfields of $\Bbb{C}$ **[HY: 这个符号指的是 complex algebraic numbers?]** or, more generally, in abstract number fields **[HY: 抽象数域]**.
 
 ### Complex Algebraic Numbers ...
 
-Complex algebraic numbers are those complex numbers that satisfy a polynomial equation with rational coefficients, i.e. a complex number $z$ is algebraic if it satisfies $P(z)=0$ for a (nonzero) polynomial $P$ with rational coefficients. Examples include:
+Complex algebraic numbers 复代数数 are those complex numbers that satisfy a polynomial equation with rational coefficients, i.e. a complex number $z$ is algebraic if it satisfies $P(z)=0$ for a (nonzero) polynomial $P$ with rational coefficients. Examples include:
 * rational numbers $q\in\Bbb{Q}$, take $P=X-q\in\Bbb{Q}[X]$;
 * square roots of rationals "$\sqrt{q}$" with $q\in\Bbb{Q}$, take $P=X^2-q\in\Bbb{Q}[X]$;
-* higher roots such as "$\sqrt[r]{a}$", take $P=X^r-a$);
+* higher roots such as "$\sqrt[r]{a}$", take $P=X^r-a$;
 
 and many, many more ... In particular __roots of unity__ $\zeta=\exp(\frac{2ik\pi}n)$, with $P=X^n-1$, are algebraic numbers.
 
