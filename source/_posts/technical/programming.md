@@ -275,6 +275,8 @@ title: 如何学习编程
         - 分层
         - 正确的依赖关系
         - 精简美丽的命名
+        * https://refactoringguru.cn/design-patterns
+        * https://refactoringguru.cn/refactoring
         - [<<重构>>](https://book.douban.com/subject/1229923/)
             + 先写(自动化)测试
             + 太长，功能杂糅
