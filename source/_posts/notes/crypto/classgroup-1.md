@@ -156,9 +156,11 @@ __Note.__ We called these examples "concrete" as they are realized as subfields 
 
 ### The right equations 
 
-When adjoining roots of polynomial equations $P(X)=0$ one should restrict to _irreducible_ polynomials, i.e. polynomials that can't substantially be factored over $\Bbb{Q}[X]$. Consider for instance $P=X^4 - X^2 -2$: this polynomial is reducible, as $P=(X^2+1)(X^2-2)$. As a consequence it has two qualitatively very different pairs of solutions : $\pm\sqrt{2}$ and $\pm \sqrt{-1}$. Obviously, "adjoining $\sqrt{2}$ to $\Bbb{Q}$" produces $K=\Bbb{Q}[\sqrt{2}]$ a field that is substantially different from $L=\Bbb{Q}[i]$ obtained by "adjoining $\sqrt{-1}$ to $\Bbb{Q}$". To wit: $2$ is a square in $K$ but not in $L$.
+When adjoining roots of polynomial equations $P(X)=0$ one should restrict to _irreducible_ **[HY: 不可分解？]** polynomials, i.e. polynomials that can't substantially be factored over $\Bbb{Q}[X]$. Consider for instance $P=X^4 - X^2 -2$: this polynomial is reducible, as $P = (X^2 + 1)(X^2 - 2)$. As a consequence it has two qualitatively very different pairs of solutions : $\pm\sqrt{2}$ and $\pm \sqrt{-1}$. Obviously, "adjoining $\sqrt{2}$ to $\Bbb{Q}$" produces $K=\Bbb{Q}[\sqrt{2}]$ a field that is substantially different from $L=\Bbb{Q}[i]$ obtained by "adjoining $\sqrt{-1}$ to $\Bbb{Q}$". To wit: $2$ is a square in $K$ but not in $L$.
 
 ### Algebraic indistinguishability of roots
+
+**[HY: 根的代数不可区分性]**
 
 The complex roots of a given __irreducible__ rational polynomial $P$ are __absolutely indistinguishable from an algebraic point of view__.
 * You can't tell $\sqrt{2}$ and $-\sqrt{2}$ apart from one another (the roots of the irreducible rational polynomial $X^2-2$) by algebraic manipulations[^w_rat_coeffs] alone.
@@ -175,7 +177,7 @@ To illustrate this, consider the problem of expressing $\frac1{\delta + 3}$ as a
 
 | $\delta = \sqrt{2}$ | $\delta = - \sqrt{2}$ |
 | -------- | -------- |
-|  $\begin{array}{rcl}\displaystyle \frac1{\delta + 3} & = & \displaystyle \frac1{\sqrt{2} + 3} \\ & = & \displaystyle \frac{-\sqrt{2} + 3}{(-\sqrt{2} + 3)(\sqrt{2} + 3)}\\ & = & \displaystyle 3 - \sqrt{2} \\ & = & \displaystyle3-\delta \end{array}$   | $\begin{array}{rcl}\displaystyle \frac1{\delta + 3} & = & \displaystyle \frac1{-\sqrt{2} + 3} \\ & = &  \displaystyle \frac{\sqrt{2} + 3}{(\sqrt{2} + 3)(-\sqrt{2} + 3)}\\ & = & \displaystyle 3 + \sqrt{2}\\ & = & \displaystyle3-\delta\end{array}$ |
+| $\displaystyle \frac1{\delta + 3} = \frac1{\sqrt{2} + 3}$ <br> $\ \ \ \ \ \ \ \ \ = \displaystyle \frac{-\sqrt{2} + 3}{(-\sqrt{2} + 3)(\sqrt{2} + 3)}$ <br> $\ \ \ \ \ \ \ \ \ = \displaystyle 3 - \sqrt{2}$ <br> $\ \ \ \ \ \ \ \ \ = \displaystyle 3 - \delta$ | $\displaystyle \frac1{\delta + 3} = \frac1{-\sqrt{2} + 3}$ <br> $\ \ \ \ \ \ \ \ \ = \displaystyle \frac{\sqrt{2} + 3}{(\sqrt{2} + 3)(-\sqrt{2} + 3)}$ <br> $\ \ \ \ \ \ \ \ \ = \displaystyle 3 + \sqrt{2}$ <br> $\ \ \ \ \ \ \ \ \ = \displaystyle 3 - \delta$ |
 
 ### Disincarnate number fields
 
