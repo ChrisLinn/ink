@@ -10,24 +10,24 @@ title: Class Group 1
 
 ## Introduction
 
-These notes grew out of an effort to understand the basics of __class groups__. With another VDF day around the corner, now seemed as good a time as any to get to grips with this material. Furthermore, class groups and lattices are part of the standard tool set in areas of cryptography relevant to blockchain and zero knowledge applications.
+These notes grew out of an effort to understand the basics of __class groups 类群__. With another VDF day around the corner, now seemed as good a time as any to get to grips with this material. Furthermore, class groups 类群 and lattices 格 are part of the standard tool set in areas of cryptography relevant to blockchain and zero knowledge applications.
 
-The central object of these notes are __rings of integers $\mathcal{O}_K$ in number fields $K$__. These are objects borrowed from the realm of algebraic number theory (ANT). Topics derived from their study that have found application in cryptography include:
-* Class Groups (of Imaginary Quadratic Number Fields),
-* Lattices (ideal lattices or derived from  groups of units of rings of integers),
+**[HY: 核心是整数环]** The central object of these notes are **rings of integers 整数环 $\mathcal{O}_K$ in number fields 数域 $K$**. These are objects borrowed from the realm 领域 of algebraic number theory (ANT). Topics derived from their study that have found application in cryptography include:
+* Class Groups 类群 (of Imaginary Quadratic Number Fields 虚二次数域),
+* Lattices 格 (ideal lattices 理想格 or derived from  groups of units of rings of integers),
 
 and to a lesser extent (it seems),
-* Orders (in Imaginary Quadratic Number Fields associated with elliptic curves).
+* Orders 秩 (in Imaginary Quadratic Number Fields associated with elliptic curves).
 
-Discussing the abstract theory of rings of integers is a necessary (?) prerequesite to properly introducing __class groups__; __orders__ and __lattices__ will be mentioned along the way.
+**[HY: 介绍 classgroup 需要先介绍整数环，同时也会介绍 orders 秩 和 lattice 格]** Discussing the abstract theory of rings of integers is a necessary (?) prerequesite to properly introducing __class groups__; __orders__ and __lattices__ will be mentioned along the way.
 
 Definitions will be given in due time. In the meantime, ...
 
-### How is algebraic number theory relevant to cryptography?
+### How is algebraic number theory relevant to cryptography? [HY: 代数数论与密码学的关系]
 
 Let's stick to the three topics introduced above.
 
-In cryptographic applications, __class groups__ are seen as a __source of groups of unknown order__ (GUO). Recall that the __order__ of a finite group $G$ is its cardinality as a set. GUOs have been considered in the construction of candidate __Verifiable Delay Functions__ (VDF) and __Cryptographic Accumulators__. They can also serve for as __target groups for (polynomial) commitment schemes__.
+In cryptographic applications, __class groups__ are seen as a __source of groups of unknown order__ (GUO). Recall that the __order__ of a finite group $G$ is its cardinality 势、基 as a set. GUOs have been considered in the construction of candidate __Verifiable Delay Functions__ (VDF) and __Cryptographic Accumulators__. They can also serve for as __target groups for (polynomial) commitment schemes__.
 
 RSA groups $(\Bbb{Z}/N\Bbb{Z})^\times$[^RSA_modulus] provide an alternative family of GUOs[^RSA_are_GUO]. However, generating RSA moduli $N=pq$ requires either a trusted party[^RSA_trust] or a non-trivial multiparty computation. Generating class groups[^cl_grp_gen] $\mathcal{Cl}(d)$ on the other hand "[only][square free test]" requires generating large negative square free public integers $d$. Taking $d=-p$ for a large prime $p$ is a viable option.
 [^RSA_are_GUO]: computing their order is equivalent to factoring $N=pq$, and is a difficult problem
