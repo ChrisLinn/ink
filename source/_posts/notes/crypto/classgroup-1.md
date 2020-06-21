@@ -61,6 +61,8 @@ __Orders__[^unrelated_order] and __rings of integers__ also make a double-take-w
 
 These notes contain a somewhat informal exposition of some basic topics in algebraic number theory as well as pointers as to how these are relevant to cryptography. The reader will find _no proofs_ here, only assertions and my attempts at motivating the theory. __My goal is to swiftly take the reader from the definition of algebraic integers to that of class groups__. In keeping with that philosophy, I have tried to keep all theorems, lemmas, propositions and definitions _short_ and written in plain english whenever possible. 
 
+**[HY: 原来素性测试不仅有随机算法，还有确定性算法，还能达到多项式时间，see https://zh.wikipedia.org/wiki/%E7%B4%A0%E6%80%A7%E6%B5%8B%E8%AF%95]**
+
 However, __motivation is key__, and I have tried to follow some guiding threads. The angle that made the most sense to me[^no_originality] is that of __prime-ness 素性: what does it mean to be  prime?__ and __factorization: when/how can one extend the standard theory of prime factorization of integers to other number systems?__ **[HY: factorization 不仅可以用于整数]**
 
 [^no_originality]: and which is invariably discussed in pretty much every other text on the subject
@@ -69,7 +71,7 @@ __Note.__ I discovered rather late in the writing process (thanks to Thomas Piel
 
 > [TOC]
 
-## Algebraic Numbers and Algebraic Integers
+## Algebraic Numbers 代数数 and Algebraic Integers 代数整数
 
 > In this section we define (complex) algebraic integers. In the sequel we will restrict to those algebraic integers that reside in small subfields of $\Bbb{C}$ or, more generally, in abstract number fields.
 
