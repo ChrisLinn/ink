@@ -77,7 +77,7 @@ __Note.__ I discovered rather late in the writing process (thanks to Thomas Piel
 
 ### Complex Algebraic Numbers ...
 
-**[HY: 不是所有的数都是代数]** Complex algebraic numbers 复代数数 are those complex numbers that satisfy a polynomial equation 多项式方程 with rational coefficients 有理数系数, i.e. a complex number 复数 $z$ is algebraic 代数的 if it satisfies $P(z)=0$ for a (nonzero) polynomial $P$ with rational coefficients. Examples include:
+**[HY: 不是所有的数都是代数数。简单来说，指任何整系数多项式的复根。]** Complex algebraic numbers 复代数数 are those complex numbers that satisfy a polynomial equation 多项式方程 with rational coefficients 有理数系数, i.e. a complex number 复数 $z$ is algebraic 代数的 if it satisfies $P(z)=0$ for a (nonzero) polynomial $P$ with rational coefficients. Examples include:
 * rational numbers $q\in\Bbb{Q}$ **[HY: $\Bbb{Q}$ 就是有理数的标识？]**, take $P=X-q\in\Bbb{Q}[X]$;
 * square roots of rationals "$\sqrt{q}$" with $q\in\Bbb{Q}$, take $P=X^2-q\in\Bbb{Q}[X]$;
 * higher roots such as "$\sqrt[r]{a}$", take $P=X^r-a$; **[HY: 这里怎么不 $\in\Bbb{Q}[X]$ 了]**
@@ -101,13 +101,15 @@ __Note.__ Chasing denominators in a rational polynomial $P$ killing a particular
 
 ### Complex Algebraic Integers ...
 
-We noted that, chasing denominators if necessary, complex algebraic numbers are the complex roots of integer coefficient polynomials. __Algebraic integers__ are those algebraic numbers that are the roots of __[monic][monic polynomial wiki]__ polynomials with integer coefficients.
+We noted that, chasing denominators **[HY: 通分?]** if necessary, complex algebraic numbers are the complex roots 复数根 of integer coefficient polynomials 整数系数多项式. __Algebraic integers__ are those algebraic numbers that are the roots of __[monic][monic polynomial wiki]__ polynomials 单项多项式 (首一多项式) with integer coefficients.
+
+**[HY: 不是所有的代数都是代数整数。涉及到 本原多项式 Primitive Polynomial、首一多项式 monic polynomial 什么的]** 
 
 All algebraic integers are algebraic numbers, but not all algebraic numbers are algebraic integers. The difference is already stark for rational numbers:
 
 > __Lemma.__ A rational number is an algebraic integer _iff_ it is an integer.
 
-Thus "$\sqrt{d}$" for $d\in\Bbb{Z}$ is an algebraic integer, as a root of the monic integer polynomial $X^2-d$, but $\frac23$ is not.
+Thus "$\sqrt{d}$" for $d\in\Bbb{Z}$ is an algebraic integer, as a root of the monic integer polynomial $X^2-d$, but $\frac23$ is not. **[HY: 所以 $\sqrt{2}$ 是代数整数?]**
 
 ### ... Form a Ring
 
