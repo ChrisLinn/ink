@@ -77,14 +77,14 @@ __Note.__ I discovered rather late in the writing process (thanks to Thomas Piel
 
 ### Complex Algebraic Numbers ...
 
-Complex algebraic numbers 复代数数 are those complex numbers that satisfy a polynomial equation with rational coefficients, i.e. a complex number $z$ is algebraic if it satisfies $P(z)=0$ for a (nonzero) polynomial $P$ with rational coefficients. Examples include:
+**[HY: 不是所有的数都是代数]** Complex algebraic numbers 复代数数 are those complex numbers that satisfy a polynomial equation 多项式方程 with rational coefficients 有理数系数, i.e. a complex number 复数 $z$ is algebraic 代数的 if it satisfies $P(z)=0$ for a (nonzero) polynomial $P$ with rational coefficients. Examples include:
 * rational numbers $q\in\Bbb{Q}$, take $P=X-q\in\Bbb{Q}[X]$;
 * square roots of rationals "$\sqrt{q}$" with $q\in\Bbb{Q}$, take $P=X^2-q\in\Bbb{Q}[X]$;
 * higher roots such as "$\sqrt[r]{a}$", take $P=X^r-a$;
 
 and many, many more ... In particular __roots of unity__ $\zeta=\exp(\frac{2ik\pi}n)$, with $P=X^n-1$, are algebraic numbers.
 
-__Note.__ Not all complex numbers are algebraic. Those that aren't are called __[transcendental][transcendental number wiki]__.
+__Note.__ Not all complex numbers are algebraic. Those that aren't are called __[transcendental][transcendental number wiki] 超越的__.
 
 ### ... Form a Field
 
