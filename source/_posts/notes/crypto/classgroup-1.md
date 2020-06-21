@@ -61,7 +61,7 @@ __Orders__[^unrelated_order] and __rings of integers__ also make a double-take-w
 
 These notes contain a somewhat informal exposition of some basic topics in algebraic number theory as well as pointers as to how these are relevant to cryptography. The reader will find _no proofs_ here, only assertions and my attempts at motivating the theory. __My goal is to swiftly take the reader from the definition of algebraic integers to that of class groups__. In keeping with that philosophy, I have tried to keep all theorems, lemmas, propositions and definitions _short_ and written in plain english whenever possible. 
 
-However, __motivation is key__, and I have tried to follow some guiding threads. The angle that made the most sense to me[^no_originality] is that of __prime-ness 素性: what does it mean to be  prime?__ and __factorization: when/how can one extend the standard theory of prime factorization of integers to other number systems [HY: factorization 不仅可以用于整数]?__
+However, __motivation is key__, and I have tried to follow some guiding threads. The angle that made the most sense to me[^no_originality] is that of __prime-ness 素性: what does it mean to be  prime?__ and __factorization: when/how can one extend the standard theory of prime factorization of integers to other number systems?__ **[HY: factorization 不仅可以用于整数]**
 
 [^no_originality]: and which is invariably discussed in pretty much every other text on the subject
 
