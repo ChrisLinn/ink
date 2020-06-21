@@ -78,17 +78,17 @@ __Note.__ I discovered rather late in the writing process (thanks to Thomas Piel
 ### Complex Algebraic Numbers ...
 
 **[HY: 不是所有的数都是代数]** Complex algebraic numbers 复代数数 are those complex numbers that satisfy a polynomial equation 多项式方程 with rational coefficients 有理数系数, i.e. a complex number 复数 $z$ is algebraic 代数的 if it satisfies $P(z)=0$ for a (nonzero) polynomial $P$ with rational coefficients. Examples include:
-* rational numbers $q\in\Bbb{Q}$, take $P=X-q\in\Bbb{Q}[X]$;
+* rational numbers $q\in\Bbb{Q}$ **[HY: $\Bbb{Q}$ 就是有理数的标识？]**, take $P=X-q\in\Bbb{Q}[X]$;
 * square roots of rationals "$\sqrt{q}$" with $q\in\Bbb{Q}$, take $P=X^2-q\in\Bbb{Q}[X]$;
-* higher roots such as "$\sqrt[r]{a}$", take $P=X^r-a$;
+* higher roots such as "$\sqrt[r]{a}$", take $P=X^r-a$; **[HY: 这里怎么不 $\in\Bbb{Q}[X]$ 了]**
 
-and many, many more ... In particular __roots of unity__ $\zeta=\exp(\frac{2ik\pi}n)$, with $P=X^n-1$, are algebraic numbers.
+and many, many more ... In particular __roots of unity 单位根__ $\zeta=\exp(\frac{2ik\pi}n)$, with $P=X^n-1$, are algebraic numbers.
 
 __Note.__ Not all complex numbers are algebraic. Those that aren't are called __[transcendental][transcendental number wiki] 超越的__.
 
 ### ... Form a Field
 
-It is a [fact][algebraic numbers form a field wiki] that the sum, product and quotient of algebraic numbers is still algebraic.
+**[HY: 代数的 和、乘积、商 都还是代数的]** It is a [fact][algebraic numbers form a field wiki] that the sum, product and quotient of algebraic numbers is still algebraic.
 > __Theorem.__ The set $\overline{\Bbb{Q}}$ of all complex algebraic numbers forms a subfield of $\Bbb{C}$.
 
 __Note.__ This is not _a priori_ obvious. Take $\alpha=\sqrt{5}+\frac12\frac1{\sqrt{3}}$: individually $\sqrt{5}$ and $\frac1{\sqrt{3}}$ are algebraic (they are roots of $X^2-5$ and $X^2-\frac1{3}$ respectively). To see that their $\Bbb{Q}$-linear combination $\alpha$ is algebraic we need to come up with a (nonzero) rational polynomial $P$ annihilating $\alpha$. We see that $\alpha^2=\frac{61}{12} - \frac{\sqrt{15}}3$ so that $\alpha$ is a root of $$P=\Big(X^2-\frac{61}{12}\Big)^2-\frac{5}3 = X^4-\frac{61}6 X^2 + \frac{3481}{144}$$ Since $\alpha$ is a root of this rational polynomial, we see that $\alpha$ is algebraic. Doing similar manipulations by hand for more complicated expressions quickly becomes complicated.
