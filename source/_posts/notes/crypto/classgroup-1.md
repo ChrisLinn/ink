@@ -144,7 +144,7 @@ In other words, $K$ is a field[^of_char_zero] and there exist elements $\alpha_1
 Elementary linear algebra shows that
 > __Lemma.__ All elements of a number field $K$ are algebraic.
 
-**[HY: 向量空间和加法乘法各个律的关系，和”代数的“的关系。]**
+**[HY: 向量空间和加法乘法各个律的关系，和“代数的”的关系。]**
 
 [^of_char_zero]: Of characteristic zero
 

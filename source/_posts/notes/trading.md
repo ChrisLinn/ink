@@ -19,6 +19,29 @@
     * [高级技术分析](https://book.douban.com/subject/2220884/)
     * [对冲基金经理笔记](https://book.douban.com/subject/6863129/)
     * [技术分析](https://book.douban.com/subject/1082999/)
++ [作为金融专业学生或从业者，你每天会为学习金融做出什么样的努力？](https://www.zhihu.com/question/28141300/answer/719888021)
+    * 信息
+        - 自己尝试着对一些公司进行分析和估值。
+            + [Bloomberg](https://www.bloomberg.com/professional/contact-menu/) - 找公开的卖方的研究报告；
+            + [Seekingalpha](https://seekingalpha.com/) - 看别的作者写的分析。
+        - 培养对投行的基础概念的培养和累积知识。培养对市场的兴趣，增加对市场的了解，良性循环。
+        - 紧跟市场动态
+            + [Investopedia](https://www.investopedia.com/)
+                * 为何这是一个好的投资
+                * 商业模式由什么推动，影响利润和成本的因素都有哪些
+                *  潜在的机会和上升空间
+            + [The New York Times Dealbook](https://www.nytimes.com/section/business/dealbook)
+                * 不仅囊括了市场最新动态，还能够给我提供高质量的分析文章，并结合最新政策动态提供较为深度的解读。
+                * 不仅囊括了市场最新动态，还能够给我提供高质量的分析文章，并结合最新政策动态提供较为深度的解读。
+                    - 保持自己的思辨能力其实更为核心
+                    - 不要被各大不同网站文章的立场而左右
+            + [American Banker](https://www.americanbanker.com/)
+                * 日常交易和市场动态以外，这个网站还有从内部了解投行行业的深度解读
+            + CNBC，Wall Street Journal，中文的华尔街见闻...
+    * 看书
+        - 金融入门：Fundamentals of Corporate Finance by Ross Westerfield Jordan
+        - 交易：Investments by Bodie Kane Marcus
+        - Quant：Expected Returns: An Investor's Guide to Harvesting Market Rewards by Antti Ilmanen
 + ...
 
 ## Economists
