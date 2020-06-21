@@ -27,13 +27,15 @@
         + https://gitmemory.com/longcpp
         + https://gitmemory.com/amanusk
         + https://gitmemory.com/danielkeep
+        + https://gitmemory.com/jjyr
         + https://gitmemory.com/wayslog
     - gitcoin
         + https://gitcoin.co/explorer
         + https://github.com/gitcoinco/beyondblockchainteams/issues
 * blockchain
-    - https://distsys.substack.com/
     - https://decentralizedthoughts.github.io/
+    - https://zkcapital.substack.com/
+    - https://distsys.substack.com/
     - https://blog.cryptographyengineering.com/
     - https://ethresear.ch/u/sebastianelvis/summary
     - https://www.the-paper-trail.org/
@@ -83,8 +85,6 @@
             + 70
             + ~~71-76~~
             + ~~89~~
-    - https://zkcapital.substack.com/
-    - https://distsys.substack.com/
     - https://csruiliu.github.io/blog/tag/distcomp/
     - https://blog.quarkslab.com/
     - https://joinmarket.me/blog/
@@ -92,6 +92,7 @@
     - https://cathieyun.github.io/
     - http://defeo.lu/
     - https://www.michaelstraka.com/
+    - https://dankradfeist.de/
     - https://www.eff.org/about/staff/eva-galperin
     - https://github.com/pszal/teaching
     - https://github.com/isislovecruft/library--
@@ -123,6 +124,7 @@
     - http://wayslog.com/
     - https://blog.iany.me/
         + zhangyaning
+    - https://justjjy.com/
     - https://xxuejie.github.io
         + xiao xue jie, ckb-vm
     + http://accu.cc/
@@ -131,7 +133,6 @@
     - [blockchain](/technical/blockchain/README.md)
     - https://www.jianshu.com/c/06ddad58490f
     - https://concourseopen.com/
-    * https://decentralizedthoughts.github.io/
 * sec
     - 玄武 https://sec.today
     * https://github.com/riusksk/secbook
