@@ -714,8 +714,8 @@ There are of course exceptions, and many classical results determining the struc
 * $\Bbb{Z}^\times=\{\pm1\}$,
 * $\Bbb{Q}^*_+\simeq\bigoplus_{p\text{ prime}}\Bbb{Z}$, and taking signs into account, $\Bbb{Q}^*\simeq \{\pm1\}\times \Bbb{Q}^*_+$;
 * $\Bbb{R}^*_+\simeq(\Bbb{R},+)$ via the exponential map / logarithm, $\Bbb{R}^*\simeq\{\pm1\}\times(\Bbb{R},+)$
-* $\Bbb{U}=\{z\in\Bbb{C}\mid |z|=1\}$, $\Bbb{U}\simeq\Bbb{R}/\Bbb{Z}$ via $t\mapsto\exp(2i\pi t)$
-* $\Bbb{C}^*\simeq \Bbb{U}\times\Bbb{R}_+^*$
+* $\Bbb{U} = $ { $z\in\Bbb{C}\mid |z|=1$ }, $\Bbb{U}\simeq\Bbb{R}/\Bbb{Z}$ via $t\mapsto\exp(2i\pi t)$
+* $\Bbb{C}^* \simeq \Bbb{U} \times \Bbb{R}_+^*$
 
 For rings of the form $\Bbb{Z}/N\Bbb{Z}$ it is enough, thanks to the [Chinese Remainder Theorem][CRT wiki] to deal with the prime power case $N=p^d$:
 * if $\mathcal{U}(\Bbb{Z}/p^d\Bbb{Z})$ is cyclic isomorphic to $\Bbb{Z}/(p-1)p^{d-1}\Bbb{Z}$.
@@ -726,9 +726,9 @@ It is a [fact][fin subgrp of units of field] that finite subgroups of $L^\times$
 If $A$ is any ring, $A[X]$ its ring of polynomials, $P=a_0+a_1X+\cdots+a_d X^d\in A[X]$, then
 * $P$ is invertible in $A[X]$ _iff_ $a_0$ is invertible in $A$ and $a_1,\dots,a_d$ are nilpotent.
 
-In particular, if $A$ is [reduced][reduced ring wiki] then $A[X]^\times\simeq A^\times$.
+In particular, if $A$ is [reduced][reduced ring wiki] **[HY: ???]** then $A[X]^\times\simeq A^\times$.
 
-Likely the most important example on this list is the (noncommutative) ring of matrixes $M_n(A)$ for a (commutative) ring $A$: its units are precisely those matrices whose determinant is a unit in $A$.
+Likely the most important example on this list is the (noncommutative) ring of matrixes $M_n(A)$ for a (commutative **[HY: 交换的]**) ring $A$: its units are precisely those matrices whose determinant is a unit in $A$.
 
 [Canonical Embedding, 5.3]: https://faculty.math.illinois.edu/~r-ash/Ant/AntChapter5.pdf
 [Lemmermeyer]: http://www.fen.bilkent.edu.tr/~franz/ant-st.pdf
