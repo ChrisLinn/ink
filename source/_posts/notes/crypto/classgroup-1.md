@@ -682,7 +682,9 @@ An important property of the trace $t$ is the
 
 The Serre-Tate theorem tells us that __the endomorphism rings of isogenous elliptic curves are all sandwiched between the orders $\Bbb{Z}[\mathbf{Frob}_q]$ and $\mathcal{O}_K$ of the same number field $K$__. Futhermore, the previous remark about divisibility of indices implies that there are only finitely many orders in that gap.
 
-On page 6 of Luca de Feo _et al._'s paper [Towards practical key exchange from ordinary isogeny graphs][LDF Towards] one finds a description of how (invertible) ideals $\mathfrak{a}$ of $\mathcal{O}:=\mathrm{End}(E)$ define finite subgroups $$E[\mathfrak{a}]=\lbrace P\in E\mid \forall\varphi\in\mathfrak{a},~\varphi(P)=O\}$$ and associated isognies $E\twoheadrightarrow\mathfrak{a}*E$ where $\mathfrak{a}*E=E/E[\mathfrak{a}]$ is the quotient curve. These isogenies are always __horizontal__ (in the sense of page 66 out of 96 of the bold link) so that $\mathrm{End}(\mathfrak{a}*E)=\mathcal{O}=\mathrm{End}(E)$. It turns out that this defines an action of the class group of invertible ideals of $\mathcal{O}$ on the isogeny graph of $E$. One can thus walk along this graph using products of ideals. This is the basis of Diffie-Hellman-type key exchange protocols.
+On page 6 of Luca de Feo _et al._'s paper [Towards practical key exchange from ordinary isogeny graphs][LDF Towards] one finds a description of how (invertible) ideals $\mathfrak{a}$ of $\mathcal{O}:=\mathrm{End}(E)$ define finite subgroups
+$$E[\mathfrak{a}]=\lbrace P \in E\mid \forall\varphi \in \mathfrak{a}, \varphi(P)=O\rbrace$$
+and associated isognies $E\twoheadrightarrow\mathfrak{a}*E$ where $\mathfrak{a}*E=E/E[\mathfrak{a}]$ is the quotient curve. These isogenies are always __horizontal__ (in the sense of page 66 out of 96 of the bold link) so that $\mathrm{End}(\mathfrak{a}*E)=\mathcal{O}=\mathrm{End}(E)$. It turns out that this defines an action of the class group of invertible ideals of $\mathcal{O}$ on the isogeny graph of $E$. One can thus walk along this graph using products of ideals. This is the basis of Diffie-Hellman-type key exchange protocols.
 
 [LDF Towards]: https://eprint.iacr.org/2018/485
 
@@ -714,7 +716,7 @@ There are of course exceptions, and many classical results determining the struc
 * $\Bbb{Z}^\times=\{\pm1\}$,
 * $\Bbb{Q}^*_+\simeq\bigoplus_{p\text{ prime}}\Bbb{Z}$, and taking signs into account, $\Bbb{Q}^*\simeq \{\pm1\}\times \Bbb{Q}^*_+$;
 * $\Bbb{R}^*_+\simeq(\Bbb{R},+)$ via the exponential map / logarithm, $\Bbb{R}^*\simeq\{\pm1\}\times(\Bbb{R},+)$
-* $\Bbb{U} = $ { $z\in\Bbb{C}\mid |z|=1$ }, $\Bbb{U}\simeq\Bbb{R}/\Bbb{Z}$ via $t\mapsto\exp(2i\pi t)$
+* $\Bbb{U} = \lbrace z\in\Bbb{C}\mid |z|=1 \rbrace$, $\Bbb{U}\simeq\Bbb{R}/\Bbb{Z}$ via $t\mapsto\exp(2i\pi t)$
 * $\Bbb{C}^* \simeq \Bbb{U} \times \Bbb{R}_+^*$
 
 For rings of the form $\Bbb{Z}/N\Bbb{Z}$ it is enough, thanks to the [Chinese Remainder Theorem][CRT wiki] to deal with the prime power case $N=p^d$:
