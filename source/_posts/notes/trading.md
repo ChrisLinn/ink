@@ -42,6 +42,7 @@
         - 金融入门：Fundamentals of Corporate Finance by Ross Westerfield Jordan
         - 交易：Investments by Bodie Kane Marcus
         - Quant：Expected Returns: An Investor's Guide to Harvesting Market Rewards by Antti Ilmanen
++ [B 站 hftquant](https://space.bilibili.com/434225454?from=search&seid=1880528684684358500)
 + ...
 
 ## Economists
