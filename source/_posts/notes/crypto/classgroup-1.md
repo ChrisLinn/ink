@@ -655,9 +655,9 @@ I & \longmapsto & (I,q_I)\\[4mm]
 
 (To be fair, the proper target of the first map is the category of oriented quadratic planes: free abelian groups of rank $2$ with an orientation and a quadratic form of discriminant $D$, and ideals on the left should be endowed with an orientation.)
 
-An explicit construction can be found in the appendix [to this paper][G. Harcos class group via quadratic forms]. (The equivalence class of) $(\mathcal{O}_K, N_{K/\Bbb{Q}})$ corresponds to the neutral element $[\langle 1\rangle]=[\mathcal{O}_K]$, and there are explicit algebraic formulas for computing the product of two representatives forms represented by $[a,b,c]$ and $[\alpha,\beta,\gamma]$ respectively. This law is called __composition of quadratic forms__.
+**[HY: !!!]** An explicit construction can be found in the appendix [to this paper][G. Harcos class group via quadratic forms]. (The equivalence class of) $(\mathcal{O}_K, N_{K/\Bbb{Q}})$ corresponds to the neutral element $[\langle 1\rangle]=[\mathcal{O}_K]$, and there are explicit algebraic formulas for computing the product of two representatives forms represented by $[a,b,c]$ and $[\alpha,\beta,\gamma]$ respectively. This law is called __composition of quadratic forms__.
 
-[Brian Conrad's course notes][B Conrad course notes] explain this correspondence __very satisfyingly__ without arbitrary base choices. I should also mention [Serre's short paper $\Delta=b^2-4ac$][Serre Delta] which discusses class number $1$ and related problems.
+**[HY: !!!]** [Brian Conrad's course notes][B Conrad course notes] explain this correspondence __very satisfyingly__ without arbitrary base choices. I should also mention [Serre's short paper $\Delta=b^2-4ac$][Serre Delta] which discusses class number $1$ and related problems.
 
 [^for_all_x_y]: for all $x,y\in\Bbb{Z}$,
 
