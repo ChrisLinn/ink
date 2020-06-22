@@ -258,6 +258,10 @@ security的论文 实验和出成果都不难, 工业界比学术界领先, 论�
 + Circus Ponies Notebook
 + citavi
 
+## Peer Review
++ https://www.scisnack.com/wp-content/uploads/2018/10/A-Peer-Review-Process-Guide.pdf
++ https://www.nature.com/articles/d41586-018-06991-0
+
 ## 区块链的文章都发在哪几个会
 http://www.conferenceranks.com/ ,randA & rankB
 
@@ -296,6 +300,7 @@ http://www.conferenceranks.com/ ,randA & rankB
     * https://cbr.stanford.edu/sbc20/
     * https://blockchain.kcl.ac.uk/ieee-sb2019/#top
 
+
 <!-- 
 ## white-city
 + https://www.fpcomplete.com/blog/2018/07/deploying-rust-with-docker-and-kubernetes
@@ -305,11 +310,6 @@ http://www.conferenceranks.com/ ,randA & rankB
 
 ## system model, network model, threat model
 可以看 omniledger
-
-
-## I like the way they criticise other works
-
-+ https://eprint.iacr.org/2020/362.pdf
 
 
 ## smart contract
