@@ -119,6 +119,8 @@
         + https://reviews.llvm.org/p/lichray/
     - http://maskray.me/
     - http://adnanaziz.com/classes/
+    - http://users.cms.caltech.edu/~mvanier/index.html
+    - http://comonad.com/reader/
     - https://xieyuheng.github.io
     - https://www.driftluo.com/
     - http://wayslog.com/
