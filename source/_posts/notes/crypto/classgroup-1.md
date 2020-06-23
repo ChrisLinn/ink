@@ -181,11 +181,11 @@ To illustrate this, consider the problem of expressing $\frac1{\delta + 3}$ as a
 
 ### Disincarnate number fields
 
-The examples of number fields we gave up until now were "concrete" in the sense that they were subfields of the field of complex numbers. We noted that their algebra could be done _purely formally_. If we take this observation seriously we are led to construct "disincarnate" number fields by "adjoining formal roots" of irreducible polynomials to the rational numbers.
+**[HY: 这里 disincarnate 和 abstract 是同义词。TODO: 这里的概念应该可以梳理一下。]** The examples of number fields we gave up until now were "concrete" in the sense that they were subfields of the field of complex numbers. We noted that their algebra could be done _purely formally_. If we take this observation seriously we are led to construct "disincarnate" number fields by "adjoining formal roots" of irreducible polynomials to the rational numbers.
 
 > __Definition.__ Let $P$ be an irreducible polynomial over $\Bbb{Q}$. There is a number field $K_P$ obtained by formally adjoining a root of $P$ to $\Bbb{Q}$.
 
-One can construct $K_P$ as the [quotient ring][quotient ring wiki] $\Bbb{Q}[X]/\langle P\rangle$ of rational polynomials modulo $P$. This produces a number field called the [rupture field of $P$][rupture field wiki]. Indeed, if one defines $x$ to be the class of $X$ mod $P$, then $x$ is a root of $P$ in $K_P$ and $(1,x,\dots,x^{d-1})$ forms a $\Bbb{Q}$-basis of $K_P$ where $d=\deg(P)$.
+One can construct $K_P$ as the [quotient ring][quotient ring wiki] **[HY: 商环]** $\Bbb{Q}[X]/\langle P\rangle$ of rational polynomials modulo $P$. This produces a number field called the [rupture field of $P$][rupture field wiki] **[HY: ???]**. Indeed, if one defines $x$ to be the class of $X$ mod $P$, then $x$ is a root of $P$ in $K_P$ and $(1,x,\dots,x^{d-1})$ forms a $\Bbb{Q}$-basis of $K_P$ where $d=\deg(P)$.
 
 __Note.__ In concrete terms this means that one defines $K_P$ as the set of polynomials "mod $P$", and does operations "mod $P$". Thus $A\times B$ is computed by computing the ordinary product $A\times B$, doing long division by $P$ and returning the residue.
 
