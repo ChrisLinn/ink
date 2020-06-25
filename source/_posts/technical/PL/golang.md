@@ -18,6 +18,7 @@
 + https://github.com/inancgumus/learngo
 + https://github.com/hantmac/Mastering_Go_Second_Edition_Zh_CN
 + https://github.com/hoanhan101/ultimate-go
++ https://github.com/GoesToEleven/GolangTraining
 + https://github.com/quii/learn-go-with-tests
 + https://github.com/qichengzx/gopher-reading-list-zh_CN
 + https://github.com/golang/go/wiki/
