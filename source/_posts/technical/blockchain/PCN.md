@@ -27,3 +27,27 @@ Schnorr 签名也可达到这个效果，所以 Scriptless Scripts 很可能不�
 + ability to hide complex scripts / contracts
 
 
+<!-- 
+
+Time-Dilation Attacks
++ https://arxiv.org/abs/2006.01418
++ https://bitcoinops.org/en/newsletters/2020/06/10/
+
+fee attack on atomicity?
++ https://bitcoinops.org/en/newsletters/2020/04/29/#new-attack-against-ln-payment-atomicity
++ https://bitcoinops.org/en/topics/transaction-pinning/
++ https://bitcoinops.org/en/newsletters/2020/06/24/
+
+
+mad-htlc
++ https://arxiv.org/abs/2006.12031
+
+
+LN fee ransom attack:
++ https://bitcoinops.org/en/newsletters/2020/06/24/
++ https://lists.linuxfoundation.org/pipermail/lightning-dev/2020-June/002735.html
+
+一些客户端 close 的 bug
+
+
+ -->
