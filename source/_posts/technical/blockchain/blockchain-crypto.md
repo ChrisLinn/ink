@@ -15,8 +15,7 @@ also see:
 + hash function
     - 也不是都是抗量子的
         - 所谓抗量子也很复杂，什么 RSA assumption（分解质因数？）， discrete logarithm (DL) problem（DH？），decisional DH, computational DH，SDH。。。
-            + 话说 共识里面 关于 assumption 的讨论： [Completeness Theorems for
-Non-Cryptographic Fault-Tolerant Distributed Computation](https://dl.acm.org/doi/pdf/10.1145/3335741.3335756)
+            + 话说 共识里面 关于 assumption 的讨论： [Completeness Theorems for Non-Cryptographic Fault-Tolerant Distributed Computation](https://dl.acm.org/doi/pdf/10.1145/3335741.3335756)
     * 但好像还比较多抗量子的
 + lattice
     * 抗量子
