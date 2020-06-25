@@ -240,6 +240,33 @@ libfoo.a: foo.o cfoo.o
 
 ## Compiler Interview
 <!-- 
+
+call by Value/Value-result/Reference/Name/Need
+
+
+Liveness
+Register Allocation
+Interference Graph
+
+Liveness
+Dead code elimination
+
+
+
+GC
+
+
+Heap vs Stack
+
+
+
+Interpreter vs Complier
+JIT
+IR
+
+
+
+
 inline
 
 循环展开，强制函数内联，用空间换时间
