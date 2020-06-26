@@ -34,6 +34,11 @@ see "2020_501 vs 2020_492"
 ### 2020/498 vs GG20
 see "gg20_2"
 
+<!-- 
+### Efficient Constant-Round MPC with Identifiable Abort and Public Verifiability
+https://eprint.iacr.org/2020/767
+ -->
+
 ## comparison
 + https://medium.com/blockchain-at-berkeley/alternative-signatures-schemes-14a563d9d562
 + https://medium.com/cryptoadvance/bls-signatures-better-than-schnorr-5a7fe30ea716
