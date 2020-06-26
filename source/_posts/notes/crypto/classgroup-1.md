@@ -9,6 +9,8 @@ TODO:
 + https://www.cnblogs.com/Colin-Cai/p/9397448.html
 + https://jeremykun.com/primers/
 
+also see assets/group.drawio
+
 -->
 
 
