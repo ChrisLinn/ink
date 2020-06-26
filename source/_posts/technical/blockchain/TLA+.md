@@ -2,6 +2,7 @@
 
 * https://github.com/tlaplus/DrTLAPlus
 - https://github.com/mryndzionek/tlaplus_specs
+* https://github.com/lemmy/awesome-tlaplus
 + https://ethresear.ch/t/modelling-a-state-channel-protocol-using-tla/7534
     * https://blog.statechannels.org/breaking-state-channels/
     * https://github.com/statechannels/tla-specs
