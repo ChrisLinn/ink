@@ -50,4 +50,10 @@ LN fee ransom attack:
 一些客户端 close 的 bug
 
 
+griefing
+https://eprint.iacr.org/2020/456
+
+Flood & Loot: A Systemic Attack On The Lightning Network
+https://arxiv.org/abs/2006.08513
+
  -->
