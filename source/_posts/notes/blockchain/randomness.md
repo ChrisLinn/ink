@@ -78,6 +78,8 @@ have taken a long time.
 
 cVDF enable verifiably outsourcing VDF computation.
 
+incremental PoSW 就是 别人可以接着 PoSW；cVDF 就是别人可以接着 VDF。
+
 ### RSA Groups assumption
 Everyone seems to love VDFs, but the complexity theory around them is a bit underwhelming — why do they only work against adversaries with a polynomial compute advantage?
 
