@@ -1,5 +1,11 @@
 # Hash
 
+https://ethfans.org/posts/the-state-of-hashing-algorithms-the-why-the-how-and-the-future
+
+https://www.hyperelliptic.org/tanja/teaching/cryptoI14/Hash-Functions-Crypto1_part1.pdf
+
+https://eprint.iacr.org/2004/035.pdf
+
 ## some history
 SHA1
 SHA2
@@ -21,6 +27,7 @@ merkle tree
 dis-log
 DDH
 SDH
+dan boneh 里面也有
 
 ## snark-friendly hash
 SHA?
@@ -29,3 +36,4 @@ MiMC
 
 ## former secrecy
 TODO
+wikipedia
