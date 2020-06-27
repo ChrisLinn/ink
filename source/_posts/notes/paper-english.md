@@ -35,3 +35,6 @@
 + there is little compelling evidence to support the claims
 + devastating
 + aggravate
++ subvert
++ substitute
++ posterior 
