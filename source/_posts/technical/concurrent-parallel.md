@@ -361,6 +361,17 @@ pool.join()
             a: 3
             ```
 
+##### CSP vs actor model
+
++ http://www.usingcsp.com/cspbook.pdf
++ 最基本，也是每个人都需要掌握的并发模型是 threading / multiprocessing，也就是 lock-based concurrency
++ CSP
+    * CSP 是 occam 第一个引入到语言的，但让 CSP 变得流行要归功于 golang，随后 clojure 又在其 core.async 也把 CSP 引入语言的核心库。
++ 之后是 actor model，自从 erlang 将其从学术界引入到工业界，actor model 开始受到重视，尤其是最近几年，随着分布式系统地流行，actor model 开始大放异彩，开始渗透到其他主流语言。actor model 和 CSP 某些地方很像
++ STM (software transaction memory) 稍微冷门一些，目前使用 STM 的主流语言只有 clojure。它从数据库吸取了很多灵感。
++ 最后介绍的是 future。主要谈了 Promise 和 Observable。这是两个非常重要的概念，在 javascript 应用广泛，但其概念也可以应用于任何语言（Observable 有多个语言的实现）。
+
+
 #### `context`
 + 应用场景主要是在API中
     * goroutine往往要衍生出许多额外的goroutine去处理操作, 如
