@@ -38,6 +38,12 @@
     - https://distsys.substack.com/
     - https://blog.cryptographyengineering.com/
     - https://ethresear.ch/u/sebastianelvis/summary
+    - https://hashmatter.com/
+        + https://github.com/hashmatter
+        + https://github.com/hashmatter/research
+        + https://github.com/gpestana/notes
+        + https://github.com/gpestana/p2psec
+        + https://www.gpestana.com/
     - https://www.the-paper-trail.org/
     - https://www.lightbluetouchpaper.org/
     * https://medium.com/consensys-diligence
@@ -136,6 +142,7 @@
     - https://www.jianshu.com/c/06ddad58490f
     - https://concourseopen.com/
 * sec
+    - https://www.gpestana.com/
     - 玄武 https://sec.today
     * https://github.com/riusksk/secbook
     * https://github.com/david415/reading_lists
