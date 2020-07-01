@@ -262,6 +262,10 @@ security的论文 实验和出成果都不难, 工业界比学术界领先, 论�
 + https://www.scisnack.com/wp-content/uploads/2018/10/A-Peer-Review-Process-Guide.pdf
 + https://www.nature.com/articles/d41586-018-06991-0
 
+## Rebuttal
++ https://sites.umiacs.umd.edu/elm/2016/11/19/writing-rebuttals/
++ [merrie_rebuttal_tips](https://github.com/ChrisLinn/chrislinn.ink/tree/master/assets/merrie_rebuttal_tips.pdf)
+
 ## 区块链的文章都发在哪几个会
 http://www.conferenceranks.com/ ,randA & rankB
 
