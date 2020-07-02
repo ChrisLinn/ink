@@ -31,3 +31,8 @@ Learning With Error (LWE)
 + TFHE
 + cuFHE
 + https://palisade-crypto.org/
++ lattice-related
+    * QEDIT (in a version of their PSI)
+    * https://github.com/ldsec/lattigo
+    * https://dualitytech.com/
+    * https://www.inpher.io/
