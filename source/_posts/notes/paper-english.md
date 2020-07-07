@@ -44,3 +44,6 @@
 + surpass
 + eclectic
 + lay down
++ bring forth a notable degree of interest and capital influx
++ advent
++ strenuous
