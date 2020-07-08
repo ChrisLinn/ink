@@ -11,6 +11,14 @@ title: Linux Notes
 
 [Linux命令行有这么多的好东西？](https://zhuanlan.zhihu.com/p/30720022)
 
+## 换源
+
+清华、阿里、中科大
+
+https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
+
+然后 `sudo apt-get update`
+
 ## fisher
 + https://github.com/jethrokuan/fzf
 + https://github.com/junegunn/fzf
@@ -418,6 +426,15 @@ function sproxy_goflyway() {
         ```bash
         git config remote.origin.prune true
         ```
+
+## Git
+```
+[source.crates-io]
+registry = "https://github.com/rust-lang/crates.io-index"
+replace-with = 'ustc'
+[source.ustc]
+registry = "git://mirrors.ustc.edu.cn/crates.io-index"
+```
 
 ## Misc
 
