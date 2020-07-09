@@ -427,6 +427,14 @@ function sproxy_goflyway() {
         git config remote.origin.prune true
         ```
 
+# [寻找文件](https://mp.weixin.qq.com/s/oh_wduALM601fQbNu7UKzAhttps://mp.weixin.qq.com/s/oh_wduALM601fQbNu7UKzA)
+
++ `grep -irl "some pathern" .`
++ `find . -name "filename"`
++ `locate "filename"` + `sudo updatedb`
++ `which "binfilename"`
++ `whereis "binfilename"``
+
 ## Git
 ```
 [source.crates-io]
