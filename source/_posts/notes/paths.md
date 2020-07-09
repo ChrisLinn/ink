@@ -145,6 +145,8 @@
 ## direction
 security的论文 实验和出成果都不难, 工业界比学术界领先, 论文还没出工业界就把事情搞出来了(不像密码学,没论文是几乎不可能搞出事情的), 关键在 methodology 和 motivation 要好, __角度要刁钻__(实现不难，然后统计分析一下), 解决实际问题, 
 
++ 入门参考
+    + https://oaklandsok.github.io/
 + methodology
     * [SoK: Science, Security, and the Elusive Goal of Security as a Scientific Pursuit](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/03/scienceAndSecuritySoK.pdf)
     * [Science of Security: Combining Theory and Measurement to Reflect the Observable](https://people.scs.carleton.ca/~paulv/papers/science-security-SPmag-jan2018.pdf)
