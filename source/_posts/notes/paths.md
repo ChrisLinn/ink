@@ -116,6 +116,7 @@
 + [Ittay Eyal](http://webee.technion.ac.il/people/ittay/)
 + Ittai Abraham
 + [Elaine Shi](http://elaineshi.com/)
++ [Kenneth P. Birman](http://www.cs.cornell.edu/ken/)
 + Dan Boneh
 + Yehuda Lindell
 + Oded Goldreich
