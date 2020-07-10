@@ -162,6 +162,7 @@ https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
     ```
 
 <!-- 
+
 `~/.bashrc`
 ```
 function kproxy() {
@@ -192,7 +193,9 @@ function sproxy_goflyway() {
   echo -e "proxy on!"
 }
 ```
- -->
+
+-->
+
 ## [Vim](/notes/vim.md)
 
 ## Reverse proxy
@@ -206,7 +209,7 @@ function sproxy_goflyway() {
     ssh -p 7788 username@localhost
     ```
 
-### frp   
+### frp
 * server
     ```
     # frps.ini
