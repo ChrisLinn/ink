@@ -35,6 +35,7 @@
         + https://github.com/gitcoinco/beyondblockchainteams/issues
 * blockchain
     - https://decentralizedthoughts.github.io/
+    - https://openmined.org/
     - https://zkcapital.substack.com/
     - https://distsys.substack.com/
     - https://blog.cryptographyengineering.com/
