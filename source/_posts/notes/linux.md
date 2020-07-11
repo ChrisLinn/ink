@@ -20,8 +20,9 @@ https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
 然后 `sudo apt-get update`
 
 ## fisher
-+ https://github.com/jethrokuan/fzf
 + https://github.com/junegunn/fzf
++ https://github.com/jethrokuan/fzf
++ https://github.com/halostatue/fish-fzf
 + https://github.com/jorgebucaran/fisher
     * alternative: https://github.com/oh-my-fish/oh-my-fish
 + https://github.com/jorgebucaran/fish-nvm
