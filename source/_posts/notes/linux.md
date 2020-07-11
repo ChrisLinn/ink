@@ -135,20 +135,20 @@ https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
         ```
 + git, https://gist.github.com/laispace/666dd7b27e9116faece6 
     * HTTP
-    ```bash
-    git config --global http.proxy http://127.0.0.1:8118
-    ```
+    	```bash
+    	git config --global http.proxy http://127.0.0.1:8118
+    	```
     * socks5
-    ```bash
-    git config --global http.proxy socks5://127.0.0.1:1080
-    #or git config --global http.proxy socks5h://127.0.0.1:1080
-    #specifically git config --global http.https://github.com.proxy socks5://127.0.0.1:1080
-    ```
+    	```bash
+    	git config --global http.proxy socks5://127.0.0.1:1080
+    	#or git config --global http.proxy socks5h://127.0.0.1:1080
+    	#specifically git config --global http.https://github.com.proxy socks5://127.0.0.1:1080
+    	```
     * SSH git@ -- `~/.ssh/config`
-    ```
-    Host github.com
-    ProxyCommand nc -X 5 -x 127.0.0.1:1080 %h %p # (For linux. Change to "ProxyCommand connect -S 127.0.0.1:1080 %h %p" for Windows.)
-    ```
+    	```
+    	Host github.com
+    	ProxyCommand nc -X 5 -x 127.0.0.1:1080 %h %p # (For linux. Change to "ProxyCommand connect -S 127.0.0.1:1080 %h %p" for Windows.)
+    	```
     * `git config --global --unset http.https://github.com.proxy`
     * squash
         - https://github.com/wprig/wprig/wiki/How-to-squash-commits
@@ -161,41 +161,6 @@ https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
     pip install —-upgrade genpac
     genpac --pac-proxy "SOCKS5 127.0.0.1:<PORT>" --gfwlist-proxy="SOCKS5 127.0.0.1:<PORT>" --gfwlist-url=https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt --output="autoproxy.pac” 
     ```
-
-<!-- 
-
-`~/.bashrc`
-```
-function kproxy() {
-  unset http_proxy
-  unset https_proxy
-  echo -e "proxy off!"
-}
-
-function sproxy_ss() {
-  export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
-  export http_proxy="http://127.0.0.1:8118"
-  export https_proxy=$http_proxy
-  echo -e "proxy on!"
-}
-
-function start_ss() {
-  sudo /etc/init.d/sslocal_script restart 
-}
-
-function start_goflyway() {
-  nohup goflyway -g -k="oo00oowoo00oo" -up="cf://i.lori.science:2082" > ~/.goflyway.log &
-}
-
-function sproxy_goflyway() {
-  export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
-  export http_proxy="http://127.0.0.1:8100"
-  export https_proxy=$http_proxy
-  echo -e "proxy on!"
-}
-```
-
--->
 
 ## [Vim](/notes/vim.md)
 
@@ -439,7 +404,7 @@ function sproxy_goflyway() {
 + `which "binfilename"`
 + `whereis "binfilename"`
 
-## Git
+## Cargo
 ```
 [source.crates-io]
 registry = "https://github.com/rust-lang/crates.io-index"
@@ -642,6 +607,11 @@ and it's so good that I don't need to worry about chinese IME in sublime/shell
 
 ~~(安装 之后好像 kde 登录界面会变中文？待确认。有可能只能忍受。)~~
 
+
+### Rime
+Rmie 不错的！
+
+### fcitx
 安装 fcitx：
 ```bash
 sudo apt install fcitx-bin
