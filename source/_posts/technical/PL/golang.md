@@ -316,15 +316,6 @@ https://go-critic.github.io/overview.html#builtinshadow
 
 ### Mics
 
-#### submodule 
-+ Delete the relevant section from the .gitmodules file.
-+ Stage the .gitmodules changes git add .gitmodules
-+ Delete the relevant section from .git/config.
-+ Run git rm --cached path_to_submodule (no trailing slash).
-+ Run rm -rf .git/modules/path_to_submodule (no trailing slash).
-+ ~~Commit git commit -m "Removed submodule "~~
-+ ~~Delete the now untracked submodule files rm -rf path_to_submodule~~
-
 #### append
 
 https://stackoverflow.com/questions/27622083/performance-slices-of-structs-vs-slices-of-pointers-to-structs

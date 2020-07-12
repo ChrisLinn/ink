@@ -396,6 +396,33 @@ https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
         git config remote.origin.prune true
         ```
 
+### delete submodule
+https://gist.github.com/myusuf3/7f645819ded92bda6677
+```
++ Delete the relevant section from the .gitmodules file.
++ Stage the .gitmodules changes git add .gitmodules
++ Delete the relevant section from .git/config.
++ Run git rm --cached path_to_submodule (no trailing slash).
++ Run rm -rf .git/modules/path_to_submodule (no trailing slash).
++ ~~Commit git commit -m "Removed submodule "~~
++ ~~Delete the now untracked submodule files rm -rf path_to_submodule~~
+```
+
+### completely delete submodule
+https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule
+```
+0. mv a/submodule a/submodule_tmp
+
+1. git submodule deinit -f -- a/submodule    
+2. rm -rf .git/modules/a/submodule
+3. git rm -f a/submodule
+# Note: a/submodule (no trailing slash)
+
+# or, if you want to leave it in your working tree and have done step 0
+3.   git rm --cached a/submodule
+3bis mv a/submodule_tmp a/submodule
+```
+
 ## [寻找文件](https://mp.weixin.qq.com/s/oh_wduALM601fQbNu7UKzAhttps://mp.weixin.qq.com/s/oh_wduALM601fQbNu7UKzA)
 
 + `grep -irl "some pathern" .`
