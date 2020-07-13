@@ -10,6 +10,7 @@ title: 目录
     * Distributed System / 分布式系统
         - [Learn You a Distributed Computing for Great Good! / 分布式系统思维导图](/technical/distsys/learn-u-a-distcomp-for-great-good)
     - Blockchain / 区块链
+        + [cryptography in blockchain space / 区块链中的密码学](/technical/blockchain/blockchain-crypto)
         + [VRF mining / 通过 VRF 来消灭矿池](/technical/blockchain/vrf-mining)
         + Bytom / 比原
             * [cross-chain / 跨链](/technical/blockchain/bytom/cross-chain)
