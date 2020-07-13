@@ -71,3 +71,4 @@ https://eprint.iacr.org/2020/767
     * With signature aggregation we have to rely on random number generator
         * we can’t choose random point R deterministically like we do in ECDSA
         * 如果你使用确定性K，它允许黑客获得我们的私钥
+    + 另有新 [FROST: Flexible Round-Optimized Schnorr Threshold Signatures](https://eprint.iacr.org/2020/852.pdf)
