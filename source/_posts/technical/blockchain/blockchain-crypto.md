@@ -70,15 +70,28 @@ Private_information_retrieval 这个亦有意义，涉及 intersection、交易�
 stealth address 这些则和很多相关，暂时不感兴趣。
 
 
-
 ## PCD
 + https://www.michaelstraka.com/posts/recursivesnarks/
 + https://eprint.iacr.org/2020/499
 
 
 ## VDF
-see: https://blog.priewienv.me/post/verifiable-delay-function-1/
+VDF 比较全的资料网站: https://vdfresearch.org/, also see: https://blog.priewienv.me/post/verifiable-delay-function-1/ and https://medium.com/@chia_network/chia-vdf-competition-guide-5382e1f4bd39.
 
+VDF 向上可以追溯到 [Time-lock Puzzles](https://people.csail.mit.edu/rivest/pubs/RSW96.pdf) 和 [Timed Commitments](https://pdfs.semanticscholar.org/764b/41d1cf0c2c64bec722f0afd4b0a2ce0bee27.pdf)。
+
+目前最常用的 两种 VDF 的构造是:
+
++ [Pie19](https://eprint.iacr.org/2018/627.pdf)
+    * fast to create, but large and slow to verify.
++ [Wes19](https://eprint.iacr.org/2018/623.pdf)
+    * slower to create (but parallelizable), but small, and quick to verify.
+
+[BBF18](https://eprint.iacr.org/2018/712) 专门了介绍了他们。
+
+[BBBF18](https://eprint.iacr.org/2018/601.pdf) 则列了各种 18年及以前的 VDF 相关的协议，并正式提出了 Verifiable Delay Functions (VDF) 的概念。
+
+[sloth](https://eprint.iacr.org/2015/366.pdf) 也是 Wes19 的 Wesolowski 提出的，在我看来就是 VDF 正式提出之前，VDF 的前身 (sloth 和 VDF 的 properties 还是有点区别，只能算是 pseudo-VDF)。sloth 和前面提到的 Pie19 和 Wes19 的区别是：sloth 利用了 computing square root (也算是 modular exponentiation，而 there is no known algorithm for computing modular exponentiation which is sublinear in the bit-length of the exponent.) 比它的逆运算难（慢）；而 Pie19 和 Wes19 则是利用了 repeated squaring in an RSA group (也可以不用 RSA group 而用别的 GUO 比如 class group)。
 
 
 ### [cVDF](https://eprint.iacr.org/2019/619.pdf)
