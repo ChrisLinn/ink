@@ -65,27 +65,6 @@ title: Randomness
 #### Dfinity 
 >它的机制和 algorand 很像，也需要一个 __委员会__ ，委员会会运行一个分布式的生成随机种子的协议。一样，我们先假设已经有了这样的随机数种子了，这样，随机数种子可以被利用算出每一个节点的排名。同时节点可以注册进入不同的组，不同的组中可以有相同的节点。委员会就是在这些组中随机挑选的一个，随机种子是刚刚提到的那个种子。此时，大家都可以提交候选区块，广播给所有的节点，但是在所有人做区块认证的时候，诚实节点总是会选择 __排名最高__ 的块签名，签好后，广播给所有的节点，直到节点收到或拥有某个获得一半以上签名的区块。一轮的公共种子实际上是根据上一轮的种子以及开始设置的密钥对唯一生成的。其实就是 __无分发者的秘密分享加上门限签名__ 的方案。首先，在最开始，会有一次分布式密钥生成来进行初始化配置。此时，组内的 n 个人必须要全部参与到这个协议中。通过这样一种方式，每个人获得一把私钥的一个碎片，以及用来验证这些碎片正确性的证明，这个碎片是用来做门限签名的。私钥的碎片，用来对上一轮生成的随机数和轮数拼在一起的字符串进行签名，然后广播之。这样的 n 个签名中只需要任意t个就可以拼出完整的可被公钥验证的签名，这个签名就是当前轮的随机数。整个过程，算法是确定的，对于一个节点来讲，唯一不确定的是其他人的签名结果。值得注意的地方就是 Dfinity 此处采用基于 BLS 的门限签名方案，这个方案的第一个好处就是仅需要进行一次全局设置。之前提到的秘密分享，每次都需要分享一次给每一个人。但是使用门限签名，除了密钥分发的阶段，之后的阶段只需要 n 个人中 t 个人提交有效的签名即可得出结果。第二个好处就是唯一性，无论哪 t 个人提交，最后对同样消息生成的签名都是相同的，这保证了最后生成的随机数是无法被偏移的。
 
-## VDF
-see: https://blog.priewienv.me/post/verifiable-delay-function-1/
-
-### [cVDF](https://eprint.iacr.org/2019/619.pdf)
-
-#### (incremental) PoSW vs cVDF
-a PoSW enables generating a publicly verifiable proof of some computation (rather than a specific function with a unique output) that is guaranteed to
-have taken a long time. 
-
-(Incremental) PoSWs do not satisfy (computational) uniqueness, which is a major downside for many applications (see [BBBF18] for several examples). 
-
-cVDF enable verifiably outsourcing VDF computation.
-
-incremental PoSW 就是 别人可以接着 PoSW；cVDF 就是别人可以接着 VDF。
-
-### RSA Groups assumption
-Everyone seems to love VDFs, but the complexity theory around them is a bit underwhelming — why do they only work against adversaries with a polynomial compute advantage?
-
-[A Note on Low Order Assumptions in RSA groups](https://eprint.iacr.org/2020/402)
-
-
 ## [Mining for Privacy: How to Bootstrap a Snarky Blockchain](https://eprint.iacr.org/2020/401.pdf)
 
 Achilles heel: If the randomness used for the generation is known, the soundness of the proof system can be broken with devastating consequences for the underlying blockchain system that utilises them

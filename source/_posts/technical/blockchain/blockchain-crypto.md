@@ -25,7 +25,7 @@ also see:
         - class group, trustless setup
             + 亦可用于 zkp???
     * GUO 可用于
-        * VDF
+        * [VDF](#vdf)
         * Cryptographic Accumulators
             - [Batching Techniques for Accumulators
 with Applications to IOPs and Stateless Blockchains](https://eprint.iacr.org/2018/1188/20181210:211743)
@@ -76,3 +76,24 @@ stealth address 这些则和很多相关，暂时不感兴趣。
 + https://eprint.iacr.org/2020/499
 
 
+## VDF
+see: https://blog.priewienv.me/post/verifiable-delay-function-1/
+
+
+
+### [cVDF](https://eprint.iacr.org/2019/619.pdf)
+
+#### (incremental) PoSW vs cVDF
+a PoSW enables generating a publicly verifiable proof of some computation (rather than a specific function with a unique output) that is guaranteed to
+have taken a long time. 
+
+(Incremental) PoSWs do not satisfy (computational) uniqueness, which is a major downside for many applications (see [BBBF18] for several examples). 
+
+cVDF enable verifiably outsourcing VDF computation.
+
+incremental PoSW 就是 别人可以接着 PoSW；cVDF 就是别人可以接着 VDF。
+
+### RSA Groups assumption
+Everyone seems to love VDFs, but the complexity theory around them is a bit underwhelming — why do they only work against adversaries with a polynomial compute advantage?
+
+[A Note on Low Order Assumptions in RSA groups](https://eprint.iacr.org/2020/402)
