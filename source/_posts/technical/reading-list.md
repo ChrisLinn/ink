@@ -39,6 +39,7 @@
     - https://zkcapital.substack.com/
     - https://distsys.substack.com/
     - https://blog.cryptographyengineering.com/
+    - https://jbp.io/archive/
     - https://joinmarket.me/blog/blog/
     - https://ethresear.ch/u/sebastianelvis/summary
     - https://hashmatter.com/
