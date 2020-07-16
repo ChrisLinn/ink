@@ -3,6 +3,7 @@
 * https://github.com/tlaplus/DrTLAPlus
 - https://github.com/mryndzionek/tlaplus_specs
 * https://github.com/lemmy/awesome-tlaplus
+* https://github.com/spacejam/tla-rust
 + https://github.com/istoilkovska/synchronous-tla-benchmarks
 + https://ethresear.ch/t/modelling-a-state-channel-protocol-using-tla/7534
     * https://blog.statechannels.org/breaking-state-channels/
