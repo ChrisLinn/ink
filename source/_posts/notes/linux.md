@@ -50,7 +50,7 @@ https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
         ```
         listen-address localhost:8118
         ...
-        forward-socks5t / 127.0.0.1:<PORT> .
+        forward-socks5 / 127.0.0.1:<PORT> .
         ```
     + `/etc/privoxy/user.action`
         ```
