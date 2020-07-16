@@ -154,6 +154,7 @@
 * rust
     - https://oribenshir.github.io/afternoon_rusting/index.html
     - https://github.com/wezm/read-rust
+    - http://tylerneely.com/
     - https://rniczh.github.io/blog/
     - https://rust.cc/
     - https://this-week-in-rust.org/
