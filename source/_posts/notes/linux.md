@@ -432,6 +432,7 @@ https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule
 + `whereis "binfilename"`
 
 ## Cargo
+~/.cargo/config
 ```
 [source.crates-io]
 registry = "https://github.com/rust-lang/crates.io-index"
