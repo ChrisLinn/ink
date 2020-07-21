@@ -29,6 +29,7 @@ Learning With Error (LWE)
 ## Projects
 + HElib
 + TFHE
+    * https://eprint.iacr.org/2014/816.pdf is a precursor for the popular [TFHE](https://tfhe.github.io/tfhe/)
 + cuFHE
 + https://palisade-crypto.org/
 + lattice-related
@@ -36,3 +37,5 @@ Learning With Error (LWE)
     * https://github.com/ldsec/lattigo
     * https://dualitytech.com/
     * https://www.inpher.io/
++ https://github.com/lducas/FHEW
+    * https://eprint.iacr.org/2014/816.pdf 's code
