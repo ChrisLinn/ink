@@ -20,6 +20,7 @@
 + https://github.com/hoanhan101/ultimate-go
 + https://github.com/GoesToEleven/GolangTraining
 + https://github.com/rubyhan1314/Golang-100-Days
++ https://github.com/overnote/over-golang
 + https://github.com/quii/learn-go-with-tests
 + https://github.com/qichengzx/gopher-reading-list-zh_CN
 + https://github.com/golang/go/wiki/
