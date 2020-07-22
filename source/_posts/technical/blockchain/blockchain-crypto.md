@@ -10,6 +10,8 @@ also see:
 
 我觉得主要就是 VDF, accumulator, zkp, PCD 这些。zkp 所属其实又比较复杂，PCD 和 polynomial commitments 中可能使用 ZKP。(bulletproof, DARKs 是 alternative polynomial commitments? Sonic 中也构建了 polynomial commitments?)
 
+对了，还有 [randomness](/notes/blockchain/randomness)，比如 VRF。(对 sharding、leader election 等很重要)
+
 然后里面又有基本工具:
 
 + hash function
@@ -110,3 +112,6 @@ incremental PoSW 就是 别人可以接着 PoSW；cVDF 就是别人可以接着 
 Everyone seems to love VDFs, but the complexity theory around them is a bit underwhelming — why do they only work against adversaries with a polynomial compute advantage?
 
 [A Note on Low Order Assumptions in RSA groups](https://eprint.iacr.org/2020/402)
+
+## VRF
+JP Aumasson 也提到 the most exciting crypto  in real applications 是 [threshold oblivious PRFs](https://twitter.com/veorq/status/1272922678475788288)。
