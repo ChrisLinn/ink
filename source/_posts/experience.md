@@ -8,15 +8,16 @@ Mainly: Blockchain Proof-of-Work, Peer-to-Peer Communication, Cryptocurrency Wal
 
 ---
 
-+ Blockchain Engineer @ [bytom](https://github.com/Bytom/), _March 2018 – Present_
++ Research Engineer @ [bytom](https://github.com/Bytom/), _August 2019 – Present_
+    - TSS related:
+        + __take charge of__ Bytom's TSS usage in cross-chain federation
++ Blockchain Engineer @ [bytom](https://github.com/Bytom/), _March 2018 – August 2019_
     * PoW-related:
         - optimize bytom's PoW algorithm, from __900+ ms to 100+ ms__
         - optimize bytomd node mining pool, updating blocktemplate __timely__
         - implement other mining-related functionalities in bytomd (the bytomd daemon node), including set-mining-address and set-coinbase-arbitrary
     - chain-interoperability-related:
         - __take charge of__ bystack's chain interoperability, mainly cross-chain transactions and two-way peg federation
-    - TSS related:
-        + __take charge of__ Bytom's TSS usage in cross-chain federation
     * wallet-related:
         - work as core developer of blockcenter, a semi-centralized crypto-currency wallet back-end server, supporting mutiple blockchains and assets on them
         - design and implement a key management service for Bytom DEX
