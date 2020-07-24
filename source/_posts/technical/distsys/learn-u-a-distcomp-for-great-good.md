@@ -254,6 +254,7 @@ PoW 其实只是 membership 的门槛，  nakamoto consensus 除了 PoW 其实�
     + $k$-common-preifx
         * First proposed in [The bitcoin backbone protocol: Analysis and applications (GKL15)](https://eprint.iacr.org/2014/765.pdf).
             - For any pair of honest players $P_1, P_2$ adopting the chains $C_1, C_2$ at rounds $r_1 \leq r_2$, it holds that $\mathcal{C}_{1}^{\lceil k} \preceq \mathcal{C}_2$.
+            - [Model Checking Bitcoin and other Proof-of-Work Consensus Protocols](https://arxiv.org/pdf/2007.08644.pdf): A formal model based on the Bitcoin Backbone Protocol abstraction and use a statistical model checking tool (UPPAAL-SMC) to study its security.
     + $T$-consistency
         * [Analysis of the blockchain protocol in asynchronous networks (PSS17)](https://eprint.iacr.org/2016/454.pdf) refines Common Prefix to $T$-Consistency in order to provide a black-box reduction.
             - Eurocrypt'17 密码学顶会
@@ -339,6 +340,10 @@ Paxos 算法的场景比 FLP 的系统模型还要松散：异步通信，允许
             + Incentive Compatibility of Bitcoin Mining Pool Reward Functions
             + sucker punch makes you richer
             + Lay Down the Common Metrics: Evaluating Proof-of-Work Consensus Protocols' Security
++ undercutting attacks
+    * https://arxiv.org/pdf/2007.11480.pdf
+    * https://bitcoin.stackexchange.com/questions/67697/can-undercutting-attacks-be-mitigated
+    * https://www.cs.princeton.edu/~arvindn/publications/mining_CCS.pdf
 + selfish mining
     * 获得超出与算力相匹配的收益
 + Sybil Attack 女巫攻击

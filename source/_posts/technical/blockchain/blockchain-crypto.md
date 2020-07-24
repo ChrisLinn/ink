@@ -10,6 +10,8 @@ also see:
 
 我觉得主要就是 VDF, accumulator, zkp, PCD 这些。zkp 所属其实又比较复杂，PCD 和 polynomial commitments 中可能使用 ZKP。(bulletproof, DARKs 是 alternative polynomial commitments? Sonic 中也构建了 polynomial commitments?)
 
+对了，还有 [randomness](/notes/blockchain/randomness)，比如 VRF。(对 sharding、leader election 等很重要)
+
 然后里面又有基本工具:
 
 + hash function
@@ -91,7 +93,7 @@ VDF 向上可以追溯到 [Time-lock Puzzles](https://people.csail.mit.edu/rives
 
 [BBBF18](https://eprint.iacr.org/2018/601.pdf) 则列了各种 18年及以前的 VDF 相关的协议，并正式提出了 Verifiable Delay Functions (VDF) 的概念。
 
-[sloth](https://eprint.iacr.org/2015/366.pdf) 也是 Wes19 的 Wesolowski 提出的，在我看来就是 VDF 正式提出之前，VDF 的前身 (sloth 和 VDF 的 properties 还是有点区别，只能算是 pseudo-VDF)。sloth 和前面提到的 Pie19 和 Wes19 的区别是：sloth 利用了 computing square root (也算是 modular exponentiation，而 there is no known algorithm for computing modular exponentiation which is sublinear in the bit-length of the exponent.) 比它的逆运算难（慢）；而 Pie19 和 Wes19 则是利用了 repeated squaring in an RSA group (也可以不用 RSA group 而用别的 GUO 比如 class group)。
+[sloth](https://eprint.iacr.org/2015/366.pdf) 也是 Wes19 的 Wesolowski 提出的，在我看来就是 VDF 正式提出之前，VDF 的前身 (sloth 和 VDF 的 properties 还是有点区别，只能算是 pseudo-VDF)。sloth 和前面提到的 Pie19 和 Wes19 的区别是：sloth 利用了 computing square root (也算是 modular exponentiation，而 there is no known algorithm for computing modular exponentiation which is sublinear in the bit-length of the exponent.) 比它的逆运算难（慢）；而 Pie19 和 Wes19 则是利用了 repeated squaring in an RSA group (也可以不用 RSA group 而用别的 GUO 比如 class group)。(额我觉得我这里说的也不太对? sloth 好像和 hash 相关？然后 Wes19&Pie19 用的是 RSW time-lock puzzle? 我感觉都用了 squaring 的难度啊，应该是因为 RSW time-lock puzzle 的性质更好。)
 
 
 ### [cVDF](https://eprint.iacr.org/2019/619.pdf)
@@ -110,3 +112,6 @@ incremental PoSW 就是 别人可以接着 PoSW；cVDF 就是别人可以接着 
 Everyone seems to love VDFs, but the complexity theory around them is a bit underwhelming — why do they only work against adversaries with a polynomial compute advantage?
 
 [A Note on Low Order Assumptions in RSA groups](https://eprint.iacr.org/2020/402)
+
+## VRF
+JP Aumasson 也提到 the most exciting crypto  in real applications 是 [threshold oblivious PRFs](https://twitter.com/veorq/status/1272922678475788288)。
