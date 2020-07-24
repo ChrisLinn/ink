@@ -340,6 +340,10 @@ Paxos 算法的场景比 FLP 的系统模型还要松散：异步通信，允许
             + Incentive Compatibility of Bitcoin Mining Pool Reward Functions
             + sucker punch makes you richer
             + Lay Down the Common Metrics: Evaluating Proof-of-Work Consensus Protocols' Security
++ undercutting attacks
+    * https://arxiv.org/pdf/2007.11480.pdf
+    * https://bitcoin.stackexchange.com/questions/67697/can-undercutting-attacks-be-mitigated
+    * https://www.cs.princeton.edu/~arvindn/publications/mining_CCS.pdf
 + selfish mining
     * 获得超出与算力相匹配的收益
 + Sybil Attack 女巫攻击
