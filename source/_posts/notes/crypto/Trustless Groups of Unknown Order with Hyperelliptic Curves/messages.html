@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Exported Data</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <script src="js/script.js" type="text/javascript">
+
+  </script>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <div class="content">
+
+     <div class="text bold">
+KZen-Research 
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+25 July 2020
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8009">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="25.07.2020 05:36:58">
+05:36
+       </div>
+
+       <div class="from_name">
+J S
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message8005" onclick="return GoToMessage(8005)">this message</a>
+       </div>
+
+       <div class="text">
+That is quiet interesting, I&apos;ve been asking myself about the information leakage of edge-to-edge applications. I guess this might not be a huge problem if the participants are anonymous (unlike the presented use-case). Would be interesting to also consider repeated MPC execution and if it can leak more information.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8010">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JD
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="25.07.2020 08:00:57">
+08:00
+       </div>
+
+       <div class="from_name">
+Justin Drake
+       </div>
+
+       <div class="text">
+Spartan implementation is now on github <a href="https://github.com/microsoft/Spartan">https://github.com/microsoft/Spartan</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8011">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+CL
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="25.07.2020 11:44:00">
+11:44
+       </div>
+
+       <div class="from_name">
+Chris Lin
+       </div>
+
+       <div class="text">
+<a href="https://link.medium.com/D4mRLwkMo8">https://link.medium.com/D4mRLwkMo8</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8012">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="25.07.2020 11:51:39">
+11:51
+       </div>
+
+       <div class="text">
+i guess by “non custodial” they still store  encrypted private keys on some storage services, because they mention recoverability.<br><br><br>not sure whether they encrypt the entire key or make use of tss or proxy-re enc/sig   technique
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8013">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="25.07.2020 11:56:31">
+11:56
+       </div>
+
+       <div class="text">
+looks nice. they claim they support Google、Facebook、Reddit、Twitch、Discord、AppleID、Github、LinkedIn、Twitter、Line   login.<br><br>and they use DKG
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8014">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="25.07.2020 11:56:32">
+11:56
+       </div>
+
+       <div class="text">
+<a href="https://link.medium.com/OX0EdUbNo8">https://link.medium.com/OX0EdUbNo8</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8015">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="25.07.2020 12:00:58">
+12:00
+       </div>
+
+       <div class="text">
+not sure how they take care of the privacy/traceability issues tho
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8016">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+H
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="25.07.2020 12:10:26">
+12:10
+       </div>
+
+       <div class="from_name">
+Han Wen 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message8015" onclick="return GoToMessage(8015)">this message</a>
+       </div>
+
+       <div class="text">
+If I’m not wrong, keys generation are app-specific, diff keys for diff app for the same OAuth.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8017">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+CL
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="25.07.2020 12:22:26">
+12:22
+       </div>
+
+       <div class="from_name">
+Chris Lin
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message8016" onclick="return GoToMessage(8016)">this message</a>
+       </div>
+
+       <div class="text">
+i am not sure how they do it.   but I think technically speaking you can reuse the &quot;seed&quot; (or maybe call it seed_share)   for your random r_i
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8018">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="25.07.2020 12:25:10">
+12:25
+       </div>
+
+       <div class="text">
+at least for secp256k1 and Edwards25519
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8019">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="25.07.2020 12:33:45">
+12:33
+       </div>
+
+       <div class="text">
+hmm, seems they are not using TSS. but re-constructing the full key and store it
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8020">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+V
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="25.07.2020 12:42:41">
+12:42
+       </div>
+
+       <div class="from_name">
+Vasiliy 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message7983" onclick="return GoToMessage(7983)">this message</a>
+       </div>
+
+       <div class="text">
+for white city? I want to
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8021">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="25.07.2020 13:02:20">
+13:02
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message8019" onclick="return GoToMessage(8019)">this message</a>
+       </div>
+
+       <div class="text">
+They use a secret sharing scheme based on Cachin paper from 2002: <a href="https://docs.tor.us/how-torus-works/key-generation-and-resharing">https://docs.tor.us/how-torus-works/key-generation-and-resharing</a>. I believe this work is still considered one of the best for async secret sharing.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8022">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="25.07.2020 13:02:43">
+13:02
+       </div>
+
+       <div class="text">
+And great paper btw
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8023">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+CL
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="25.07.2020 13:03:14">
+13:03
+       </div>
+
+       <div class="from_name">
+Chris Lin
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message8022" onclick="return GoToMessage(8022)">this message</a>
+       </div>
+
+       <div class="text">
+thx! i will take a read on the paper
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8024">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic4" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+L
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="25.07.2020 15:46:49">
+15:46
+       </div>
+
+       <div class="from_name">
+LLFourn 
+       </div>
+
+       <div class="text">
+<a href="https://t.me/Omershlo">@Omershlo</a> Does <a href="https://eprint.iacr.org/2020/196.pdf">https://eprint.iacr.org/2020/196.pdf</a> apply to to CL encryption used in your class library? Do we have to increase discrim relative to what was originally advised?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8025">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="25.07.2020 16:05:01">
+16:05
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message8024" onclick="return GoToMessage(8024)">this message</a>
+       </div>
+
+       <div class="text">
+Not sure yet: there are some open questions that remain around their definition of security and possible mitigations for some use cases . I will update here as soon as we get concrete peer review on this paper . Regardless I will be very happy to get your take
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8026">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic4" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+L
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="25.07.2020 16:06:05">
+16:06
+       </div>
+
+       <div class="from_name">
+LLFourn 
+       </div>
+
+       <div class="text">
+👍
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8027">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+CC
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="25.07.2020 17:57:14">
+17:57
+       </div>
+
+       <div class="from_name">
+CY Chuang
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message8024" onclick="return GoToMessage(8024)">this message</a>
+       </div>
+
+       <div class="text">
+If you know the order of Jacobian groups then CL encryption will be broken. Unless you have a nice method to find safe hyperelliptic curves quickly such that their order are hardly determenined, you are able to replace ideal class group over  number fields by ideal class group over function fields in the CL encryption.<br><br>Note that: So far the discrete logrithm problem of Jacobina groups with genus 3 is hard. But determining its order  seems easy. So I also regard that it is not time to implement it.
+       </div>
+
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </body>
+
+</html>
