@@ -28,3 +28,15 @@
 __TODO:__
 
 传递“信任阈值”来达成共识
+
+## Misc
+话说回来觉得这个采访不错 [对话 Ted：关于 Avalanche 的二三事](https://www.chainnews.com/articles/024038258160.htm):
+
+* 窃窃私语、泛化、随机去问通过反馈刷新认知、反复、确信、压倒性优势
++ Metastable 是 probabilistic 的
+    * 但 既然可以接受 Nakamoto Consensu，那又怕什么呢
++ 共识和准入机制其实没有关系
+    + PoW 正好都有
+    + PoS 其实本来强调的是准入部分，不一定要把 共识做掉
+- TPS(带宽) vs lantency
+    + 单位时间内 vs 单位交易

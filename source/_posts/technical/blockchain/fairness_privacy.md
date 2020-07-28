@@ -61,6 +61,15 @@ May not be VSS:
 + https://en.wikipedia.org/wiki/Lagrange_polynomial
 + https://crypto.stackexchange.com/questions/54578/how-to-forge-a-shamir-secret-share
 
+#### Asynchronous Verifiable Secret Sharing, AVSS
++ https://eprint.iacr.org/2002/134.pdf
++ https://tor.us/ 的 DirectAuth 用了这个
+    * main advantage the AVSS DKG has over the other well-known DKGs like Pedersen DKG, Feldman's VSS and its variants is that
+        * it is fully asynchronous
+            * and thus does not require a complaint phase when we consider the allowance for a small zero-knowledge proof.
+            * This results in
+                * a simpler implementation (with constant communication rounds even during malicious scenarios), 
+                * but at the expense of message size.
 
 #### multi-signature
 
