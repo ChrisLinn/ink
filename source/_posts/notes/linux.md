@@ -20,12 +20,16 @@ https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
 然后 `sudo apt-get update`
 
 ## fisher
-+ https://github.com/junegunn/fzf
-+ https://github.com/jethrokuan/fzf
-+ https://github.com/halostatue/fish-fzf
 + https://github.com/jorgebucaran/fisher
     * alternative: https://github.com/oh-my-fish/oh-my-fish
 + https://github.com/jorgebucaran/fish-nvm
+
+### FZF
++ Alt + c
++ Ctrl + r
++ https://github.com/junegunn/fzf
++ https://github.com/jethrokuan/fzf
++ https://github.com/halostatue/fish-fzf
 
 ## Shadowsocks
 + ss-qt5
@@ -163,6 +167,33 @@ https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
     ```
 
 ## [Vim](/notes/vim.md)
+
+## tmux
++ `.tmux.conf`
+    ```
+    set -g prefix C-t
+
+    set -g base-index         1     # 窗口编号从 1 开始计数
+    set -g display-panes-time 10000 # PREFIX-Q 显示编号的驻留时长，单位 ms
+    set -g mouse              on    # 开启鼠标
+    set -g pane-base-index    1     # 窗格编号从 1 开始计数
+    set -g renumber-windows   on    # 关掉某个窗口后，编号重排
+
+    setw -g allow-rename      off   # 禁止活动进程修改窗口名
+    setw -g automatic-rename  off   # 禁止自动命名新窗口
+    setw -g mode-keys         vi    # 进入复制模式的时候使用 vi 键位（默认是 EMACS）
+    ```
++ Ctrl+t
++ tmux [new -s 会话名 -n 窗口名]
++ tmux at -t 0
++ tmux ls
++ tmux kill-session -t 会话名
++ Ctrl+t, d
++ Ctrl+t, q
++ Ctrl+t, %
++ Ctrl+t, x
++ Ctrl+t, & (kill window? but I think it's kill session...)
++ Ctrl+t, s or Ctrl+t, w: 列出所有会话/窗口 (会话>window)
 
 ## Reverse proxy
 ### ssh
@@ -329,6 +360,7 @@ https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
     ```
 
 ## Git
++ tig
 + https://stackoverflow.com/questions/7244321/how-do-i-update-a-github-forked-repository
     * fork 同步原仓库，merge 原仓库到 fork 仓库
     ```bash

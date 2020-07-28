@@ -32,7 +32,20 @@ title: Vim Notes
         - kubuntu's default font
 
 ## Shortcuts
++ To Shell
+    + To suspend your running Vim
+        - Ctrl+Z
+        - `fg`
+    * To start a new shell
+        - `:sh`
+        - Ctrl+D
 
+## ag
+`:Ag`
+
+## vim-go
++ `:GoDef`
++ Ctrl+x, Ctrl+o
 
 ## Commands
 + macro
