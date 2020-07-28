@@ -442,7 +442,12 @@ registry = "git://mirrors.ustc.edu.cn/crates.io-index"
 ```
 
 ## Misc
-
++ [ag](https://github.com/ggreer/the_silver_searcher)
+    * 比grep、ack更快的递归搜索文件内容。
++ [tig](https://github.com/jonas/tig)
+    * 字符模式下交互查看git项目，可以替代git命令。
++ [mycli](https://github.com/dbcli/mycli)
+    * mysql客户端，支持语法高亮和命令补全，效果类似ipython，可以替代mysql命令。
 + Kubook
     * [Current State of Surfaces](https://www.reddit.com/r/SurfaceLinux/comments/6eau79/current_state_of_surfaces/)
         - The default driver works fine for some, but not for others, to install the Marvell Driver, follow the instructions [here](https://pastebin.com/aBLHBFak)
