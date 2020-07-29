@@ -21,6 +21,17 @@ also see:
     * 但好像还比较多抗量子的
 + lattice
     * 抗量子
+    * 但是慢...
++ misc
+    * 其他一些新东西...
+        - Isogeny based crypto
+            + 有啥用?
+            + [可以不用 RSW time-lock puzzle 来构建 VDF](https://ethresear.ch/t/vdfs-delay-encryption/7542)
+                * time-lock puzzles encode only one participant’s contribution, making individual puzzles almost worthless. And time-lock puzzles are expensive of course.
+                * Isogeny VDFs require a trusted setup, but a painless one, nothing like the RSA nastiness. You generate the VDF parameters after the trusted setup, so the trusted setup itself remains tiny.
+        - Hyperelliptic curve?
+        - ristretto
+        - RedDSA?
 + GUO
     * 分类
         - RSA group, trusted setup 或 MPC

@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Exported Data</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <script src="js/script.js" type="text/javascript">
+
+  </script>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <div class="content">
+
+     <div class="text bold">
+ZeroKnowledgePodcast 
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+2 May 2020
+      </div>
+
+     </div>
+
+     <div class="message service" id="message3045">
+
+      <div class="body details">
+Ismail joined group by link from Anna
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message3046">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+RZ
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="02.05.2020 06:51:49">
+06:51
+       </div>
+
+       <div class="from_name">
+Robert Z
+       </div>
+
+       <div class="text">
+Hi. I&apos;ve just finished the &quot; Crypto libraries, Zcash&apos;s Zebra and contact tracing with Henry de Valence &quot; epizode.<br>The &quot;Why Ristretto?&quot; (<a href="https://ristretto.group/why_ristretto.html">https://ristretto.group/why_ristretto.html</a>) says: <br>&gt; However, modern elliptic curve implementations with fast, simple formulas don&apos;t provide a prime-order group. Instead, they provide a group of order h⋅ℓh \cdot \ell h⋅ℓ for a small cofactor<br><br>What&apos;s the problem of creating a group of prime order?<br>Second question: is there any downside of using Ristretton except small computation overhead? (when someone should use plain curve25519 instead of Ristretto)?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message3047">
+
+      <div class="body details">
+T J joined group by link from Anna
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message3049">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+K
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="02.05.2020 19:44:10">
+19:44
+       </div>
+
+       <div class="from_name">
+Kev 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message3046" onclick="return GoToMessage(3046)">this message</a>
+       </div>
+
+       <div class="text">
+Maybe I can slightly answer your question.<br><br>You can choose to use a curve with prime order such as P-256, however these curves are not the state of the art in terms of Elliptic curve group arithmetic performance. <br><br>AFAIK a Hisil paper from ~2008 is still the best.<br>Also, previously there were no complete formulas for curves such as P256, so constant time implementations were harder to achieve. There are complete formulas now, but they are still slower than the Twisted Edwards Curves group arithmetic. Not sure by how much though
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message3050">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="02.05.2020 19:46:34">
+19:46
+       </div>
+
+       <div class="text">
+I think the main downside of using Ristretto is interopability with previous protocols.<br><br>For example EdDsa is specified for twisted edwards curve which is a curve that is birationally equivalent to Curve25519. and X25519 is specified for the montgomery curve; Curve25519. <br><br>There is probably a way to make them interopable by maybe dividing by 2 because the isogeny that Ristretto uses is 2-isogenous. But subjectively judging from the design decisions on Ristretto255 repo, I think it is meant to be used with newer protocols and older protocols that explicitly ask for a group of prime order.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message3051">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="02.05.2020 19:49:56">
+19:49
+       </div>
+
+       <div class="text">
+There is no overhead in using Ristretto versus using the underlying representation, which in the case of Ristretto255 is the birationally equivalent twisted edwards curve. <br><br>There is a small overhead in _converting_ points to &quot;Ristretto&quot; however I believe this is insignificant, for Decaf its roughly 1 inverse square root and 13 multiplications, so Ristretto would be a roughly +2 extra field multiplications. I guess it also depends on how you implement the inverse square root, but in general I think the performance impact should be negligible
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message3052">
+
+      <div class="body details">
+Henry de Valence joined group by link from Anna
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message3053">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+Hd
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="02.05.2020 23:18:50">
+23:18
+       </div>
+
+       <div class="from_name">
+Henry de Valence
+       </div>
+
+       <div class="text">
+Yep, that is a good explanation
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-2">
+
+      <div class="body details">
+3 May 2020
+      </div>
+
+     </div>
+
+     <div class="message service" id="message3054">
+
+      <div class="body details">
+Michele Orrù joined group by link from Anna
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message3055">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+RZ
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2020 23:31:53">
+23:31
+       </div>
+
+       <div class="from_name">
+Robert Z
+       </div>
+
+       <div class="text">
+<a href="https://t.me/kevthedev">@kevthedev</a>  Thanks for responding. <br>What&apos;s the point of using Ristretto with EdDSA? It seams that it&apos;s always safer to use curve25519 whenever possible because we can always transform points to Ristretto if needed.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message3056">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+K
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2020 23:52:31">
+23:52
+       </div>
+
+       <div class="from_name">
+Kev 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message3055" onclick="return GoToMessage(3055)">this message</a>
+       </div>
+
+       <div class="text">
+I think with Ristretto it is better to use something like Ristretto with Schnorr. AFAICT you have to treat the Ristretto group as an opaque element, so the underlying representation may not be an Edwards curve.<br><br>In terms of transforming points, The Ristretto guidelines that Henry et al wrote up, says that you should not allow users to arbitrarily _transform_ points in and out of the Ristretto domain. <br><br>See section 5 in <a href="https://tools.ietf.org/html/draft-hdevalence-cfrg-ristretto-00">https://tools.ietf.org/html/draft-hdevalence-cfrg-ristretto-00</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message3057">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2020 23:54:51">
+23:54
+       </div>
+
+       <div class="text">
+I guess the main thing is that you should not arbitrarily mix RistrettoPoints and EdwardsPoints because they are not the same mathematical objects
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-3">
+
+      <div class="body details">
+4 May 2020
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message3058">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+RZ
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="04.05.2020 02:02:30">
+02:02
+       </div>
+
+       <div class="from_name">
+Robert Z
+       </div>
+
+       <div class="text">
+Thanks a lot!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message3059">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+Hd
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="04.05.2020 06:19:09">
+06:19
+       </div>
+
+       <div class="from_name">
+Henry de Valence
+       </div>
+
+       <div class="text">
+<a href="https://t.me/robert_zaremba">@robert_zaremba</a> +1 to what <a href="https://t.me/kevthedev">@kevthedev</a> said. as one example of a problem ristretto fixes, eddsa systems like ed25519 are hard to use in consensus critical applications because they can have different behavior between batched and singleton verification
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message3060">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="04.05.2020 06:19:46">
+06:19
+       </div>
+
+       <div class="text">
+in fact rfc 8032 does not define the set of valid ed25519 signatures and conformant implementations are allowed to disagree on whether a signature is valid
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message3061">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="04.05.2020 06:20:10">
+06:20
+       </div>
+
+       <div class="text">
+this behavior is ultimately downstream of the cofactor (but there are a few extra steps)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message3062">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+K
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="04.05.2020 06:28:32">
+06:28
+       </div>
+
+       <div class="from_name">
+Kev 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message3059" onclick="return GoToMessage(3059)">this message</a>
+       </div>
+
+       <div class="text">
+This is a good example, Zcash uses a modification of EdDSA called RedDSA , I think this could be the reason why, not aware of the specifics
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message3063">
+
+      <div class="body details">
+Elvis joined group by link from Anna
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message3064">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+Hd
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="04.05.2020 10:31:09">
+10:31
+       </div>
+
+       <div class="from_name">
+Henry de Valence
+       </div>
+
+       <div class="text">
+RedDSA doesn&apos;t use a prime-order group, but it does fix this issue through other means (there&apos;s one validation criteria for batched and non-batched signatures).
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-4">
+
+      <div class="body details">
+5 May 2020
+      </div>
+
+     </div>
+
+     <div class="message service" id="message3067">
+
+      <div class="body details">
+Matthew Niemerg joined group by link from Anna
+      </div>
+
+     </div>
+
+     <div class="message service" id="message3069">
+
+      <div class="body details">
+Awalo joined group by link from Anna
+      </div>
+
+     </div>
+
+     <div class="message service" id="message3070">
+
+      <div class="body details">
+T . joined group by link from Anna
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-5">
+
+      <div class="body details">
+6 May 2020
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message3071">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2020 07:55:58">
+07:55
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+That particular problem could have been fixed for EdDSA; it&apos;s just that DJB (incorrectly, IMHO) didn&apos;t think it was important for the set of valid signatures to be well-specified
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message3072">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2020 07:56:33">
+07:56
+       </div>
+
+       <div class="text">
+RedDSA is designed for a block chain consensus application so it needs to fix this
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message3073">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2020 07:57:25">
+07:57
+       </div>
+
+       <div class="text">
+In any case, RedDSA would probably have used Ristretto if it had been designed a few months later
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message3074">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2020 07:58:36">
+07:58
+       </div>
+
+       <div class="text">
+The main reason why we couldn&apos;t just use EdDSA is that we needed key randomisation
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message3075">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2020 08:01:23">
+08:01
+       </div>
+
+       <div class="text">
+Incidentally, that problem with lack of precise specification of the set of valid signatures (and public keys) did bite us for the Sprout protocol, which uses Ed25519
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message3076">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2020 08:03:41">
+08:03
+       </div>
+
+       <div class="text">
+We ended up having to specify bug-for-bug compatibility with how libsodium v1.0.15 (with particular compilation options) implemented Ed25519 validation. We&apos;re fixing this in the NU4 upgrade of Zcash
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message3077">
+
+      <div class="body details">
+thore joined group by link from Anna
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message3078">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+A
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2020 15:49:20">
+15:49
+       </div>
+
+       <div class="from_name">
+Anna 
+       </div>
+
+       <div class="text">
+latest zkMesh newsletter went out yesterday! Subscribe for the latest zk/privacy research, articles and updates - put together monthly by myself and <a href="https://t.me/mikerah">@mikerah</a> ! <a href="https://zkmesh.substack.com/p/zkmesh-newsletter-april-2020-edition?r=4w621&amp;utm_campaign=post&amp;utm_medium=web&amp;utm_source=copy">https://zkmesh.substack.com/p/zkmesh-newsletter-april-2020-edition?r=4w621&amp;utm_campaign=post&amp;utm_medium=web&amp;utm_source=copy</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message3079">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+RZ
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2020 21:56:41">
+21:56
+       </div>
+
+       <div class="from_name">
+Robert Z
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message3075" onclick="return GoToMessage(3075)">this message</a>
+       </div>
+
+       <div class="text">
+Interesting. Could you provide more details please? Why you had problem with Ed25519, and so many other protocols don&apos;t have?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-6">
+
+      <div class="body details">
+7 May 2020
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message3080">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+Hd
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="07.05.2020 00:22:51">
+00:22
+       </div>
+
+       <div class="from_name">
+Henry de Valence
+       </div>
+
+       <div class="text">
+Hmm, I think other protocols also have this problem, whether they realize it or not
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message3081">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="07.05.2020 06:52:16">
+06:52
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+Yeah, many protocols don&apos;t have more than one implementation
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message3082">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="07.05.2020 06:58:15">
+06:58
+       </div>
+
+       <div class="text">
+Not that it necessarily helps to have only one implementation, since at some point you have to upgrade dependencies: <a href="https://github.com/zcash/zcash/issues/2872">https://github.com/zcash/zcash/issues/2872</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message3083">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="07.05.2020 07:05:26">
+07:05
+       </div>
+
+       <div class="text">
+And here&apos;s the fix (which patches libsodium to put back the *incorrect* blacklist of small-order points): <a href="https://github.com/zcash/zcash/pull/4359">https://github.com/zcash/zcash/pull/4359</a>
+       </div>
+
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </body>
+
+</html>
