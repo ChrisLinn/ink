@@ -40,6 +40,10 @@ title: Vim Notes
         - `:sh`
         - Ctrl+D
 
+## Buffer
++ `:Buffers` or `:buffers`
++ `bd`
+
 ## ag
 `:Ag`
 

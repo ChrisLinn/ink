@@ -168,7 +168,7 @@ https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
 
 ## [Vim](/notes/vim.md)
 
-## tmux
+## [tmux](https://gist.github.com/ryerh/14b7c24dfd623ef8edc7)
 + `.tmux.conf`
     ```
     set -g prefix C-t
@@ -185,6 +185,8 @@ https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
     ```
 + Ctrl+t
 + tmux [new -s 会话名 -n 窗口名]
++ Ctrl+t, $
++ Ctrl+t, ,
 + tmux at -t 0
 + tmux ls
 + tmux kill-session -t 会话名
