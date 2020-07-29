@@ -46,7 +46,7 @@ with Applications to IOPs and Stateless Blockchains](https://eprint.iacr.org/201
                     * merkle 应该用的是 hash
                 + 这篇文章做到了 Dynamic Accumulator，也就是 constant-sized inclusion proofs
                     * Merkle trees 是 O(logn) ，并且不能 batch proofs for multiple elements
-            + Accumulator
+            + [Accumulator](https://eprint.iacr.org/2015/087.pdf)
                 + A cryptographic accumulator is a primitive that produces a short binding commitment to a set of elements together with short membership/non-membership proofs for any element in the set.
             + **Dynamic Accumulator**
                 + Accumulator which supports addition/deletion of elements with O(1) cost, independent of the number of accumulated elements
