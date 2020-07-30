@@ -54,6 +54,9 @@ with Applications to IOPs and Stateless Blockchains](https://eprint.iacr.org/201
                 + Dynamic Accumulator which supports membership and non-membership proofs
             + Batching
                 + Batch verify n proofs faster than verifying a single proof n times
+            - ZKP accumulator
+                + [Zero-Knowledge Accumulators and Set Operations](https://eprint.iacr.org/2015/404)
+                + [An Expressive (Zero-Knowledge) Set Accumulator](https://ieeexplore.ieee.org/document/7961978)
         * Accumulator 和 commitments 不是一个东西，但是可以用 commitment 去实现 Accumulator。不是彼此独立的概念。不过 accumulator 不关心顺序。主要目的不一样，commitment 是为了 binding，Accumulator 是为了 membership。
             - [Cryptographic accumulators can be interpreted as commitments](https://eprint.iacr.org/2016/766.pdf)
                 + The first family of accumulators based on GUO
