@@ -28,8 +28,9 @@ title: Vim Notes
     ```
     * Ubuntu Mono derivative Powerline
     * [Nerd-fonts?](https://github.com/ryanoasis/nerd-fonts)
-    * Hack (nerd) font?
-        - kubuntu's default font
+        - Hack (nerd) font?
+            + kubuntu's default font
+        - I think I should use UbuntuMono Nerd Mono
 
 ## Shortcuts
 + To Shell
