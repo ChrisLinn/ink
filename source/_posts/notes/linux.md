@@ -182,6 +182,40 @@ https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
     setw -g allow-rename      off   # 禁止活动进程修改窗口名
     setw -g automatic-rename  off   # 禁止自动命名新窗口
     setw -g mode-keys         vi    # 进入复制模式的时候使用 vi 键位（默认是 EMACS）
+
+    # -----------------------------------------------------------------------------
+    # 使用插件 - via tpm
+    #   1. 执行 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    #   2. 执行 tmux source ~/.tmux.conf
+    #   3. 执行 bash ~/.tmux/plugins/tpm/bin/install_plugins
+    # -----------------------------------------------------------------------------
+
+    setenv -g TMUX_PLUGIN_MANAGER_PATH '~/.tmux/plugins'
+
+    # 推荐的插件（请去每个插件的仓库下读一读使用教程）
+    set -g @plugin "arcticicestudio/nord-tmux"
+    # set -g @plugin 'seebi/tmux-colors-solarized'
+    set -g @plugin 'tmux-plugins/tmux-pain-control'
+    set -g @plugin 'tmux-plugins/tmux-prefix-highlight'
+    set -g @plugin 'tmux-plugins/tmux-resurrect'
+    set -g @plugin 'tmux-plugins/tmux-sensible'
+    set -g @plugin 'tmux-plugins/tmux-yank'
+    set -g @plugin 'tmux-plugins/tpm'
+
+    # tmux-resurrect
+    set -g @resurrect-dir '~/.tmux/resurrect'
+
+    # tmux-prefix-highlight
+    set -g status-right '#{prefix_highlight} #H | %a %Y-%m-%d %H:%M'
+    set -g @prefix_highlight_show_copy_mode 'on'
+    set -g @prefix_highlight_copy_mode_attr 'fg=white,bg=blue'
+
+    # 初始化 TPM 插件管理器 (放在配置文件的最后)
+    run '~/.tmux/plugins/tpm/tpm'
+
+    # -----------------------------------------------------------------------------
+    # 结束
+    # -----------------------------------------------------------------------------
     ```
 + Ctrl+t
 + tmux [new -s 会话名 -n 窗口名]
