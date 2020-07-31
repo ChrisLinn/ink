@@ -27,6 +27,7 @@ title: 目录
         + [API security / 安全 API 的设计模式](/notes/API_sec)
     - cryptography / 密码学
         - [E*DSA / 椭圆曲线签名](/notes/crypto/e_dsa)
+        - [Crypto Coding / 密码学编程中应注意的问题](/notes/crypto/crypto-coding)
     - Blockchain / 区块链
         + [Coinbugs / 区块链代码实现中的常见漏洞](/notes/blockchain/coinbugs)
     * [Hayek / 我读哈耶克](/notes/hayek)

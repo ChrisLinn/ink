@@ -88,12 +88,36 @@ title: Crypto Coding
             + 如果 `buf[0]` 为 `255`, `name_len` 则会为 `-1`, 
                 + 那么就造成了 allocate a 0-byte buffer, 然后 memcpy (size_t)-1 这么大(过大)的数据进该 buffer 中, 造成 [非法堆内存访问](https://stackoverflow.com/questions/13669329/what-is-a-memory-stomp)
 + 保证强随机性
-    + __TBD__
+    + 为什么
+        * DSA 中就算只泄漏一比特也会导致私钥立马泄漏
+    + 不要怎样
+        * 不要使用可预测的熵，比如 时间戳、PIDs、温度传感器
+        * 不要依赖于 general-purpose 的伪随机函数 (`stdlib`'s `rand()`, `srand()`, `random()`, or Python's `random` module)
+        * 不要使用 [Mersenne Twister](http://crypto.di.uoa.gr/CRYPTO.SEC/Randomness_Attacks.html)
+        * 不要使用 http://www.random.org/ 等工具
+            * 因为，你怎么知道这个随机数会不会被别人知道或者与别人共用...
+        * 不要自己设计 PRNG
+        * 不要(跨应用)重用 randomness
+        * 不要以为一个 PRNG 过了 Diehard tests or NIST's tests 就是安全的了
+        * 不要假设一个 cryptographically secure 的 PRNG 一定会提供 forward or backward secrecy (aka [backtracking resistance and prediction resistance](http://csrc.nist.gov/publications/nistpubs/800-90A/SP800-90A.pdf)), 不然可能会泄漏 internal state
+        * 不要直接使用 "熵" 来作为伪随机数据
+            * 模拟信号源的熵往往是 biased 的
+                * N bits from an entropy pool often provide less than N bits of entropy
+    + 应该怎样
+        * 减少用 randomness 的需求
+            - 比如 Ed25519 签名就是 deterministical 的
+        + 文中也给出了 Linux、OpenBSD、Windows 等平台下获取随机数
+        + `/dev/urandom` vs `/dev/random`
+            * `/dev/random` 更好，但 `/dev/random` 是 blocking 的，如果发现 熵池 的 熵 不足则不会返回
+            * `/dev/urandom` 也不是不行，但要学 LibreSSL 中的 `getentropy_urandom` 加一下 error checks
+            * 不行就 adding analog sources of noise and mixing them well
+        + RDRAND/RDSEED instructions
+        + Do [check the return values](http://jbp.io/2014/01/16/openssl-rand-api) of your RNG, to make sure that the random bytes are as strong as they should be, and they have been written successfully.
+        + Follow the recommendations from Nadia Heninger et al. in Section 7 of their [Mining Your Ps and Qs](https://factorable.net/weakkeys12.extended.pdf) paper.
 + Always typecast shifted values
-    + __TBD__
-- leaking just one bit of each random number in the DSA will reveal a private key astonishingly quickly. Lack of randomness can be surprisingly hard to diagnose: the Debian random number generator failure in OpenSSL went unnoticed for 2 years, compromising a vast number of keys. The requirements on random numbers for cryptographic purposes are very stringent: most pseudorandom number generators (PRNG) fail to meet them.
-    + Bad solutions
-    + Solution
+    + 比如说 SHA-1、SHA-2 家族中，哈希前先将 bytes 组成 "word-sized" 整数，再进行处理。在 `c` 中通常通过 `<<` 左位移操作符来实现。
+    + 但如果 位移完之后的值是 signed 的，left-shift 完的结果如何就不好说了
+        * 出于 integer promotion rule，unsigned operand like `uint8_t` may be promoted to `signed int`，并导致问题
 
 ---
 
@@ -146,7 +170,7 @@ MPC secure channel:
 
 - https://bloodzer0.github.io/ossa/application-security/sdl/go-scp/
     + go语言安全编码规范（中文版）
-        + __TBD__
+        + __TODO:__
     + https://checkmarx.gitbooks.io/go-scp/content/
 + https://github.com/SalusaSecondus/CryptoGotchas
 
@@ -156,6 +180,7 @@ MPC secure channel:
     * [目录](https://www.packtpub.com/networking-and-servers/security-go)
 
 ---
+__TODO:__
 
 + [How I'm learning to build secure systems](https://github.com/veeral-patel/learn-security-engineering)
 + https://www.chosenplaintext.ca/articles/beginners-guide-constant-time-cryptography.html
