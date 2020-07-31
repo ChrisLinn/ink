@@ -94,12 +94,15 @@ title: Crypto Coding
         * 不要使用可预测的熵，比如 时间戳、PIDs、温度传感器
         * 不要依赖于 general-purpose 的伪随机函数 (`stdlib`'s `rand()`, `srand()`, `random()`, or Python's `random` module)
         * 不要使用 [Mersenne Twister](http://crypto.di.uoa.gr/CRYPTO.SEC/Randomness_Attacks.html)
-        * 不要使用 http://www.random.org/ 等工具 (你怎么知道这个随机数会不会被别人知道或者与别人共用...)
+        * 不要使用 http://www.random.org/ 等工具
+            * 因为，你怎么知道这个随机数会不会被别人知道或者与别人共用...
         * 不要自己设计 PRNG
         * 不要(跨应用)重用 randomness
         * 不要以为一个 PRNG 过了 Diehard tests or NIST's tests 就是安全的了
-        * Do not assume that a cryptographically secure PRNG necessarily provides forward or backward secrecy (aka backtracking resistance and prediction resistance, would the internal state leak to an attacker.
-        * Do not directly use "entropy" as pseudorandom data (entropy from analog sources is often biased, that is, N bits from an entropy pool often provide less than N bits of entropy).
+        * 不要假设一个 cryptographically secure 的 PRNG 一定会提供 forward or backward secrecy (aka [backtracking resistance and prediction resistance](http://csrc.nist.gov/publications/nistpubs/800-90A/SP800-90A.pdf)), 不然可能会泄漏 internal state
+        * 不要直接使用 "熵" 来作为伪随机数据
+            * 模拟信号源的熵往往是 biased 的
+                * N bits from an entropy pool often provide less than N bits of entropy
     + 应该怎样
         * 减少用 randomness 的需求
         + __TBD__
@@ -167,6 +170,7 @@ MPC secure channel:
     * [目录](https://www.packtpub.com/networking-and-servers/security-go)
 
 ---
+__TODO:__
 
 + [How I'm learning to build secure systems](https://github.com/veeral-patel/learn-security-engineering)
 + https://www.chosenplaintext.ca/articles/beginners-guide-constant-time-cryptography.html
