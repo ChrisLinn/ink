@@ -51,6 +51,23 @@ for i in range(l-1, -1, -1): # fixed-length loop
 print(m)
 ```
 
+#### Interplay with elliptic-curve formulas
++ http://ecchacks.cr.yp.to/
+
+#### Valgrind
+use valgrind to help check constant-time
+
+#### clock cycle
+...
+
+#### XXX to the rescue
++ Formal logic
+    * 但只能说明 代码逻辑没问题，还要担心 complier 等的 bug
++ Testing
+    * SUPERCOP crypto test framework
+    * testing 可能会 miss
+        - Symbolic testing
+
 ## 延伸阅读
 
 + https://www.hacs-workshop.org/links.html
@@ -58,4 +75,3 @@ print(m)
 + https://cryptojedi.org/peter/data/cecc-20160622.pdf
 + https://arxiv.org/pdf/1808.01348.pdf
 + https://ieeexplore.ieee.org/document/7310828
-+ http://ecchacks.cr.yp.to/
