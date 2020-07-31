@@ -105,7 +105,15 @@ title: Crypto Coding
                 * N bits from an entropy pool often provide less than N bits of entropy
     + 应该怎样
         * 减少用 randomness 的需求
-        + __TODO:__
+            - 比如 Ed25519 签名就是 deterministical 的
+        + 文中也给出了 Linux、OpenBSD、Windows 等平台下获取随机数
+        + `/dev/urandom` vs `/dev/random`
+            * `/dev/random` 更好，但 `/dev/random` 是 blocking 的，如果发现 熵池 的 熵 不足则不会返回
+            * `/dev/urandom` 也不是不行，但要学 LibreSSL 中的 `getentropy_urandom` 加一下 error checks
+            * 不行就 adding analog sources of noise and mixing them well
+        + RDRAND/RDSEED instructions
+        + Do [check the return values](http://jbp.io/2014/01/16/openssl-rand-api) of your RNG, to make sure that the random bytes are as strong as they should be, and they have been written successfully.
+        + Follow the recommendations from Nadia Heninger et al. in Section 7 of their [Mining Your Ps and Qs](https://factorable.net/weakkeys12.extended.pdf) paper.
 + Always typecast shifted values
     + 比如说 SHA-1、SHA-2 家族中，哈希前先将 bytes 组成 "word-sized" 整数，再进行处理。在 `c` 中通常通过 `<<` 左位移操作符来实现。
     + 但如果 位移完之后的值是 signed 的，left-shift 完的结果如何就不好说了
