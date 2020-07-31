@@ -9,6 +9,7 @@ title: Crypto Coding
 + 传统方式 比较字符串是否相等，为了快，逐位比较一有不同就返回
     * 但这样可以通过 函数执行的时间来猜测 前多少位相等
     * 防止这种攻击的方式是无论如何（字符串是否相等，多少位相等）都固定时间（每一位都比完）才返回
+    * [介绍了一些如何 实现/使用 constant-time comparison 的例子](https://github.com/veorq/cryptocoding#compare-secret-strings-in-constant-time)
 + 条件执行语句判断不应和 secret 有关 (avoid branching controlled by secret data)
     * 不同 branch 执行时间不同，那么可利用执行时间来猜测 condition, 从而猜测 secret
         - 比如 RSA 快速幂取余算法, [在密码硬件中使用会被攻击](https://wiki.x10sec.org/crypto/asymmetric/rsa/rsa_side_channel/)
@@ -52,9 +53,8 @@ title: Crypto Coding
     + 不同平台函数的安全性不一样
         * 不要假设平台安全
         * 如果 override 掉 不安全的 func？
-            - 如果 override 掉 不安全的 func？
-                + override 失败则仍会跑不安全的 func
-                + 移植到别的平台后可能会跑不安全的 func
+            - override 失败则仍会跑不安全的 func
+            - 移植到别的平台后可能会跑不安全的 func
 + Avoid mixing security and abstraction levels of cryptographic primitives in the same API layer
     + 没细研究.......
 + 应该用 unsigned bytes 来表示 binary data (bytestrings)
