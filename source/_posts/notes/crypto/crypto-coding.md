@@ -91,12 +91,20 @@ title: Crypto Coding
     + 为什么
         * DSA 中就算只泄漏一比特也会导致私钥立马泄漏
     + 不要怎样
+        * 不要使用可预测的熵，比如 时间戳、PIDs、温度传感器
+        * 不要依赖于 general-purpose 的伪随机函数 (`stdlib`'s `rand()`, `srand()`, `random()`, or Python's `random` module)
+        * 不要使用 [Mersenne Twister](http://crypto.di.uoa.gr/CRYPTO.SEC/Randomness_Attacks.html)
+        * 不要使用 http://www.random.org/ 等工具 (你怎么知道这个随机数会不会被别人知道或者与别人共用...)
+        * 不要自己设计 PRNG
+        * 不要(跨应用)重用 randomness
+        * 不要以为一个 PRNG 过了 Diehard tests or NIST's tests 就是安全的了
+        * Do not assume that a cryptographically secure PRNG necessarily provides forward or backward secrecy (aka backtracking resistance and prediction resistance, would the internal state leak to an attacker.
+        * Do not directly use "entropy" as pseudorandom data (entropy from analog sources is often biased, that is, N bits from an entropy pool often provide less than N bits of entropy).
     + 应该怎样
+        * 减少用 randomness 的需求
+        + __TBD__
 + Always typecast shifted values
     + __TBD__
-- leaking just one bit of each random number in the DSA will reveal a private key astonishingly quickly. Lack of randomness can be surprisingly hard to diagnose: the Debian random number generator failure in OpenSSL went unnoticed for 2 years, compromising a vast number of keys. The requirements on random numbers for cryptographic purposes are very stringent: most pseudorandom number generators (PRNG) fail to meet them.
-    + Bad solutions
-    + Solution
 
 ---
 
