@@ -56,7 +56,14 @@ title: Crypto Coding
             - override 失败则仍会跑不安全的 func
             - 移植到别的平台后可能会跑不安全的 func
 + Avoid mixing security and abstraction levels of cryptographic primitives in the same API layer
-    + 没细研究.......
+    + 调用 API 时有不同的 参数，混用不同 安全级别的 参数会影响安全性
+    + 解决办法
+        * 提供 high-level APIs
+        * 尽量避免 low-level APIs
+            - 比如其实用户一般都用不到 unpadded RSA, or to use a block cipher in ECB mode, or to perform a DSA signature with a user-selected nonce
+        * low-level APIs 和 high-level APIs 之间要拎的清
+            - safe/unsafe 的不要放在同一个 packages/headers 中
+            - subtyping 的语言，safe crypto 应有单独的 type
 + 应该用 unsigned bytes 来表示 binary data (bytestrings)
     + C 中 char 类型的正负是 implementation-defined 的, 那么比如对于这段代码
         ```c
