@@ -107,7 +107,9 @@ title: Crypto Coding
         * 减少用 randomness 的需求
         + __TODO:__
 + Always typecast shifted values
-    + __TODO:__
+    + 比如说 SHA-1、SHA-2 家族中，哈希前先将 bytes 组成 "word-sized" 整数，再进行处理。在 `c` 中通常通过 `<<` 左位移操作符来实现。
+    + 但如果 位移完之后的值是 signed 的，left-shift 完的结果如何就不好说了
+        * 出于 integer promotion rule，unsigned operand like `uint8_t` may be promoted to `signed int`，并导致问题
 
 ---
 
