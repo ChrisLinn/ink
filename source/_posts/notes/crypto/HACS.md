@@ -1,12 +1,12 @@
 ---
-title: high-assurance crypto software
+title: High-assurance crypto software
 ---
 
-# high-assurance crypto software
+# High-assurance crypto software
 
-## [36C3 - High-assurance crypto software](https://www.youtube.com/watch?v=O07uRT-5BDM)
+## [djb & Tanja Lange's talk](https://www.youtube.com/watch?v=O07uRT-5BDM)
 
-### timing attacks
+### Timing attacks
 
 #### Exponentiation with secret exponent (RSA, DH)
 Compute $c^d$ given $c$ and $d$.
@@ -29,9 +29,29 @@ NIST P-256 上 scalar multiplication 所需要的时间？不可忽视。
 其他的一些 exponentiation 方法：略...
 
 #### 泄露一些 bits 会引发什么问题
++ 对于 RSA、DH 有一些影响
++ 对于 DSA、ECDSA 影响很大
+    * nonces (one-time scalars) 稍微有点 bias 密钥就可能泄漏
++ even worse: hyperthreading attacks, cache-timing attacks... 或者更多的信息导致导致更多的漏洞
 
+#### Constant-time exponentiation
+This costs 1 multiplication per bit, so as slow as worst case.
 
-## 衍生阅读
+```py
+n = 1000001
+d = 12473
+c = 41241
+l = n.nbits()
+D = d.digits(2, padto = 1)
+m = 1 # so initial squaring don't matter
+for i in range(l-1, -1, -1): # fixed-length loop
+    m = m^2 % n
+    h = m * c % n
+    m = (1 - D[i]) * m + D[i] * h # selection by arithmetic
+print(m)
+```
+
+## 延伸阅读
 
 + https://www.hacs-workshop.org/links.html
 + https://www.youtube.com/watch?v=O07uRT-5BDM
