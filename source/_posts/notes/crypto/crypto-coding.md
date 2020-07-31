@@ -105,9 +105,9 @@ title: Crypto Coding
                 * N bits from an entropy pool often provide less than N bits of entropy
     + 应该怎样
         * 减少用 randomness 的需求
-        + __TBD__
+        + __TODO:__
 + Always typecast shifted values
-    + __TBD__
+    + __TODO:__
 
 ---
 
@@ -160,7 +160,7 @@ MPC secure channel:
 
 - https://bloodzer0.github.io/ossa/application-security/sdl/go-scp/
     + go语言安全编码规范（中文版）
-        + __TBD__
+        + __TODO:__
     + https://checkmarx.gitbooks.io/go-scp/content/
 + https://github.com/SalusaSecondus/CryptoGotchas
 
