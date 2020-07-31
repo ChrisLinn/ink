@@ -58,3 +58,4 @@ print(m)
 + https://cryptojedi.org/peter/data/cecc-20160622.pdf
 + https://arxiv.org/pdf/1808.01348.pdf
 + https://ieeexplore.ieee.org/document/7310828
++ http://ecchacks.cr.yp.to/
