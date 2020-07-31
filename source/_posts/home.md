@@ -22,7 +22,7 @@ He/him.
 
 ## Friends
 
-+ [Runchao HAN](https://github.com/SebastianElvis)
++ [Runchao HAN](https://runchao.rocks/)
 + [Jyuwan WONG](https://www.douban.com/people/10566855/)
 + [Xiaoliang YU](https://github.com/yxliang01)
 + [Feiyang QIU](https://priewienv.me/)
