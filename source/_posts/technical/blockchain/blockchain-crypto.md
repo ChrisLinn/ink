@@ -77,6 +77,7 @@ with Applications to IOPs and Stateless Blockchains](https://eprint.iacr.org/201
                     * https://cypherpunks.ca/~iang/pubs/PolyCommit-AsiaCrypt.pdf
                     * https://ethresear.ch/t/using-polynomial-commitments-to-replace-state-roots/
                         - 其中提到 polynomial commitments 也可作为 vector commitments
+                            + [Constant-Size Commitments to Polynomials and Their Applications](https://www.iacr.org/archive/asiacrypt2010/6477178/6477178.pdf)
                 + ...
 
 schnorr signature (我感觉我甚至想写一篇 scriptless script is doom...) 感觉也挺有意义, 衍生到各种 DSA 相关。ZEC 他们搞了一堆。
