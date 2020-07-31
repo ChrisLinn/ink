@@ -49,3 +49,4 @@
 + strenuous
 + tremendous
 + paradigm
++ stringent
