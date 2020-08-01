@@ -39,6 +39,9 @@
     - https://zkcapital.substack.com/
     - https://distsys.substack.com/
     - https://blog.cryptographyengineering.com/
+    - https://zkproof.org/blog/
+        + https://docs.zkproof.org/pages/reference/reference.pdf
+    - https://community.zkproof.org/
     - https://jbp.io/archive/
     - https://petertodd.org/
     - https://joinmarket.me/blog/blog/
