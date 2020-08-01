@@ -167,20 +167,22 @@ MPC secure channel:
     * timeouts and errors
 
 ---
+__TODO:__
 
-- https://bloodzer0.github.io/ossa/application-security/sdl/go-scp/
-    + go语言安全编码规范（中文版）
-        + __TODO:__
-    + https://checkmarx.gitbooks.io/go-scp/content/
 + https://github.com/SalusaSecondus/CryptoGotchas
-
----
-
-+ 亦可参考 [PacktPublishing/Security-with-Go 的 Cryptography 章节代码](https://github.com/PacktPublishing/Security-with-Go/tree/master/Chapter06)
-    * [目录](https://www.packtpub.com/networking-and-servers/security-go)
 
 ---
 __TODO:__
 
 + [How I'm learning to build secure systems](https://github.com/veeral-patel/learn-security-engineering)
 + https://www.chosenplaintext.ca/articles/beginners-guide-constant-time-cryptography.html
+
+---
+__TODO:__
+
++ go语言安全编码规范
+    * https://checkmarx.gitbooks.io/go-scp/content/
+    + https://bloodzer0.github.io/ossa/application-security/sdl/go-scp/
+
++ [PacktPublishing/Security-with-Go 的 Cryptography 章节代码](https://github.com/PacktPublishing/Security-with-Go/tree/master/Chapter06)
+    * [目录](https://www.packtpub.com/networking-and-servers/security-go)
