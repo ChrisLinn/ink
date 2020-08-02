@@ -1,3 +1,7 @@
+---
+title: Avalanche
+---
+
 # Avalanche
 
 + [Scalable and Probabilistic Leaderless BFT Consensus through Metastability](https://arxiv.org/abs/1906.08936)
