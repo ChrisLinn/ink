@@ -49,4 +49,14 @@
 + strenuous
 + tremendous
 + paradigm
++ embodiment
 + stringent
++ single-shot consensus instance
++ has gained more traction in practice
++ be used in lieu of
++ full-fledged
++ infinitesimally small
++ the conceptual complication, 
++ for the sake of reaching a contradiction
++ consecutive
++ henceforth
