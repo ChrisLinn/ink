@@ -1,12 +1,8 @@
+---
+title: When do we need cryptography in blockchain space?
+---
+
 # When do we need cryptography in blockchain space?
-
-also see:
-
-+ https://ethresear.ch/t/when-do-we-need-cryptography-in-blockchain-space
-+ https://www.michaelstraka.com/posts/classgroups/
-+ https://hackmd.io/@olivierbbb/r10VpNPZU
-+ https://github.com/Chia-Network/vdf-competition/blob/master/classgroups.pdf
-+ https://blog.goodaudience.com/deep-dive-on-rsa-accumulators-230bc84144d9?gi=b5fa21147b56
 
 我觉得主要就是 VDF, accumulator, zkp, PCD 这些。zkp 所属其实又比较复杂，PCD 和 polynomial commitments 中可能使用 ZKP。(bulletproof, DARKs 是 alternative polynomial commitments? Sonic 中也构建了 polynomial commitments?)
 
@@ -84,6 +80,7 @@ with Applications to IOPs and Stateless Blockchains](https://eprint.iacr.org/201
 schnorr signature (我感觉我甚至想写一篇 scriptless script is doom...) 感觉也挺有意义, 衍生到各种 DSA 相关。ZEC 他们搞了一堆。
 
 Private_information_retrieval 这个亦有意义，涉及 intersection、交易撮合？
+相关概念： PIR、PSI。
 
 stealth address 这些则和很多相关，暂时不感兴趣。
 
@@ -131,3 +128,11 @@ Everyone seems to love VDFs, but the complexity theory around them is a bit unde
 
 ## VRF
 JP Aumasson 也提到 the most exciting crypto  in real applications 是 [threshold oblivious PRFs](https://twitter.com/veorq/status/1272922678475788288)。
+
+## 延伸阅读
+
++ https://ethresear.ch/t/when-do-we-need-cryptography-in-blockchain-space
++ https://www.michaelstraka.com/posts/classgroups/
++ https://hackmd.io/@olivierbbb/r10VpNPZU
++ https://github.com/Chia-Network/vdf-competition/blob/master/classgroups.pdf
++ https://blog.goodaudience.com/deep-dive-on-rsa-accumulators-230bc84144d9?gi=b5fa21147b56
