@@ -33,6 +33,8 @@ title: When do we need cryptography in blockchain space?
         - RSA group, trusted setup 或 MPC
         - class group, trustless setup
             + 亦可用于 zkp???
+    * compression
+        + [Trustless Groups of Unknown Order with Hyperelliptic Curves](https://eprint.iacr.org/2020/196.pdf) section 5 provides a way to Compress group element representation
     * GUO 可用于
         * [VDF](#vdf)
         * Cryptographic Accumulators
