@@ -6,6 +6,7 @@
 + novel
 + trivial
 + a priori
++ aforementioned
 + simple yet elusive until now
 + trivial?
 + without loss of generality
@@ -56,7 +57,13 @@
 + be used in lieu of
 + full-fledged
 + infinitesimally small
-+ the conceptual complication, 
++ the conceptual complication
++ conceptual simplicity
 + for the sake of reaching a contradiction
 + consecutive
++ adjacent
++ sequentially
 + henceforth
++ classical mainstream approaches resort to ...
++ adversial
++ faithfully
