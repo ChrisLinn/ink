@@ -166,6 +166,7 @@ title: 如何学习编程
             + 保证 API 100% RESTful
                 * everything is a “resource”
                 * https://github.com/aisuhua/restful-api-design-references
+                * https://github.com/marmelab/awesome-rest
             + 在 request 和 response 中，都应该尽可能的保持参数的结构化。
                 * 如果是一个 hash，就传一个 hash（不要传 hash.to_string）。
                     - 在 serialization / deserialization 中完成不同语言间类型的转换。
