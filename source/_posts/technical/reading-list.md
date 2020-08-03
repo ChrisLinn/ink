@@ -67,6 +67,7 @@
     - https://simpleaswater.com/
     - https://github.com/pingcap/talent-plan
     - https://research.nccgroup.com/
+    - https://src.getmonero.org/resources/research-lab/
     - https://github.com/SebastianElvis/distributed-computing-lecture-notes/
     - https://github.com/denisnazarov/awesome-crypto-trackers
     - https://github.com/jonatack/bitcoin-development
