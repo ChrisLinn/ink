@@ -12,6 +12,7 @@
 
 ## list
 + https://github.com/golang/talks
++ https://github.com/darjun/go-daily-lib
 + https://github.com/jakescript/go-bible
 + https://github.com/dgryski/go-perfbook
 + __https://github.com/yangwenmai/learning-golang__
