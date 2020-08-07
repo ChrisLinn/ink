@@ -150,6 +150,7 @@
     - [blockchain](/technical/blockchain/README.md)
     - https://www.jianshu.com/c/06ddad58490f
     - https://concourseopen.com/
+    - https://blog.soreatu.com/
 * sec
     - https://www.gpestana.com/
     - 玄武 https://sec.today
