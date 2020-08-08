@@ -101,6 +101,7 @@ VDF 向上可以追溯到 [Time-lock Puzzles](https://people.csail.mit.edu/rives
 
 + [Pie19](https://eprint.iacr.org/2018/627.pdf)
     * fast to create, but large and slow to verify.
+    * 另外 poanetwork 中说 Pie19 "Number of iterations must be even and at least 66"
 + [Wes19](https://eprint.iacr.org/2018/623.pdf)
     * slower to create (but parallelizable), but small, and quick to verify.
 
