@@ -14,7 +14,7 @@ title: 目录
         + [VRF mining / 通过 VRF 来消灭矿池](/technical/blockchain/vrf-mining)
         + Bytom / 比原
             * [cross-chain / 跨链](/technical/blockchain/bytom/cross-chain)
-    - cryptography / 密码学
+    - Cryptography / 密码学
         - [Cryptography Interview / 密码学面试题](/technical/crypto/crypto-interview)
     * Programming Language / 程序设计语言
         - [High performance GoLang / golang 高性能笔记](/technical/PL/hp-golang)
@@ -25,7 +25,7 @@ title: 目录
 * Notes / 笔记
     - Programming / 编程
         + [API security / 安全 API 的设计模式](/notes/API_sec)
-    - cryptography / 密码学
+    - Cryptography / 密码学
         - [E*DSA / 椭圆曲线签名](/notes/crypto/e_dsa)
         - [Crypto Coding / 密码学编程中应注意的问题](/notes/crypto/crypto-coding)
     - Blockchain / 区块链
