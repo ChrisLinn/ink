@@ -25,15 +25,21 @@ merkle tree
 
 ## Assumptions
 dis-log
+    crypto
+    distcomp
 DDH
 SDH
 dan boneh 里面也有
+pairing
+Fiat-Shamir heuristic
+    oracle
+    NIZK?
+    Universally Composable Security
+    1 round?
 
 ## snark-friendly hash
 SHA?
 Poiseden
 MiMC
 
-## former secrecy
-TODO
-wikipedia
+## forward secrecy
