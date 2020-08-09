@@ -10,7 +10,7 @@
     * https://learning-modules.mit.edu/materials/index.html?uuid=/course/6/fa15/6.852#materials
         - 6.852
         - Distributed Algorithms
-        - https://labs.xjtudlc.com/labs/wldmt1/books/Distributed%20and%20parallel%20algorithms/Distributed_Algorithms_(%e4%b8%ad%e6%96%87%e5%90%8d%ef%bc%9a%e5%88%86%e5%b8%83%e5%bc%8f%e7%ae%97%e6%b3%95).pdf
+        - https://github.com/ChrisLinn/ink/blob/master/source/_posts/assets/Distributed_Algorithms_MIT_6.852.pdf
     * http://nil.lcs.mit.edu/6.S974/
         - 6.S974
         - Decentralized Applications
