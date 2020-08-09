@@ -114,6 +114,8 @@ VDF 向上可以追溯到 [Time-lock Puzzles](https://people.csail.mit.edu/rives
 
 ### [cVDF](https://eprint.iacr.org/2019/619.pdf)
 
+cVDF 中提到 Pie19 和 Wes19 中的 assumption 都有点不常规。cVDF 提到自己的 assumption 比起它们没毛病。
+
 #### (incremental) PoSW vs cVDF
 a PoSW enables generating a publicly verifiable proof of some computation (rather than a specific function with a unique output) that is guaranteed to
 have taken a long time. 
