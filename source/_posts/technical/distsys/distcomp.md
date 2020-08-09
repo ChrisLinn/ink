@@ -10,6 +10,7 @@
     * https://learning-modules.mit.edu/materials/index.html?uuid=/course/6/fa15/6.852#materials
         - 6.852
         - Distributed Algorithms
+        - https://labs.xjtudlc.com/labs/wldmt1/books/Distributed%20and%20parallel%20algorithms/Distributed_Algorithms_(%e4%b8%ad%e6%96%87%e5%90%8d%ef%bc%9a%e5%88%86%e5%b8%83%e5%bc%8f%e7%ae%97%e6%b3%95).pdf
     * http://nil.lcs.mit.edu/6.S974/
         - 6.S974
         - Decentralized Applications
@@ -24,6 +25,7 @@
     * https://disco.ethz.ch/courses/ss03/distcomp/
     * https://disco.ethz.ch/courses/podc/
     * https://disco.ethz.ch/courses/distsys/
+    * [Lecture Notes on Principles of Distributed Computing](https://disco.ethz.ch/courses/podc_allstars/lecture/podc.pdf) by Roger Wattenhofer
 + princeton
     * https://www.cs.princeton.edu/courses/archive/fall18/cos418/schedule.html
 + CMU
@@ -34,8 +36,9 @@
     * https://dcl.epfl.ch/site/education/da
         - Distributed Algorithms
 + Yale
-    * http://www.cs.yale.edu/homes/aspnes/classes/465/notes.pdf
+    * [Notes on Theory of Distributed Systems](http://www.cs.yale.edu/homes/aspnes/classes/465/notes.pdf) by James Aspnes
         * Distributed Computing
+    + [Notes on Randomized Algorithms](https://www.cs.yale.edu/homes/aspnes/classes/469/notes.pdf) by James Aspnes
 - Duke
     + https://sites.duke.edu/compsci590_04_f2019/schedule/
         * Consensus Protocols in Distributed Computing and Blockchains
