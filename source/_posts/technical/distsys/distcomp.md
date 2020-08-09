@@ -11,6 +11,7 @@
         - 6.852
         - Distributed Algorithms
         - https://github.com/ChrisLinn/ink/blob/master/source/_posts/assets/Distributed_Algorithms_MIT_6.852.pdf
+            - https://labs.xjtudlc.com/labs/wldmt1/books/Distributed%20and%20parallel%20algorithms/
     * http://nil.lcs.mit.edu/6.S974/
         - 6.S974
         - Decentralized Applications
