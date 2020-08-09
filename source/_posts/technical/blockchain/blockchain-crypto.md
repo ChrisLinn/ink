@@ -105,7 +105,7 @@ VDF 向上可以追溯到 [Time-lock Puzzles](https://people.csail.mit.edu/rives
 + [Wes19](https://eprint.iacr.org/2018/623.pdf)
     * slower to create (but parallelizable), but small, and quick to verify.
 
-[BBF18](https://eprint.iacr.org/2018/712) 专门了介绍了他们。
+[BBF18](https://eprint.iacr.org/2018/712) 专门了介绍了他们。其中提到，Pie19 要求 low order assumption，Wes19 要求 adaptive root assumption。Wes19 的要求更严格。
 
 [BBBF18](https://eprint.iacr.org/2018/601.pdf) 则列了各种 18年及以前的 VDF 相关的协议，并正式提出了 Verifiable Delay Functions (VDF) 的概念。
 
@@ -114,7 +114,15 @@ VDF 向上可以追溯到 [Time-lock Puzzles](https://people.csail.mit.edu/rives
 
 ### [cVDF](https://eprint.iacr.org/2019/619.pdf)
 
-cVDF 中提到 Pie19 和 Wes19 中的 assumption 都有点不常规。cVDF 提到自己的 assumption 比起它们没毛病。
+cVDF 中提到 Pie19 和 Wes19 中的 assumption 都不对。
+
+Pie19 assumes the Fiat-Shamir heuristic for a proof system with a superconstant number of rounds.
+
+Wes19 assumes the Fiat-Shamir heuristic for a
+constant-round argument system.
+
+cVDF 提到自己的 assumption 比起它们没毛病: relies on Fiat-Shamir heuristic for a
+constant-round proof system.
 
 #### (incremental) PoSW vs cVDF
 a PoSW enables generating a publicly verifiable proof of some computation (rather than a specific function with a unique output) that is guaranteed to
