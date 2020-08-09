@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Exported Data</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <script src="js/script.js" type="text/javascript">
+
+  </script>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <div class="content">
+
+     <div class="text bold">
+ZenGo X 
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+9 August 2020
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8412">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="09.08.2020 03:21:07">
+03:21
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="text">
+<a href="https://eprint.iacr.org/2020/934.pdf">https://eprint.iacr.org/2020/934.pdf</a> <strong>CanDID: Can-Do Decentralized Identity with Legacy Compatibility, Sybil-Resistance, and Accountability</strong> <br><br>Decentralized ID is a hot topic. This paper proposes a practical, complete DID system with implementation, which  other standards have failed to do so far. <br><br>The model is: committee of nodes, chosen in a permissioned way and assuming less than t&lt;n/3  of them are faulty.<br>An issue I have here is that the model assumes static corruption. I think that it makes more sense in such a system for a committee to change/refresh nodes once in a while and for attacker to adaptively corrupt nodes. <br><br>At first, CanDID solves the bootstrapping problem: how to connect to existing legacy credentials. In fact, the paper is composing here a result of another (excellent!) paper: DECO (which will appear in CCS). DECO shows how to import statements from TLS communications. See fig 2. <br><br>Next come the step of issuing a master credential. This is happening using an MPC between committee members and a user. What’s nice about this MPC is that it removes dedup’s - keeping only one unique credential per one unique ID. In a followup MPC the user gets his authentication token. Because it is MPC - we get privacy all the way! The implementation of this part was done using MP-SPDZ, which is fantastic suite of MPC protocols (first time I see it being used in a paper not by Marcel). <br>What’s missing for me is robustness in the MPC: we assume t&lt;n/3 so robustness is achievable, however the MPC is using n out of n protocol.  Another thing missing is economic model for the nodes (but I get that’s too much to ask 🙂 )<br><br>The system enables to issue statements (called contexts) and connect them to the master credential  of a user by way of zk proving a joint identifier between the statement and the master cred and have the nodes sign on the context. <br><br>Next, is an interesting ability - CanDID let the user prove (zk, circuit built with jsnark) she do not belong to a sanctions list. Since names can be misspelled, the zk actually proves something like “edit distance from all names in the sanctions list is &gt;0” . Similar check against a revocation list might happen from time to time and therefore the committee nodes need a tool to do it as well (remember, all credentials are private). This is done using MPC (MP-SPDZ). As it seems from the implementation, either MPC or ZK methods become extremely slow as a function of the list size. <br><br>Finally, there’s a key recovery protocol which uses the same committee to distribute the key and let a user reconstruct from them upon proving authentication from existing  services (i.e. FB + Google). This concept of letting the same committee handle secrets is discussed in various other places. Using existing centralised services to get access to backup is a bit of a backdoor in the decentralised concept but there are ways to overcome it.<br><br>Imho section V (the system) is the most important and section VIII (implementation) right after.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8413">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+KG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="09.08.2020 03:27:39">
+03:27
+       </div>
+
+       <div class="from_name">
+Kobi Gurkan
+       </div>
+
+       <div class="text">
+Thanks <a href="https://t.me/Omershlo">@Omershlo</a> <br><br>The zkp sounds really expensive!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message8414">
+
+      <div class="body details">
+Ershad invited Ershad
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8415">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+SB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="09.08.2020 06:06:38">
+06:06
+       </div>
+
+       <div class="from_name">
+Simon Brown
+       </div>
+
+       <div class="text">
+I read through the CanDID paper, I think it&apos;s a pretty big innovation. It&apos;s interesting that JP Morgan are involved with it as well. It&apos;s a shame that the DECO and Town Crier algorithms are both patented, but hopefully that won&apos;t limit it&apos;s use too much.<br><br>What&apos;s also of interest is the Snark Credentials paper from Microsoft ( <a href="https://github.com/decentralized-identity/snark-credentials/blob/master/whitepaper.pdf">https://github.com/decentralized-identity/snark-credentials/blob/master/whitepaper.pdf</a> ), that uses Spartan for snarks. There&apos;s no reason that a CanDID committee shouldn&apos;t be able to issue Snark Credentials.<br><br>The decentralised identity space is definitely heating up!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message8416">
+
+      <div class="body details">
+Shanks EKE invited Shanks EKE
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8418">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+J
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="09.08.2020 07:12:34">
+07:12
+       </div>
+
+       <div class="from_name">
+JP 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message8399" onclick="return GoToMessage(8399)">this message</a>
+       </div>
+
+       <div class="text">
+Not that I know.. been researching hash-based aggregate sig schemes but not much success so far
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8420">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+CL
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="09.08.2020 17:35:07">
+17:35
+       </div>
+
+       <div class="from_name">
+Chris Lin
+       </div>
+
+       <div class="text">
+Hi anyone knows why in <a href="https://github.com/poanetwork/vdf/blob/master/vdf/src/proof_pietrzak.rs#L45-L58">https://github.com/poanetwork/vdf/blob/master/vdf/src/proof_pietrzak.rs#L45-L58</a> , the time parameter has to be even and &gt;=66?<br><br>I cannot find evidence in:<br>+ <a href="https://eprint.iacr.org/2018/627.pdf">https://eprint.iacr.org/2018/627.pdf</a><br>+ <a href="https://eprint.iacr.org/2018/712.pdf">https://eprint.iacr.org/2018/712.pdf</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8421">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="09.08.2020 19:42:03">
+19:42
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message8420" onclick="return GoToMessage(8420)">this message</a>
+       </div>
+
+       <div class="text">
+cc: <a href="https://t.me/Burdges">@Burdges</a> <a href="https://t.me/AndreasFackler">@AndreasFackler</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8422">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic4" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AF
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="09.08.2020 20:53:23">
+20:53
+       </div>
+
+       <div class="from_name">
+Andreas Fackler
+       </div>
+
+       <div class="text">
+I know I probably reviewed this, but I don&apos;t remember, sorry.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8423">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="09.08.2020 21:01:17">
+21:01
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="text">
+<a href="https://www.wired.com/story/cryptocurrency-exchanges-key-flaws-hackers/">https://www.wired.com/story/cryptocurrency-exchanges-key-flaws-hackers/</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8424">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="09.08.2020 21:02:02">
+21:02
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message8423" onclick="return GoToMessage(8423)">this message</a>
+       </div>
+
+       <div class="text">
+<em>The attacks Shlomovits and Aumasson identified would not be trivial for an attacker to carry out. They all involve a somewhat privileged position within an exchange, whether taking control altogether or controlling one portion of a distributed key. Beyond identifying individual vulnerabilities, though, the two say that the goal of the research was to call attention to how easy it is to make mistakes while implementing multiparty distributed keys for cryptocurrency exchanges. And how impactful those mistakes can be when they&apos;re in open-source libraries that can proliferate widely. Using distributed key schemes is an important defense against takeover, but the cryptography is complicated enough that the development process can&apos;t be taken lightly.</em>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8425">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+J
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="09.08.2020 21:38:24">
+21:38
+       </div>
+
+       <div class="from_name">
+Jeff 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message8420" onclick="return GoToMessage(8420)">this message</a>
+       </div>
+
+       <div class="text">
+I could look later if you don&apos;t figure it out.. or ask demi.  I cannot really see much online right now
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8426">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+CL
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="09.08.2020 21:39:50">
+21:39
+       </div>
+
+       <div class="from_name">
+Chris Lin
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message8425" onclick="return GoToMessage(8425)">this message</a>
+       </div>
+
+       <div class="text">
+that will be great, thx!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8427">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+KG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="09.08.2020 21:39:51">
+21:39
+       </div>
+
+       <div class="from_name">
+Kobi Gurkan
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message8420" onclick="return GoToMessage(8420)">this message</a>
+       </div>
+
+       <div class="text">
+maybe <a href="https://t.me/justindrake">@justindrake</a> knows?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8428">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JD
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="09.08.2020 21:44:49">
+21:44
+       </div>
+
+       <div class="from_name">
+Justin Drake
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message8427" onclick="return GoToMessage(8427)">this message</a>
+       </div>
+
+       <div class="text">
+No idea. I think the Pietrzak proof is cleaner if the time parameter has high 2-adicity (it’s a recursive argument that repeatedly halves the time parameter)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8429">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+OO
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="09.08.2020 22:04:53">
+22:04
+       </div>
+
+       <div class="from_name">
+Ouriel Ohayon
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message8423" onclick="return GoToMessage(8423)">this message</a>
+       </div>
+
+       <div class="text">
+use &quot;incognito mode&quot; to read
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message8430">
+
+      <div class="body details">
+Omer changed group title to &laquo;ZenGo X&raquo;
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8431">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+KG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="09.08.2020 23:08:16">
+23:08
+       </div>
+
+       <div class="from_name">
+Kobi Gurkan
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message8430" onclick="return GoToMessage(8430)">this message</a>
+       </div>
+
+       <div class="text">
+🔥
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8433">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="09.08.2020 23:15:25">
+23:15
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message8430" onclick="return GoToMessage(8430)">this message</a>
+       </div>
+
+       <div class="text">
+Quick update: we rebranded our research group to [ZenGo X]. More details soon. New tg link is: <a href="https://t.me/zengo_x">https://t.me/zengo_x</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message8434">
+
+      <div class="body details">
+Jacob S invited Jacob S
+      </div>
+
+     </div>
+
+     <div class="message service" id="message8435">
+
+      <div class="body details">
+Kcn invited Kcn
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8436">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="09.08.2020 23:55:36">
+23:55
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="text">
+<a href="https://sites.google.com/zkproof.org/acas2020/">https://sites.google.com/zkproof.org/acas2020/</a> <br>Next weekend I will participate on a panel <em>on the latest trends of advanced cryptography and the challenges to deployment</em> . <br>The program looks overall great (<a href="https://t.me/danib31">@danib31</a> is the ultimate crypto-organizer). <br>It seems that registration to CRYPTO is required - please ping me if you want to attend this event but are not a member of IACR. We will do our best to help
+       </div>
+
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </body>
+
+</html>
