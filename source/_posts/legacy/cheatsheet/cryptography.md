@@ -48,6 +48,7 @@
     + [Advanced Cryptography](https://people.eecs.berkeley.edu/~sanjamg/classes/cs294-spring18/) from Berkeley
     + [A Theorist's Toolkit](https://www.cs.cmu.edu/~odonnell/toolkit13/) from CMU
     - [A Course in Cryptography](http://www.cs.cornell.edu/courses/cs4830/2010fa/lecnotes.pdf) by Rafael Pass and Abhi Shelat
+    - https://www.math.auckland.ac.nz/~sgal018/crypto-book/ch21.pdf
     + [Handbook of Applied Cryptography](https://notendur.hi.is/pgg/Handbook%20of%20Applied%20Cryptography.pdf)
     + [Foundations of Cryptography 89-856](http://u.cs.biu.ac.il/~lindell/89-856/complete-89-856.pdf) by Yehuda Lindell
     + [An intensive introduction to cryptography](https://github.com/boazbk/crypto) by Boaz Barak
