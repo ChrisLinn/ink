@@ -215,6 +215,11 @@ see https://youtu.be/-EkUn4iD8Z8
 ## universal (zk)-S[N/T]ARKS
 https://miro.com/app/board/o9J_knthJ3w=/
 
+also see:
++ [Comparing General Purpose zk-SNARKs](https://medium.com/coinmonks/comparing-general-purpose-zk-snarks-51ce124c60bd)
++ [Survey of progress in succinct zero-knowledge proofs: towards trustless SNARKs](http://diyhpl.us/wiki/transcripts/scalingbitcoin/tel-aviv-2019/survey-of-progress-in-zero-knowledge-proofs-towards-trustless-snarks/)
++ [A Cambrian Explosion of Crypto Proofs](https://nakamoto.com/cambrian-explosion-of-crypto-proofs/)
+
 ## [Pairing](/notes/crypto/pairing)
 又叫 配对 或 双线性映射
 
