@@ -166,6 +166,29 @@ $y^2 = x^3 + ax + b,\ 4a^3 + 27b^2 \ne 0$
 #### 离散对数问题
 已知两个在 子群 上的点 $P$ 和 $Q = kP$，求解  $k$ 是非常困难的问题，目前没有多项式时间的求解算法。
 
+<!-- 
+## Assumptions
+dis-log
+    crypto
+    distcomp
+DDH
+SDH
+dan boneh 里面也有
+
+
+
+## DH
++ Discrete Logarithm Problem
+    * Computational Diffie-Hellman Problem
+        - g, g^x, g^y -> g^{xy}
+    * Decisional Diffie-Hellman Problem
+        - g. 给定 g^x, g^y: g^{xy} looks like a random element in G.
+        - hard to determine whether g^c = g^{xy}
+* probabilistic polynomial time Turing machine
+    + 概率多项式时间图灵机
+
+ -->
+
 ## Simulation
 ### proofs based on simulation vs proofs based on games
 基于游戏的定义更容易为其编写证明，但基于模拟的定义在获得安全性方面通常更清晰。
@@ -176,15 +199,41 @@ $y^2 = x^3 + ax + b,\ 4a^3 + 27b^2 \ne 0$
 
 独立的基于模拟的定义能提供顺序组合下的安全性，所以也很容易通过使用模块化顺序组合定理将协议插入更大的协议来证明大协议的安全性。
 
-## Pairing
+
+## Fiat-Shamir transform
++ the Fiat-Shamir heuristic
+    + a technique for taking an interactive proof of knowledge and creating a digital signature based on it.
+        + This way, some fact (for example, knowledge of a certain secret number) can be publicly proven without revealing underlying information.
+        + For the method to work, the original interactive proof must have the property of being **public-coin**, i.e. verifier's random coins are made public throughout the proof protocol.
+    + yields a non-interactive zero-knowledge argument in the random oracle model
+        + **only secure in the random oracle model**.
++ **也就是说**
+    + The Fiat-Shamir heuristic may also be viewed as converting a public-coin interactive proof of knowledge into a non-interactive proof of knowledgel (in random oracle model).
++ 怎么做
+    + The Fiat-Shamir transformation takes an interactive public coin argument and replaces the challenges with the output of a cryptographic hash function.
+
+### Public coin protocol
+The verifier must show the prover all the random bits it uses in its computation. The result is that the verifier cannot "hide" anything from the prover, because the prover is powerful enough to simulate everything the verifier does if it knows what random bits it used. 
+
+## [Pairing](/notes/crypto/pairing)
 又叫 配对 或 双线性映射
+
+## SNARG
+![SNARG](/img/crypto/SNARG.jpg)
 
 ### ZKP 中为什么用了 Pairing？
 如果只用 指数 和 取模来进行同态加密，只能支持一个加密的值和一个未加密的值相乘。引入了 Pairing 之后就可以实现加密值相乘。
 
-
-## Paillier
+## Paillier cryptosystem
 Paillier 是一种原生支持加法同态的非对称加密体系。能同时支持 语义安全 (semantically secure) 和 加法同态 (additively homomorphic)；RSA 只能取其一。
+
+* probabilistic public-key encryption
+    * 概率公钥加密系统
++ Assumption:
+    * The problem of computing n-th residue classes is believed to be computationally difficult. The decisional composite residuosity assumption is the intractability hypothesis upon which this cryptosystem is based.
+    + 基于复合剩余类的困难问题
+- partial homomorphic encryption scheme
+    - 加法和数乘同态
 
 ## Semantic Security
 > Any probabilistic, polynomial-time algorithm (PPTA) that is given the ciphertext of a certain message $m$ (taken from any distribution of messages), and the message's length, cannot determine any partial information on the message with probability non-negligibly higher than all other PPTA's that only have access to the message length (and not the ciphertext).

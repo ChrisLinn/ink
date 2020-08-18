@@ -49,10 +49,8 @@ https://eprint.iacr.org/2020/767
 + tECDSA
 + tBLS
     + [BLS](https://crypto.stanford.edu/~dabo/pubs/papers/BLSmultisig.html)
-    * based on pairing
+    * based on [pairing](/notes/crypto/pairing)
         - cons: assumption of pairing
-            + https://www.math.uwaterloo.ca/~ajmeneze/publications/pairings.pdf
-            + https://eprint.iacr.org/2016/223.pdf
             + 现在还没有 efficient, plausibly secure PQ (post-quantum!) bilinear maps （但 不 PQ的应该已经有了？）
     * verification 10x slower than ECDSA
     * 自带多签

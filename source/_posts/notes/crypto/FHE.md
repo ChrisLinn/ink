@@ -6,7 +6,7 @@
 
 ## Somewhat Homomorphic Encryption 近似同态加密
 
-Pairing
+[Pairing](/notes/crypto/pairing)
 
 可以同时加法、乘法，但次数有限。
 
