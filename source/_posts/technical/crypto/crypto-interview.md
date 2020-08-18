@@ -219,7 +219,7 @@ The verifier must show the prover all the random bits it uses in its computation
 又叫 配对 或 双线性映射
 
 ## SNARG
-![SNARG](/img/crypto/SNARG.jpg)
+![SNARG](https://github.com/ChrisLinn/ink/raw/master/source/_posts/img/crypto/SNARG.jpg)
 
 ### ZKP 中为什么用了 Pairing？
 如果只用 指数 和 取模来进行同态加密，只能支持一个加密的值和一个未加密的值相乘。引入了 Pairing 之后就可以实现加密值相乘。

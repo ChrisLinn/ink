@@ -26,7 +26,7 @@ Mainly: Blockchain Proof-of-Work, Peer-to-Peer Communication, Cryptocurrency Wal
         * __take charge of__ the PreCogs Projects, discovering and monitoring global bytomd nodes status
         * implement node version checking & update functionalities in bytomd
     + talks
-        * _Bytom Smart Contract_ ([[1]](https://twitter.com/Bytom_Official/status/1165402458908061697?s=20), [[2]](https://www.8btc.com/article/469596), [[3]](https://github.com/ChrisLinn/chrislinn.ink/raw/master/img/me/bytom-devcon2/flash.JPG)) on [Bytom Devcon 2](https://github.com/ChrisLinn/chrislinn.ink/raw/master/img/me/bytom-devcon2/agenda.PNG) in _SF_
+        * _Bytom Smart Contract_ ([[1]](https://twitter.com/Bytom_Official/status/1165402458908061697?s=20), [[2]](https://www.8btc.com/article/469596), [[3]](https://github.com/ChrisLinn/chrislinn.ink/raw/master/img/me/bytom-devcon2/flash.JPG)) on [Bytom Devcon 2](https://github.com/ChrisLinn/ink/raw/master/source/_posts/img/me/bytom-devcon2/agenda.PNG) in _SF_
         <!-- - p2p 层实现节点保持连接? -->
 
 <!-- 
