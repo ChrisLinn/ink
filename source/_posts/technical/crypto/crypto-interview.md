@@ -188,7 +188,6 @@ $y^2 = x^3 + ax + b,\ 4a^3 + 27b^2 \ne 0$
 
 独立的基于模拟的定义能提供顺序组合下的安全性，所以也很容易通过使用模块化顺序组合定理将协议插入更大的协议来证明大协议的安全性。
 
-
 ## Fiat-Shamir transform
 + the Fiat-Shamir heuristic
     + a technique for taking an interactive proof of knowledge and creating a digital signature based on it.
@@ -204,13 +203,13 @@ $y^2 = x^3 + ax + b,\ 4a^3 + 27b^2 \ne 0$
 ### Public coin protocol
 The verifier must show the prover all the random bits it uses in its computation. The result is that the verifier cannot "hide" anything from the prover, because the prover is powerful enough to simulate everything the verifier does if it knows what random bits it used. 
 
-## [Pairing](/notes/crypto/pairing)
-又叫 配对 或 双线性映射
-
 ## SNARG
 ![SNARG](https://github.com/ChrisLinn/ink/raw/master/source/_posts/img/crypto/SNARG.jpg)
 
 see https://youtu.be/-EkUn4iD8Z8
+
+## [Pairing](/notes/crypto/pairing)
+又叫 配对 或 双线性映射
 
 ### ZKP 中为什么用了 Pairing？
 如果只用 指数 和 取模来进行同态加密，只能支持一个加密的值和一个未加密的值相乘。引入了 Pairing 之后就可以实现加密值相乘。

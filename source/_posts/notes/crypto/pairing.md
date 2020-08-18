@@ -11,13 +11,12 @@ title: Pairing (Bilinear Map)
 + omer? RH?
 
 ## Assumption
+Let $n$ be a prime number. Let $G_1$ = $\langle P \rangle$ be an additively-written group of order $n$ with identity $\infty$, and let $G_T$ be a multiplicatively-written group of order $n$ with identity 1.
+
 The security of many pairing-based protocols is dependent on the intractability
 of the following problem.
 
-Let $n$ be a prime number. Let $G_1$ = $<Pi>$ be an additively-written group of
-order $n$ with identity ∞, and let GT be a multiplicatively-written group of order $n$
-with identity 1.
-
+Let $\hat{e}$ be a bilinear pairing on $(G_1, G_T)$. The **bilinear Diffie-Hellman problem** (BDHP) is the following: Given $P, aP, bP, cP$, compute $\hat{e}(P, P)^{abc}$.
 
 ## Weil Pairing
 
