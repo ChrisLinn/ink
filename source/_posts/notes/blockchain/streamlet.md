@@ -6,7 +6,7 @@ title: Streamlet
 
 Consensus protocols, in cryptocurrency systems, can be called as blockchain protocols. They were commonly referred to as "State Machine Replication" or "Byzantine Fault Tolerance" protocols.
 
-Nakamoto consensus works in a permissionless environment. But as shown in [Algorand: The efficient and democratic ledger](https://arxiv.org/abs/1607.01341), [Snow white: Robustly reconfigurable consensus and applications to provably secure proofs of stake]() and [ Ouroboros: A provably secure proof-of-stake blockchain protocol](), PoS systems rely instead on "permissioned" consensus (needs PKI) as a core building block.
+Nakamoto consensus works in a permissionless environment. But as shown in [Algorand: The efficient and democratic ledger](https://arxiv.org/abs/1607.01341), [Snow white: Robustly reconfigurable consensus and applications to provably secure proofs of stake](https://eprint.iacr.org/2016/919) and [Ouroboros: A provably secure proof-of-stake blockchain protocol](https://eprint.iacr.org/2016/889), PoS systems rely instead on "permissioned" consensus (needs PKI) as a core building block.
 
 Byzantine Agreement or Byzantine Broadcast is a single-shot consensus instances abstraction.
 

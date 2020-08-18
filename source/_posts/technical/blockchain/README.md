@@ -143,6 +143,9 @@
             + a scalable drop-in replacement for merkle trees
     + rsa accumulator
         * FlyClient
+            - 改进了 NIPoPoWs
+                + NIPoPoWs are succinct only as long as no adversary influences the honest chain, and can only be used in chains with fixed block difficulty
+                    + [A Gas-Efficient Superlight Bitcoin Client in Solidity](https://eprint.iacr.org/2020/927) 这篇用 solidity 实现了 NIPoPoWs
 + ninji
 + GHOST
 + Bitcoin-NG
