@@ -178,6 +178,9 @@ $y^2 = x^3 + ax + b,\ 4a^3 + 27b^2 \ne 0$
     + [The Diffie-Hellman Protocol, U. Maurer and S. Wolf,](https://www.crypto.ethz.ch/publications/files/MauWol00c.pdf) developed strong evidence for the equivalence of the Diffie–Hellman and Discrete Log Problems on elliptic curves
 * probabilistic polynomial time Turing machine
     + 概率多项式时间图灵机
+- DLP vs ECDLP
+    + ECDLP is still the discrete logarithm problem, since you have a group with an operation (addition on EC) applied to itself n times, and you're trying to find the value $x$ given $B$ and $Y$, where $xB$ = $Y$. This is the same as in a prime field (which is a group with an operation that is multiplication) trying to find $x$ given $g$ and $y$ were $g^x$ = $y$.
+        * However, elliptical curves aren't fields, which means the methods that are efficient at solving discrete logarithm on fields aren't accelerated.
 
 ## Simulation
 ### proofs based on simulation vs proofs based on games
