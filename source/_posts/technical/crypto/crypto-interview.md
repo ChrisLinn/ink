@@ -212,6 +212,9 @@ The verifier must show the prover all the random bits it uses in its computation
 
 see https://youtu.be/-EkUn4iD8Z8
 
+## universal (zk)-S[N/T]ARKS
+https://miro.com/app/board/o9J_knthJ3w=/
+
 ## [Pairing](/notes/crypto/pairing)
 又叫 配对 或 双线性映射
 
