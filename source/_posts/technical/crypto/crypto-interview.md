@@ -183,10 +183,6 @@ $y^2 = x^3 + ax + b,\ 4a^3 + 27b^2 \ne 0$
 dis-log
     crypto
     distcomp
-DDH
-SDH
-dan boneh 里面也有
-
  -->
 
 ## Simulation
