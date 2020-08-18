@@ -166,16 +166,6 @@ $y^2 = x^3 + ax + b,\ 4a^3 + 27b^2 \ne 0$
 #### 离散对数问题
 已知两个在 子群 上的点 $P$ 和 $Q = kP$，求解  $k$ 是非常困难的问题，目前没有多项式时间的求解算法。
 
-<!-- 
-## Assumptions
-dis-log
-    crypto
-    distcomp
-DDH
-SDH
-dan boneh 里面也有
-
-
 
 ## DH
 + Discrete Logarithm Problem
@@ -186,6 +176,15 @@ dan boneh 里面也有
         - hard to determine whether g^c = g^{xy}
 * probabilistic polynomial time Turing machine
     + 概率多项式时间图灵机
+
+<!-- 
+## Assumptions
+dis-log
+    crypto
+    distcomp
+DDH
+SDH
+dan boneh 里面也有
 
  -->
 
