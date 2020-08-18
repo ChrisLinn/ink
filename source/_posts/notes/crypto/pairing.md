@@ -33,7 +33,16 @@ We note that the [decisional Diffie-Hellman problem (DDHP)](/technical/crypto/cr
 
 另外因为 solving DLP 技巧的进展，有些 assumption 也会慢慢不成立。
 
-[PAIRING-BASED CRYPTOGRAPHY AT HIGH SECURITY LEVELS](https://eprint.iacr.org/2005/076.pdf) 讨论了 DHP、DLP on elliptic curves、DHP in the field、BDHP。
+[PAIRING-BASED CRYPTOGRAPHY AT HIGH SECURITY LEVELS](https://eprint.iacr.org/2005/076.pdf) 讨论了 DLP、DHP on elliptic curves、DHP in the field、BDHP（`<=` 表示弱于）：
++ BDHP <= DHP on the curve (in the elliptic curve group $E(\mathbb{F}_{q^k})$)
+    * 只是目前没人知道 any way to solve the BDHP except by finding discrete logs
++ DHP <= DLP (on the curve)
++ BDHP is also closely related to the DHP in the finite field $\mathbb{F}_{q^k}$
+    * BDHP <= DHP in the field, 甚至严格弱于
+* Verheul’s theorem: 就算 BDHP = DHP = DLP on a low-embedding-degree curve （比如 in the
+multiplicative group of a finite field？），也可以 用 MOV embedding 将其转换成 in the finite field
+    * 这是不是就是 [MOV attack](https://crypto.stanford.edu/pbc/notes/elliptic/movattack.html)?
+        - reduced the discrete logarithm problem on the group of points on an elliptic curve to the discrete logarithm on finite fields, where subexponential attacks are known.
 
 
 ## Weil Pairing
