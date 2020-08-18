@@ -6,5 +6,7 @@ title: Pairing (Bilinear Map)
 
 + https://www.math.uwaterloo.ca/~ajmeneze/publications/pairings.pdf
 + https://eprint.iacr.org/2016/223.pdf
++ ren lin
++ https://en.wikipedia.org/wiki/Pairing-based_cryptography
 
 ## Assumption

@@ -163,17 +163,18 @@ $y^2 = x^3 + ax + b,\ 4a^3 + 27b^2 \ne 0$
 #### 寻找生成元
 略
 
-#### 离散对数问题
+#### Discrete Logarithm Problem 离散对数问题
 已知两个在 子群 上的点 $P$ 和 $Q = kP$，求解  $k$ 是非常困难的问题，目前没有多项式时间的求解算法。
 
-
-## DH
+## Diffie-Hellman Problem
 + Discrete Logarithm Problem
-    * Computational Diffie-Hellman Problem
-        - g, g^x, g^y -> g^{xy}
-    * Decisional Diffie-Hellman Problem
-        - g. 给定 g^x, g^y: g^{xy} looks like a random element in G.
-        - hard to determine whether g^c = g^{xy}
+    * Diffie-Hellman Problem
+        - Computational Diffie-Hellman Problem
+            + g, g^x, g^y -> g^{xy}
+        - Decisional Diffie-Hellman Problem
+            + g. 给定 g^x, g^y: g^{xy} looks like a random element in G.
+            + hard to determine whether g^c = g^{xy}
+        - It is easy to see that the DHP reduces in polynomial time to the DLP. It is generally assumed, and has been proven in some cases (e.g., see [The relationship between breaking the Diffie-Hellman protocol and computing discrete logarithms](https://www.crypto.ethz.ch/publications/files/MauWol99b.pdf), [Diffie-Hellman is as strong as discrete log for certain primes](https://link.springer.com/content/pdf/10.1007/0-387-34799-2_38.pdf)), that the DLP reduces in polynomial time to the DHP.
 * probabilistic polynomial time Turing machine
     + 概率多项式时间图灵机
 
