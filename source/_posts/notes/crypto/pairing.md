@@ -7,7 +7,7 @@ title: Pairing (Bilinear Map)
 ## Assumptions
 
 ### Pairing Inversion Problem
-more detail in https://eprint.iacr.org/2016/223.pdf
+more detail in [Still Wrong Use of Pairings in Cryptography](https://eprint.iacr.org/2016/223.pdf)
 
 ### Bilinear Diffie-Hellman Problem
 Let $n$ be a prime number. Let $G_1$ = $\langle P \rangle$ be an additively-written group of order $n$ with identity $\infty$, and let $G_T$ be a multiplicatively-written group of order $n$ with identity 1.
@@ -22,7 +22,7 @@ Hardness of the BDHP implies the hardness of the [DHP](/technical/crypto/crypto-
 We note that the [decisional Diffie-Hellman problem (DDHP)](/technical/crypto/crypto-interview/#diffie-hellman-problem) in $G_1$ can be efficiently solved. 
 
 #### 更细致的分类
-见 https://eprint.iacr.org/2016/223.pdf
+见 [Still Wrong Use of Pairings in Cryptography](https://eprint.iacr.org/2016/223.pdf)
 
 + Computational Bilinear Diffie-Hellman Problems, Decisional Bilinear Diffie-Hellman Problem
     * It is clear that the decisional Diffie-Hellman problems including the pairing related ones are solvable in polynomial time when one has oracles solving the computational Diffie-Hellman problems. However, there are groups for which **the classical decisional Diffie-Hellman problem is easy while the classical computational Diffie-Hellman problem is believed to be hard**. In particular, a gap Diffi-Helman group has a distinguishability oracle for which solving the computational problem is hard.
