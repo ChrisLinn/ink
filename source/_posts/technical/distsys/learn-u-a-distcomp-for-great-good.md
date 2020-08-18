@@ -13,6 +13,10 @@ Revision v0.11
 
 这份笔记大部分是 [我](https://chrislinn.ink/) 从 [韩神](https://github.com/SebastianElvis) 和 [邱巨](https://priewienv.me/) 处抄袭、总结或与他们请教而来；如果有任何错误，那肯定是我搞错了，与大腿们无关。
 
+## Approaches
+also see [blockchain-crypto#approaches](/technical/blockchain/blockchain-crypto/#approaches)
+
+
 ## ACID
 
 数据库管理系统（DBMS）在写入或更新资料的过程中，为保证事务（transaction）是正确可靠的

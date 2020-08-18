@@ -84,14 +84,14 @@ Private_information_retrieval 这个亦有意义，涉及 intersection、交易�
 
 stealth address 这些则和很多相关，暂时不感兴趣。
 
-## General Assumption
-- 共识里面 关于 assumption 的讨论： [Completeness Theorems for Non-Cryptographic Fault-Tolerant Distributed Computation](https://dl.acm.org/doi/pdf/10.1145/3335741.3335756).
+## Approaches
+- in [Completeness Theorems for Non-Cryptographic Fault-Tolerant Distributed Computation](https://dl.acm.org/doi/pdf/10.1145/3335741.3335756):
     + The rapid development of distributed systems raised the natural question of what tasks can be performed by them (especially when faults occur). 
         * cryptographic approach
-            - inaugurated by Difiie and Hellman [DH], assumes the players are computationally bounded, and further assumes the existence of certain (one-way) functions, that can be computed but not inverted by the player.
+            - inaugurated by Difiie and Hellman [DH], assumes the players are **computationally bounded**, and further assumes the existence of certain (one-way) functions, that can be computed but not inverted by the player.
                 + This simple assumption was ppstulated in [DH] in order to achieve the **basic task of secure message exchange** between two of the processors, but turned out to be **universal**! In subsequent years ingenious protocols baaed on the same assumption were given for increasingly harder tasks such as **contract signing, secret exchange, joint coin flipping, voting and playing Poker**. These results culminated, through the definition of zero-knowledge proofs [GMR], their existence for NP-complete problems [GMW1] in completeness theorems for two-party [Y1] and multi-party [GMW2] cryptographic distributed computation. In particular the results of Goldreich, Micali and Wigdesrson in [GMW2] were the main inspiration to our work. They show, that if (non-uniform) one way functions exist then every (probabilistic) function of n input,s can be computed by n computationally bounded processors in such a way that: (1) If no faults occur, no subset of the players can compute any additional information, and (2) Even if Byzantine faults are allowed, no set of size t < n/2 can either disrupt the computation or compute additional information. 
         * The non-Cryptographic (or information-theoretic) approach
-            * does not limit the computational power of the processors.
+            * **does not limit the computational power** of the processors.
                 + To facilitate the basic primitive of secret message exchange between a pair of players, we have secure channels.
                     + (For an excellent source of results and problems in the case no secure channels exist, see [BL].
 
