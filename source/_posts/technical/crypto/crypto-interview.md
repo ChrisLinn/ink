@@ -178,13 +178,6 @@ $y^2 = x^3 + ax + b,\ 4a^3 + 27b^2 \ne 0$
 * probabilistic polynomial time Turing machine
     + 概率多项式时间图灵机
 
-<!-- 
-## Assumptions
-dis-log
-    crypto
-    distcomp
- -->
-
 ## Simulation
 ### proofs based on simulation vs proofs based on games
 基于游戏的定义更容易为其编写证明，但基于模拟的定义在获得安全性方面通常更清晰。

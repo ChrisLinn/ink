@@ -11,9 +11,7 @@ title: When do we need cryptography in blockchain space?
 然后里面又有基本工具:
 
 + hash function
-    - 也不是都是抗量子的
-        - 所谓抗量子也很复杂，什么 RSA assumption（分解质因数？）， discrete logarithm (DL) problem（DH？），decisional DH, computational DH，SDH。。。
-            + 话说 共识里面 关于 assumption 的讨论： [Completeness Theorems for Non-Cryptographic Fault-Tolerant Distributed Computation](https://dl.acm.org/doi/pdf/10.1145/3335741.3335756)
+    - 也不是都是[抗量子的](/technical/crypto/hash/#post-quantuam)
     * 但好像还比较多抗量子的
 + lattice
     * 抗量子
@@ -87,6 +85,10 @@ Private_information_retrieval 这个亦有意义，涉及 intersection、交易�
 stealth address 这些则和很多相关，暂时不感兴趣。
 
 
+## General Assumption
++ [Discrete Logarithm Problem](/technical/crypto/crypto-interview/#diffie-hellman-problem)
+- 共识里面 关于 assumption 的讨论： [Completeness Theorems for Non-Cryptographic Fault-Tolerant Distributed Computation](https://dl.acm.org/doi/pdf/10.1145/3335741.3335756)
+
 ## PCD
 + https://www.michaelstraka.com/posts/recursivesnarks/
 + https://eprint.iacr.org/2020/499
@@ -135,7 +137,7 @@ cVDF enable verifiably outsourcing VDF computation.
 incremental PoSW 就是 别人可以接着 PoSW；cVDF 就是别人可以接着 VDF。
 
 ### RSA Groups assumption
-Everyone seems to love VDFs, but the complexity theory around them is a bit underwhelming — why do they only work against adversaries with a polynomial compute advantage?
+Everyone seems to love VDFs, but the complexity theory around them is a bit underwhelming -- why do they only work against adversaries with a polynomial compute advantage?
 
 [A Note on Low Order Assumptions in RSA groups](https://eprint.iacr.org/2020/402)
 

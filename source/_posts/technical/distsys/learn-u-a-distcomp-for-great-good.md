@@ -4,6 +4,11 @@ title: Learn You a Distributed Computing for Great Good!
 
 # Learn You a Distributed Computing for Great Good!
 
+<!--
+TODO:
++ http://elaineshi.com/docs/blockchain-book.pdf
+ -->
+
 Revision v0.11
 
 这份笔记大部分是 [我](https://chrislinn.ink/) 从 [韩神](https://github.com/SebastianElvis) 和 [邱巨](https://priewienv.me/) 处抄袭、总结或与他们请教而来；如果有任何错误，那肯定是我搞错了，与大腿们无关。
