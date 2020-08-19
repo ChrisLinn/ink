@@ -109,6 +109,7 @@ title: Crypto Coding
         + 文中也给出了 Linux、OpenBSD、Windows 等平台下获取随机数
         + `/dev/urandom` vs `/dev/random`
             * `/dev/random` 更好，但 `/dev/random` 是 blocking 的，如果发现 熵池 的 熵 不足则不会返回
+                - 现在好像 `/dev/random` 初始化好就不会 block 了
             * `/dev/urandom` 也不是不行，但要学 LibreSSL 中的 `getentropy_urandom` 加一下 error checks
             * 不行就 adding analog sources of noise and mixing them well
         + RDRAND/RDSEED instructions
