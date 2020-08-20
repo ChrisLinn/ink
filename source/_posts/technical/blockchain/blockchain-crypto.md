@@ -110,7 +110,7 @@ knowledge complexity of interactive proof systems, STOC85, pp. 291-304.
 ## VDF
 VDF 比较全的资料网站: https://vdfresearch.org/, also see: https://blog.priewienv.me/post/verifiable-delay-function-1/ and https://medium.com/@chia_network/chia-vdf-competition-guide-5382e1f4bd39.
 
-VDF 向上可以追溯到 [Time-lock Puzzles](https://people.csail.mit.edu/rivest/pubs/RSW96.pdf) 和 [Timed Commitments](https://pdfs.semanticscholar.org/764b/41d1cf0c2c64bec722f0afd4b0a2ce0bee27.pdf)。
+VDF 向上可以追溯到 [Time-lock Puzzles](https://people.csail.mit.edu/rivest/pubs/RSW96.pdf) 和 [Timed Commitments](https://pdfs.semanticscholar.org/764b/41d1cf0c2c64bec722f0afd4b0a2ce0bee27.pdf)。RSW Time-lock Puzzles 和 Timed Commitments 的构造比较像。后者强调 can be forced open by a procedure of determined running time & can prove that the time-lock puzzle has a solution；而前者 cannot verify that the puzzle can be unlocked in the desired time (is only privately verifiable)。
 
 目前最常用的 两种 VDF 的构造是:
 
