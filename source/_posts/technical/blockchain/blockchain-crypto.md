@@ -112,6 +112,8 @@ VDF 比较全的资料网站: https://vdfresearch.org/, also see: https://blog.p
 
 VDF 向上可以追溯到 [Time-lock Puzzles](https://people.csail.mit.edu/rivest/pubs/RSW96.pdf) 和 [Timed Commitments](https://pdfs.semanticscholar.org/764b/41d1cf0c2c64bec722f0afd4b0a2ce0bee27.pdf)。RSW Time-lock Puzzles 和 Timed Commitments 的构造比较像。后者强调 can be forced open by a procedure of determined running time & can prove that the time-lock puzzle has a solution；而前者 cannot verify that the puzzle can be unlocked in the desired time (is only privately verifiable)。
 
+Timed Commitments 和 VDF 主要就是 场景不太一样。
+
 目前最常用的 两种 VDF 的构造是:
 
 + [Pie19](https://eprint.iacr.org/2018/627.pdf)
