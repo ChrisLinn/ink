@@ -157,6 +157,7 @@ security的论文 实验和出成果都不难, 工业界比学术界领先, 论�
     * [SoK: Research Perspectives and Challenges for Bitcoin and Cryptocurrencies](https://www.ieee-security.org/TC/SP2015/papers-archived/6949a104.pdf)
     * 这个里面的讨论也不错的:
         - [Analysis of Nakamoto Consensus](https://eprint.iacr.org/2019/943)
+    * [Survey on Cryptocurrency Networking: Context, State-of-the-Art, Challenges](https://arxiv.org/pdf/2008.08412.pdf)
 + https://www.zhihu.com/question/23647187/answer/568803695
     * 模仿, 一开始的时候idea的新颖程度低一些，工作量夯实一些
     * 优先阅读该方向里最近五年的survey
