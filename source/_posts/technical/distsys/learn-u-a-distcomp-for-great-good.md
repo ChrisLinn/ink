@@ -355,6 +355,8 @@ Paxos 算法的场景比 FLP 的系统模型还要松散：异步通信，允许
     * https://www.cs.princeton.edu/~arvindn/publications/mining_CCS.pdf
 + selfish mining
     * 获得超出与算力相匹配的收益
+        - ...
+        - [Discouraging Pool Block Withholding Attacks in Bitcoins](https://arxiv.org/pdf/2008.06923.pdf)
 + Sybil Attack 女巫攻击
 + Eclipse Attack 日蚀攻击
     * 可以将整个网络划分为两个部分，降低 51%所需要的算力。
