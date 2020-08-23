@@ -110,8 +110,11 @@
     + auto
     + manual
     + solidity tools
++ Joseph Bonneau
++ andrew miller
 + [Roger Wattenhofer](https://disco.ethz.ch/members/wroger)
 + [Emin Gün Sirer](http://www.cs.cornell.edu/people/egs/)
++ https://www.cs.cornell.edu/~tedyin/
 + Ren Ling
     * 他的 paper 都好想好好读读
 + [Ittay Eyal](http://webee.technion.ac.il/people/ittay/)
