@@ -52,6 +52,8 @@ EdDSA (Edwards-curve Digital Signature Algorithm) 签名机制是这个研究方
 
 EdDSA 签名机制是定义在 **Edwards25519 曲线上的变种 Schnorr 签名**, 其设计初衷是在不牺牲安全性的前提下提升签名/验签速度, 并同时解决前述的 ECDSA 在应用方面存在的一些问题。
 
+(Edwards25519 是 twisted edwards curve，虽然名字中不带 twisted。)
+
 广泛使用的 EdDSA 签名机制是基于哈希函数 SHA-512 和椭圆曲线 Edwards25519 的 Ed25519 签名机制。
 
 ### Curve25519 vs Edwards25519
@@ -59,12 +61,12 @@ Curve25519 是 Bernstein7 在 2005 年为了提升 ECDH 密钥交换协议 (Elli
 
 在 2005 年的论文中 Curve25519 实际上用来指代 ECDH 密钥交换协议, 然而后来多使用 Curve25519 指代底层的椭圆曲线, 用 X25519 指代基于 Curve25519 的 ECDH 密钥协议
 
-**X25519 直接构建在 Curve25519** 之上, 而 **Ed25519 构建在 Edwards25519** 之上, 并且 Curve25519 和 Twisted-Edwards25519 是双向有理等价的。
+**X25519 直接构建在 Curve25519** 之上, 而 **Ed25519 构建在 Edwards25519** 之上, 并且 Curve25519 和 Edwards25519 是双向有理等价的。
 这是因为 ECDH 协议和 EdDSA 协议计算过程中重度依赖的点群运算不同, 这是为更好的适配的上层协议而刻意选择的中层的椭圆曲线点的表示的结果。
 
 Curve25519 是基于素数域 $\mathbb{F}_q, q = 2^{255} - 19$ 上的蒙哥马利曲线.
 
-Curve25519 曲线双向有理等价于 (Bira-tional Equivalent) 扭曲爱德华曲线 (Twisted Edwards Curves) Edwards25519. 而这条扭曲爱德华曲线则同构于 (Isomorphic) 爱德华曲线 (Edwards Curves) untwisted-Edwards25519, 提供大约 128 比特的安全强度 (与 secp256k1 和 secp256r1 安全强度一致)。
+Curve25519 曲线双向有理等价于 (Bira-tional Equivalent)、同构于 (Isomorphic)  扭曲爱德华曲线 (Twisted Edwards Curves) Edwards25519, 提供大约 128 比特的安全强度 (与 secp256k1 和 secp256r1 安全强度一致)。
 
 ### 椭圆曲线表示
 secp256k1/secp256r1 的 **Short Weierstrass** 形式的椭圆曲线表示: $y^2 = x^3 + ax + b$
@@ -79,7 +81,7 @@ secp256k1/secp256r1 的 **Short Weierstrass** 形式的椭圆曲线表示: $y^2 
 
 Short Weierstrass, 蒙哥马利曲线以及爱德华曲线都可以通过符号代换与 **广义 Weierstrass 曲线** $y^2 + a_1 xy + a_3 y = x^3 + a_2 x^2 + a_4 x + a_6$ 相互转换。
 
-X25519 和 Ed25519 的做依赖的点的运算都可以转换成为 Weierstrass 曲线上的点运算, 然而使用特定的曲线形式, 对于高效安全的 X25519 或者 Ed25519 大有裨益. 以 twist-Edwards25519 为例, 其上的点的加法运算是完备的 (Complete)，并且单位元为点 (0, 1)， 简洁优雅。且构造椭圆曲线的加法点群时无需引入一个假想的无穷远点来满足群的条件。相比之下，Short Weierstrass 形式下椭圆曲线点加运算则需进行各种边界条件判断。
+X25519 和 Ed25519 的做依赖的点的运算都可以转换成为 Weierstrass 曲线上的点运算, 然而使用特定的曲线形式, 对于高效安全的 X25519 或者 Ed25519 大有裨益. 以 Edwards25519 为例, 其上的点的加法运算是完备的 (Complete)，并且单位元为点 (0, 1)， 简洁优雅。且构造椭圆曲线的加法点群时无需引入一个假想的无穷远点来满足群的条件。相比之下，Short Weierstrass 形式下椭圆曲线点加运算则需进行各种边界条件判断。
 
 **Edwards25519** 是定义在有限域 $\mathbb{F}_q, p = 2^{255} - 19$ 上选用参数 $a = -1, d = \frac{121665}{121666}$ 的扭曲爱德华曲线: $-x^2 + y^2 \equiv 1 - (121665/121666)x^2 y^2 \mod p$
 
