@@ -62,6 +62,7 @@
         * https://web.engr.oregonstate.edu/~glencora/cs175/index.php/CourseScheduleSpring2018#w5H
     + [Applied Cryptography](https://www.cs.virginia.edu/~evans/courses/crypto-notes.pdf) by David Evans
     + [The Joy of Cryptography](https://web.engr.oregonstate.edu/~rosulekm/crypto/)
+    + [Foundations of Privacy](https://course.ece.cmu.edu/~ece734/index.html) from CMU
 + https://tlu.tarilabs.com/cryptography/cryptography.html
 + https://github.com/isislovecruft/library--/tree/master/cryptography%20%26%20mathematics
 + [Elliptic Curve Handbook](http://webs.ucm.es/BUCM/mat/doc8354.pdf)
