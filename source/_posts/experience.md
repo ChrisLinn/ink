@@ -8,7 +8,7 @@ Mainly: Blockchain Proof-of-Work, Peer-to-Peer Communication, Cryptocurrency Wal
 
 ---
 
-+ Research Engineer @ [bytom](https://github.com/Bytom/), _August 2019 – Present_
++ Research Engineer, Cryptographer @ [bytom](https://github.com/Bytom/), _August 2019 – Present_
     - TSS related:
         + __take charge of__ Bytom's TSS usage in cross-chain federation
 + Blockchain Engineer @ [bytom](https://github.com/Bytom/), _March 2018 – August 2019_
