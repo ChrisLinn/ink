@@ -144,6 +144,7 @@ title: 如何学习编程
     * https://cloud.google.com/apis/design/
         * and ...
             - https://microservices.io/patterns/apigateway.html
+    + https://github.com/tlhunter/consumer-centric-api-design
     * 什么是合理的接口
         - 合理的名称
         - 合理的输入输出
