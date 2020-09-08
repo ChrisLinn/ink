@@ -142,6 +142,7 @@ https://github.com/bitcoin/bitcoin/pull/15713
             - ...
         * 交易池 overflow
         * ...
+    + [Transaction rejection (consensus + relay rules) ](https://github.com/talaia-labs/python-teos/issues/37#issuecomment-678241254)
 - 什么是 locking order？ 为什么要按同样的顺序 acquire lock？
     + thread consistency, 防止可能的 死锁
     - 比特币编译时 可以开启 `--enable-debug` 检查 lock 顺序
