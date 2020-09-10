@@ -23,7 +23,7 @@ title: Publications
 - [_RandChain: Decentralised Randomness Beacon from Sequential Proof-of-Work_](https://eprint.iacr.org/2020/1033)
     + A new family of DRBs. 
 - [_VRF-based mining_](https://github.com/DEX-ware/vrf-mining/blob/master/paper/main.pdf), _co-author_
-    + the most decentralized mining protocol by far, to our best knowledge
+    + The most decentralized mining protocol by far, to our best knowledge
 - [_go语言公链开发实战_](https://book.douban.com/subject/34659372/), _reviewer_
 - https://github.com/ChrisLinn/blockchain-cheatsheet, _author & maintainer_
 - https://github.com/rust-interview, _maintainer_
