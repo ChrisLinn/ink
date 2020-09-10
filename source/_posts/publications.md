@@ -21,6 +21,7 @@ title: Publications
         * [We got attention from d5000](https://bitcointalk.org/index.php?topic=5251998.0)
         -->
 - [_RandChain: Decentralised Randomness Beacon from Sequential Proof-of-Work_](https://eprint.iacr.org/2020/1033)
+    + A new family of DRBs. 
 - [_VRF-based mining_](https://github.com/DEX-ware/vrf-mining/blob/master/paper/main.pdf), _co-author_
     + the most decentralized mining protocol by far, to our best knowledge
 - [_go语言公链开发实战_](https://book.douban.com/subject/34659372/), _reviewer_
