@@ -3,6 +3,7 @@
 + [刘巍然](https://www.zhihu.com/people/liu-wei-ran-8-34)
 + [温隆](http://github.com/longcpp)
 + [邹玉娣](https://blog.csdn.net/mutourend)
++ [沙金锐](https://www.zhihu.com/people/gang-cheng-35-97)
 + 李星
     * 公众号：星想法
 + 夏坤贤
