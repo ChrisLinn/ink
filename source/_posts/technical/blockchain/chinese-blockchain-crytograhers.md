@@ -4,6 +4,7 @@
 + [温隆](http://github.com/longcpp)
 + [邹玉娣](https://blog.csdn.net/mutourend)
 + [沙金锐](https://www.zhihu.com/people/gang-cheng-35-97)
++ [东泽](http://blog.higashi.tech/)
 + 李星
     * 公众号：星想法
 + 夏坤贤
