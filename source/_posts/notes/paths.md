@@ -313,6 +313,9 @@ http://www.conferenceranks.com/ ,randA & rankB
     * https://cbr.stanford.edu/sbc20/
     * https://blockchain.kcl.ac.uk/ieee-sb2019/#top
 
+### deadline
++ http://www.cs.technion.ac.il/~dan/index_sysvenues_deadline.html
++ ...
 
 <!-- 
 ## white-city
