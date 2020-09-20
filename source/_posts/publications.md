@@ -5,9 +5,9 @@ title: Publications
 # Publications
 + [_On the optionality and fairness of Atomic Swaps_](https://eprint.iacr.org/2019/896), _co-author_
     + Paper __accepted__ by _The first ACM conference on Advances in Financial Technologies (AFT’19)_
+        <!-- 
         * AFT is a new conference, of which [the committee](https://aft.acm.org/committees) chairs includes: Ittai Abraham (_VMware research_), Ittay Eyal (_Technion_) & Emin Gün Sirer (_Cornell University_).
         * Based on this paper, we propose [EIP-2266](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-2266.md).
-        <!-- 
         * Our paper is put into [the reading list of "Introduction to Cryptocurrencies"](http://istvanseres.web.elte.hu/courses/2019/introtocrypto/introtocrypto.html)!
         * Our paper is cited by
             * [SoK: Communication Across Distributed Ledgers](https://eprint.iacr.org/2019/1128.pdf)
@@ -20,7 +20,7 @@ title: Publications
         * See Emin Gün Sirer's [tweet](https://twitter.com/el33th4xor/status/1186211608596533248) on Our presentation in ETH Zürich.
         * [We got attention from d5000](https://bitcointalk.org/index.php?topic=5251998.0)
         -->
-- [_RandChain: Decentralised Randomness Beacon from Sequential Proof-of-Work_](https://eprint.iacr.org/2020/1033)
+- [_RandChain: Decentralised Randomness Beacon from Sequential Proof-of-Work_](https://eprint.iacr.org/2020/1033), _co-author_
     + A new family of DRBs. 
 - [_VRF-based mining_](https://github.com/DEX-ware/vrf-mining/blob/master/paper/main.pdf), _co-author_
     + The most decentralized mining protocol by far, to our best knowledge
