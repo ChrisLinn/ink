@@ -114,6 +114,7 @@
 + andrew miller
 + [Roger Wattenhofer](https://disco.ethz.ch/members/wroger)
 + [Emin Gün Sirer](http://www.cs.cornell.edu/people/egs/)
++ Bart Preneel
 + https://www.cs.cornell.edu/~tedyin/
 + Ren Ling
     * 他的 paper 都好想好好读读
