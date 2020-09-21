@@ -88,3 +88,10 @@ __A:__ 这个暂时没有办法解决，我们在看通过 DID 去中心化认�
 + [Cheng Wang](https://ethresear.ch/u/chengwang)
 + [Jiangshan Yu](https://www.jiangshanyu.com/)
 + [John Tromp](https://forum.grin.mw/u/tromp),  Cuckoo Cycle 算法发明者
+
+
+## 后记
++ 2P-PoW 的 phase 1 是为了 兼容比特币，[ziftrCOIN 中的 Sign-to-Mine](https://d19y4lldx7po3t.cloudfront.net/assets/docs/ziftrcoin-whitepaper-120614.pdf) 没有这种顾虑，直接上了 phase 2。应该说 Sign-to-Mine 和 vrf-mining 达到的效果是相近的，只是我们的构造用了 VRF。
++ Andrew Miller's 的 NIZK 版可以 达到 unlinkability。但其 非NIZK 版 也和 2P-PoW 不一样。2P-PoW 中绑定的是 密钥，Andrew Miller's 密钥的证书（对 密钥加一层加密）。矿工没挖到真 nonce 时可以正常 submit 来拿 share reward，但是如果挖到真 nonce 时就可以 拿走全部 block reward。[Bypassing](https://eprint.iacr.org/2020/044.pdf) 分析到，其实 2P-PoW 达到的效果是 泄漏 key -> 矿工可以 steal the reward **after** block finalization；Andrew Miller's 达到的效果是可以快速转钱走（因为 密钥被加密过 所以没法直接 知道 密钥）-> 矿工可以 steal the reward **before** block finalization。 
++ [Bypassing](https://eprint.iacr.org/2020/044.pdf) 中提到，其实 密钥不用和 block subsidy 绑定（除非链规定了），只要 最终打钱 给矿池的某个地址就可以了。这也就是构造 [Bypassing](https://eprint.iacr.org/2020/044.pdf) 的基础。
++ [Bypassing](https://eprint.iacr.org/2020/044.pdf) 中还有很有意思的分析，包括 1) flood attack 导致 网络分割，2) broadcast attack 盗 submission 等等。
