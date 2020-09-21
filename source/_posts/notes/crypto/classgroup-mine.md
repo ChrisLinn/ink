@@ -24,3 +24,10 @@ GUO 的选择：
     * 为什么选择这个判别式
 + form class group
     * 易于表示和计算
+
+## TODOs
++ Concrete groups  discussions （BBF18    &   Wes19）
++ mod 4 什么的，和 sloth 很像，和 squaring 有关？可以谈谈。
+
+## talk about RSA
+为什么 GUO
