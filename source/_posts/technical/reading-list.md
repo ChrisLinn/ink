@@ -236,6 +236,8 @@
 - crypto
     - https://hdevalence.ca/blog/
     - http://blog.higashi.tech/
+    - https://suyash67.github.io/homepage/
+    - https://blog.csdn.net/mutourend
     - https://cr.yp.to/djb.html
     - https://cse.iitkgp.ac.in/~debdeep/courses_iitkgp/teach.htm
     - https://intensecrypto.org/public/index.html
