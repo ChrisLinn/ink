@@ -93,6 +93,7 @@
         - Least Authority
             + https://leastauthority.com/
         - chainsecurity
+        - https://abdk.consulting/
     * Notary: A Device for Secure Transaction Approval 
         - http://delivery.acm.org/10.1145/3360000/3359661/p97-athalye.pdf?ip=49.127.13.214&id=3359661&acc=OA&key=4D4702B0C3E38B35%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35%2E959AAFAD2A5E8B5F&__acm__=1573089226_826c06c4ff788d06e38e76c6e969980b
     * DECIM, detect the leakage of private keys for secure messaging
