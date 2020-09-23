@@ -66,7 +66,7 @@ Curve25519 是 Bernstein7 在 2005 年为了提升 ECDH 密钥交换协议 (Elli
 
 Curve25519 是基于素数域 $\mathbb{F}_q, q = 2^{255} - 19$ 上的蒙哥马利曲线.
 
-Curve25519 曲线双向有理等价于 (Bira-tional Equivalent)、同构于 (Isomorphic)  扭曲爱德华曲线 (Twisted Edwards Curves) Edwards25519, 提供大约 128 比特的安全强度 (与 secp256k1 和 secp256r1 安全强度一致)。
+Curve25519 曲线双向有理等价于 (Bi-rational Equivalent)、同构于 (Isomorphic)  扭曲爱德华曲线 (Twisted Edwards Curves) Edwards25519, 提供大约 128 比特的安全强度 (与 secp256k1 和 secp256r1 安全强度一致)。
 
 ### 椭圆曲线表示
 secp256k1/secp256r1 的 **Short Weierstrass** 形式的椭圆曲线表示: $y^2 = x^3 + ax + b$
