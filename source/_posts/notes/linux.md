@@ -463,6 +463,10 @@ https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
         ```bash
         git config remote.origin.prune true
         ```
++ github 保存敏感信息
+    * https://github.com/StackExchange/blackbox
+    * https://github.com/AGWA/git-crypt
+
 
 ### delete submodule
 https://gist.github.com/myusuf3/7f645819ded92bda6677
