@@ -327,7 +327,8 @@ http://www.conferenceranks.com/ ,randA & rankB
 
 ### deadline
 + http://www.cs.technion.ac.il/~dan/index_sysvenues_deadline.html
-+ ...
++ https://sec-deadlines.github.io/
++ https://cseweb.ucsd.edu/~mihir/confs.html
 
 <!-- 
 ## white-city
