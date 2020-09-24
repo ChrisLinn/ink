@@ -223,6 +223,16 @@ security的论文 实验和出成果都不难, 工业界比学术界领先, 论�
             - 隐藏在实验和技术分析中的潜在问题和引文缺失
                 + 找出作者陈述中的每一个假设，亲自挑战它，提出自己的思考
 
+## [密码学领域写文章如何找研究点和创新点（applied crypto research）？](https://www.zhihu.com/question/405937541/answer/1434271310)
+
+
++ 方法 1. 加强现有crypto的security guarantee
+    * (从一些concrete example出发，)比如找一些针对某些leakage based scheme的 attack example或者corner case什么的，可以fail一些scheme的security guarantee. 然后再提供新的solution，不断的加强现有crypto scheme的security guarantee.
+        - 研究leakage, 提出新方法，概括leakage profile. 然后有人提出攻击可以利用某些leakage，这些leakage不能用了，然后再提出新的scheme消除leakage. 
+            + Order revealing xxx -> order hiding xxx -> search pattern hiding  xxx-> query pattern hiding xxx -> access pattern hiding xxx-> forward and backward privacy -> volume hiding xxx...
+        - 等有了concrete example以后，再试着formal，那就是非常nice的crypto work.
++ 方法 2. relax 现有crypto的security guarantee, 牺牲security换点performance
+
 ## [How To Read a Paper](https://github.com/papers-we-love/papers-we-love#how-to-read-a-paper)
 
 + https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf
