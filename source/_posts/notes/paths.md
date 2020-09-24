@@ -232,6 +232,7 @@ security的论文 实验和出成果都不难, 工业界比学术界领先, 论�
             + Order revealing xxx -> order hiding xxx -> search pattern hiding  xxx-> query pattern hiding xxx -> access pattern hiding xxx-> forward and backward privacy -> volume hiding xxx...
         - 等有了concrete example以后，再试着formal，那就是非常nice的crypto work.
 + 方法 2. relax 现有crypto的security guarantee, 牺牲security换点performance
+    * DP relax crypto只是万千种relax方法中的一个, 能relax的方法太多，重点在于描述relax后的guarantee，最好还能有parameter去控制如何relax
 
 ## [How To Read a Paper](https://github.com/papers-we-love/papers-we-love#how-to-read-a-paper)
 
