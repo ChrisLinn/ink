@@ -125,10 +125,6 @@ BASE: 对CAP中一致性和可用性权衡的结果
     + total ordering
         * taken from [BEAT: Asynchronous BFT made practical (DRZ18)](https://www.csee.umbc.edu/~hbzhang/files/beat.pdf)
         > If a correct replica has delivered $m_1, m_2, \dots , m_s$ and another correct replica has delivered $m_1', m_2', \dots , m_{s'}'$, then $m_i = m_i'$ for $1 \leq i \leq min(s, s')$.
-+ [SMR vs NoSQL vs Blockchain](https://rink1969.github.io/Blockchain-consistency_model)
-    * replicated data structure一致性这么弱，是因为 replicated data structure选择了高可靠性，一致性自然要弱一些。
-    * 区块链跟一般意义上的replicated data structure还不太一样，区块链是通过atomic broadcast来同步(写操作)，其一致性在整个大类里面是最强的。
-    * 分布式数据库能达到线性一致性，是因为分布式数据库的读写操作都是由主节点排序的，而区块链的写操作是无序的，并且读操作跟写操作是完全分离的。从CAP的角度来说就是分布式数据库舍弃了部分可用性。分布式数据库主节点不可用的时候，整个系统是不可用的。但是区块链在切换出块节点的过程中是一直保持可用性的。这主要是靠节点间会相互转发交易，当然这也就造成结论的第三点中的情况，上链的顺序跟用户最初发出交易的顺序就不一致了。
 
 ## Permissioned vs Permissionless
 
@@ -167,6 +163,7 @@ __TODO:__
     * 1/2 in sync, 1/3 in async?
 + PBFT paper section 3
 
+注：Nakamoto Consensus (NC, or Proof-of-Work) 是 byzantine fault tolerant 的，但是一般 BFT 协议指 classical BFT protocols based on SMR，一般不把 NC 叫做 BFT protocol。但是也有人把 NC 叫做 BFT protocol，因为他确实 byzantine fault tolerant。
 
 ## Network Assumption
 
@@ -186,7 +183,7 @@ __TODO:__
     * delivered eventually but without a finite time bound
     + PBFT
         * async
-            - 在这之前的之前的 BFT 协议中拜占庭协议所使用的通讯网络是一个同步网络
+            - 在这之前的 BFT 协议中拜占庭协议所使用的通讯网络是一个同步网络
             - can achieve safety in asynchronous networks, but not liveness
             - PBFT requires synchrony to achieve liveness
         * OSDI'99 (Symposium on Operating Systems Design and Implementation 操作系统顶会)
@@ -258,6 +255,8 @@ PoW 其实只是 membership 的门槛，  nakamoto consensus 除了 PoW 其实�
             - A consensus protocol is responsive if nodes can reach the consensus in time depending only on the network’s actual $\delta$ (message delays), not on the loose upper bound $\Delta$ (known upper bound on message delays).
 
 ## Blockchain Properties
+
+[FOUNDATIONS OF DISTRIBUTED CONSENSUS AND BLOCKCHAINS](https://www.distributedconsensus.net/) 中提到，Blockchain （这一结构）本质上就是 SMR。
 
 - Common prefix (Consistency)
     + $k$-common-preifx
