@@ -31,3 +31,12 @@ GUO 的选择：
 
 ## talk about RSA
 为什么 GUO
+
+
+## class group 的计算、结构
++　https://github.com/Chia-Network/vdf-competition/blob/master/classgroups.pdf
++　[Class groups for imaginary quadratic fields](http://math.stanford.edu/~conrad/676Page/handouts/picgroup.pdf)
++　[The Structure of the Class Group of Imaginary Quadratic Fields, Nicole Miller](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.590.2666&rep=rep1&type=pdf)
++　[On the computation of quadratic 2-class groups, Wieb Bosma & Peter Stevenhagen](https://www.math.ru.nl/~bosma/pubs/JTNB1996.pdf)
++　[gauss’s ternary form reduction and the 2-sylow subgroup, Daniel Shank](https://www.ams.org/journals/mcom/1971-25-116/S0025-5718-1971-0297737-4/S0025-5718-1971-0297737-4.pdf)
++　[Eta quotients and class fields of imaginary quadratic fields, Jana Sotáková](https://www.math.u-bordeaux.fr/~ybilu/algant/documents/theses/Sotakova.pdf)
