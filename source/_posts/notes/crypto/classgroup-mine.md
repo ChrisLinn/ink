@@ -9,9 +9,12 @@ title: Class Group
 $K = \mathbb{Q}(\sqrt{d})$, d < 0, square free
 
 if $d \equiv 1\ mod\ 4$, field discriminant $d_K = d$,
-if $d \not\equiv 1\ mod\ 4$, field discriminant $d_K = 4d$.
+if $d \not\equiv 1\ mod\ 4$, field discriminant $d_K = 4d$. (好像 只能 $d \equiv 2\ mod\ 4$ 或 $d \equiv 3\ mod\ 4$?)
 
-$\mathcal{O_k} = \mathbb{Z}[\frac{d_k + \sqrt{d_K}}{2}]$
+__TODO:__
++ $\mathcal{O} = \mathbb{Z}[\frac{d_k + \sqrt{d_K}}{2}]$
++ $\frac{-b + \sqrt{D}}{2}$
++ ...
 
 ## 两种角度
 
