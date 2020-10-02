@@ -4,7 +4,12 @@ title: Class Group
 
 # Class Group
 
-## Intro
+## Introduction
+
+$K = \mathbb{Q}(\sqrt{d})$, d < 0, square free
+
+if $d \equiv 1\ mod\ 4$, field discriminant $d_K = d$,
+if $d \not\equiv 1\ mod\ 4$, field discriminant $d_K = 4d$.
 
 
 
