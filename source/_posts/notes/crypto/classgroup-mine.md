@@ -20,7 +20,7 @@ title: Class Group
 $K = \mathbb{Q}(\sqrt{d})$, d 是个 负 prime (选用 prime 可以方便 composition) & square free。
 
 + if $d \equiv 1\ mod\ 4$, field discriminant $d_K = d$,
-+ if $d \not\equiv 1\ mod\ 4$, field discriminant $d_K = 4d$. (因为 d 是 square free，所以 d 只可能 $d \equiv 2\ mod\ 4$ 或 $d \equiv 3\ mod\ 4$ (?), 而且这里 $d_K \equiv 0\ mod\ 4$)
++ if $d \not\equiv 1\ mod\ 4$, field discriminant $d_K = 4d$. (因为 d 是 square free，所以 d 只可能 $d \equiv 2\ mod\ 4$ 或 $d \equiv 3\ mod\ 4$, 而且这里 $d_K \equiv 0\ mod\ 4$)
 
 分 $d \equiv 1\ mod\ 4$ 和 $d\equiv 2, 3\ mod\ 4$ 两种情况是因为 $\mathbb{Q}(\sqrt{d})$ 的整数环 在$d \equiv 1\ mod\ 4$ 时为 \{$a + b\frac{1+\sqrt{d}}{2}$\}，在 $d\equiv 2, 3\ mod\ 4$ 时 为 \{$a + b\sqrt{d}$\}。
 
