@@ -19,7 +19,7 @@ title: 搞 MPC 和 ZKP 的基础密码学面试
 + 单位元：集合中存在一个元素 $I$，保证 $aI = Ia = a$，对所有的 $a \in G$ 都成立
 + 逆元：对每个集合的元素 $a \in G$，存在对应的 $b = a^{-1}$，保证 $ab = ba = I$
 
-_另外，有一个叫 类群 (class group) 的东西，和 二元二次型 (Binary quadratic form) 以及 虚二次数域 (Imaginary Quadratic Number Fields) 相关，在 1) 零知识证明 (比如 zkSNARK 的 Marlin 协议中用它来构造 Polynomial commitment) 和 2) 累加器 (用于替代 merkle tree，快速同步快速验证) 中很有用，这个到时值得单独拿出来讲讲。_
+_另外，有一个叫 类群 (class group) 的东西，和 二元二次型 (Binary quadratic form) 以及 虚二次数域 (Imaginary Quadratic Number Fields) 相关，在 1) 零知识证明 (比如 zkSNARK 的 Marlin 协议中用它来构造 Polynomial commitment) 和 2) 累加器 (用于替代 merkle tree，快速同步快速验证) 中很有用，这个到时值得[单独拿出来讲讲](/notes/crypto/classgroup)。_
 
 <!-- 
 * [](/notes/crypto/classgroup-1/)

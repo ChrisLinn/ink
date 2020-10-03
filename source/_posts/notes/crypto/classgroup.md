@@ -4,6 +4,8 @@ title: Class Group
 
 # 类群 (Class Group)
 
+出发点, 见: [cryptography in blockchain space](/technical/blockchain/blockchain-crypto) 中的 GUO 部分
+
 ## 两种角度
 
 + ideal class group (imaginary quadratic field)
@@ -46,5 +48,6 @@ class group 的具体结构和计算也可参考：
 + mod 4 什么的，和 sloth 很像，和 squaring 有关？可以谈谈.
     * [sloth 中的 square roots](http://course1.winona.edu/eerrthum/math347/SquareRoots.pdf)
 
-## talk about RSA
-为什么 GUO
+## further reading
++ https://www.michaelstraka.com/posts/classgroups
++ https://hackmd.io/@olivierbbb/r10VpNPZU

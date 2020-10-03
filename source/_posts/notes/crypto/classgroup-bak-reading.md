@@ -1,5 +1,5 @@
 ---
-title: Class Group (1)
+title: Class Group
 ---
 <!-- 
 
@@ -14,7 +14,7 @@ also see assets/group.drawio
 -->
 
 
-# Class Group (1)
+# Class Group
 
 ###### tags: `study notes` `class groups` `number theory`
 

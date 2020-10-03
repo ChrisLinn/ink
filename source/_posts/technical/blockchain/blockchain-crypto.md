@@ -29,12 +29,24 @@ title: When do we need cryptography in blockchain space?
 + GUO
     * 分类
         - RSA group, trusted setup 或 MPC
-        - class group, trustless setup
+            + the difficulty of computing the group order is on par with the difficulty of computing the factors of N
+            + [知道了 order 就知道了 private key，也就是 factorization](https://crypto.stackexchange.com/questions/5791/why-is-it-important-that-phin-is-kept-a-secret-in-rsa). 另参考 [[1]](https://crypto.stackexchange.com/questions/6632/is-it-possible-to-determine-the-group-order-by-knowing-the-public-and-private), [[2]](http://math.ntnu.edu.tw/~li/algebra-html/node12.html), [[3]](https://en.wikipedia.org/wiki/Order_(group_theory))
+        - [class group, trustless setup](/notes/crypto/classgroup)
             + 亦可用于 zkp???
+        - Jacobians of hyperelliptic curves, trustless setup
+            + [Trustless Groups of Unknown Order with Hyperelliptic Curves](https://eprint.iacr.org/2020/196.pdf) 中批评了 class group 的 security level (所以要达到高 security level 其实需要更高的复杂度、更大的空间、更低的效率)，并提出用 Jacobians of hyperelliptic curves 来构造 GUO，指出虽然可能存在多项式时间算法，但对于 256-bits 的 discrete-log-based cryptograpghy 已经 impratical 
     * compression
         + [Trustless Groups of Unknown Order with Hyperelliptic Curves](https://eprint.iacr.org/2020/196.pdf) section 5 provides a way to Compress group element representation
     * GUO 可用于
         * [VDF](#vdf)
+            - 目的
+                * [chia 的文档](https://github.com/Chia-Network/vdf-competition/blob/master/classgroups.pdf):
+                    * The unknown order requirement is due to the divisibility of the order of a finite group by the order of any element in the group; if the group order is known then the repeated squaring operation could be reduced modulo the order of the group, shortcutting the computation.
+                * [Trustless Groups of Unknown Order with Hyperelliptic Curves](https://eprint.iacr.org/2020/196.pdf) （这下面三句话好象是一个意思）:
+                    - it should be infeasible to compute random roots, or any elements of known order
+                    - it should be infeasible to find any non-trivial element in the group with known order
+                    - it should be infeasible to compute random roots of any non-trivial element in the group
+                    - section 2.1 中证明了 为什么否则可以伪造 proof
         * Cryptographic Accumulators
             - [Batching Techniques for Accumulators
 with Applications to IOPs and Stateless Blockchains](https://eprint.iacr.org/2018/1188/20181210:211743)
