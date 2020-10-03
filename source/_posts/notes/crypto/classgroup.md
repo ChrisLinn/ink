@@ -42,6 +42,7 @@ class group 的具体结构和计算也可参考：
 + [On the computation of quadratic 2-class groups, Wieb Bosma & Peter Stevenhagen](https://www.math.ru.nl/~bosma/pubs/JTNB1996.pdf)
 + [gauss’s ternary form reduction and the 2-sylow subgroup, Daniel Shank](https://www.ams.org/journals/mcom/1971-25-116/S0025-5718-1971-0297737-4/S0025-5718-1971-0297737-4.pdf)
 + [Eta quotients and class fields of imaginary quadratic fields, Jana Sotáková](https://www.math.u-bordeaux.fr/~ybilu/algant/documents/theses/Sotakova.pdf)
++ [Algebraic Number Theory](https://people.math.umass.edu/~weston/cn/notes.pdf)
 
 ## TODOs
 + Concrete groups  discussions （BBF18    &   Wes19）
