@@ -13,20 +13,22 @@ title: Class Group
 
 具有相同判别式
 
-背后其实是同一个东西
+背后其实是同一个东西。(不过这句话其实只有 $\Delta < 0$ 且 $f(a, b, c)$  positive definite 时才成立。)
 
 ## 选择 & 构造 & 计算
 
-$K = \mathbb{Q}(\sqrt{d})$, d 是个 负 prime & square free。
+$K = \mathbb{Q}(\sqrt{d})$, d 是个 负 prime (选用 prime 可以方便 composition) & square free。
 
-if $d \equiv 1\ mod\ 4$, field discriminant $d_K = d$,
-if $d \not\equiv 1\ mod\ 4$, field discriminant $d_K = 4d$. (因为 d 是 square free，所以 d 只可能 $d \equiv 2\ mod\ 4$ 或 $d \equiv 3\ mod\ 4$ (?), 而且这里 $d_K \equiv 0\ mod\ 4$)
++ if $d \equiv 1\ mod\ 4$, field discriminant $d_K = d$,
++ if $d \not\equiv 1\ mod\ 4$, field discriminant $d_K = 4d$. (因为 d 是 square free，所以 d 只可能 $d \equiv 2\ mod\ 4$ 或 $d \equiv 3\ mod\ 4$ (?), 而且这里 $d_K \equiv 0\ mod\ 4$)
+
+分 $d \equiv 1\ mod\ 4$ 和 $d\equiv 2, 3\ mod\ 4$ 两种情况是因为 $\mathbb{Q}(\sqrt{d})$ 的整数环 在$d \equiv 1\ mod\ 4$ 时为 \{$a + b\frac{1+\sqrt{d}}{2}$\}，在 $d\equiv 2, 3\ mod\ 4$ 时 为 \{$a + b\sqrt{d}$\}。
 
 $d_K$ 应该只会 $d_K \equiv 0\ mod\ 4$ 或 $d_K \equiv 1\ mod\ 4$, 因为只有 0 和 1 是 mod 4 的二次剩余 (quadratic residue)。
 
 $d_K$ 是对于 imaginary quadratic field $\mathbb{Q}(\sqrt{d})$ 来说的，对于 binary quadratic form 来说，即 $f(a, b, c) = ax^2 + bxy + cy^2$ 的判别式 (discriminant) $\Delta = b^2 - 4ac$。
 
-为了方便我们直接选 $d = -prime = 1\ mod\ 4 = \Delta = -3\ mod\ 4$, 那么也就是 $prime = 3\ mod\ 4 = |d|$
+为了方便我们直接选 $d = -prime = 1\ mod\ 4 = \Delta = -3\ mod\ 4$, 那么也就是 $prime = 3\ mod\ 4 = |d|$。不然我们还要 确保 $\Delta / 4$ 是 square free 的。
 
 然后就可以进行计算了，[Chia 的文档](https://github.com/Chia-Network/vdf-competition/blob/master/classgroups.pdf)中给出了比较具体的计算方法。
 
