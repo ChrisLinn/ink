@@ -34,6 +34,7 @@
         + https://gitcoin.co/explorer
         + https://github.com/gitcoinco/beyondblockchainteams/issues
 * blockchain
+    - https://rebuttal.kas.pa/
     - https://decentralizedthoughts.github.io/
     - https://github.com/matthewdgreen/blockchains
     - https://openmined.org/
