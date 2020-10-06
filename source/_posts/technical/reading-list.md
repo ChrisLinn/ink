@@ -234,6 +234,7 @@
     - https://github.com/pszal/teaching
     - https://github.com/lorin/systems-reading
 - crypto
+    - https://www.cryptologie.net/
     - https://hdevalence.ca/blog/
     - http://blog.higashi.tech/
     - https://suyash67.github.io/homepage/
