@@ -237,6 +237,7 @@
 - crypto
     - https://hdevalence.ca/blog/
     - http://blog.higashi.tech/
+    - https://shashank-agrawal.com/
     - https://suyash67.github.io/homepage/
     - https://blog.csdn.net/mutourend
     - https://cr.yp.to/djb.html
