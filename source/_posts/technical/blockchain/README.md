@@ -41,6 +41,7 @@
 + https://github.com/matthewdgreen/blockchains
 + https://github.com/ScottWorks/ConsenSys-Academy-Notes
 + https://github.com/rustielin/Blockchain-Notes
++ https://github.com/solegga/blockchaincourse
 + [区块链技术指南](https://yeasy.gitbooks.io/blockchain_guide/content/)
 + btc
     * https://github.com/satoshilabs/slips
@@ -197,17 +198,3 @@
         - rust
         - ml/func
 + STL
-
-## Books
-
-## BigchainDB 源码剖析
-
-## DNA 源码剖析
-
-## Chain 源码剖析
-
-> https://gguoss.github.io/2017/05/26/chain/
-> 
-> chain设计了一种多种资产可以互相交易发布的分布式账本协议。用该协议的多条链可以独立的存在， 并且可以跨链交易， 这样不同的运营商可以以相同的形式互相交易。坚持最小权限原则， 资产的管理和分布式账本同步控制相分离。
-> ...
-> 当今社会的货币， 证券以及衍生品是以电子支付的形式进行交易的。电子支付需要太多的第三方中介参与，需要太多的人力物力去对帐。比特币虽然去中介化了，但堆栈式脚本实现的功能太少， 只支持本币的简单交易合约。以太坊的evm 又太过于复杂， 有太多的安全不确定性。再者， 他们是公有链，所有数据在公众的眼皮底下。 这时， Chain 恰好能够解决这些痛点。 Chain 是联盟链，支持多种资产的发布和交易， 也支持多种组织的跨链交易。

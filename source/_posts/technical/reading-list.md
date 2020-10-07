@@ -37,6 +37,7 @@
     - https://rebuttal.kas.pa/
     - https://decentralizedthoughts.github.io/
     - https://github.com/matthewdgreen/blockchains
+    - https://github.com/solegga/blockchaincourse
     - https://openmined.org/
     - https://zkcapital.substack.com/
     - https://distsys.substack.com/
@@ -238,6 +239,7 @@
     - https://hdevalence.ca/blog/
     - http://blog.higashi.tech/
     - https://shashank-agrawal.com/
+    - https://decrypto.org/
     - https://suyash67.github.io/homepage/
     - https://blog.csdn.net/mutourend
     - https://cr.yp.to/djb.html

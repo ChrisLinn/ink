@@ -1,6 +1,7 @@
 # Curriculum
 
 + https://github.com/chaincodelabs/bitcoin-curriculum
++ https://github.com/solegga/blockchaincourse
 + https://github.com/bitcoinbook/bitcoinbook
 + https://github.com/jimmysong/programmingbitcoin
 + https://github.com/ProgrammingBlockchain/ProgrammingBlockchain
