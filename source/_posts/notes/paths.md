@@ -384,3 +384,6 @@ oyente用符号化执行
         * https://shijue.me/
         * https://stock.tuchong.com/
         * https://www.iconfont.cn/
+
+# Misc
++ [You and Your Research](https://d37ugbyn3rpeym.cloudfront.net/stripe-press/TAODSAE_zine_press.pdf)
