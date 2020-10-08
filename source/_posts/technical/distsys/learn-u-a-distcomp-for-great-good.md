@@ -155,12 +155,15 @@ BASE: 对CAP中一致性和可用性权衡的结果
 
 Byzantine Fault Torelance
 
-Requires >= 2f+1 honest nodes (<= f Byzantine nodes) in order to achieve safety ~~and liveness~~, where there are totally n = 3f + 1 nodes
+Requires >= 2f+1 honest nodes (<= f Byzantine nodes) in order to achieve safety ~~and liveness~~, where there are totally n = 3f + 1 nodes (in async?)
 
 __TODO:__
 
 + https://medium.com/thundercore/consensus-series-preliminaries-a3bab33ae09
     * 1/2 in sync, 1/3 in async?
+    *  Existing research shows that n ≥ 3f + 1 is required to achieve agreement in partially synchronous networks, and n ≥ 2f + 1 is required to achieve agreement in synchronous networks
+        - "Byzantine quorum systems" by Dahlia Malkhi and Michael Reiter
+        - "Consensus in the presence of partial synchrony" by Cynthia Dwork, Nancy Lynch and Larry Stockmeyer
 + PBFT paper section 3
 
 注：Nakamoto Consensus (NC, or Proof-of-Work) 是 byzantine fault tolerant 的，但是一般 BFT 协议指 classical BFT protocols based on SMR，一般不把 NC 叫做 BFT protocol。但是也有人把 NC 叫做 BFT protocol，因为他确实 byzantine fault tolerant。
