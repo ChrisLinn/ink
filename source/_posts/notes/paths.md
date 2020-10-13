@@ -387,3 +387,8 @@ oyente用符号化执行
 
 # Misc
 + [You and Your Research](https://d37ugbyn3rpeym.cloudfront.net/stripe-press/TAODSAE_zine_press.pdf)
++ http://ding.fyi/blog/phd-must-read-list/
+    * http://www.pgbovine.net/PhD-memoir/pguo-PhD-grind.pdf
+    * http://ding.fyi/blog/the-phd-grind-afterthoughts-1/
+    * http://ding.fyi/blog/the-phd-grind-afterthoughts-2/
+    * http://ding.fyi/blog/the-phd-grind-afterthoughts-3/
