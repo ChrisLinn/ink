@@ -149,6 +149,9 @@
             * 惯性 vs 哪个更符合逻辑
             * recast it in its fundamental form
     - 不要让自己不可代替，否则你就不可能被升迁
+        + you should do your job in such a fashion that others can build on top of it
+            * 别人可以 use your results, adopt, adapt, extend, and elaborate them, and in the process give you credit for it
+        + 做重要的事情，不要被 trivial details 羁绊住
     - sell ideas 很重要
         + you must learn to sell your ideas, not by propaganda, but by force of clear presentation
         + 好的 idea 不会自动胜出，反而很多 好 idea 需要被重新发现，因为他们一开始时没有被好好呈现
