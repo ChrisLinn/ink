@@ -101,6 +101,7 @@
 + [Silvio Micali](https://people.csail.mit.edu/silvio/)
 + http://users.monash.edu.au/~kailiu/
 + http://www.jiangshanyu.com/
+    * Paulo Verissimo
 + https://www.kotselidis.net/
 + https://www.cse.unsw.edu.au/~z9195738/
 + https://www.comp.nus.edu.sg/~abhik/
