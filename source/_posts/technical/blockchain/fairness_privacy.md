@@ -85,6 +85,8 @@ Nakamura [IN83](https://scinapse.io/papers/200023587), allow a group of signers 
 
 另，MuSig 中还说, Schnorr multi-signature 应该是在 [[BN06]](https://dl.acm.org/citation.cfm?id=1180453) 提出. Schnorr 本身应该是在 [[Sch91]](https://dl.acm.org/citation.cfm?id=2725006) 提出.
 
+[MuSig2](https://eprint.iacr.org/2020/1261): 2 round signing, precomputed for non-interactivity, some privacy preserving stuff in there too
+
 
 ## Threshold Signature Scheme
 密钥打碎分开存储，然后在需要时通过MPC多方安全计算生成签名
