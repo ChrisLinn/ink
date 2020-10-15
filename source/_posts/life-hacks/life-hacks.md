@@ -129,3 +129,42 @@
     * 世界上大部分不过是运气好而已。所做的工作很多都是无用功，能给行业带来的变化也是非常非常的小的。
     * 但是可以在自己能做的选择中，尽量做更好的选择
     * 人生最重要的不是做对多少选择，而是不要做错几个选择
++ You and Your Research
+    * 运气很重要，但是要准备好运气来的时候能抓住
+        - luck favors the prepared mind
+        - 智力投资是复利的
+            + 不过 正确的 方向、时间、方式 也很重要
+        - IQ 不妨碍 great idea
+    * 做重要的事情
+        - 不重要的事情有什么意义呢
+        - 动力
+        - 人生有限
+        - 保持想重要的事，这样当有灵感时就能第一时间去跟进，放下手头其他不重要的事
+    * 注意种树，有些事情需要积累需要慢慢成长，需要等待局势
+        - 你并不一定要做很宏大的事情，但要做 small things which seem to you to have the possibility of future growth
+        - plant the little acorns which grow into the mighty oak trees
+    * 卡壳时 转换问题，说不定就能 解决更重要的问题
+        * 逆向思维
+        * 或者 换一种方式： 比如不用模拟计算机了改用数字计算机
+            * 惯性 vs 哪个更符合逻辑
+            * recast it in its fundamental form
+    - 不要让自己不可代替，否则你就不可能被升迁
+        + you should do your job in such a fashion that others can build on top of it
+            * 别人可以 use your results, adopt, adapt, extend, and elaborate them, and in the process give you credit for it
+        + 做重要的事情，不要被 trivial details 羁绊住
+    - sell ideas 很重要
+        + you must learn to sell your ideas, not by propaganda, but by force of clear presentation
+        + 好的 idea 不会自动胜出，反而很多 好 idea 需要被重新发现，因为他们一开始时没有被好好呈现
+            * 需要
+                - Giving formal presentations
+                - Producing written reports
+                - Mastering the art of informal presentations as they happen to occur
++ PhD grind
+    * 做任何事情我觉得是先把skillset给攒齐了，然后就有了接着创新的平台。一开始最重要的是学会怎么做research，而通过和老师的沟通合作才能够最快的学会怎么做research。
+    * 导师之前学生 的平均值 大概率就是你将来的样子
+    * 产出论文的三要素
+        - 学生感兴趣，积极性。
+        - 老师感兴趣，grant 和 后续的 扶持（帮你想后续深入的 idea、帮你继续给资源等）。
+        - 学术界感兴趣，这直接关系最终能不能让reviewer觉得做的东西是值得发表论文的。
+    * 及时止损
+        - 坑跌的项目或者方向

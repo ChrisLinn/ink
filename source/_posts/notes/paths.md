@@ -101,6 +101,7 @@
 + [Silvio Micali](https://people.csail.mit.edu/silvio/)
 + http://users.monash.edu.au/~kailiu/
 + http://www.jiangshanyu.com/
+    * Paulo Verissimo
 + https://www.kotselidis.net/
 + https://www.cse.unsw.edu.au/~z9195738/
 + https://www.comp.nus.edu.sg/~abhik/
@@ -127,6 +128,10 @@
 + Oded Goldreich
 + [Jonathan Katz](https://www.cs.umd.edu/~jkatz)
 + [Matthew Green](https://isi.jhu.edu/~mgreen/)
++ Alessandro Chiesa
++ Jens Groth
++ Eli Ben-Sasson
++ Izaak Meckler
 * [David Evans](http://www.cs.virginia.edu/~evans/)
 + [Mike Rosulek](http://web.engr.oregonstate.edu/~rosulekm/)
     * https://eecs.oregonstate.edu/people/rosulek-mike
@@ -387,3 +392,8 @@ oyente用符号化执行
 
 # Misc
 + [You and Your Research](https://d37ugbyn3rpeym.cloudfront.net/stripe-press/TAODSAE_zine_press.pdf)
++ http://ding.fyi/blog/phd-must-read-list/
+    * http://www.pgbovine.net/PhD-memoir/pguo-PhD-grind.pdf
+    * http://ding.fyi/blog/the-phd-grind-afterthoughts-1/
+    * http://ding.fyi/blog/the-phd-grind-afterthoughts-2/
+    * http://ding.fyi/blog/the-phd-grind-afterthoughts-3/

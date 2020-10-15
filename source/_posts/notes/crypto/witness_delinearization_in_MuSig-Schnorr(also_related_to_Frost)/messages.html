@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Exported Data</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <script src="js/script.js" type="text/javascript">
+
+  </script>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <div class="content">
+
+     <div class="text bold">
+ZenGo X 
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+11 October 2020
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message9486">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+J
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="11.10.2020 00:17:23">
+00:17
+       </div>
+
+       <div class="from_name">
+Jeff 
+       </div>
+
+       <div class="text">
+<a href="https://eprint.iacr.org/2020/1245.pdf">https://eprint.iacr.org/2020/1245.pdf</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message9487">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="11.10.2020 00:20:40">
+00:20
+       </div>
+
+       <div class="text">
+It&apos;s a correct proof for witness delinearization in multisigner schnorr, which I implemented last January.  After we all showed the Frost authors their January version was easily broken then they eventually adopted witness delinearization in July too, but their security arguments do not hold water.  This proof should be correct.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message9488">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="11.10.2020 00:24:12">
+00:24
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message9487" onclick="return GoToMessage(9487)">this message</a>
+       </div>
+
+       <div class="text">
+Wow.. <br>1) how is this scheme compared to MuSig-DN?<br>2) is current version of Frost broken?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message9489">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+J
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="11.10.2020 00:25:37">
+00:25
+       </div>
+
+       <div class="from_name">
+Jeff 
+       </div>
+
+       <div class="text">
+I can probably prove the current version of frost is secure, although flexible rounds will usually be broken by implementations.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message9490">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="11.10.2020 00:28:34">
+00:28
+       </div>
+
+       <div class="text">
+MuSig-DN and DWMS each have advantages and disadvantages.  DWMS is way cheaper and permits doing message and signer set agreement in the second round, but MuSig-DN scales better once you&apos;re talking thousands of signers.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message9492">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="11.10.2020 00:33:33">
+00:33
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="text">
+I guess there is a different in required security assumptions ?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message9493">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+J
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="11.10.2020 00:33:48">
+00:33
+       </div>
+
+       <div class="from_name">
+Jeff 
+       </div>
+
+       <div class="text">
+MuSig-DN needing signer set agreement in the first round mildly inconveniences threshold signatures I guess, but otherwise it fits the cryptocurrency use case quite well.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message9494">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="11.10.2020 00:34:53">
+00:34
+       </div>
+
+       <div class="text">
+Yes: MuSig-DN requires minimal assumptions but exploits curve properties.  We need AGM, OMDL etc.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message9495">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="11.10.2020 00:35:18">
+00:35
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="text">
+I see it now in the paper. Good stuff!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message9496">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+J
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="11.10.2020 00:36:18">
+00:36
+       </div>
+
+       <div class="from_name">
+Jeff 
+       </div>
+
+       <div class="text">
+DWMS is basically trivial to implement and does not care what curve you use, while MuSig-DN exploits properties of secp256k1
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message9497">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AV
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="11.10.2020 00:45:13">
+00:45
+       </div>
+
+       <div class="from_name">
+Alexander Vlasov
+       </div>
+
+       <div class="text">
+Jeff, what particular property do you mean? As far as I remember you just need to instantiate bulletproofs and find suitable embedded curve (that I assume you can always find if group order is prime)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message9498">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+J
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="11.10.2020 02:03:45">
+02:03
+       </div>
+
+       <div class="from_name">
+Jeff 
+       </div>
+
+       <div class="text">
+I did not look closely, but yes if they do not need the mirror curve then that&apos;s different
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message9499">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="11.10.2020 02:05:23">
+02:05
+       </div>
+
+       <div class="text">
+It&apos;s way more than two two scalar multiplications though ;)
+       </div>
+
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </body>
+
+</html>
