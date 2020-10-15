@@ -128,6 +128,10 @@
 + Oded Goldreich
 + [Jonathan Katz](https://www.cs.umd.edu/~jkatz)
 + [Matthew Green](https://isi.jhu.edu/~mgreen/)
++ Alessandro Chiesa
++ Jens Groth
++ Eli Ben-Sasson
++ Izaak Meckler
 * [David Evans](http://www.cs.virginia.edu/~evans/)
 + [Mike Rosulek](http://web.engr.oregonstate.edu/~rosulekm/)
     * https://eecs.oregonstate.edu/people/rosulek-mike
