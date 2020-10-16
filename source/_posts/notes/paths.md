@@ -143,6 +143,7 @@
 + [Pratyush Mishra](http://people.eecs.berkeley.edu/~pratyushmishra)
 + Claudio Orlandi
 + Luca de Feo
++ Lefteris Kokoris-Kogias
 + [Carsten Baum](http://www.carstenbaum.com/)
 + Seres István András
 + heming cui
