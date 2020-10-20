@@ -21,13 +21,6 @@ title: 搞 MPC 和 ZKP 的基础密码学面试
 
 _另外，有一个叫 类群 (class group) 的东西，和 二元二次型 (Binary quadratic form) 以及 虚二次数域 (Imaginary Quadratic Number Fields) 相关，在 1) 零知识证明 (比如 zkSNARK 的 Marlin 协议中用它来构造 Polynomial commitment) 和 2) 累加器 (用于替代 merkle tree，快速同步快速验证) 中很有用，这个到时值得[单独拿出来讲讲](/notes/crypto/classgroup)。_
 
-<!-- 
-* [](/notes/crypto/classgroup-1/)
-    + https://hackmd.io/@olivierbbb/r10VpNPZU
-+ https://www.michaelstraka.com/posts/classgroups/
-+ https://github.com/Chia-Network/vdf-competition/blob/master/classgroups.pdf)
- -->
-
 #### 阿贝尔群 (Abelian group) 
 满足交换律，故阿贝尔群又叫交换群 (commutative group)。
 
