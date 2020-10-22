@@ -116,6 +116,10 @@
 + [Roger Wattenhofer](https://disco.ethz.ch/members/wroger)
 + [Emin Gün Sirer](http://www.cs.cornell.edu/people/egs/)
 + Bart Preneel
++ David Tse
+    * the Thomas Kailath and Guanghan Xu Professor of Engineering at Stanford University
+    * 通信领域宗师
+    * [在斯坦福有个 lab...](https://tselab.stanford.edu/)
 + https://www.cs.cornell.edu/~tedyin/
 + Ren Ling
     * 他的 paper 都好想好好读读
