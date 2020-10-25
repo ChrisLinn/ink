@@ -37,3 +37,10 @@ __reconciliation__:
  fannout 通知 8个节点，reconciliation 会在所有 32个节点之间都进行。4倍的连接数提升使得像使用 LN 协议这种时间敏感的交易能更快的被传给矿工。
 
 论文中还对如何优化 sketches、reconciliation 失败时如何 fallback 进行了分析讨论。
+
+## Related work
+### 区块压缩
++ [Compact Block Relay](https://github.com/bitcoin/bips/blob/master/bip-0152.mediawiki)
++ Xthin
++ txilm
++ bloXroute
