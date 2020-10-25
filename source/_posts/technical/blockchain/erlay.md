@@ -42,5 +42,5 @@ __reconciliation__:
 ### 区块压缩
 + [Compact Block Relay](https://github.com/bitcoin/bips/blob/master/bip-0152.mediawiki)
 + Xthin
-+ txilm
++ [Txilm](https://arxiv.org/abs/1906.06500)
 + bloXroute
