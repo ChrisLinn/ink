@@ -110,6 +110,7 @@
 + https://github.com/zcash/sapling-security-analysis/blob/master/MaryMallerUpdated.pdf
 
 ## MPC
++ https://www.cs.virginia.edu/~evans/pragmaticmpc/pragmaticmpc.pdf
 + [A Pragmatic Introduction to Secure Multi-Party Computation](https://securecomputation.org/)
 + https://www.mpcalliance.org/learn
 + https://github.com/rdragos/awesome-mpc
