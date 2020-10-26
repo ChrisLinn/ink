@@ -254,6 +254,8 @@
     * [Practical-Cryptography-for-Developers-Book](https://github.com/nakov/Practical-Cryptography-for-Developers-Book)
     * [Serious Cryptography](https://github.com/ChrisLinn/chrislinn.ink/blob/master/assets/Serious%20Cryptography%20A%20Practical%20Introduction%20to%20Modern%20Encryption.pdf)
     + [Introduction to Reliable and Secure Distributed Programming](https://github.com/ChrisLinn/chrislinn.ink/tree/master/assets/IntroductionToReliableAndSecur_Book_2011.pdf)
+    + https://github.com/pwang00/Cryptographic-Attacks
+    + https://github.com/matthewdgreen/cryptoengineering
 + [Software Folklore](http://beza1e1.tuxen.de/lore/index.html)
 
 
