@@ -55,7 +55,7 @@ print(m)
 + http://ecchacks.cr.yp.to/
 
 #### Valgrind
-use valgrind to help check constant-time
+use valgrind to help check constant-time & memory leak and so forth
 
 #### clock cycle
 ...
