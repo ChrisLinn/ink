@@ -233,6 +233,7 @@
             * dalek now using Merlin, bringing Merlin to KZen would be amazing
         + proving a number is in interval
 * network
+    - https://github.com/dgryski/awesome-consensus
     - https://www.allthingsdistributed.com/
     - https://github.com/PrincetonUniversity/COS461-Public
     - https://github.com/pszal/teaching
