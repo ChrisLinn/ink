@@ -1,6 +1,7 @@
 # TLA+
 
 * https://github.com/tlaplus/DrTLAPlus
+* https://github.com/tlaplus/CommunityModules
 - https://github.com/mryndzionek/tlaplus_specs
 * https://github.com/lemmy/awesome-tlaplus
 * https://github.com/spacejam/tla-rust
