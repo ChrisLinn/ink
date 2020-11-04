@@ -193,6 +193,7 @@
     - https://isocpp.github.io/CppCoreGuidelines/
     - https://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list
     - https://changkun.de/modern-cpp/
++ https://octo.vmware.com/
 + https://fleurer.github.io/booknotes/
 + https://github.com/developer-learning/learning-linux/
 * DailyCodingInterview
