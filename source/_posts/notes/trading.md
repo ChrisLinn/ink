@@ -1,6 +1,7 @@
 # Trading
 
 ## General
++ [王克丹经济类书籍推荐](https://zhuanlan.zhihu.com/p/272645459)
 + 游侠小二
     * [期货市场完全指南](https://book.douban.com/subject/27604426/)
     * [克罗谈投资策略](https://book.douban.com/subject/1160483/)
