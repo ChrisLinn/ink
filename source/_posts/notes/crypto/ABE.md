@@ -4,3 +4,6 @@
     * 只有某类 key 才能解密
 + https://eprint.iacr.org/2006/309.pdf
 + https://crypto.stackexchange.com/questions/17893/what-is-attribute-based-encryption/17894#17894
+
+## Proxy re-encryption
++ https://eprint.iacr.org/2005/433.pdf
