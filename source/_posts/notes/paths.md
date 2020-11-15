@@ -167,6 +167,7 @@ security的论文 实验和出成果都不难, 工业界比学术界领先, 论�
 + methodology
     * [SoK: Science, Security, and the Elusive Goal of Security as a Scientific Pursuit](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/03/scienceAndSecuritySoK.pdf)
     * [Science of Security: Combining Theory and Measurement to Reflect the Observable](https://people.scs.carleton.ca/~paulv/papers/science-security-SPmag-jan2018.pdf)
++ https://github.com/dair-ai/awesome-research-proposals-guide
 + directions
     * [SoK: Research Perspectives and Challenges for Bitcoin and Cryptocurrencies](https://www.ieee-security.org/TC/SP2015/papers-archived/6949a104.pdf)
     * 这个里面的讨论也不错的:
