@@ -194,6 +194,7 @@
     - https://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list
     - https://changkun.de/modern-cpp/
 + https://octo.vmware.com/
++ https://travisdowns.github.io/
 + https://fleurer.github.io/booknotes/
 + https://github.com/developer-learning/learning-linux/
 * DailyCodingInterview
