@@ -5,5 +5,5 @@
 + https://eprint.iacr.org/2006/309.pdf
 + https://crypto.stackexchange.com/questions/17893/what-is-attribute-based-encryption/17894#17894
 
-## Proxy re-encryption
+## Proxy re-encryption & Proxy re-signatures
 + https://eprint.iacr.org/2005/433.pdf

@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Exported Data</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <script src="js/script.js" type="text/javascript">
+
+  </script>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <div class="content">
+
+     <div class="text bold">
+ZK Study Club 
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+14 November 2020
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5898">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic4" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+KK
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 00:29:37">
+00:29
+       </div>
+
+       <div class="from_name">
+Konstantin Kladko
+       </div>
+
+       <div class="text">
+How critical is this ?)<br><br><a href="https://medium.com/zengo/baby-sharks-a3b9ceb4efe0">https://medium.com/zengo/baby-sharks-a3b9ceb4efe0</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5899">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 00:31:29">
+00:31
+       </div>
+
+       <div class="text">
+From the paper
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5900">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 00:31:33">
+00:31
+       </div>
+
+       <div class="media_wrap clearfix">
+
+        <a class="photo_wrap clearfix pull_left" href="photos/photo_49@14-11-2020_00-31-33.jpg">
+
+         <img class="photo" src="photos/photo_49@14-11-2020_00-31-33_thumb.jpg" style="width: 260px; height: 104px"/>
+
+        </a>
+
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5901">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 00:32:02">
+00:32
+       </div>
+
+       <div class="text">
+We use EdDSA at SKALE, luckily for reg signatures, not threshold ones ...
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5902">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 04:07:02">
+04:07
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+Non-prime-order groups are thoroughly taken into account in the Zcash protocol. It&apos;s one of the most annoying things from the point of view of increasing design complexity, and I&apos;m very happy that we are switching to prime-order curves for Pollard / Halo 2
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5903">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 04:07:38">
+04:07
+       </div>
+
+       <div class="text">
+(granted, that was essentially forced by using cycles of curves, which have to be prime-order, but I&apos;m still happy about it)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5904">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 04:09:15">
+04:09
+       </div>
+
+       <div class="text">
+I&apos;m pretty confident that we don&apos;t have the kind of non-prime-curve related bug that affected Monero
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5905">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 04:11:03">
+04:11
+       </div>
+
+       <div class="text">
+Actually most of the complexity issue is with Jubjub where we use cofactor multiplication and small-order checks. For BLS12-381, we do it the dirt-simple (but somewhat expensive) way of checking that all points encoded in proofs are in the relevant subgroup
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5906">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 04:15:52">
+04:15
+       </div>
+
+       <div class="text">
+I&apos;d actually have to disagree with &quot;There is not yet a systematic study on how to handle the cofactor in higher-level protocols&quot;. You can *always* just check that input points are in the subgroup, and that approach is as secure (*footnote) as using a prime-order curve. In the case of Edwards curves it&apos;s straightforward to use Ristretto for new protocols. The main reason we didn&apos;t use Ristretto for Zcash Sapling is that it was quite a new technique at the time Sapling was being designed. But in principle it&apos;s a complete solution for those curves.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5907">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 04:20:38">
+04:20
+       </div>
+
+       <div class="text">
+So the systematic approach would be:<br>* For protocols that do not need pairings, use prime-order curves with complete formulae (or prove that incomplete formulae are sufficient), *or* use Ristretto on Edwards curves, depending on your performance requirements and whether the protocol imposes constraints on which curves can be used.<br>* For pairing-based protocols, just do full subgroup checks on *all* input points and take the performance hit. (There are ways to optimize these checks using endomorphisms, for j=0 curves.)<br><br>Problem comprehensively solved, for new protocols. Analysing subgroup problems in existing protocols is still complicated though.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5908">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 04:28:15">
+04:28
+       </div>
+
+       <div class="text">
+(*footnote) Except possibly against fault attacks. But that&apos;s not primarily a prime vs non-prime order issue, because fault attacks can also result in point representations that are not in the curve even if you used prime-order curves.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5909">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+PM
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 05:55:38">
+05:55
+       </div>
+
+       <div class="from_name">
+Pratyush Mishra
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message5907" onclick="return GoToMessage(5907)">this message</a>
+       </div>
+
+       <div class="text">
+Big +1 from me.<br><br>I have a question: are there protocols where subgroup checks are bottlenecks? I can imagine if you&apos;re signing on a constrained embedded device then it might be the case, but otherwise?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5910">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 06:13:42">
+06:13
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+These checks are a nonnegligible part of the Groth16 proof verification bottleneck in Zcash
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5911">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+PM
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 06:15:20">
+06:15
+       </div>
+
+       <div class="from_name">
+Pratyush Mishra
+       </div>
+
+       <div class="text">
+I presume mostly for the G2 portion?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5912">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 06:16:34">
+06:16
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+If you consider batched Groth16 verification (which we don&apos;t do yet), the marginal cost of verification is roughly: point decompression and subgroup checks for 2 G1 points and 1 G2 point; a 128-bit scalar mul in G1; and a Miller loop
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5913">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 06:17:53">
+06:17
+       </div>
+
+       <div class="text">
+There are also some multiscalar multiplications but they&apos;re less significant
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5914">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+PM
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 06:19:48">
+06:19
+       </div>
+
+       <div class="from_name">
+Pratyush Mishra
+       </div>
+
+       <div class="text">
+how expensive are the subgroup checks on G1 and G2? On G1 they&apos;re just 128-bit scalar mults, right?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5915">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 06:45:09">
+06:45
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+256-bit
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5916">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 06:45:21">
+06:45
+       </div>
+
+       <div class="text">
+On both G1 and G2
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5917">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+PM
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 06:46:07">
+06:46
+       </div>
+
+       <div class="from_name">
+Pratyush Mishra
+       </div>
+
+       <div class="text">
+For G1 you can multiply by cofactor^-1 on the prover side and then multiply by cofactor on the verifier side, no?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5918">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 06:53:05">
+06:53
+       </div>
+
+       <div class="from_name">
+Ariel Gabizon
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message5917" onclick="return GoToMessage(5917)">this message</a>
+       </div>
+
+       <div class="text">
+iirc that is what the sapling circuit does, it is slightly different and more delicate than doing a subgroup check, cause the prover has |cofactor| representations for each element this way; but if you are careful with only use the value from the prover after the co-factor mult everywhere else in the circuit (except the place where you mult by cofactor), you are safe
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5919">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+PM
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 06:54:59">
+06:54
+       </div>
+
+       <div class="from_name">
+Pratyush Mishra
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message5918" onclick="return GoToMessage(5918)">this message</a>
+       </div>
+
+       <div class="text">
+do you mean for the points on JubJub?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5920">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 07:01:51">
+07:01
+       </div>
+
+       <div class="from_name">
+Ariel Gabizon
+       </div>
+
+       <div class="text">
+yes
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5921">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 09:19:32">
+09:19
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+The Sapling circuits don&apos;t do this.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5922">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 09:20:08">
+09:20
+       </div>
+
+       <div class="text">
+Qedit told us about this technique; we didn&apos;t know about it when we were designing the Sapling circuits
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5923">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 09:21:36">
+09:21
+       </div>
+
+       <div class="text">
+In any case, BLS12-381 isn&apos;t used inside the Zcash circuits, so this technique wouldn&apos;t be useful for that curve in Zcash
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5924">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+PM
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 09:41:30">
+09:41
+       </div>
+
+       <div class="from_name">
+Pratyush Mishra
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message5923" onclick="return GoToMessage(5923)">this message</a>
+       </div>
+
+       <div class="text">
+By &quot;prover&quot; I mean Groth16 prover, and by &quot;verifier&quot; I mean Groth16 verifier
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5925">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 09:44:01">
+09:44
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+Well, we don&apos;t do that
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5926">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 22:38:02">
+22:38
+       </div>
+
+       <div class="from_name">
+Ariel Gabizon
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message5923" onclick="return GoToMessage(5923)">this message</a>
+       </div>
+
+       <div class="text">
+if it&apos;s multiplying by cofactor vs doing a subgroup check the former is much cheaper for edwards curve; I guess I got things mixed up - so do we do a subgroup check for the secret key in sapling, or did we conclude it doesn&apos;t allow you to cheat to use a general point?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5927">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 22:44:09">
+22:44
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+The Diffie-Hellman key agreement and RedDSA verification both use cofactor multiplication
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5928">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 22:45:18">
+22:45
+       </div>
+
+       <div class="text">
+There are also some non-small-order checks (the one on g_d is particularly important)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5929">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.11.2020 23:50:27">
+23:50
+       </div>
+
+       <div class="from_name">
+Ariel Gabizon
+       </div>
+
+       <div class="text">
+I was referring more to the public spending key a_k which we do not check is in the subgroup if I&apos;m reading the spec correctly, but I think we concluded you can&apos;t use that to cheat
+       </div>
+
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </body>
+
+</html>
