@@ -19,3 +19,4 @@
             * https://github.com/libra/libra/pull/2977
 * https://github.com/vacp2p/formalities
 * https://github.com/decanus/rutschblock
+* https://github.com/matklad/paxosnotes

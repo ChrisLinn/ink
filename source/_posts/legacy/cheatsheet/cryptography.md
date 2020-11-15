@@ -9,6 +9,14 @@
 + https://www.michaelstraka.com/posts/classgroups/
 + https://docs.google.com/document/d/1sdZqVdXOY9h85oVP2E47SFDMlsAbiPZY1LcaPAZ5LV8/edit
 + http://safecurves.cr.yp.to/
+    * https://safecurves.cr.yp.to/twist.html
+        - Twist security
+            + small-subgroup attacks
+            + Invalid-curve attacks
+            + miscs
+                * double spending...
+                * verification discrepancy
+                * secret leakage in ECDH
 + https://blog.cr.yp.to/index.html
 + https://github.com/sobolevn/awesome-cryptography
 + https://github.com/pFarb/awesome-crypto-papers
