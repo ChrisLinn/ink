@@ -218,6 +218,7 @@
     - https://github.com/yangwenmai/awesome-papers
     - https://github.com/dyweb/papers-notebook
     - https://github.com/developer-learning/paper-reading
+    - https://github.com/brucechin/paper
 * Jobs
     - https://gitcoin.co/explorer
     - patreon

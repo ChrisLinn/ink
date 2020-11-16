@@ -76,6 +76,7 @@
     + [CS294: Foundations of Probabilistic Proofs (F2020)](https://people.eecs.berkeley.edu/~alexch/classes/CS294-F2020.html) from Berkeley by Alessandro Chiesa
     + [CMSC 652 --- Complexity Theory](http://www.cs.umd.edu/~jkatz/complexity/f11/)
 - [Privacy enhancing technologies reading list](https://crysp.uwaterloo.ca/courses/pet/F18/readinglist.html)
+- https://github.com/brucechin/paper
 + https://tlu.tarilabs.com/cryptography/cryptography.html
 + https://github.com/isislovecruft/library--/tree/master/cryptography%20%26%20mathematics
 + [Elliptic Curve Handbook](http://webs.ucm.es/BUCM/mat/doc8354.pdf)
