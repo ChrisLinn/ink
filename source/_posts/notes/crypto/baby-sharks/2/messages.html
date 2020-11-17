@@ -869,6 +869,418 @@ I was referring more to the public spending key a_k which we do not check is in 
 
      </div>
 
+     <div class="message service" id="message-2">
+
+      <div class="body details">
+16 November 2020
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5930">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.11.2020 01:27:39">
+01:27
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+We did conclude that, yes. The argument is pretty straightforward: the creator of a note is incentivized to choose a secure ask and to avoid key linkage attacks, and can&apos;t derive any benefit from choosing an rk outside the subgroup. (They don&apos;t directly reveal ak, but ak is in the subgroup iff rk is.)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5931">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.11.2020 02:45:54">
+02:45
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+This recent eprint is applicable to taking square roots (used for point decompression, for example) over Fp for p = 1 + 2^n m, which is precisely the case needed for highly 2-adic fields commonly used in SNARKs. Looks like a ~60% improvement for n ≈ 32, if I&apos;m reading correctly. <a href="https://eprint.iacr.org/2020/1407">https://eprint.iacr.org/2020/1407</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5932">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+KG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.11.2020 02:48:34">
+02:48
+       </div>
+
+       <div class="from_name">
+Kobi Gurkan
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message5931" onclick="return GoToMessage(5931)">this message</a>
+       </div>
+
+       <div class="text">
+nice, this would be great for bls12-377 point decompression, for example! cc <a href="https://t.me/pratyush795">@pratyush795</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5933">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+D
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.11.2020 03:02:32">
+03:02
+       </div>
+
+       <div class="from_name">
+Dev 
+       </div>
+
+       <div class="text">
+I wonder how the speed improvement for that compares against batch point compression/decompression (<a href="https://link.springer.com/article/10.1007%2Fs10623-016-0251-2">https://link.springer.com/article/10.1007%2Fs10623-016-0251-2</a>)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5934">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.11.2020 03:14:51">
+03:14
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+Oh maybe it&apos;s only a ~30% improvement for n ≈ 32 and p ≈ 2^256, since I think Table 1 doesn&apos;t take into account the initial computation of v = u^{(m-1)<a href="" onclick="return ShowBotCommand(&quot;2&quot;)">/2</a>}. (I&apos;m assuming that the table-based variant doesn&apos;t pay off for n ≈ 32, since Table 2 only has entries for n ≥ 96.)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5935">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.11.2020 03:15:16">
+03:15
+       </div>
+
+       <div class="text">
+Still enough of an improvement to be worth implementing
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5936">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.11.2020 03:19:14">
+03:19
+       </div>
+
+       <div class="text">
+The cost of the v computation will be comparatively smaller if m is sparse (as it is for the Tweedle curves, for example). I&apos;ve assumed for the purpose of this estimate that it will take ~224 squarings and ~32 multiplications
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5937">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.11.2020 03:22:21">
+03:22
+       </div>
+
+       <div class="text">
+The problem with the multiple point compression techniques that discourages people from using them is that they&apos;re not standardized, and are incompatible with standard compressed formats
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5938">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.11.2020 05:52:49">
+05:52
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+Also that technique compresses n points to n+1 field elements + n-1 bits, rather than to n field elements + n bits
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5939">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.11.2020 05:55:55">
+05:55
+       </div>
+
+       <div class="text">
+That technique *is* significantly faster though. We&apos;ve considered using a variant of it to compress points as transcript inputs for Fiat-Shamir when doing recursive Halo validation in a circuit. (In that case, you never actually have to decompress them.)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5940">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.11.2020 05:59:52">
+05:59
+       </div>
+
+       <div class="text">
+That was mentioned in my ZK Study Club on Halo: <a href="https://hackmd.io/ZDx3OtrZSlS4Dugc2HUnoA#Compression-of-two-random-curve-points-to-three-field-elements">https://hackmd.io/ZDx3OtrZSlS4Dugc2HUnoA#Compression-of-two-random-curve-points-to-three-field-elements</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5941">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.11.2020 06:01:06">
+06:01
+       </div>
+
+       <div class="text">
+(that variant doesn&apos;t need extra bits)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5942">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.11.2020 06:03:29">
+06:03
+       </div>
+
+       <div class="text">
+Btw, the paper <a href="https://t.me/Valardragon">@Valardragon</a> linked is on Sci-Hub
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5943">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+D
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.11.2020 09:30:08">
+09:30
+       </div>
+
+       <div class="from_name">
+Dev 
+       </div>
+
+       <div class="text">
+oh nice, didn&apos;t realize there was a variant that didn&apos;t require extra bits!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5944">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.11.2020 17:11:34">
+17:11
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+Yeah. I actually reinvented the scheme and only noticed later that it was basically the same idea as that paper (for n = 2)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5945">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.11.2020 17:58:38">
+17:58
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+Note that in the arithmetic circuit setting, we absolutely don&apos;t want to decompose the y coordinate into bits in order to get its sign; that would be very expensive and would defeat the point of compression as an optimization
+       </div>
+
+      </div>
+
+     </div>
+
     </div>
 
    </div>

@@ -24,3 +24,5 @@ https://twitter.com/socrates1024/status/1140158749585399808
 + https://eprint.iacr.org/2020/1275
 + https://eprint.iacr.org/2020/1274
 + https://eprint.iacr.org/2020/1410
++ https://eprint.iacr.org/2020/1410
+    * https://twitter.com/schollster/status/1328390150083186689?s=21
