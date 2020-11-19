@@ -47,6 +47,7 @@
     - https://community.zkproof.org/
     - https://jbp.io/archive/
     - https://petertodd.org/
+    - https://oleganza.com/
     - https://joinmarket.me/blog/blog/
     - https://ethresear.ch/u/sebastianelvis/summary
     - https://hashmatter.com/
