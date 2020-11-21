@@ -1,5 +1,10 @@
 # TSS
 
+## reshare
++ https://eprint.iacr.org/2019/017.pdf
++ http://pmg.csail.mit.edu/papers/mpss-thesis.pdf
++ https://eprint.iacr.org/2019/1328.pdf
+
 ## social recovery
 + https://bitrocks.me/secret-social-recovery
     * https://ethereum-magicians.org/t/social-recovery-using-address-book-merkle-proofs/3790
