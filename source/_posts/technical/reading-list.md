@@ -42,11 +42,13 @@
     - https://zkcapital.substack.com/
     - https://distsys.substack.com/
     - https://blog.cryptographyengineering.com/
+    + https://unenumerated.blogspot.com/
     - https://zkproof.org/blog/
         + https://docs.zkproof.org/pages/reference/reference.pdf
     - https://community.zkproof.org/
     - https://jbp.io/archive/
     - https://petertodd.org/
+    - https://oleganza.com/
     - https://joinmarket.me/blog/blog/
     - https://ethresear.ch/u/sebastianelvis/summary
     - https://hashmatter.com/
@@ -218,6 +220,7 @@
     - https://github.com/yangwenmai/awesome-papers
     - https://github.com/dyweb/papers-notebook
     - https://github.com/developer-learning/paper-reading
+    - https://github.com/brucechin/paper
 * Jobs
     - https://gitcoin.co/explorer
     - patreon
@@ -240,10 +243,12 @@
     - https://github.com/PrincetonUniversity/COS461-Public
     - https://github.com/pszal/teaching
     - https://github.com/lorin/systems-reading
+    - https://github.com/asatarin/testing-distributed-systems
 - crypto
     - https://www.cryptologie.net/
     - https://hdevalence.ca/blog/
     - https://asz.ink/
+    - https://blog.csdn.net/mutourend/
     - http://blog.higashi.tech/
     - https://shashank-agrawal.com/
     - https://decrypto.org/

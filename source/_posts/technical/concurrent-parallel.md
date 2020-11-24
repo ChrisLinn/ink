@@ -74,6 +74,7 @@
     * [《分布式系统设计》，来自微软](https://azure.microsoft.com/en-us/resources/designing-distributed-systems/en-us/)
     * [谈谈分布式系统](https://mp.weixin.qq.com/s/J11Us4RE37fthUxsoDzW5Q)
     * [decentralized-research](https://github.com/nicola/decentralized-research)
+    * https://github.com/asatarin/testing-distributed-systems
     * https://github.com/aphyr/distsys-class
     * P2P
         - [DNA](https://github.com/DNAProject/DNA)
