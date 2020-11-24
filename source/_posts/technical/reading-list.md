@@ -243,6 +243,7 @@
     - https://github.com/PrincetonUniversity/COS461-Public
     - https://github.com/pszal/teaching
     - https://github.com/lorin/systems-reading
+    - https://github.com/asatarin/testing-distributed-systems
 - crypto
     - https://www.cryptologie.net/
     - https://hdevalence.ca/blog/

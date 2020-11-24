@@ -48,6 +48,7 @@
         * Distributed Systems
 + talent-plan
 + https://github.com/aphyr/distsys-class
+- https://github.com/asatarin/testing-distributed-systems
 
 ## PBFT
 
