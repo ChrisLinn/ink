@@ -88,5 +88,5 @@
 + 周金涛
     * 人民币贬值则澳元跟着贬值
 + 章昱昕聊庞氏骗局
-    * ![](https://github.com/ChrisLinn/chrislinn.ink/raw/master/img/ponzi/1.PNG)
-    * ![](https://github.com/ChrisLinn/chrislinn.ink/raw/master/img/ponzi/2.PNG)
+    * ![](https://github.com/ChrisLinn/ink/raw/master/source/_posts/img/ponzi/1.PNG)
+    * ![](https://github.com/ChrisLinn/ink/raw/master/source/_posts/img/ponzi/2.PNG)

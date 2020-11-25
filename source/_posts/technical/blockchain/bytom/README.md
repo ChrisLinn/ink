@@ -291,7 +291,7 @@
 > https://gguoss.github.io/2017/06/28/Bytom-s-data-structure/
 > 
 > __资产账户__
-> ![bytom_asset](/img/bytom/bytom_asset.png)
+> ![bytom_asset](https://github.com/ChrisLinn/ink/raw/master/source/_posts/img/bytom/bytom_asset.png)
 > 
 > + assetid 是全局唯一的资产识别id
 > + alias 是资产的别名，可便于记忆，如(gold, silver) 
