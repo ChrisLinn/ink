@@ -87,3 +87,6 @@
             + 不建议散户去参与这类投机，因为它玩的就是人性的弱点。
 + 周金涛
     * 人民币贬值则澳元跟着贬值
++ 章昱昕聊庞氏骗局
+    * ![](https://github.com/ChrisLinn/chrislinn.ink/raw/master/img/ponzi/1.PNG)
+    * ![](https://github.com/ChrisLinn/chrislinn.ink/raw/master/img/ponzi/2.PNG)
