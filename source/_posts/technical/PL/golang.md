@@ -80,6 +80,7 @@
 + https://github.com/Workiva/go-datastructures
 + https://github.com/avelino/awesome-go
 + https://github.com/jobbole/awesome-go-cn
++ https://github.com/dgryski/awesome-go-style
 + https://github.com/astaxie/build-web-application-with-golang
 + https://github.com/avelino/awesome-go
 + https://github.com/a8m/go-lang-cheat-sheet

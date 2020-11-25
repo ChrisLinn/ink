@@ -183,6 +183,7 @@ title: 如何学习编程
     * https://draveness.me/golang-101
     * https://github.com/google/styleguide
     * https://github.com/uber-go/guide
+    * https://github.com/dgryski/awesome-go-style
     * https://github.com/dominikh/go-tools
     * https://github.com/go-critic/go-critic
     * https://dave.cheney.net/practical-go/presentations/qcon-china.html#_dont_name_your_variables_for_their_types
@@ -190,6 +191,7 @@ title: 如何学习编程
     * https://github.com/unknwon/go-code-convention
     * https://github.com/cristaloleg/go-advices
     * https://github.com/davecheney/the-zen-of-go
+    * https://github.com/jiujuan/go-collection
 + python
     * https://www.tangkin.com/index.php/archives/pylint.html
     * https://wiki.geany.org/howtos/check_python_code
