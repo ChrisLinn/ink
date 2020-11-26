@@ -341,6 +341,9 @@ http://www.conferenceranks.com/ ,randA & rankB
 + https://sec-deadlines.github.io/
 + https://cseweb.ucsd.edu/~mihir/confs.html
 
+#### Cyptography Online Talks Calendar
++ https://www.ccs.neu.edu/~rancohen/cryptotalks.html
+
 <!-- 
 ## white-city
 + https://www.fpcomplete.com/blog/2018/07/deploying-rust-with-docker-and-kubernetes
