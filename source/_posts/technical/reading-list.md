@@ -165,6 +165,7 @@
     * https://github.com/david415/reading_lists
     * https://github.com/helloqirun/helloqirun.github.io
 * rust
+    - https://.github.io/faq/
     - https://oribenshir.github.io/afternoon_rusting/index.html
     - https://github.com/wezm/read-rust
     - http://tylerneely.com/
@@ -272,6 +273,7 @@
 ## Rust
 
 * __https://resource.rs/__
+* https://.github.io/faq/
 * https://lester123.gitbook.io/rust/
 * https://github.com/DaseinPhaos/tlborm-chinese
     - Rust宏小册, the Chinese translation of tlborm.
