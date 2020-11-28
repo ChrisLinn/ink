@@ -6,3 +6,4 @@
 + https://hackmd.io/xfgP5_uMTZyaEJJG4EJoRQ?view
 + https://research.metastate.dev/plonk-by-hand-part-1/
 + https://research.metastate.dev/plonk-by-hand-part-2-the-proof/
++ https://research.metastate.dev/plonk-by-hand-part-3-verification/
