@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Exported Data</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <script src="js/script.js" type="text/javascript">
+
+  </script>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <div class="content">
+
+     <div class="text bold">
+ZK Study Club 
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+28 November 2020
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5974">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+OA
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.11.2020 02:59:29">
+02:59
+       </div>
+
+       <div class="from_name">
+Oleg Andreev
+       </div>
+
+       <div class="text">
+Hey folks! I&apos;ve updated my 5+ year old blinded signature proposal, which was insane hack for ECDSA. Now it&apos;s way cleaner and targets Schnorr. I wonder if it&apos;s a disaster or something decent? <a href="https://github.com/oleganza/bitcoin-papers/blob/master/BitcoinBlindSignatures.md">https://github.com/oleganza/bitcoin-papers/blob/master/BitcoinBlindSignatures.md</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5975">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.11.2020 03:00:34">
+03:00
+       </div>
+
+       <div class="text">
+TL\DR: it allows you to have multisig custody with your friends, who never learn anything about tx that you are signing. Public key, signature and message are all blinded.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5976">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+GK
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.11.2020 03:10:09">
+03:10
+       </div>
+
+       <div class="from_name">
+Georgios Konstantopoulos
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message5974" onclick="return GoToMessage(5974)">this message</a>
+       </div>
+
+       <div class="text">
+You write that Ethereum uses ed25519 but it actually uses secp
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5977">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.11.2020 03:10:22">
+03:10
+       </div>
+
+       <div class="text">
+But nice writeup! Thank you for taking the time
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5978">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+OA
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.11.2020 03:10:32">
+03:10
+       </div>
+
+       <div class="from_name">
+Oleg Andreev
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message5976" onclick="return GoToMessage(5976)">this message</a>
+       </div>
+
+       <div class="text">
+ouch,
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5979">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.11.2020 03:10:34">
+03:10
+       </div>
+
+       <div class="text">
+will change
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5980">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.11.2020 03:10:54">
+03:10
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message5976" onclick="return GoToMessage(5976)">this message</a>
+       </div>
+
+       <div class="text">
+🤦
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5981">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+GK
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.11.2020 03:11:18">
+03:11
+       </div>
+
+       <div class="from_name">
+Georgios Konstantopoulos
+       </div>
+
+       <div class="text">
+😅 no big deal anyway - can this also be done with threshold schnorr?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5982">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.11.2020 03:12:49">
+03:12
+       </div>
+
+       <div class="text">
+Also why do you need to blind with both a and b? Doesn&apos;t just a suffice?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5983">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+OA
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.11.2020 03:17:00">
+03:17
+       </div>
+
+       <div class="from_name">
+Oleg Andreev
+       </div>
+
+       <div class="text">
+AFAIU, we need enough degrees of freedom to avoid matching using the data published (signature, challenge, blinded pubkey) and data known to the agent (their sig, rev-blinded challenge, privkey). Maybe it&apos;s enough to have one factor for pubkey and two for R, or the other way around. I&apos;m working this out.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5984">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.11.2020 03:21:32">
+03:21
+       </div>
+
+       <div class="text">
+yeah, maybe <code>b</code> could be zero.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5985">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.11.2020 03:24:25">
+03:24
+       </div>
+
+       <div class="text">
+or, <code>a</code> could be one...
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5986">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.11.2020 03:36:32">
+03:36
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message5982" onclick="return GoToMessage(5982)">this message</a>
+       </div>
+
+       <div class="text">
+Added some analysis - seems like either multiplicative or additive blinding for pubkey would suffice. I&apos;d keep the additive one because it&apos;s compatible with BIP32 and cheaper to compute.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5987">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.11.2020 03:37:22">
+03:37
+       </div>
+
+       <div class="text">
+But we really need <code>R*p + q</code> because both provide necessary degree of freedom. See below - <a href="https://github.com/oleganza/bitcoin-papers/blob/master/BitcoinBlindSignatures.md">https://github.com/oleganza/bitcoin-papers/blob/master/BitcoinBlindSignatures.md</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5988">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+OA
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.11.2020 04:05:13">
+04:05
+       </div>
+
+       <div class="from_name">
+Oleg Andreev
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message5982" onclick="return GoToMessage(5982)">this message</a>
+       </div>
+
+       <div class="text">
+updated with just <code>x&apos; = x + b</code>, thanks for the tip!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5989">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.11.2020 12:47:51">
+12:47
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message5973" onclick="return GoToMessage(5973)">this message</a>
+       </div>
+
+       <div class="text">
+Actually it&apos;s not! Given how secp256k1 was constructed, such a curve necessarily exists. There is an amicable pair of that kind for *every* prime-order CM elliptic curve over a prime field
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5990">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.11.2020 12:50:54">
+12:50
+       </div>
+
+       <div class="text">
+(By &quot;CM elliptic curve&quot; here I mean a reduction of an elliptic curve that has CM over the complex numbers. Every curve over a finite field is a reduction of a curve that has CM over some number field, but that&apos;s not what I mean.)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5991">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.11.2020 12:58:41">
+12:58
+       </div>
+
+       <div class="text">
+<a href="https://t.me/oleganza">@oleganza</a> : &quot;principle&quot; should be &quot;principal&quot;
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5992">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.11.2020 12:59:09">
+12:59
+       </div>
+
+       <div class="text">
+The key blinding looks similar to RedDSA
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5993">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.11.2020 13:03:21">
+13:03
+       </div>
+
+       <div class="text">
+(RedDSA uses additive blinding for the key; we also considered multiplicative, but additive had already been proposed in section 3 of <a href="https://eprint.iacr.org/2015/395">https://eprint.iacr.org/2015/395</a> which has a security proof.)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5994">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+OA
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.11.2020 15:25:02">
+15:25
+       </div>
+
+       <div class="from_name">
+Oleg Andreev
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message5991" onclick="return GoToMessage(5991)">this message</a>
+       </div>
+
+       <div class="text">
+Oh 🤦‍♂️ thanks!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5995">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.11.2020 15:29:09">
+15:29
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message5993" onclick="return GoToMessage(5993)">this message</a>
+       </div>
+
+       <div class="text">
+Will check it out, thank you!
+       </div>
+
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </body>
+
+</html>

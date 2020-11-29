@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Exported Data</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <script src="js/script.js" type="text/javascript">
+
+  </script>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <div class="content">
+
+     <div class="text bold">
+ZK Study Club 
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+27 November 2020
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5952">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+MB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="27.11.2020 18:41:45">
+18:41
+       </div>
+
+       <div class="from_name">
+Maurizio Binello
+       </div>
+
+       <div class="text">
+Hi, I re-watched <a href="https://t.me/dairahopwood">@dairahopwood</a> brilliant video and slides on Halo and curve search. Now, we&apos;ll probably need to find a safe outer curve (I mean a curve that we can use to build snark proofs) that generates a group or subgroup of the same order as the characteristic of secp256k1’s base field. If I remember right from previous work we did ourselves on lollipop curves, I think we can use the Cocks-Pinch method to sample it, but we&apos;ll probably get a &gt; 500 bit field, that is less than ideal; also we don&apos;t need a pairing friendly curve since we&apos;ll use dLog Marlin, and theoretically that should make our search much easier (maybe :). I understand the CM method restricts the number of possible orders, so is that a possible approach we can take (by trying until we find a good one that has the order we need among them)? Or any hint or suggestion on where to start this psychedelic journey from? 😊
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5953">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="27.11.2020 19:27:50">
+19:27
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+There are two options, as far as I know:<br>1. Use Cocks–Pinch, Brezing–Weng, or Dupont–Enge–Morain. All of these will produce curves of size around 512 bits (maybe slightly shorter with a more expensive search).<br>2. Use secp256k1&apos;s amicable pair curve, sometimes called secq256k1.<br><br>But with either approach, secp256k1&apos;s base field does not have high 2-adicity, which is going to restrict efficiency and what circuit sizes can be used.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5954">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="27.11.2020 19:30:11">
+19:30
+       </div>
+
+       <div class="text">
+Hang on a sec while I do some factoring
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5955">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="27.11.2020 19:35:11">
+19:35
+       </div>
+
+       <div class="text">
+Ok, you might get away with this...
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5957">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="27.11.2020 19:38:52">
+19:38
+       </div>
+
+       <div class="text">
+sage: p = 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F<br>sage: factor(p-1)<br>2 * 3 * 7 * 13441 * 205115282021455665897114700593932402728804164701536103180137503955397371
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5958">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="27.11.2020 19:40:58">
+19:40
+       </div>
+
+       <div class="text">
+That&apos;s the p for secp256k1. For any proof system that relies on multiplicative subgroups, your circuit size is going to be restricted to some product of the small factors of p-1
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5959">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="27.11.2020 19:41:26">
+19:41
+       </div>
+
+       <div class="text">
+(This applies regardless of whether you take approach 1 or 2.)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5960">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="27.11.2020 19:59:40">
+19:59
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+Actually DLOG-Marlin might not have that restriction on circuit size, let me check
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5961">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+MB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="27.11.2020 20:00:33">
+20:00
+       </div>
+
+       <div class="from_name">
+Maurizio Binello
+       </div>
+
+       <div class="text">
+Thanks a lot Daira! Ok, circuit size will be ok for our needs, I guess FFT will not be too efficient then.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5962">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="27.11.2020 20:03:53">
+20:03
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+Ok, see remark 5.3 in the Marlin paper
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5963">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="27.11.2020 20:04:32">
+20:04
+       </div>
+
+       <div class="text">
+Which says that the domains H and K must be either additive or multiplicative subgroups of Fp
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5964">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+MB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="27.11.2020 20:05:12">
+20:05
+       </div>
+
+       <div class="from_name">
+Maurizio Binello
+       </div>
+
+       <div class="text">
+But hang on, the snark will be on the base field of the new curve we are looking for. So high 2 adicity should be one of the constrains of the curve we are looking for, we are just nailing the order of the group/subgroup, and keeping the base field free
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5965">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="27.11.2020 20:05:25">
+20:05
+       </div>
+
+       <div class="text">
+or what am I missing? :)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5966">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="27.11.2020 20:06:57">
+20:06
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+It&apos;s the order of the prime subgroup of the curve you&apos;re searching for (i.e. the size of the base field of secp256k1) that would need to be 2-adic for efficiency
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5967">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="27.11.2020 20:08:02">
+20:08
+       </div>
+
+       <div class="text">
+So it doesn&apos;t matter, for that aspect of efficiency, which curve you use for the proof system
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5968">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="27.11.2020 20:08:45">
+20:08
+       </div>
+
+       <div class="text">
+(hence, secq256k1 is optimal if you don&apos;t need a pairing)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5969">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+MB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="27.11.2020 20:09:44">
+20:09
+       </div>
+
+       <div class="from_name">
+Maurizio Binello
+       </div>
+
+       <div class="text">
+ok!!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5970">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="27.11.2020 20:09:58">
+20:09
+       </div>
+
+       <div class="text">
+thank you!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5971">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="27.11.2020 20:10:05">
+20:10
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+You&apos;re welcome
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message5972">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="27.11.2020 20:11:00">
+20:11
+       </div>
+
+       <div class="text">
+The curve equation of secq256k1 is the same as secp256k1, i.e. y^2 = x^3 + 7
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message5973">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+MB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="27.11.2020 20:19:09">
+20:19
+       </div>
+
+       <div class="from_name">
+Maurizio Binello
+       </div>
+
+       <div class="text">
+It&apos;s amazing that such curve exists! It&apos;s perfect swap of secp256k1 base/order, and with the same equation!
+       </div>
+
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </body>
+
+</html>
