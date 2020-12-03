@@ -4,6 +4,7 @@
 + https://eprint.iacr.org/2019/017.pdf
 + http://pmg.csail.mit.edu/papers/mpss-thesis.pdf
 + https://eprint.iacr.org/2019/1328.pdf
++ https://eprint.iacr.org/2015/304
 
 ## social recovery
 + https://bitrocks.me/secret-social-recovery
