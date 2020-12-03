@@ -643,6 +643,14 @@ registry = "git://mirrors.ustc.edu.cn/crates.io-index"
 + Ops
     * Container
         - Docker
+            + docker with proxy
+                ```
+                docker build . \
+                    --build-arg "HTTP_PROXY=http://127.0.0.1:8118" \
+                    --build-arg "HTTPS_PROXY=http://127.0.0.1:8118" \
+                    --build-arg "NO_PROXY=localhost,127.0.0.1" \
+                    --network host
+                ```
             + VM is about emulation, Docker is about isolation.
             + Image
                 * An image is an inert, immutable, file that's essentially a snapshot of a container.
