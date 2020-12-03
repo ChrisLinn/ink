@@ -43,6 +43,7 @@
 + https://github.com/ScottWorks/ConsenSys-Academy-Notes
 + https://github.com/rustielin/Blockchain-Notes
 + https://github.com/solegga/blockchaincourse
++ https://github.com/dmdque/blockchain-engineer
 + [区块链技术指南](https://yeasy.gitbooks.io/blockchain_guide/content/)
 + btc
     * https://github.com/satoshilabs/slips
