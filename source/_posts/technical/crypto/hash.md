@@ -42,4 +42,5 @@ merkle tree
 SHA?
 Poiseden
 MiMC
+https://github.com/matter-labs/zksync/issues/261
 
