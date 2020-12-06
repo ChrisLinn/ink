@@ -5,6 +5,7 @@
 + http://pmg.csail.mit.edu/papers/mpss-thesis.pdf
 + https://eprint.iacr.org/2019/1328.pdf
 + https://eprint.iacr.org/2015/304
++ https://eprint.iacr.org/2020/1052.pdf 3.1
 
 ## social recovery
 + https://bitrocks.me/secret-social-recovery
@@ -12,8 +13,6 @@
 
 ## scalable
 
-+ https://webpages.uncc.edu/yonwang/papers/reviewTSS.pdf
-    * https://wiki.mpcalliance.org/
 + [white-city](https://github.com/KZen-networks/white-city)
 + [Towards Scalable Threshold Cryptosystems](https://www.computer.org/csdl/proceedings-article/sp/2020/349700b242/1i0rIwLapqM)
     * The main innovation as I see it, is III.B. The work improves over KZG proofs in the case of multipoint evaluation by breaking the polynomial to a binary evaluation tree and use this tree to commit to the polynomial and prove evaluation in multiple points. The tree is binary and therefore instead of asymptotic O(nt) for threshold t they get O(n log t) which for large t makes a difference. 
@@ -77,3 +76,12 @@ https://eprint.iacr.org/2020/767
         * we can’t choose random point R deterministically like we do in ECDSA
         * 如果你使用确定性K，它允许黑客获得我们的私钥
     + 另有新 [FROST: Flexible Round-Optimized Schnorr Threshold Signatures](https://eprint.iacr.org/2020/852.pdf)
+
+## survey
++ https://webpages.uncc.edu/yonwang/papers/reviewTSS.pdf
++ https://eprint.iacr.org/2020/1390.pdf
+
+## Misc
++ https://eprint.iacr.org/2019/523.pdf
++ https://eprint.iacr.org/2018/499.pdf
++ https://arxiv.org/abs/2007.04036
