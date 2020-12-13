@@ -19,4 +19,7 @@
 
 ---
 
+Taken from: [Evaluating Ethereum L2 Scaling Solutions: A Comparison Framework](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
+
+![rollup](https://miro.medium.com/max/700/1*OKGnYwqV8IEFrZe-NRwaIQ.png)
 ![rollup](https://github.com/ChrisLinn/ink/raw/master/source/_posts/img/crypto/rollup.png)
