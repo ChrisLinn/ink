@@ -17,3 +17,6 @@
     * 不需许可。
     * optimistic rollup 和 plasma 都需要保证金 & 挑战期。那么提现就会比较久。解决办法是客户端自行验证，那么就可以立即接受。
 
+---
+
+![rollup](https://github.com/ChrisLinn/ink/raw/master/source/_posts/img/crypto/rollup.png)
