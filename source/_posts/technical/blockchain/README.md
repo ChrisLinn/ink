@@ -40,6 +40,7 @@
     * https://github.com/trailofbits/publications
 - https://github.com/dgryski/awesome-consensus
 + https://github.com/matthewdgreen/blockchains
++ https://github.com/fccoelho/Curso_Blockchain
 + https://github.com/ScottWorks/ConsenSys-Academy-Notes
 + https://github.com/rustielin/Blockchain-Notes
 + https://github.com/solegga/blockchaincourse
