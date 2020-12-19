@@ -145,6 +145,7 @@ Atomic Swap 的一些解释说明。论文rephrase可用。
 
 ## Projects
 + 密钥托管
+    * [Security Guidelines for Storage Infrastructure](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-209.pdf)
     * https://github.com/bitwarden
         - https://github.com/dani-garcia/bitwarden_rs
     * https://github.com/hashicorp/vault
