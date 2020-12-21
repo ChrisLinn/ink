@@ -335,6 +335,8 @@ http://www.conferenceranks.com/ ,randA & rankB
     * https://dci.mit.edu/cryptoeconomic-systems-journal
     * https://cbr.stanford.edu/sbc20/
     * https://blockchain.kcl.ac.uk/ieee-sb2019/#top
+    * https://econcs.pku.edu.cn/wine2020/index.htm
+        - 这个还挺好玩的
 
 ### deadline
 + http://www.cs.technion.ac.il/~dan/index_sysvenues_deadline.html
