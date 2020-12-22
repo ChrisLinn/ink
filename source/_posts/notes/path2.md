@@ -34,4 +34,5 @@
 + loopring
 + chainnews
 + binance
++ platON
 + sparkpool
