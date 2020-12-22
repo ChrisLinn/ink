@@ -25,3 +25,13 @@
         - 不同资金量策略不同
 + 读博
     * 没有陈伟霆
+
+---
+
+上海？
+
++ cobo
++ loopring
++ chainnews
++ binance
++ sparkpool
