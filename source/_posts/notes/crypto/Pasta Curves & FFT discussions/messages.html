@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Exported Data</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <script src="js/script.js" type="text/javascript">
+
+  </script>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <div class="content">
+
+     <div class="text bold">
+ZK Study Club 
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+13 December 2020
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6040">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+M
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="13.12.2020 23:47:20">
+23:47
+       </div>
+
+       <div class="from_name">
+Mikerah 
+       </div>
+
+       <div class="text">
+Is there a breakdown on the Pasta curves vis a vis the TweedleDee and TweedleDum curves and why one would use those curves of secp and secq curves?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-2">
+
+      <div class="body details">
+14 December 2020
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6041">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 04:05:49">
+04:05
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+<a href="https://electriccoin.co/blog/the-pasta-curves-for-halo-2-and-beyond/">https://electriccoin.co/blog/the-pasta-curves-for-halo-2-and-beyond/</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6042">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 04:07:47">
+04:07
+       </div>
+
+       <div class="text">
+secp and secq don&apos;t have high 2-adicity
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6043">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 04:12:05">
+04:12
+       </div>
+
+       <div class="text">
+They do have small subgroups which *could* be used, but the small factors of q are just 2*3*7*13441, so that means there are no subgroup sizes between 42 and 13441
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6044">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 04:13:10">
+04:13
+       </div>
+
+       <div class="text">
+Which is exactly the region that the recursion threshold for Halo 2 (and the size of many other useful small circuits) falls into
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6045">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 04:17:38">
+04:17
+       </div>
+
+       <div class="text">
+So you would lose at least a factor of 6.5 in efficiency to prove a circuit that naturally fits into 2048 rows using Halo 2 on secq256k1, just based on circuit size. And then you would have a further efficiency loss due to the less efficient polynomial multiplication, from not being able to use a base-2 FFT
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6046">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 04:21:48">
+04:21
+       </div>
+
+       <div class="text">
+So either the Tweedle or Pasta cycles are much better than secp/secq for recursion, and Pasta is a small incremental improvement on Tweedle (for efficiency and simplicity of hash-to-curve and square roots)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6047">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 04:25:35">
+04:25
+       </div>
+
+       <div class="text">
+Btw, there&apos;s a Sage implementation of a table-based square root algorithm for the Pasta fields here: <a href="https://github.com/zcash/pasta/blob/master/squareroottab.sage">https://github.com/zcash/pasta/blob/master/squareroottab.sage</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6048">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+D
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 04:32:07">
+04:32
+       </div>
+
+       <div class="from_name">
+Dev 
+       </div>
+
+       <div class="text">
+Thanks for sharing the sage script, this is really helpful!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6049">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 04:33:32">
+04:33
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+Also see this for the required addition chains to optimize powering by (m-1)<a href="" onclick="return ShowBotCommand(&quot;2&quot;)">/2</a>: <a href="https://github.com/zcash/pasta/blob/master/addchain_sqrt.py">https://github.com/zcash/pasta/blob/master/addchain_sqrt.py</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6050">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 04:35:55">
+04:35
+       </div>
+
+       <div class="text">
+This square root algorithm does a constant number of squarings and multiplications. It uses table lookups so it&apos;s *not* resistant to cache timing attacks as-is
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6051">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 04:37:16">
+04:37
+       </div>
+
+       <div class="text">
+(depending on the application you night not need constant time; in any case, it doesn&apos;t pay anything extra to get the constant number of operations)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6052">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 04:40:57">
+04:40
+       </div>
+
+       <div class="text">
+I&apos;m also working on a hash-to-curve implementation but that&apos;s not quite ready yet. Still at least one bug to iron out, and I want to make sure it&apos;s consistent with the Internet Draft on hashing to elliptic curves
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6053">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+D
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 04:42:57">
+04:42
+       </div>
+
+       <div class="from_name">
+Dev 
+       </div>
+
+       <div class="text">
++1, its definitely interesting that we may now have to expose both a constant time and var time point de-compression
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6054">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 04:43:45">
+04:43
+       </div>
+
+       <div class="text">
+(though I guess faster table methods already existed, I just hadn&apos;t known of them before)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6055">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 04:46:27">
+04:46
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+It is possible to tweak this algorithm to be fully constant-time; you just need to use very small tables and access every element. For example if you restrict the discrete log table (invtab in the Sage code) to 16 elements or so, you can implement it using bit shifts of a constant
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6056">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 04:46:52">
+04:46
+       </div>
+
+       <div class="text">
+It&apos;s still faster than Tonelli-Shanks if you do that (it should be, anyway; I haven&apos;t actually calculated the cost)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6057">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 04:50:27">
+04:50
+       </div>
+
+       <div class="text">
+Yeah it&apos;s very similar to Bernstein&apos;s method, which the table-based algorithm in Sarkar&apos;s paper is derived from
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6058">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+D
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 05:28:06">
+05:28
+       </div>
+
+       <div class="from_name">
+Dev 
+       </div>
+
+       <div class="text">
+That makes sense. You&apos;d probably have to reason about the systems exact L1 cache size to get the exact max table size, and ensure the table&apos;s preloaded before the square root operation right?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6059">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 05:28:53">
+05:28
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+I meant access the whole table for every lookup (using cmov or whatever to pick up the entry you need). That&apos;s guaranteed to be constant-time regardless of cache size
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6060">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 05:30:29">
+05:30
+       </div>
+
+       <div class="text">
+In any case, the more significant speed-up is from the discrete log table, which can be very small and still give a useful improvement over Tonelli-Shanks
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6061">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 05:32:26">
+05:32
+       </div>
+
+       <div class="text">
+E.g. you can implement that as a 16*4 bit minimal perfect hash function, which will be fast, simple, and constant-time
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6062">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 05:35:36">
+05:35
+       </div>
+
+       <div class="text">
+Then you can do the fixed-base exponentiations however you would normally do them in constant time (it&apos;s optional to use tables for those)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6063">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+D
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 05:39:39">
+05:39
+       </div>
+
+       <div class="from_name">
+Dev 
+       </div>
+
+       <div class="text">
+Ohh, that makes sense
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6064">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 05:40:08">
+05:40
+       </div>
+
+       <div class="text">
+Agreed that would still be really helpful, since you&apos;re saving those field operations, even with wasted memory accesses
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6065">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 05:40:13">
+05:40
+       </div>
+
+       <div class="text">
+thanks for the expl!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6066">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 05:40:22">
+05:40
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+No problem
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6067">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 05:40:40">
+05:40
+       </div>
+
+       <div class="text">
+I should write something to find that minimal perfect hash
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6068">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 05:41:07">
+05:41
+       </div>
+
+       <div class="text">
+(or if you intend to do that, let me know)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6069">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+PM
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 05:41:41">
+05:41
+       </div>
+
+       <div class="from_name">
+Pratyush Mishra
+       </div>
+
+       <div class="text">
+Rust has some libraries to generate perfect hash maps at compile time; that might be a useful resource?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6070">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+D
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 05:42:03">
+05:42
+       </div>
+
+       <div class="from_name">
+Dev 
+       </div>
+
+       <div class="text">
+At the moment no plans to do so, (currently spending cycles dedicated to performance on improving FFTs)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6071">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 05:43:13">
+05:43
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+Most perfect hash function generators rely on tries, so that gets you back to the same problem of non-constant time lookups (since they&apos;re not designed for cryptographic side-channel resistance)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6072">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 05:43:52">
+05:43
+       </div>
+
+       <div class="text">
+For a 16-entry table you should be able to just brute-force it, I think
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6073">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 05:48:45">
+05:48
+       </div>
+
+       <div class="text">
+Speaking of which, what&apos;s the current best FFT implementation for 255-bit 2-adic prime fields that we know of?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6074">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 05:49:41">
+05:49
+       </div>
+
+       <div class="text">
+On x86-64 CPUs and on GPUs I guess
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6075">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 05:49:51">
+05:49
+       </div>
+
+       <div class="text">
+I haven&apos;t really been keeping up with the state of the art there
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6076">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+D
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 05:57:45">
+05:57
+       </div>
+
+       <div class="from_name">
+Dev 
+       </div>
+
+       <div class="text">
+I&apos;m not sure either, I&apos;ve been looking at OpenZKP&apos;s implementation and Aztec&apos;s
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6077">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 05:58:57">
+05:58
+       </div>
+
+       <div class="text">
+Not sure which ends up being faster for 255 bit fields
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6078">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 06:58:59">
+06:58
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+I was able to quickly find near-minimal perfect hash tables of size 17 (minimal would be 16). The hash_xor values for the Pasta fields are 0xC847 for F_p and 0xFA68 for F_q
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6079">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 06:59:28">
+06:59
+       </div>
+
+       <div class="text">
+Square root cost is 252S + 60M for 16-entry tables
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6080">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 07:00:28">
+07:00
+       </div>
+
+       <div class="text">
+Compared to 248S + 35M for 256-entry tables, so not very much worse
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6081">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 07:33:11">
+07:33
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+Going back to FFT implementations:<br><br>Aztec&apos;s Barretenberg is nice but it&apos;s in C++ using OpenMP (which may be fine for C++-based projects, but it&apos;s a bit of a pain if you&apos;re trying to minimize new unsafe code).<br><br>OpenZKP seems to be tailored to a particular 251-bit field according to the overall project readme.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6082">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AV
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 08:37:05">
+08:37
+       </div>
+
+       <div class="from_name">
+Alexander Vlasov
+       </div>
+
+       <div class="text">
+OpenZKP is tailored for a specific field, but their FFT implementation is probably the best one as in can scale linearly to hundreds of CPUs and cache-friendly, while by-the-book ones usually show sublinear scaling at 16+ core CPUs from my experience
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6083">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+D
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.12.2020 08:41:19">
+08:41
+       </div>
+
+       <div class="from_name">
+Dev 
+       </div>
+
+       <div class="text">
+The FFT code they have is general over the field (it takes in the trait FieldLike defined here: <a href="https://github.com/0xProject/OpenZKP/blob/a4fbf23d65f3f2443a8db5ae192f61b7d812a5f7/algebra/primefield/src/traits.rs#L35">https://github.com/0xProject/OpenZKP/blob/a4fbf23d65f3f2443a8db5ae192f61b7d812a5f7/algebra/primefield/src/traits.rs#L35</a>)<br><br>I don&apos;t know of any optimizations they&apos;d do differently for a radix 2 fft in a 255 prime field vs the 251 bit field they optimize for
+       </div>
+
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </body>
+
+</html>
