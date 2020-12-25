@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Exported Data</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <script src="js/script.js" type="text/javascript">
+
+  </script>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <div class="content">
+
+     <div class="text bold">
+ZenGo X 
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+23 December 2020
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10395">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="23.12.2020 04:02:53">
+04:02
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="text">
+I tried to find a security bug in Drand DKG using a subgroup attack. I failed. However, I figured it only after I wrote a description of the attack. <br>Sharing it here because failures are educational, specifically, while we usually observe subgroup attacks in signatures like eddsa, this attack is on bls12-381 based DKG. <br><br><strong> link removed until we make sure dash is secure</strong>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10396">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+js
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="23.12.2020 06:33:15">
+06:33
+       </div>
+
+       <div class="from_name">
+jagdeep sidhu
+       </div>
+
+       <div class="text">
+Is this attack viable on dash’s dkg which uses bls12-381 for quorums?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message10397">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="23.12.2020 06:34:54">
+06:34
+       </div>
+
+       <div class="text">
+<a href="https://github.com/dashpay/dips/blob/master/dip-0006/bls_signature_scheme.md">https://github.com/dashpay/dips/blob/master/dip-0006/bls_signature_scheme.md</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10398">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="23.12.2020 07:20:21">
+07:20
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message10396" onclick="return GoToMessage(10396)">this message</a>
+       </div>
+
+       <div class="text">
+This specific attack doesn’t apply there because they use aggregate BLS signatures which do not required a DKG, while drand is using threshold BLS for which a DKG is necessary (and the attack is on the DKG)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10399">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+js
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="23.12.2020 08:42:15">
+08:42
+       </div>
+
+       <div class="from_name">
+jagdeep sidhu
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message10398" onclick="return GoToMessage(10398)">this message</a>
+       </div>
+
+       <div class="text">
+They do a DKG <a href="https://github.com/dashpay/dips/blob/master/dip-0006/bls_m-of-n_threshold_scheme_and_dkg.md">https://github.com/dashpay/dips/blob/master/dip-0006/bls_m-of-n_threshold_scheme_and_dkg.md</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message10400">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="23.12.2020 08:43:49">
+08:43
+       </div>
+
+       <div class="text">
+<a href="https://github.com/dashpay/dash/blob/master/src/llmq/quorums_dkgsession.cpp">https://github.com/dashpay/dash/blob/master/src/llmq/quorums_dkgsession.cpp</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10401">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="23.12.2020 17:25:50">
+17:25
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message10399" onclick="return GoToMessage(10399)">this message</a>
+       </div>
+
+       <div class="text">
+Mm you are right. I am not familiar enough with dash (do you know for what purpose they use threshold BLS?) and I don’t have the bandwidth to look in their code but it is likely that this attack might apply (and if it does it can be fatal). lets continue this discussion in DM
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10402">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="23.12.2020 18:27:00">
+18:27
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message10278" onclick="return GoToMessage(10278)">this message</a>
+       </div>
+
+       <div class="text">
+The initial round is required for the security proof. This is how a simulator is able to make sure that the output public key of the DKG is the same as it was given.  The simulator will wait for the other parties to commit, and then rewind and change its commitment. At the next round the simulator will simulate its VSS without knowing the ec dlog of the free term.  The Schnorr proof is required against rogue key attack. `
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message10403">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="23.12.2020 18:35:17">
+18:35
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message10402" onclick="return GoToMessage(10402)">this message</a>
+       </div>
+
+       <div class="text">
+Alternatively the first round could have been a round of commitments to the non-hiding commitment of the free term : comm(a_0G), which at the second round be used in the VSS (V0 = a_0G). This is the DKG gg18 are using. <br>In both cases, as <a href="https://t.me/kobigurk">@kobigurk</a> suggested, there is a possibility of bias but it doesn’t impose an issue on the security proof. <br>Additionally, common to both, is the dishonest majority assumption, we referred to it here as “happy flow” meaning we assume no party cheats, but  if a party cheats, there is no way to fix it, only to detect and start the protocol from the beginning . <br>cc: <a href="https://t.me/CryptoTuxxy">@CryptoTuxxy</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10404">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+KG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="23.12.2020 18:50:10">
+18:50
+       </div>
+
+       <div class="from_name">
+Kobi Gurkan
+       </div>
+
+       <div class="text">
+Thanks <a href="https://t.me/Omershlo">@Omershlo</a>!<br><br>The bias doesn’t impose an issue because they don’t try to prove a general secrecy property and just focus on unforgability?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10405">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="23.12.2020 18:50:22">
+18:50
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="text">
+Yes exactly
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10406">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+t
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="23.12.2020 18:53:44">
+18:53
+       </div>
+
+       <div class="from_name">
+tux 
+       </div>
+
+       <div class="text">
+Sorry, I need to catch up an all of your messages haha
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10407">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+n
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="23.12.2020 20:05:26">
+20:05
+       </div>
+
+       <div class="from_name">
+nikkolasg 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message10404" onclick="return GoToMessage(10404)">this message</a>
+       </div>
+
+       <div class="text">
+From the genaro paper, the issue described is that usually ppl reduce from the threshold case to the centralised case and then say it&apos;s secure, while it&apos;s not because the distribution of secret key is not the same if it can be biased. Gennaro doesn&apos;t pass by this reduction step: it proves the threshold case secure by reducing the problem to the underlying hard problem _directly_, dlog. <br>Is that what <a href="https://t.me/Omershlo">@Omershlo</a> is saying or is different ?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10408">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="23.12.2020 20:11:19">
+20:11
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message10407" onclick="return GoToMessage(10407)">this message</a>
+       </div>
+
+       <div class="text">
+I put aside this Gennaro technique - which as we discussed before is relatively unknown and not widely used. This technique comes to solve an issue that happens only in the honest majority case.  FROST/GG18 are indeed using reduction to the centralised case.
+       </div>
+
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </body>
+
+</html>
