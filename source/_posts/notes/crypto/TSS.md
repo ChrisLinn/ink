@@ -85,3 +85,4 @@ https://eprint.iacr.org/2020/767
 + https://eprint.iacr.org/2019/523.pdf
 + https://eprint.iacr.org/2018/499.pdf
 + https://arxiv.org/abs/2007.04036
++ [Threshold variant of HashEdDSA with  Rescue hash function](https://eprint.iacr.org/2020/214.pdf)
