@@ -37,6 +37,7 @@
 + https://github.com/gopherdata/gophernotes
 + [Effective Go](https://golang.org/doc/effective_go.html)
     * https://github.com/bingohuang/effective-go-zh-en
++ https://github.com/geektutu/high-performance-go
 + https://github.com/tmrts/go-patterns
 + https://github.com/bvwells/go-patterns
 + https://github.com/senghoo/golang-design-pattern
