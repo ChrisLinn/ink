@@ -23,6 +23,10 @@ https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
 + https://github.com/jorgebucaran/fisher
     * alternative: https://github.com/oh-my-fish/oh-my-fish
 + https://github.com/jorgebucaran/fish-nvm
+    * 注意设置长久使用，否则只有当前窗口有用
+        ```
+        set --universal nvm_default_version lts/fermium
+        ```
 
 ### FZF
 + Alt + c
@@ -752,7 +756,9 @@ sudo apt autoremove
 sudo apt install fcitx-googlepinyin
 ```
 
-重启
+重启。
+
+需要 设一下 Imput Method。kubuntu Super 键 搜索 并调一下。好像也要 搜一下 fcitx configuration 然后加一下 sougou。
 
 sogou/google 默认配置应该没问题
 
