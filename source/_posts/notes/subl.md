@@ -65,6 +65,7 @@ You can also take a look at [my __Sublime Text 3__ config](https://bitbucket.org
             * ~~stylish haskell~~
     - ~~prolog~~
         - ~~for highlight~~
+    - Print to HTML
     * viewinbroswer
         - change default browser to chrome64 in Win
     * ConvertToUTF8
