@@ -21,6 +21,7 @@
         - distributed system
         - https://github.com/chaozh/MIT-6.824
         - https://github.com/feixiao/Distributed-Systems
+        - https://github.com/alinush/6.824-lecture-notes
 + ethz
     * https://disco.ethz.ch/courses/ss04/distcomp/
     * https://disco.ethz.ch/courses/ss03/distcomp/
