@@ -42,6 +42,7 @@
     - https://zkcapital.substack.com/
     - https://distsys.substack.com/
     - https://blog.cryptographyengineering.com/
+    - https://alinush.github.io/about.html
     - https://www.benthamsgaze.org/
     + https://unenumerated.blogspot.com/
     - https://zkproof.org/blog/
