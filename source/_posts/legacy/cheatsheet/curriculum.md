@@ -15,3 +15,5 @@
 + https://github.com/dgryski/awesome-consensus
 + https://github.com/dmdque/blockchain-engineer
 + https://github.com/fccoelho/Curso_Blockchain
++ https://www.udemy.com/build-blockchain
+    * https://github.com/15Dkatz/sf-chain-guides
