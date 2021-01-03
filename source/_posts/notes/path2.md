@@ -46,3 +46,15 @@
 套利、赚便宜、中介、差价、信息差 也不错。
 
 资本的力量还是王道。资本是大势之力，很可能和国家、时代有关，很容易被动生钱。而创造本身则需要不断努力。
+
+---
+
+法律
+
+这个网站可以看到 诉讼文件 (case, case document, complaint)？
+
+https://www.scribd.com/document/489193842/Findora-Lily-Chao-Damien-Ding-lawsuit
+
+适合吃瓜，适合研究。
+
+官方： https://trellis.law/case/20CV372622/Temujin-Labs-Inc-v-Abittan-et-al
