@@ -49,7 +49,7 @@
         + https://docs.zkproof.org/pages/reference/reference.pdf
     - https://community.zkproof.org/
     - https://jbp.io/archive/
-    - https://that.world/~wei/
+    - https://that.world/en/
     - https://petertodd.org/
     - https://oleganza.com/
     - https://joinmarket.me/blog/blog/
