@@ -49,7 +49,7 @@
 
 ---
 
-法律
+法律诉讼 lawsuit
 
 这个网站可以看到 诉讼文件 (case, case document, complaint)？
 
