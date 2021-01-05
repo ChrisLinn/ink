@@ -22,6 +22,7 @@ __A:__ [oblivious transfer](https://en.wikipedia.org/wiki/Oblivious_transfer)
 + 1-out-of-n oblivious transfer is incomparable to private information retrieval (PIR). On the one hand, 1-out-of-n oblivious transfer imposes an additional privacy requirement for the database: namely, that the receiver learn at most one of the database entries. On the other hand, PIR requires communication sublinear in n, whereas 1-out-of-n oblivious transfer has no such requirement.
 
 ## DKG
++ [Aggregatable Distributed Key Generation](https://eprint.iacr.org/2021/005)
 
 ## MPC
 + (输出结果)正确性
