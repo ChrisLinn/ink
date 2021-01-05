@@ -85,6 +85,6 @@ https://eprint.iacr.org/2020/767
 + https://eprint.iacr.org/2019/523.pdf
 + https://eprint.iacr.org/2018/499.pdf
 + https://arxiv.org/abs/2007.04036
-+ [Threshold variant of HashEdDSA with  Rescue hash function](https://eprint.iacr.org/2020/214.pdf)
++ [Threshold variant of HashEdDSA with Rescue hash function](https://eprint.iacr.org/2020/214.pdf)
 + [Towards Threshold Key Exchange Protocols](https://arxiv.org/abs/2101.00084)
     + Paper suggests a threshold DH protocols and shows how they can be used to build threshold Wireguard. And we also considered use case of GG18, made two implementation: based on tss-lib (https://github.com/binance-chain/tss-lib) and multi-party-ecdsa (https://github.com/ZenGo-X/multi-party-ecdsa), and compared their performance
