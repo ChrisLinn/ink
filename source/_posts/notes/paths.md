@@ -279,6 +279,12 @@ security的论文 实验和出成果都不难, 工业界比学术界领先, 论�
 + draft
 + 再拿出去投 边投边改
 
+## how to write systems papers
++ https://www.usenix.org/legacy/event/samples/submit/advice.html
++ https://gramoli.redbellyblockchain.io/web/doc/talks/researchmethod.pdf
++ https://www.cse.unsw.edu.au/~gernot/benchmarking-crimes.html
++ https://people.inf.ethz.ch/troscoe/pubs/review-writing.pdf
+
 ## reference
 + Mendeley
 + EndNote
@@ -293,6 +299,8 @@ security的论文 实验和出成果都不难, 工业界比学术界领先, 论�
 ## Peer Review
 + https://www.scisnack.com/wp-content/uploads/2018/10/A-Peer-Review-Process-Guide.pdf
 + https://www.nature.com/articles/d41586-018-06991-0
++ [Tips and Guidance for Students Writing Papers and Reports](http://gernot-heiser.org/style-guide.html)
++ https://people.inf.ethz.ch/troscoe/pubs/review-writing.pdf
 
 ## Rebuttal
 + https://sites.umiacs.umd.edu/elm/2016/11/19/writing-rebuttals/
