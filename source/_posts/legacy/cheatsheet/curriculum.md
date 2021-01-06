@@ -1,5 +1,6 @@
 # Curriculum
 
++ https://github.com/chainrg/reading
 + https://github.com/chaincodelabs/bitcoin-curriculum
 + https://github.com/solegga/blockchaincourse
 + https://github.com/bitcoinbook/bitcoinbook

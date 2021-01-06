@@ -36,6 +36,7 @@
 * blockchain
     - https://rebuttal.kas.pa/
     - https://decentralizedthoughts.github.io/
+    - https://github.com/chainrg/reading
     - https://github.com/matthewdgreen/blockchains
     - https://github.com/solegga/blockchaincourse
     - https://openmined.org/
