@@ -31,6 +31,7 @@
     * https://crypto.stanford.edu/~blynn/
         - https://crypto.stanford.edu/pbc/notes/
     * http://math.tut.fi/~ruohonen/MC.pdf
+    * [Designing Secure Cryptography](https://github.com/cornelltech/CS6831-Spring2019)
     * [Practical Cryptographic Systems](http://spar.isi.jhu.edu/~mgreen/650.445/650.445__Main.html)
         * https://github.com/matthewdgreen/practicalcrypto
     + https://cse.iitkgp.ac.in/~debdeep/courses_iitkgp/FCrypto/index.htm
