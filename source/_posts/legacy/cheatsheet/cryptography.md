@@ -3,6 +3,10 @@
 ## Math
 + Binary Quadratic Forms, An Algorithmic Approach - Algorithms and Computation in Mathematics • Volume 20
 + https://crypto.stackexchange.com/questions/10467/what-is-the-lowest-level-of-mathematics-required-in-order-to-understand-how-encr
+- An Intensive Introduction to Cryptography
+    - https://intensecrypto.org/public/index.html
+- Introduction to Theoretical Computer Science
+    - https://introtcs.org/public/index.html
 + https://intensecrypto.org/public/index.html
 + [Quadralay's Cryptography Archive](https://www.austinlinks.com/Crypto/)
 + https://crypto.stackexchange.com/questions/53321/what-are-the-coordinates-of-a-generator-point
