@@ -201,3 +201,6 @@ Atomic Swap 的一些解释说明。论文rephrase可用。
     * https://dl.acm.org/doi/pdf/10.1145/3321408.3321573?download=true
 + https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2020-June/017969.html
     * https://github.com/zkSNACKs/WabiSabi/releases/latest/download/WabiSabi.pdf
+
+## Secure Messaging
++ [SoK: Secure Messaging](http://css.csail.mit.edu/6.858/2020/readings/secure-messaging.pdf)
