@@ -23,6 +23,7 @@
                 * secret leakage in ECDH
 + https://blog.cr.yp.to/index.html
 + https://github.com/sobolevn/awesome-cryptography
++ https://github.com/mostafatouny/awesome-theoretical-computer-science
 + https://github.com/pFarb/awesome-crypto-papers
 + https://github.com/SebastianElvis/crypto-lecture-notes/
     * https://www.garykessler.net/library/crypto.html
