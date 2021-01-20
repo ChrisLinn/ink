@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Exported Data</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <script src="js/script.js" type="text/javascript">
+
+  </script>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <div class="content">
+
+     <div class="text bold">
+ZenGo X 
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+15 January 2021
+      </div>
+
+     </div>
+
+       <div class="text">
+<a href="https://eprint.iacr.org/2020/1478.pdf">https://eprint.iacr.org/2020/1478.pdf</a> <strong>Robust Subgroup Multi-Signatures for Consensus </strong>: <br>- another paper from the GLOW authors (<a href="https://eprint.iacr.org/2020/096.pdf">https://eprint.iacr.org/2020/096.pdf</a> ) <br>- authors noticed that existing multisig schemes are not suitable for consensus because there is no identifiable accountability - it is enough for a single party to broadcast a wrong local signature and the entire multi sig will be invalid  (in byzantine consensus we assume the existence of faulty signers). <br>- most cases of previous multisigs were aimed for wallets where this is a non issue<br>- The main contribution is a tweak to the Boneh et al MSP construction (from Compact Multi-Signatures for Smaller Blockchains). It is actually very smart change - see 4.1: step 1 is to let each signer prove correctness of its local sig, step 2 is to combine only the valid local signatures. <br>- result is new multisig RSMSP<br>- Introduction is being rewritten
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message10917">
+
+      <div class="body details">
+Thatyuta Yuta invited Thatyuta Yuta
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10918">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+KG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="15.01.2021 08:45:20">
+08:45
+       </div>
+
+       <div class="from_name">
+Kobi Gurkan
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message10916" onclick="return GoToMessage(10916)">this message</a>
+       </div>
+
+       <div class="text">
+Great work formalizing the pop variant and also upgrading BDN18 to subgroup multisigs. The modifications to build RSMSP make a lot of sense.<br><br>the nizk idea is nice but something seems weird to me: in the API they write that both g and h are in the same group, but in RSMSP-zk they use g2 which is in G2 and the output of H3 which is in G1
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10920">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+J
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="15.01.2021 17:27:16">
+17:27
+       </div>
+
+       <div class="from_name">
+Jonas 
+       </div>
+
+       <div class="text">
+So the votes suggest 16 🙌  out of the 18 voters are interested in a study group, and 8 🙌  out of the 18 voters are interested in contributing to build rust-MPC.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10921">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+J
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="15.01.2021 17:43:37">
+17:43
+       </div>
+
+       <div class="from_name">
+Jonas 
+       </div>
+
+       <div class="text">
+I created a telegram group for planning/discussing MPC study group so we don&apos;t bloat this channel, all are welcome. <a href="https://t.me/joinchat/Ha31otCWimD3lWN5">https://t.me/joinchat/Ha31otCWimD3lWN5</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10922">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="15.01.2021 18:27:41">
+18:27
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message10918" onclick="return GoToMessage(10918)">this message</a>
+       </div>
+
+       <div class="text">
+Might be some typo, I noticed one of the hash functions they use should be to the other group (H2 to g2 instead of to g1)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10923">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+KG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="15.01.2021 18:49:27">
+18:49
+       </div>
+
+       <div class="from_name">
+Kobi Gurkan
+       </div>
+
+       <div class="text">
+I think in that case it’s really different groups, since one is for signatures and another is the public key<br><br>Probably because they have the same order it’s fine as is
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10924">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="15.01.2021 18:50:47">
+18:50
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message10923" onclick="return GoToMessage(10923)">this message</a>
+       </div>
+
+       <div class="text">
+They have the same order only in the case of BLS12-381. You cannot assume it in general
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10925">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+KG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="15.01.2021 18:51:08">
+18:51
+       </div>
+
+       <div class="from_name">
+Kobi Gurkan
+       </div>
+
+       <div class="text">
+I think G1 and G2 always have the same order
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10926">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="15.01.2021 18:55:10">
+18:55
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message10925" onclick="return GoToMessage(10925)">this message</a>
+       </div>
+
+       <div class="text">
+Why is that?  (I am a one curve pony)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10927">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="15.01.2021 18:57:57">
+18:57
+       </div>
+
+       <div class="from_name">
+Damian Straszak
+       </div>
+
+       <div class="text">
+The pairing gives you an isomorphism with G_T for each G_0 and G_1
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10928">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="15.01.2021 19:02:34">
+19:02
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="text">
+So there is always a map between g1 and g2 ?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10929">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="15.01.2021 19:04:12">
+19:04
+       </div>
+
+       <div class="from_name">
+Damian Straszak
+       </div>
+
+       <div class="text">
+Under the set of axioms I know (maybe not the most general), all G0, G1, GT have the same prime order
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10930">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+KG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="15.01.2021 19:04:38">
+19:04
+       </div>
+
+       <div class="from_name">
+Kobi Gurkan
+       </div>
+
+       <div class="text">
+I believe this is by definition of type 3 pairings, where you choose specific order r subgroups for G1 and G2
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10939">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+IS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="15.01.2021 23:07:06">
+23:07
+       </div>
+
+       <div class="from_name">
+Ilya Shirobokov
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message10928" onclick="return GoToMessage(10928)">this message</a>
+       </div>
+
+       <div class="text">
+A tiny clarification. <br><br>In the case of type-3 pairings (that is the most interesting today), there aren&apos;t <strong>efficiently computable</strong> homomorphisms. <br>And there is (at least one) for type-2 pairings (I&apos;m not sure if type-2 is used in practice). <br><br>All of these, according to the definitions that I&apos;ve met before. For instance:<br>* <a href="https://www.sciencedirect.com/science/article/pii/S0166218X08000449">https://www.sciencedirect.com/science/article/pii/S0166218X08000449</a><br>* <a href="https://www.researchgate.net/profile/Liqun_Chen2/publication/225779557_Identity-based_key_agreement_protocols_from_pairings/links/0046352d3c05a35a86000000/Identity-based-key-agreement-protocols-from-pairings.pdf">https://www.researchgate.net/profile/Liqun_Chen2/publication/225779557_Identity-based_key_agreement_protocols_from_pairings/links/0046352d3c05a35a86000000/Identity-based-key-agreement-protocols-from-pairings.pdf</a>
+       </div>
+
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </body>
+
+</html>
