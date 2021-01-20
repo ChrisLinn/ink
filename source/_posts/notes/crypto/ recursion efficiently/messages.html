@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Exported Data</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <script src="js/script.js" type="text/javascript">
+
+  </script>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <div class="content">
+
+     <div class="text bold">
+ZeroKnowledgePodcast 
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+16 January 2021
+      </div>
+
+     </div>
+
+     <div class="message service" id="message4536">
+
+      <div class="body details">
+Geoff B joined group by link from Group
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message4537">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.01.2021 04:55:08">
+04:55
+       </div>
+
+       <div class="from_name">
+Drew Stone
+       </div>
+
+       <div class="text">
+Is it theoretically impossible to do recursion efficiently in SNARKs without curve cycles?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message4538">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.01.2021 04:58:48">
+04:58
+       </div>
+
+       <div class="text">
+Speaking as a non-expert. Would this be possible if there was an elliptic curve where <a href="" onclick="return ShowHashtag(&quot;E&quot;)">#E</a>(F) = |F| for field F?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message4539">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+PM
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.01.2021 05:45:54">
+05:45
+       </div>
+
+       <div class="from_name">
+Pratyush Mishra
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message4538" onclick="return GoToMessage(4538)">this message</a>
+       </div>
+
+       <div class="text">
+Such curves are insecure =/<br><br><a href="https://crypto.stackexchange.com/questions/52673/why-does-smarts-attack-only-work-on-anomalous-curves">https://crypto.stackexchange.com/questions/52673/why-does-smarts-attack-only-work-on-anomalous-curves</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message4540">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.01.2021 05:59:06">
+05:59
+       </div>
+
+       <div class="from_name">
+Drew Stone
+       </div>
+
+       <div class="text">
+Damn, I thought I was onto something 😆
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message4541">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.01.2021 06:00:17">
+06:00
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message4539" onclick="return GoToMessage(4539)">this message</a>
+       </div>
+
+       <div class="text">
+What if the field size and curve order are extremely close? And then you find some injection and work over that.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message4542">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.01.2021 06:01:12">
+06:01
+       </div>
+
+       <div class="text">
+Eh i guess maths mod p wouldn’t always work if it falls out of the range.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message4543">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DL
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.01.2021 07:11:59">
+07:11
+       </div>
+
+       <div class="from_name">
+Daniel Lubarov
+       </div>
+
+       <div class="text">
+Yeah I&apos;m not sure if the orders being close helps, but there are at least some practical schemes that use a single curve and just do non-native field arithmetic. I think Aztec and Matter are taking that approach with Plonk/KZG. Could be very interesting if someone came up with cheaper ways of simulating arithmetic for certain pairs of fields
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message4544">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.01.2021 07:14:58">
+07:14
+       </div>
+
+       <div class="text">
+Recursive FRI-based SNARKs might another practical approach to recursion with a single field — it involves a lot of hash evaluations, but one could use a KZG sub-protocol to mitigate the cost, as in <a href="https://hackmd.io/@uCHu_NMSQ4mIUvA8i4qAyg/rkxBcmvcI">https://hackmd.io/@uCHu_NMSQ4mIUvA8i4qAyg/rkxBcmvcI</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message4545">
+
+      <div class="body details">
+Alan joined group by link from Group
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message4546">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.01.2021 19:32:53">
+19:32
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+The recent paper <a href="https://eprint.iacr.org/2020/1618">https://eprint.iacr.org/2020/1618</a> makes it more feasible to do recursion via private aggregation without a cycle of curves, because the aggregation verifier only requires a constant number of operations in the &quot;wrong&quot; field
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message4547">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.01.2021 19:33:16">
+19:33
+       </div>
+
+       <div class="text">
+This approach requires that you carry a large state between proofs, though
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message4548">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.01.2021 19:34:41">
+19:34
+       </div>
+
+       <div class="text">
+(the current state of the computation is still verifiable with a succinct proof, but that proof isn&apos;t sufficient on its own to make subsequent proof steps)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message4549">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.01.2021 19:44:10">
+19:44
+       </div>
+
+       <div class="text">
+However, I think this would in practice be much more efficient than any approach using FRI and/or GKR.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message4550">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.01.2021 19:48:06">
+19:48
+       </div>
+
+       <div class="text">
+Note that in PLONK-style arithmetization it&apos;s possible to do multiple lookups per row (we have support for this in the Halo 2 prototype), so that can further reduce the overhead of wrong-field arithmetic even for circuits where you can&apos;t afford very large tables. This comes at the cost of an increase in proof size (linear in the number of lookup arguments)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message4551">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.01.2021 19:53:27">
+19:53
+       </div>
+
+       <div class="text">
+Btw, if there&apos;s a way to optimize wrong-field arithmetic based on the field sizes being close or having a particular structured difference, I couldn&apos;t find it. The bottleneck is in reduction, specifically decomposing the unreduced product. The techniques that are usually used outside circuits don&apos;t help because they are based on decomposition being a cheap operation, and in circuits it isn&apos;t.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message4552">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.01.2021 19:58:32">
+19:58
+       </div>
+
+       <div class="text">
+(we have a lot of control over the difference between the base and scalar field sizes if we use CM curves, so it&apos;s conceivable that helps, but as I say, I couldn&apos;t find anything)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-2">
+
+      <div class="body details">
+17 January 2021
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message4553">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.01.2021 01:49:03">
+01:49
+       </div>
+
+       <div class="from_name">
+Drew Stone
+       </div>
+
+       <div class="text">
+<a href="https://t.me/dairahopwood">@dairahopwood</a> are there resources that describe using Plonk with non-trusted setups? I see that&apos;s what is being used in Halo2 and papers/resources online all point to a trusted setup
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message4554">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.01.2021 01:50:43">
+01:50
+       </div>
+
+       <div class="text">
+Is it that Halo2 uses a different poly-commit scheme, a similar inner product argument to bulletproofs (iiuc from the paper)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message4555">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.01.2021 02:09:07">
+02:09
+       </div>
+
+       <div class="from_name">
+Drew Stone
+       </div>
+
+       <div class="text">
+Ok I think I answered my own question :)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message4556">
+
+      <div class="body details">
+Stefan Beyer joined group by link from Group
+      </div>
+
+     </div>
+
+     <div class="message service" id="message4557">
+
+      <div class="body details">
+L joined group by link from Group
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message4558">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.01.2021 07:42:30">
+07:42
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+Yes, exactly that. There will be a paper and documentation, but it&apos;s not ready yet. The beginnings of the documentation are here: <a href="https://zcash.github.io/halo2">https://zcash.github.io/halo2</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message4559">
+
+      <div class="body details">
+Hamidreza Khoshakhlagh joined group by link from Group
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-3">
+
+      <div class="body details">
+18 January 2021
+      </div>
+
+     </div>
+
+     <div class="message service" id="message4560">
+
+      <div class="body details">
+Raha Peyravi joined group by link from Group
+      </div>
+
+     </div>
+
+     <div class="message service" id="message4561">
+
+      <div class="body details">
+Kevy Kev joined group by link from Group
+      </div>
+
+     </div>
+
+     <div class="message service" id="message4562">
+
+      <div class="body details">
+MBGBuzzer⛓4BLOCK.TEAM joined group by link from Group
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-4">
+
+      <div class="body details">
+19 January 2021
+      </div>
+
+     </div>
+
+     <div class="message service" id="message4563">
+
+      <div class="body details">
+RallyMonkey joined group by link from Group
+      </div>
+
+     </div>
+
+     <div class="message service" id="message4564">
+
+      <div class="body details">
+Shubham Rathi joined group by link from Group
+      </div>
+
+     </div>
+
+     <div class="message service" id="message4565">
+
+      <div class="body details">
+Hias joined group by link from Group
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </body>
+
+</html>

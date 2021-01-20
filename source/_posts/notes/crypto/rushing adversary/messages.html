@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Exported Data</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <script src="js/script.js" type="text/javascript">
+
+  </script>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <div class="content">
+
+     <div class="text bold">
+ZenGo X 
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+19 January 2021
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11003">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+E
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="19.01.2021 11:21:18">
+11:21
+       </div>
+
+       <div class="from_name">
+Elvis 
+       </div>
+
+       <div class="text">
+Hi guys, I have a question on MPC. Most MPC papers (coin tossing, secret sharing, etc.) seem to assume the adversary is rushing, i.e., can observe others&apos; shares before decicing its own one. What are the common defenses against such rushing behaviours? I cannot found a summary or paper dedicated on them. It seems that most protocols employ commit-and-reveal or erasure coding techniques for this purpose, but still the protection seems not perfect for time-sensitive protocols, e.g., randomness beacon. Thanks for any help there 🙂
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11005">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="19.01.2021 15:12:34">
+15:12
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11003" onclick="return GoToMessage(11003)">this message</a>
+       </div>
+
+       <div class="text">
+Rushing adversary is the common model for synchronous MPC, i.e. protocol that is executed in rounds. It’s more of a network thing and a good approximation of real world. If you assume asynchronous network you don’t need to assume rushing adversary. If you want to design a protocol in which you specifically assume the adversary is not the last one to answer - you are putting a strong limitation on your protocol (not saying that it is not interesting), for example - I will not use such protocol in production. <br>As part of the rushing adversary model, the adversary gets to decide if the honest parties get output. The way to combat this is by requiring certain security properties from the MPC protocol: fairness and guaranteed output delivery (if the adversary gets output so does the honest parties) are the most relevant. See <a href="https://eprint.iacr.org/2014/668.pdf">https://eprint.iacr.org/2014/668.pdf</a> for discussion.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11006">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="19.01.2021 15:17:04">
+15:17
+       </div>
+
+       <div class="text">
+<a href="https://caw34769.medium.com/secret-network-a-privacy-preserving-secret-contract-decentralized-application-platform-e7dca1089a9c">https://caw34769.medium.com/secret-network-a-privacy-preserving-secret-contract-decentralized-application-platform-e7dca1089a9c</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11007">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+E
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="19.01.2021 15:46:06">
+15:46
+       </div>
+
+       <div class="from_name">
+Elvis 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11005" onclick="return GoToMessage(11005)">this message</a>
+       </div>
+
+       <div class="text">
+Nice explanation, thanks for the response! Will go through the paper and the article 🙂
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11008">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="19.01.2021 15:48:11">
+15:48
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="text">
+The secret network blog is unrelated
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11009">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+E
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="19.01.2021 16:10:18">
+16:10
+       </div>
+
+       <div class="from_name">
+Elvis 
+       </div>
+
+       <div class="text">
+😅yeah I realised that...
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11010">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="19.01.2021 16:10:30">
+16:10
+       </div>
+
+       <div class="text">
+nvm
+       </div>
+
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </body>
+
+</html>

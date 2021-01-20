@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Exported Data</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <script src="js/script.js" type="text/javascript">
+
+  </script>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <div class="content">
+
+     <div class="text bold">
+ZenGo X 
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+16 January 2021
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10940">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+n
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.01.2021 03:58:27">
+03:58
+       </div>
+
+       <div class="from_name">
+nikkolasg 
+       </div>
+
+       <div class="text">
+I&apos;m looking for libraries to play with threshold EdDSA: I&apos;ve found ZenGo&apos;s one which is based on the 2001 paper from Strobl (<a href="https://raw.githubusercontent.com/ZenGo-X/multi-party-schnorr/master/papers/provably_secure_distributed_schnorr_signatures_and_a_threshold_scheme.pdf">https://raw.githubusercontent.com/ZenGo-X/multi-party-schnorr/master/papers/provably_secure_distributed_schnorr_signatures_and_a_threshold_scheme.pdf</a>). Do you know if it&apos;s still secure w.r.t to attacks discovered in <a href="https://eprint.iacr.org/2020/945.pdf">https://eprint.iacr.org/2020/945.pdf</a> ?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10941">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.01.2021 06:03:50">
+06:03
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message10940" onclick="return GoToMessage(10940)">this message</a>
+       </div>
+
+       <div class="text">
+Hi <a href="https://t.me/nikkolasg">@nikkolasg</a> , so the good news is that both the original paper and the ZenGo variant are supposed to not be affected by this attack. The bad news is that in both cases this is done by an additional rounds of communication, by way of first committing to nonce/key commitments. This means that this is possibly not state of the art and there should be a way to implement 2 round eddsa ( based on Musig 2 or FROST maybe) . Btw, <a href="https://t.me/michelemuuuuuu">@michelemuuuuuu</a> is one of the authors of the solving ROS paper perhaps can confirm in case they looked at Stinson and Strobl construction
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10942">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+n
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.01.2021 06:06:36">
+06:06
+       </div>
+
+       <div class="from_name">
+nikkolasg 
+       </div>
+
+       <div class="text">
+I see - so there is no 1-round threshold EdDSA like there is for ECDSA ?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10943">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.01.2021 06:14:06">
+06:14
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="text">
+I think that’s a good research problem ! <br>Note that 1-round threshold ecdsa is 1-round with preprocessing. Threshold eddsa / schnorr can be 1-round in the same sense : MuSig2 achieved this (<a href="https://eprint.iacr.org/2020/1261.pdf">https://eprint.iacr.org/2020/1261.pdf</a>)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10944">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+n
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.01.2021 06:24:30">
+06:24
+       </div>
+
+       <div class="from_name">
+nikkolasg 
+       </div>
+
+       <div class="text">
+Yep with preprocessing I meant. MuSig2 sounds perfect ! I see ZenGo&apos;s implementation (once more!) - Would you have some ideas as to what changes would it require to make it work with ed25519 (im thinking cofactor pb as well) and verification be RFC compatible ?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10945">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.01.2021 06:41:46">
+06:41
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message10944" onclick="return GoToMessage(10944)">this message</a>
+       </div>
+
+       <div class="text">
+I didn’t check for MuSig2, however in general I believe bitcoin schnorr uses a different convention from ed25519 regarding the equation to be verified. Besides that there’s the issues of working with curve25519 ( need to make sure you are in the subgroup of prime order along the entire protocol),  finally there are some design choices in eddsa ( e.g. the way nonce is generated) that you need to accept as deviation or work hard to support ( see Nigel’s <a href="https://eprint.iacr.org/2020/214.pdf">https://eprint.iacr.org/2020/214.pdf</a> )
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10946">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+n
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.01.2021 06:47:43">
+06:47
+       </div>
+
+       <div class="from_name">
+nikkolasg 
+       </div>
+
+       <div class="text">
+Eddsa verification can verify &quot;schnorr signatures&quot;, I&apos;ll have to see if MuSig2 can support this format. Thanks a lot for the pointers, gonna read up a bit on all that :)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10952">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+M
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.01.2021 22:42:43">
+22:42
+       </div>
+
+       <div class="from_name">
+Mikerah 
+       </div>
+
+       <div class="text">
+<a href="https://forum.renproject.io/t/proposal-to-add-renxmr-support-to-renvm/444/2">https://forum.renproject.io/t/proposal-to-add-renxmr-support-to-renvm/444/2</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message10953">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.01.2021 22:43:04">
+22:43
+       </div>
+
+       <div class="text">
+A call for EDDSA support in renVM.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10954">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.01.2021 23:56:58">
+23:56
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message10952" onclick="return GoToMessage(10952)">this message</a>
+       </div>
+
+       <div class="text">
+This should be helpful : <a href="https://eprint.iacr.org/2020/1126">https://eprint.iacr.org/2020/1126</a> (<strong>Bitcoin-Monero Cross-chain Atomic Swap)</strong>
+       </div>
+
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </body>
+
+</html>

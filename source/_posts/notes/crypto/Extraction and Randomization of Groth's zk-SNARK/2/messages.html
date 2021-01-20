@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Exported Data</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <script src="js/script.js" type="text/javascript">
+
+  </script>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <div class="content">
+
+     <div class="text bold">
+ZenGo X 
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+14 January 2021
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10882">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.01.2021 19:24:57">
+19:24
+       </div>
+
+       <div class="from_name">
+Damian Straszak
+       </div>
+
+       <div class="text">
+Hi guys, an expert question regarding zkSNARKS. Suppose I have a SNARK for a relation R(s,w) (say Groth16). Now, someone produced a proof Π for statement s and witness w. I happen to know that for a different statement s&apos; the witness w also works (but I don&apos;t know w only Π). Can I create a proof Π&apos; for statement s&apos;, using Π (without the knowledge of w)? When looking at the security guarantees of Groth16 this does not seem ruled out. Would appreciate any help here :)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message10883">
+
+      <div class="body details">
+Tyrone invited Tyrone
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10884">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+MO
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.01.2021 19:30:20">
+19:30
+       </div>
+
+       <div class="from_name">
+Michele Orrù
+       </div>
+
+       <div class="text">
+Damian: that&apos;s not ruled out indeed, and in deal with it you must achieve something stronger than knowledge-soundness: simulation-extractability
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10885">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.01.2021 19:32:50">
+19:32
+       </div>
+
+       <div class="from_name">
+Damian Straszak
+       </div>
+
+       <div class="text">
+Nice, does any state-of-the-art construction achieve that? Do you have any pointers to literature maybe?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10886">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+MO
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.01.2021 19:33:46">
+19:33
+       </div>
+
+       <div class="from_name">
+Michele Orrù
+       </div>
+
+       <div class="text">
+I haven&apos;t really, sorry, but check out simulation-extractability groth16. There should be something from Carla Rafols or Helger Lipmaa. Good luck!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10887">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+KG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.01.2021 19:34:56">
+19:34
+       </div>
+
+       <div class="from_name">
+Kobi Gurkan
+       </div>
+
+       <div class="text">
+Groth16 was eventually shown to have some weaker form of extractibility: <a href="https://eprint.iacr.org/2020/811">https://eprint.iacr.org/2020/811</a><br><br>(Statement non malleability)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10888">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.01.2021 19:37:07">
+19:37
+       </div>
+
+       <div class="from_name">
+Damian Straszak
+       </div>
+
+       <div class="text">
+Thanks Kobi, exactly what I was looking for!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10889">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+MO
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.01.2021 19:43:41">
+19:43
+       </div>
+
+       <div class="from_name">
+Michele Orrù
+       </div>
+
+       <div class="text">
+Kubi: oh cool, thanks! (It seems they transform the statement adding an encryption of the witness? lol)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10890">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+KG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.01.2021 19:54:34">
+19:54
+       </div>
+
+       <div class="from_name">
+Kobi Gurkan
+       </div>
+
+       <div class="text">
+I think the whitebox notion works with the original Groth16 but for the blackbox they use the SAVER encryption scheme <br><br>I don’t have a good grasp of when either is needed
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10891">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.01.2021 20:01:17">
+20:01
+       </div>
+
+       <div class="from_name">
+Damian Straszak
+       </div>
+
+       <div class="text">
+In the basic Groth16 as I gather it is not enforced that the polynomials u_i(X) are linearly independent? Hence malleability is possible I imagine -- if it happens so that the polynomial are not independent, in a specific way (say two of them are equal to each other).
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10892">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+KG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.01.2021 20:04:56">
+20:04
+       </div>
+
+       <div class="from_name">
+Kobi Gurkan
+       </div>
+
+       <div class="text">
+I believe that’s why everyone adds the “a*0==0” constraints for every public input a
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10893">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.01.2021 20:08:28">
+20:08
+       </div>
+
+       <div class="from_name">
+Damian Straszak
+       </div>
+
+       <div class="text">
+yeah, that seems to fix it, nice :) Thanks Kobi!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message10894">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+KG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.01.2021 20:46:20">
+20:46
+       </div>
+
+       <div class="from_name">
+Kobi Gurkan
+       </div>
+
+       <div class="text">
+np :)
+       </div>
+
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </body>
+
+</html>
