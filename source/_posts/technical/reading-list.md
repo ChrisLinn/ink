@@ -344,6 +344,7 @@
 * https://github.com/segmentio/analytics-rust
 * https://github.com/rust-analyzer/rust-analyzer
 * https://github.com/omo/hello2015/tree/master/5min-rust
+* https://github.com/matklad/rust-course
 
 __rust NG!__
 + https://github.com/rust-lang-nursery
