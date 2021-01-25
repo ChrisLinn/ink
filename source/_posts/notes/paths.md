@@ -285,6 +285,7 @@ security的论文 实验和出成果都不难, 工业界比学术界领先, 论�
 + https://gramoli.redbellyblockchain.io/web/doc/talks/researchmethod.pdf
 + https://www.cse.unsw.edu.au/~gernot/benchmarking-crimes.html
 + https://people.inf.ethz.ch/troscoe/pubs/review-writing.pdf
++ https://github.com/asatarin/testing-distributed-systems
 
 ## reference
 + Mendeley
@@ -389,6 +390,7 @@ oyente用符号化执行
 
 ## Design
 + DIY
+    * https://pixlr.com/tw/x/
     * 稿定设计
     * 墨刀
     * 摹客
