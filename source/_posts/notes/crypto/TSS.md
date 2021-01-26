@@ -1,5 +1,7 @@
 # TSS
 
++ https://github.com/ZenGo-X/awesome-tss
+
 ## reshare
 + https://eprint.iacr.org/2019/017.pdf
 + http://pmg.csail.mit.edu/papers/mpss-thesis.pdf
