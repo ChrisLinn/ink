@@ -111,6 +111,10 @@
     + https://crypto.stackexchange.com/questions/58380/ecdsa-eddsa-and-ed25519-relationship-compatibility
     * https://crypto.stackexchange.com/questions/60383/what-is-the-difference-between-ecdsa-and-eddsa
 
+## failed cryptography
++ https://www.cfail.org/
++ https://www.reddit.com/r/FailedCrypto/
+
 ## ZKP academa
 + https://github.com/matter-labs/awesome-zero-knowledge-proofs
 + https://github.com/AdamISZ/from0k2bp
