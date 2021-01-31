@@ -82,3 +82,4 @@ Weil配對可將橢圓曲線之撓群（torsion group）上的兩個點，映射
 + [PAIRING-BASED CRYPTOGRAPHY AT HIGH SECURITY LEVELS](https://eprint.iacr.org/2005/076.pdf)
 + https://en.wikipedia.org/wiki/Pairing-based_cryptography
 + https://zh.wikipedia.org/wiki/%E9%9F%A6%E4%BC%8A%E9%85%8D%E5%AF%B9
++ [Benchmarking pairing-friendly elliptic curves libraries](https://hackmd.io/@zkteam/eccbench)

@@ -169,6 +169,8 @@ security的论文 实验和出成果都不难, 工业界比学术界领先, 论�
     * [Science of Security: Combining Theory and Measurement to Reflect the Observable](https://people.scs.carleton.ca/~paulv/papers/science-security-SPmag-jan2018.pdf)
 + https://github.com/dair-ai/awesome-research-proposals-guide
 + directions
+    * 避免坑爹的方向？https://www.cfail.org/
+        - 事实上这个会议挺好玩的
     * [SoK: Research Perspectives and Challenges for Bitcoin and Cryptocurrencies](https://www.ieee-security.org/TC/SP2015/papers-archived/6949a104.pdf)
     * 这个里面的讨论也不错的:
         - [Analysis of Nakamoto Consensus](https://eprint.iacr.org/2019/943)
@@ -192,6 +194,7 @@ security的论文 实验和出成果都不难, 工业界比学术界领先, 论�
 + https://www.connectedpapers.com/
 + 搜索论文用 dblp.org
 + download at https://sci-hub.tw/
+    * [Sci-hub domain checker](https://felixbreton.github.io/scihub/)
 + 学术搜索
     * https://libgen.pw/
     * http://libgen.io/
