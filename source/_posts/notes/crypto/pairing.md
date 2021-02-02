@@ -83,3 +83,4 @@ Weil配對可將橢圓曲線之撓群（torsion group）上的兩個點，映射
 + https://en.wikipedia.org/wiki/Pairing-based_cryptography
 + https://zh.wikipedia.org/wiki/%E9%9F%A6%E4%BC%8A%E9%85%8D%E5%AF%B9
 + [Benchmarking pairing-friendly elliptic curves libraries](https://hackmd.io/@zkteam/eccbench)
++ https://static1.squarespace.com/static/5fdbb09f31d71c1227082339/t/5ff394720493bd28278889c6/1609798774687/PairingsForBeginners.pdf
