@@ -163,6 +163,7 @@
     * Pay-to-EndPoint（P2EP）
 + Schnorr-based signatures
     * https://github.com/sipa/bips/blob/bip-schnorr/bip-schnorr.mediawiki
+    * [BIP32/43-based standard for Schnorr signatures & decentralized identity](https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2021-February/018381.html)
     * https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2018-January/015614.html
     * https://bitcoin.stackexchange.com/questions/77234/schnorr-vs-ecdsa/77235#77235
     * https://bitcoin.stackexchange.com/questions/85213/when-schnorr-signatures-are-part-of-bitcoin-will-it-be-possible-validate-each-bl
