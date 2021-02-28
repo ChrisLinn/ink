@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Exported Data</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <script src="js/script.js" type="text/javascript">
+
+  </script>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <div class="content">
+
+     <div class="text bold">
+ZenGo X 
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+23 February 2021
+      </div>
+
+     </div>
+
+     <div class="message service" id="message11403">
+
+      <div class="body details">
+James joined group by link from Group
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11404">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="23.02.2021 07:17:30">
+07:17
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="text">
+Summary of a few interesting recent results : <br>- <a href="https://eprint.iacr.org/2021/176.pdf">Blitz: Secure Multi-Hop Payments Without Two-Phase Commits</a>: Two phase commit is how the lightning network uses HTLC for payments. The authors managed to get rid of the hashing and revealing preimage part, making the protocol for payments actually simpler and better supported across chains (rely on timelocks). <br>- <a href="https://eprint.iacr.org/2021/180.pdf">Apollo – Optimistically Linear and Responsive SMR</a> : This one blew my mind. <a href="https://t.me/hermitsage">@hermitsage</a> please correct me if I got it wrong - but you basically introduce LINEAR SMR, with the tradeoff that you commit f+1 chained states at the same time? <br>- <a href="https://eprint.iacr.org/2021/186.pdf">Leakage-resilience of the Shamir Secret-sharing Scheme against Physical-bit Leakages</a> : This paper continues a fascinating line of work that deals with the leakage from MPC (specially secret sharing based). As with previous work on this topic, this paper shows in a complex way that Shamir secret sharing is leakage resilient for applications that uses shares from large enough field (elliptic curve fields are fine)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11405">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="23.02.2021 07:21:20">
+07:21
+       </div>
+
+       <div class="from_name">
+Adithya Bhat
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11404" onclick="return GoToMessage(11404)">this message</a>
+       </div>
+
+       <div class="text">
+In Apollo, our key idea is to be as efficient as possible in the optimistic case, i.e., when all the nodes are correct. In this optimistic case, we have linear SMR, responsive commits (commits are responsive if the time to commit a block is only dependent on the network speed) and uses only one normal sign operation (this is helpful for CPS). We push the use of the worst case network delay \Delta, quadratic communication and threshold signatures to the worst case. We do this by hash chaining and using implicit votes.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11406">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="23.02.2021 07:23:10">
+07:23
+       </div>
+
+       <div class="text">
+We use the idea that if a node p proposes a block B referring to another block B’ as its parent, then it votes for the entire chain. Therefore, if a block B gets f children, it has enough votes/extensions to safely commit B.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11407">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="23.02.2021 07:25:19">
+07:25
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="text">
+Thanks ! were you inspired by bitcoin ?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11408">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="23.02.2021 07:25:43">
+07:25
+       </div>
+
+       <div class="from_name">
+Adithya Bhat
+       </div>
+
+       <div class="text">
+Inspiration from Casper, Bitcoin and Sync Hotstuff.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11409">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="23.02.2021 07:26:24">
+07:26
+       </div>
+
+       <div class="text">
+Sync hotstuff mentions the implicit vote property but doesn’t use it. Casper collects implicit votes but also doesn’t use it.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11410">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="23.02.2021 07:27:28">
+07:27
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="text">
+Congrats , this is truly useful result..
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11411">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="23.02.2021 07:29:59">
+07:29
+       </div>
+
+       <div class="from_name">
+Adithya Bhat
+       </div>
+
+       <div class="text">
+We have a rust implementation here. <a href="https://github.com/adithyabhatkajake/libchatter-rs/">https://github.com/adithyabhatkajake/libchatter-rs/</a> . It is generic and can be used to build any protocol by reacting to custom defined messages. PRs on improving the library are welcome.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11412">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+SD
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="23.02.2021 08:21:01">
+08:21
+       </div>
+
+       <div class="from_name">
+Samuel Dare
+       </div>
+
+       <div class="text">
+Does anyone know if the algoritms in this paper are patented?<br><br>UC Non-Interactive, Proactive, Threshold ECDSA<br><br><pre>Building on the Gennaro &amp; Goldfeder and Lindell &amp; Nof protocols (CCS ’18), we present a threshold<br>ECDSA protocol, for any number of signatories and any threshold, that improves as follows over the state<br>of the art:<br>• Signature generation takes only 4 rounds (down from the current 8 rounds), with a comparable<br>computational cost. Furthermore, 3 of these rounds can take place in a preprocessing stage before<br>the signed message is known, lending to a non-interactive threshold ECDSA protocol.<br>• The protocol withstands adaptive corruption of signatories. Furthermore, it includes a periodic<br>refresh mechanism and offers full proactive security.<br>• The protocol realizes an ideal threshold signature functionality within the UC framework, in the<br>global random oracle model, assuming Strong RSA, semantic security of the Paillier encryption, and<br>a somewhat enhanced variant of existential unforgeability of ECDSA.<br>These properties (low latency, compatibility with cold-wallet architectures, proactive security, and composable security) make the protocol ideal for threshold wallets for ECDSA-based cryptocurrencies.</pre><br><a href="https://eprint.iacr.org/2020/492.pdf">https://eprint.iacr.org/2020/492.pdf</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11413">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+I
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="23.02.2021 08:35:22">
+08:35
+       </div>
+
+       <div class="from_name">
+Idan 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11412" onclick="return GoToMessage(11412)">this message</a>
+       </div>
+
+       <div class="text">
+Hi Samuel! The protocol is open and free-to-use. <a href="https://t.me/udipeled">@udipeled</a>  and <a href="" onclick="return ShowMentionName()">Nikos</a> , the inventors of the protocol, are in this group
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message11414">
+
+      <div class="body details">
+Rhett joined group by link from Group
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11415">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+SD
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="23.02.2021 11:47:43">
+11:47
+       </div>
+
+       <div class="from_name">
+Samuel Dare
+       </div>
+
+       <div class="text">
+Thanks!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message11416">
+
+      <div class="body details">
+Arina joined group by link from Group
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </body>
+
+</html>
