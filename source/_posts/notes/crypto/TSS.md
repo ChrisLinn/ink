@@ -56,6 +56,7 @@ https://eprint.iacr.org/2020/767
 + tECDSA
 + tBLS
     + [BLS](https://crypto.stanford.edu/~dabo/pubs/papers/BLSmultisig.html)
+        * https://blog.dash.org/bls-is-it-really-that-slow-4ca8c1fcd38e
     * based on [pairing](/notes/crypto/pairing)
         - cons: assumption of pairing
             + 现在还没有 efficient, plausibly secure PQ (post-quantum!) bilinear maps （但 不 PQ的应该已经有了？）
