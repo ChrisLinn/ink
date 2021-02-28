@@ -31,6 +31,7 @@ Learning With Error (LWE)
 + TFHE
     * https://eprint.iacr.org/2014/816.pdf is a precursor for the popular [TFHE](https://tfhe.github.io/tfhe/)
 + cuFHE
++ https://fhe.org/
 + https://palisade-crypto.org/
 + lattice-related
     * QEDIT (in a version of their PSI)

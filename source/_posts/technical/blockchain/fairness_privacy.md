@@ -13,6 +13,8 @@ Some nice books&papers:
 + [Anonymous Multi-Hop Locks for Blockchain Scalability and Interoperability](https://www.ndss-symposium.org/wp-content/uploads/2019/02/ndss2019_09-4_Malavolta_paper.pdf)
 + [Concurrency and Privacy with Payment-Channel Networks](https://eprint.iacr.org/2017/820)
     * using Multihop HTLC
+* https://csrc.nist.gov/projects/pec/suite
+    + draft: [Toward a PEC Use-Case Suite](https://csrc.nist.gov/CSRC/media/Projects/pec/documents/suite-draft1.pdf)
 
 
 __Q:__ is there an efficient way to do simple private information retrieval to get 1 out of N items, without the sender knowing which out of the N was requested?
