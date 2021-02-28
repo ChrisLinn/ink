@@ -110,6 +110,7 @@ ECDH 的实际交互过程部署中需要着重考虑对接收到的 **临时公
                 * 保证私钥值是 8 的倍数
 + 点的坐标是底层素数域的中的元素并且确实是椭圆曲线方程上的点
     * invalid-curve 攻击
+* Elliptic library: without validating secp256k1 points, ECDH is broken https://github.com/indutny/elliptic/commit/441b7428b0e8f6636c42118ad2aaa186d3c34c3f
 
 </br>
 
