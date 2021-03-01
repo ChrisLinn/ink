@@ -43,3 +43,4 @@ Learning With Error (LWE)
 
 ## Misc
 + https://fhe.org/en/talks/2020-11-04_introduction_to_fhe
++ [smartFHE: Privacy-Preserving Smart Contracts from Fully Homomorphic Encryption](https://eprint.iacr.org/2021/133.pdf)
