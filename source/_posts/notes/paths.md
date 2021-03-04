@@ -169,6 +169,7 @@ security的论文 实验和出成果都不难, 工业界比学术界领先, 论�
     * [Science of Security: Combining Theory and Measurement to Reflect the Observable](https://people.scs.carleton.ca/~paulv/papers/science-security-SPmag-jan2018.pdf)
 + https://github.com/dair-ai/awesome-research-proposals-guide
 + directions
+    * http://www.connectedpapers.com/
     * 避免坑爹的方向？https://www.cfail.org/
         - 事实上这个会议挺好玩的
     * 也可以看看这个 https://www.reddit.com/r/FailedCrypto/
