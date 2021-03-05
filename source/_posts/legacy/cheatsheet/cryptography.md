@@ -144,6 +144,7 @@
     + http://u.cs.biu.ac.il/~lindell/MPC-resources.html
     * [Foundations of Cryptography](http://u.cs.biu.ac.il/~lindell/89-856/complete-89-856.pdf)
     * [How To Simulate It – A Tutorial on the Simulation Proof Technique](https://eprint.iacr.org/2016/046.pdf)
+    + [Sequences of games: a tool for taming complexity in security proofs](https://eprint.iacr.org/2004/332.pdf)
     * ...
 - [Secure Computation](http://www.cs.umd.edu/~jkatz/gradcrypto2/f13/scribes.html) from UMD
 + [Special Topic in Cryptography: Secure Computation](https://people.eecs.berkeley.edu/~sanjamg/classes/cs294-spring16/) from Berkeley

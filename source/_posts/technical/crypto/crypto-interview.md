@@ -185,6 +185,9 @@ $y^2 = x^3 + ax + b,\ 4a^3 + 27b^2 \ne 0$
 
 独立的基于模拟的定义能提供顺序组合下的安全性，所以也很容易通过使用模块化顺序组合定理将协议插入更大的协议来证明大协议的安全性。
 
++ [How To Simulate It - A Tutorial on the Simulation Proof Technique](https://eprint.iacr.org/2016/046.pdf)
++ [Sequences of games: a tool for taming complexity in security proofs](https://eprint.iacr.org/2004/332.pdf)
+
 ## Fiat-Shamir transform
 + the Fiat-Shamir heuristic
     + a technique for taking an interactive proof of knowledge and creating a digital signature based on it.
