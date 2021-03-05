@@ -114,6 +114,7 @@ title: 如何学习编程
     * corner case
 + 代码风格
     * [lint](https://mp.weixin.qq.com/s?__biz=MzA3NDM0ODQwMw==&mid=402269704&idx=1&sn=40667c18a3b8d10f7b5df6188587fba5), 逼迫对要写的代码做更多的思考，把更多的代码逻辑转化成数据。代码到数据的转化是抽象思维的很重要一步. 将代码和代码进一步解耦，用数据（一些 rule）串联起来。
+        - [Awesome Coding Standards: A collection of C and C++ Coding Standards](https://github.com/abougouffa/awesome-coding-standards)
         - [airbnb 的 javascript style](http://mmbiz.qpic.cn/mmbiz/SER9L29WQ0icEibnsKnTs5TUvzzcN5ySJaY9VibayPyBSy98qoM5Num5Ca49biamEpMiaw6H8qLibwgOMXMcTX2LhRxQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
             + and...
                 * 一个函数最多有 50 行代码。超过 50 行要么拆分之，要么精简之。

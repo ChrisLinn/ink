@@ -57,6 +57,7 @@
         + [Type switches](https://tour.golang.org/methods/16), [Type assertions](https://tour.golang.org/methods/15)
         + [Errors](https://tour.golang.org/methods/19)
     - profiling
+        + https://github.com/DataDog/go-profiler-notes
 		+ [google/pprof](https://github.com/google/pprof)
             * `go get github.com/google/pprof`
             * `pprof -top cpu.pprof`
