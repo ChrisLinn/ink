@@ -268,6 +268,7 @@
     * [Crypto 101](https://github.com/crypto101/book)
     * [Practical-Cryptography-for-Developers-Book](https://github.com/nakov/Practical-Cryptography-for-Developers-Book)
     * [Serious Cryptography](https://github.com/ChrisLinn/chrislinn.ink/blob/master/assets/Serious%20Cryptography%20A%20Practical%20Introduction%20to%20Modern%20Encryption.pdf)
+    + https://github.com/cryptoparty/handbook
     + [Introduction to Reliable and Secure Distributed Programming](https://github.com/ChrisLinn/chrislinn.ink/tree/master/assets/IntroductionToReliableAndSecur_Book_2011.pdf)
     + https://github.com/pwang00/Cryptographic-Attacks
     + https://github.com/matthewdgreen/cryptoengineering
