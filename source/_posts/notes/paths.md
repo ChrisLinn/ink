@@ -170,6 +170,7 @@ security的论文 实验和出成果都不难, 工业界比学术界领先, 论�
 + https://github.com/dair-ai/awesome-research-proposals-guide
 + directions
     * http://www.connectedpapers.com/
+    * https://medium.com/digital-diplomacy/how-to-look-for-ideas-in-computer-science-research-7a3fa6f4696f
     * 避免坑爹的方向？https://www.cfail.org/
         - 事实上这个会议挺好玩的
     * 也可以看看这个 https://www.reddit.com/r/FailedCrypto/
