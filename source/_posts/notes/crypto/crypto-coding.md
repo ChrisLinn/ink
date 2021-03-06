@@ -177,6 +177,8 @@ __TODO:__
 
 + [How I'm learning to build secure systems](https://github.com/veeral-patel/learn-security-engineering)
 + https://www.chosenplaintext.ca/articles/beginners-guide-constant-time-cryptography.html
++ [The state of tooling for verifying constant-timeness of cryptographic implementations](https://neuromancer.sk/article/26)
++ https://github.com/mratsim/constantine/blob/master/docs/optimizations.md
 
 ---
 __TODO:__
