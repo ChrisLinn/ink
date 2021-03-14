@@ -78,6 +78,7 @@ Weil配對可將橢圓曲線之撓群（torsion group）上的兩個點，映射
 
 ## 扩展阅读
 + [An Introduction to Pairing-Based Cryptography](https://www.math.uwaterloo.ca/~ajmeneze/publications/pairings.pdf)
++ [Pairings for beginners](https://www.craigcostello.com.au/tutorials)
 + [Still Wrong Use of Pairings in Cryptography](https://eprint.iacr.org/2016/223.pdf)
 + [PAIRING-BASED CRYPTOGRAPHY AT HIGH SECURITY LEVELS](https://eprint.iacr.org/2005/076.pdf)
 + https://en.wikipedia.org/wiki/Pairing-based_cryptography
