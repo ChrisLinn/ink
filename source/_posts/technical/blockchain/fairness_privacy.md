@@ -25,6 +25,7 @@ __A:__ [oblivious transfer](https://en.wikipedia.org/wiki/Oblivious_transfer)
 
 ## DKG
 + [Aggregatable Distributed Key Generation](https://eprint.iacr.org/2021/005)
++ [NI-DKG](https://drive.google.com/file/d/13oJ2dABMI2kMdmB7DN6Fj9k5rocFYiRC/view)
 
 ## MPC
 + (输出结果)正确性
