@@ -13,6 +13,8 @@
 + https://github.com/rustielin/Blockchain-Notes
 + https://github.com/matthewdgreen/blockchains
 + https://cs251.stanford.edu/
++ https://sites.google.com/view/cs598cal
++ https://drive.google.com/drive/u/0/folders/1Vo3UPK4lamunGVtV9boVQbkteaiFLPaY
 + https://github.com/dgryski/awesome-consensus
 + https://github.com/dmdque/blockchain-engineer
 + https://github.com/fccoelho/Curso_Blockchain
