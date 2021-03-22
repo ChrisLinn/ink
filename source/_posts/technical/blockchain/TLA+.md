@@ -21,3 +21,4 @@
 * https://github.com/vacp2p/formalities
 * https://github.com/decanus/rutschblock
 * https://github.com/matklad/paxosnotes
+* https://mwhittaker.github.io/frankenpaxos/
