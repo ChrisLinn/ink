@@ -15,6 +15,7 @@ Some nice books&papers:
     * using Multihop HTLC
 * https://csrc.nist.gov/projects/pec/suite
     + draft: [Toward a PEC Use-Case Suite](https://csrc.nist.gov/CSRC/media/Projects/pec/documents/suite-draft1.pdf)
+- https://github.com/hashmatter/privacy-preserving-primitives
 
 
 __Q:__ is there an efficient way to do simple private information retrieval to get 1 out of N items, without the sender knowing which out of the N was requested?
