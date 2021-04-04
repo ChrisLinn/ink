@@ -1,0 +1,2404 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Exported Data</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <script src="js/script.js" type="text/javascript">
+
+  </script>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <div class="content">
+
+     <div class="text bold">
+ZenGo X 
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+29 March 2021
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11907">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+B
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.03.2021 01:16:56">
+01:16
+       </div>
+
+       <div class="from_name">
+Barak 
+       </div>
+
+       <div class="text">
+You may find this paper helpful: <a href="https://eprint.iacr.org/2012/699">https://eprint.iacr.org/2012/699</a><br>Section 4 gives concrete parameters. It&apos;s a decade old, but there hasn&apos;t been significant improvement to attacks since (best attack is still BKW with modification to the final stage).<br><br>I&apos;m pretty sure there used to be a website with LPN breaking records, but I just can&apos;t find it.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11908">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.03.2021 01:18:01">
+01:18
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11907" onclick="return GoToMessage(11907)">this message</a>
+       </div>
+
+       <div class="text">
+Thank you !
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11909">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.03.2021 03:57:19">
+03:57
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="text">
+Nova: Recursive Zero-Knowledge Arguments from Folding Schemes (<a href="https://eprint.iacr.org/2021/370.pdf">https://eprint.iacr.org/2021/370.pdf</a> )<br><br>Interesting work from <a href="https://t.me/srinathsetty">@srinathsetty</a> et at ! <br>1) (section 3) defines Folding scheme (def. 7): as the name suggests this is basically a way to fold two NP instance-witness tuples into one. It becomes non trivial when complexity is less of what required for 2x NP <br>2)  (section 4) introduces Relaxed R1CS (RR1CS). Loosely speaking, RR1CS  is R1CS with additional degrees of freedom, it is easy to show RR1CS is equivalent to R1CS which intuitively means RR1CS can replace R1CS and be as expressive <br>3) (section 5) combines the above two sections and constructs (construction 2)  a folding scheme for committed RR1CS (CRR1CS). Note that folding is done with “committed” RR1CS, which  is for zero knowledge. I am curious why R1CS can’t be folded ( I have a guess but it is not explained in the paper) <br>4) (section 6) [side comment: The title of the paper paves the way for the title of a follow up paper (Super Nova)]. Incremental verifiable computation (IVC) allows a prover to show that z_n  = F^(n)(z_0) - essentially repeating F “n” times. In this section, IVC is constructed using CRR1CS.  It is done by defining first a recursion function F’ (Fig 2) that runs F. F’ is represented as CRR1CS -&gt; can be folded. Lemma 8 is notable as it shows that the verifier work is dominated by 2 scalar multiplications (!!). It is not clear to me how to make it a PCD but I guess it is work for supernova <br>5) (section 7) the missing piece. The R1CS version of Spartan is adapted to RR1CS (using spartan == no FFT, no trusted setup). This allows the prover to prove zksnark a valid NP witness for the final step of the IVC (or intermediate steps)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11910">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.03.2021 04:00:47">
+04:00
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11854" onclick="return GoToMessage(11854)">this message</a>
+       </div>
+
+       <div class="text">
+This is fantastic
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message11926">
+
+      <div class="body details">
+Luis joined group by link from Group
+      </div>
+
+     </div>
+
+     <div class="message service" id="message11927">
+
+      <div class="body details">
+Luis invited Jannik
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11928">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+L
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.03.2021 21:34:51">
+21:34
+       </div>
+
+       <div class="from_name">
+Luis 
+       </div>
+
+       <div class="text">
+Hi! <a href="https://t.me/Omershlo">@Omershlo</a> contacted me to join this group and share what we&apos;ve been working on: <a href="https://twitter.com/project_shutter/status/1375416218484674561">https://twitter.com/project_shutter/status/1375416218484674561</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11929">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.03.2021 21:35:05">
+21:35
+       </div>
+
+       <div class="text">
+<a href="https://shutter.ghost.io/introducing-shutter-network-combating-frontrunning-and-malicious-mev-using-threshold-cryptography/">https://shutter.ghost.io/introducing-shutter-network-combating-frontrunning-and-malicious-mev-using-threshold-cryptography/</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11930">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+YS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.03.2021 21:37:13">
+21:37
+       </div>
+
+       <div class="from_name">
+Yonatan Sompolinsky
+       </div>
+
+       <div class="text">
+It&apos;s unclear how Shutter solves frontrunning. The encryption pushes the frontrunning / censorship opportunity to the decryption step
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11931">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+A
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.03.2021 21:37:55">
+21:37
+       </div>
+
+       <div class="from_name">
+Anna 
+       </div>
+
+       <div class="text">
+sounds a bit like what Dev Ohja and Sunny are doing with Osmosis over on Cosmos as well
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11932">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.03.2021 21:38:08">
+21:38
+       </div>
+
+       <div class="text">
+<a href="https://t.me/Valardragon">@Valardragon</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11933">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.03.2021 22:32:01">
+22:32
+       </div>
+
+       <div class="from_name">
+Damian Straszak
+       </div>
+
+       <div class="text">
+Hi <a href="https://t.me/pepae">@pepae</a> cool project. Just wanted to ask some questions. How is the committee of Keypers chosen and what exactly happens after a tx is decrypted? I mean: when is it executed, who submits it on chain and who decides on the ordering within decrypted txs and the ordering between decrypted/regular transactions?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-2">
+
+      <div class="body details">
+30 March 2021
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11934">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+J
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="30.03.2021 03:57:32">
+03:57
+       </div>
+
+       <div class="from_name">
+JP 
+       </div>
+
+       <div class="text">
+Some people audited Zcash’s Rust FROST <a href="https://www.zfnd.org/blog/frost-audit/">https://www.zfnd.org/blog/frost-audit/</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11935">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+D
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="30.03.2021 04:11:24">
+04:11
+       </div>
+
+       <div class="from_name">
+Dev 
+       </div>
+
+       <div class="text">
+Not sure how you get a guarantee of when the decryptions will included in that Ethereum example. (I&apos;m not sure how you get effective MEV resistance with threshold dec without a protocol change to add more constraints to the miners / validators)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11936">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="30.03.2021 04:12:27">
+04:12
+       </div>
+
+       <div class="text">
+since basically you want there to be no tx that can be inserted into the chain in between the time when a tx is decrypted, and when the decryption is executed
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11937">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="30.03.2021 04:12:39">
+04:12
+       </div>
+
+       <div class="text">
+but if you don&apos;t get miner buy-in, they can front-run as they please
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11938">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="30.03.2021 04:12:50">
+04:12
+       </div>
+
+       <div class="text">
+unless you make you&apos;re AMM&apos;s build this sort of queuing
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11940">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+E
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="30.03.2021 18:36:44">
+18:36
+       </div>
+
+       <div class="from_name">
+Elichai 
+       </div>
+
+       <div class="text">
+Ring-LWE over two-to-power cyclotomics is not hard<br><br>Hao Chen<br><a href="https://eprint.iacr.org/2021/418">https://eprint.iacr.org/2021/418</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11941">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="30.03.2021 18:37:25">
+18:37
+       </div>
+
+       <div class="text">
+(why doesn&apos;t eprint have a preview 😕)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-3">
+
+      <div class="body details">
+31 March 2021
+      </div>
+
+     </div>
+
+     <div class="message service" id="message11942">
+
+      <div class="body details">
+Zylo joined group by link from Group
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11943">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+n
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 05:12:49">
+05:12
+       </div>
+
+       <div class="from_name">
+nikkolasg 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11936" onclick="return GoToMessage(11936)">this message</a>
+       </div>
+
+       <div class="text">
+Why ?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11944">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+A
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 05:14:53">
+05:14
+       </div>
+
+       <div class="from_name">
+Adam Gagol 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11943" onclick="return GoToMessage(11943)">this message</a>
+       </div>
+
+       <div class="text">
+Because knowing the transaction contents, someone could frontrun it, just like it usually happens with no such system in place.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11945">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 05:17:38">
+05:17
+       </div>
+
+       <div class="text">
+The additional problem here is - how can you be sure that the nodes with keyshares are not colluding and secretly trading the transaction info to some frontrunner? It would be very hard to prove that it happens, and the business would be profitable enough to not discard such possibility
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11946">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+n
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 05:20:59">
+05:20
+       </div>
+
+       <div class="from_name">
+nikkolasg 
+       </div>
+
+       <div class="text">
+Right sorry I read from the time it is inserted into the chain, not from the time it is decrypted.<br>So even if these encrypted tx are stored in a smart contract for example, since at time T, these tx can be decrypted, then a miner could decrypt and read these tx, insert a favorable tx in his block which might frontrun and is executed before the tx in the smart contract. Is that the scenario you are thinking about ?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11947">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+A
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 05:25:03">
+05:25
+       </div>
+
+       <div class="from_name">
+Adam Gagol 
+       </div>
+
+       <div class="text">
+Yes. unless I&apos;m misunderstanding something, that wouldn&apos;t help with MEVs unless you would reimplement some DeFi instruments so they do not accept regular transactions at all, only these encrypted ones. But it still wouldn&apos;t solve all of the problems, like the collusion issue I mentioned above
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11948">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+n
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 05:56:41">
+05:56
+       </div>
+
+       <div class="from_name">
+nikkolasg 
+       </div>
+
+       <div class="text">
+Assuming there is no collusion, how would any change to defi instruments change something ? Miners could still include frontrunning tx if they decrypt tx before it is executed on chain no ? Maybe it is not on the same &quot;market&quot; than the defi smart contact, but it likely can used on another &quot;regular&quot; defi platform ?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11949">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+A
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 07:38:00">
+07:38
+       </div>
+
+       <div class="from_name">
+Adam Gagol 
+       </div>
+
+       <div class="text">
+You could for example implement an anti-MEV DEX that accepts transactions in the following way:<br>1. First, tx needs to be sent to the smart contract in an encrypted form, let&apos;s say that enc(tx) is included in block K.<br>2. Nodes holding key shares would always deliver decrypted tx before the block K+3 (but AFTER block K is mined), so it is always included in the block K+3.<br>Then to frontrun this tx, you would need to include encrypted frontrunning transaction in the block K as well, so before the decrypted version of the original tx is revealed. <br>In general, I think you could achieve a pretty similar goal as this scheme with users having to commit to a given transaction by publishing a hash of it 3 blocks in advance (and publishing the tx later), the threshold crypto doesn&apos;t seem to be all that essential here.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11950">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 07:57:09">
+07:57
+       </div>
+
+       <div class="from_name">
+Joe Bebel
+       </div>
+
+       <div class="text">
+the miners can always pretend to never receive the decrypted transaction, or to receive it late
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11951">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+A
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 07:58:28">
+07:58
+       </div>
+
+       <div class="from_name">
+Adam Gagol 
+       </div>
+
+       <div class="text">
+sure, you can censor, but still it&apos;s substantially harder to reasonably frontrun (you would have to include a lot of encrypted txs  in each block and use only some of them later)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11952">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 08:03:01">
+08:03
+       </div>
+
+       <div class="from_name">
+Joe Bebel
+       </div>
+
+       <div class="text">
+I guess it depends on how long of a delay would be tolerable
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message11953">
+
+      <div class="body details">
+Deleted Account joined group by link from Group
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11954">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+n
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 17:49:19">
+17:49
+       </div>
+
+       <div class="from_name">
+nikkolasg 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11949" onclick="return GoToMessage(11949)">this message</a>
+       </div>
+
+       <div class="text">
+Oh but you are suggesting here to change the logic of the miners themselves here right? I was staying in the context where we didn&apos;t want to change the logic of the chain.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11955">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+A
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 17:50:24">
+17:50
+       </div>
+
+       <div class="from_name">
+Adam Gagol 
+       </div>
+
+       <div class="text">
+No, I&apos;m not. I&apos;m suggesting to set the logic of this particular smart contract so that it doesn&apos;t accept transactions that were not present 3 block before in an encrypted form.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11956">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+n
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 17:53:08">
+17:53
+       </div>
+
+       <div class="from_name">
+nikkolasg 
+       </div>
+
+       <div class="text">
+if the smart contract is able to decrypt the tx or get a decrypted version somehow, so are the miners of the chain no ? (unless we use some io obfuscability vodoo) And in that case, a miner can always see the decrypted tx before the smart contract, and take profit from it maybe on another &quot;defi platform&quot;?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11957">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+A
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 17:55:34">
+17:55
+       </div>
+
+       <div class="from_name">
+Adam Gagol 
+       </div>
+
+       <div class="text">
+You can do whatever you want on another defi platforms, but if the platform using this encryption-decryption scheme is an AMM-based DEX or sth similar, you will not influence the price for it&apos;s users, hence - you will not make a profit out of them.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11958">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+n
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 17:59:41">
+17:59
+       </div>
+
+       <div class="from_name">
+nikkolasg 
+       </div>
+
+       <div class="text">
+I see - I&apos;m not convinced about the fact a miner can&apos;t profit like this (you can often profit from different platforms, like simple stuff like arbitrage?) but for sure this reduces the attack surface of front runners.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11959">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+A
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 18:09:09">
+18:09
+       </div>
+
+       <div class="from_name">
+Adam Gagol 
+       </div>
+
+       <div class="text">
+Yeah, I&apos;m not entirely convinced either, some clever arbitrage-related attack vectors may exist. My initial point was that it looks that to counter MEVs with similar tricks you would need to AT LEAST reimplement the whole defi instrument, what I see as rather impractical. And, as per discussion, it&apos;s not even clear whether it would solve the problem.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11960">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 18:13:11">
+18:13
+       </div>
+
+       <div class="from_name">
+Damian Straszak
+       </div>
+
+       <div class="text">
+I&apos;m not convinced either, but I like the brainstorm here -- it might give rise to some new approaches. Would be great to hear from &quot;Shutter&quot; people, whose post here originally sparked this whole discussion.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11961">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+GK
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 18:34:05">
+18:34
+       </div>
+
+       <div class="from_name">
+Georgios Konstantopoulos
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11949" onclick="return GoToMessage(11949)">this message</a>
+       </div>
+
+       <div class="text">
+Agree that t crypto is overkill, recommend people to look Into submarine sends for a scheme that implements this
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11962">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 18:34:33">
+18:34
+       </div>
+
+       <div class="text">
+<a href="https://libsubmarine.org/">https://libsubmarine.org/</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11963">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 18:35:19">
+18:35
+       </div>
+
+       <div class="text">
+And in general similarly skeptical of solving MEV without requiring applications or the consensus layer to change
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11964">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 18:36:22">
+18:36
+       </div>
+
+       <div class="text">
+ie you can&apos;t just &quot;layer&quot; a system on top and try to address it with crypto, unless you make it so that all miners are following a protocol (eg via sgx)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11965">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+n
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 18:44:10">
+18:44
+       </div>
+
+       <div class="from_name">
+nikkolasg 
+       </div>
+
+       <div class="text">
+Well one thing is that if smart contract can have a private key, and handle decryption in the contract in hidden manner, this could work. I believe this is what io obfuscability could do ? (Total noob question here)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11966">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+PM
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 18:47:53">
+18:47
+       </div>
+
+       <div class="from_name">
+Pratyush Mishra
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11963" onclick="return GoToMessage(11963)">this message</a>
+       </div>
+
+       <div class="text">
+Right, that&apos;s the approach we took with zexe, where one nice side-effect of the strong orotocol-level privacy guarantees is that it can reduce many kinds of MEV
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11967">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 18:48:35">
+18:48
+       </div>
+
+       <div class="from_name">
+Damian Straszak
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11965" onclick="return GoToMessage(11965)">this message</a>
+       </div>
+
+       <div class="text">
+I believe that even IO cannot do that, when the contract&apos;s private key is unknown to anyone. You need either sgx, or some form of trusted committee to run MPC.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11968">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+YS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 19:17:02">
+19:17
+       </div>
+
+       <div class="from_name">
+Yonatan Sompolinsky
+       </div>
+
+       <div class="text">
+The very role of consensus nodes is to order the publication time of txns in their legible form, it doesn&apos;t make sense to delegate this role to other players as a service atop the base consensus, as Shutter suggests
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11969">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+PM
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 20:20:14">
+20:20
+       </div>
+
+       <div class="from_name">
+Pratyush Mishra
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11967" onclick="return GoToMessage(11967)">this message</a>
+       </div>
+
+       <div class="text">
+you can just use public key encryption, no? encrypt your inputs to the contract under the pub key, the contract decrypts using iO and updates its internal state, and that&apos;s it.<br><br>The bigger problem with this approach is that the miner/validator can simulate running the contract to see the change in balances, and can then figure out what the transaction did, and can then front-run it
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11970">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+LP
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 20:36:24">
+20:36
+       </div>
+
+       <div class="from_name">
+Luka Perrrcic
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11962" onclick="return GoToMessage(11962)">this message</a>
+       </div>
+
+       <div class="text">
+nice and easy
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11971">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+n
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 20:49:37">
+20:49
+       </div>
+
+       <div class="from_name">
+nikkolasg 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11969" onclick="return GoToMessage(11969)">this message</a>
+       </div>
+
+       <div class="text">
+Ah right, miner can still observe the delta in the state before and after. Lol maybe then zcash style anonymity + io 🙊
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11972">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+PM
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 20:55:07">
+20:55
+       </div>
+
+       <div class="from_name">
+Pratyush Mishra
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11971" onclick="return GoToMessage(11971)">this message</a>
+       </div>
+
+       <div class="text">
+even that might not be sufficient; see this paper for some mitigations: <a href="https://arxiv.org/pdf/2103.01193.pdf">https://arxiv.org/pdf/2103.01193.pdf</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11973">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+KG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 20:56:03">
+20:56
+       </div>
+
+       <div class="from_name">
+Kobi Gurkan
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11972" onclick="return GoToMessage(11972)">this message</a>
+       </div>
+
+       <div class="text">
+Or the latest episode in zkpodcast that discusses it!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11974">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 21:01:25">
+21:01
+       </div>
+
+       <div class="from_name">
+Damian Straszak
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11969" onclick="return GoToMessage(11969)">this message</a>
+       </div>
+
+       <div class="text">
+Yeah, that&apos;s what I meant by saying &quot;you cannot do that&quot;, it just doesn&apos;t work, if you can use the contract code as a black box. :)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11975">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+J
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 22:27:15">
+22:27
+       </div>
+
+       <div class="from_name">
+Jannik 
+       </div>
+
+       <div class="text">
+Hey, great discussions here! To clarify the post about Shutter a bit, the plan is indeed (as some of you speculated already) to provide a sort of interface that smart contracts can opt in to become frontrunning resistant. It does not automatically help existing smart contracts, at least not without changes on their side. As others have pointed out, this is probably impossible anyway without protocol changes or miners collaborating.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11976">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 22:29:41">
+22:29
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11945" onclick="return GoToMessage(11945)">this message</a>
+       </div>
+
+       <div class="text">
+agreed, collusion can be a problem. The way to deal with it is to have lots of nodes, and select them carefully, incentivize them properly, and replace them quickly if there&apos;s suspicion of frontrunning. That&apos;s a very subjective task of course, so we&apos;re planning to have a DAO to handle this. Technically it is a security assumption though, but not too different to what blockchains already assume for censorship resistance which seems to work quite well (to be fair, censoring is not very profitable right now).
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11977">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="31.03.2021 22:31:52">
+22:31
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11949" onclick="return GoToMessage(11949)">this message</a>
+       </div>
+
+       <div class="text">
+You can see Shutter as a commit+reveal scheme, but with the difference that the reveal step happens automatically. The advantage is that this improces UX (just have to send one tx, not two), and more importantly it also means that users don&apos;t have the option to not reveal (which depending on the protocol can be a big problem, e.g. a free option in exchanges)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-4">
+
+      <div class="body details">
+1 April 2021
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11980">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.04.2021 04:30:03">
+04:30
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="text">
+<strong>On the Anonymity Guarantees of Anonymous Proof-of-Stake Protocols </strong><a href="https://eprint.iacr.org/2021/409.pdf">https://eprint.iacr.org/2021/409.pdf</a> <br>Awesome paper by <a href="" onclick="return ShowMentionName()">Varun</a>  !
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11981">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+KG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.04.2021 06:00:46">
+06:00
+       </div>
+
+       <div class="from_name">
+Kobi Gurkan
+       </div>
+
+       <div class="text">
+<a href="https://t.me/elichai2">@elichai2</a> having fun with nodejs here 😉<br><br><a href="https://62152ba126db.ngrok.io/2021/409">https://62152ba126db.ngrok.io/2021/409</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11982">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.04.2021 06:03:25">
+06:03
+       </div>
+
+       <div class="text">
+for those that don&apos;t have context, eprint doesn&apos;t have preview for links, and this wrapper server adds it
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11983">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.04.2021 06:05:18">
+06:05
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11982" onclick="return GoToMessage(11982)">this message</a>
+       </div>
+
+       <div class="text">
+🔥 how do I use the wrapper server ?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11984">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+KG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.04.2021 06:18:26">
+06:18
+       </div>
+
+       <div class="from_name">
+Kobi Gurkan
+       </div>
+
+       <div class="text">
+replace <a href="https://eprint.iacr.org">https://eprint.iacr.org</a> with <a href="https://eprint.kobi.one">https://eprint.kobi.one</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11985">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.04.2021 06:18:28">
+06:18
+       </div>
+
+       <div class="text">
+example:<br><a href="https://eprint.kobi.one/2021/422">https://eprint.kobi.one/2021/422</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11986">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+D
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.04.2021 06:30:26">
+06:30
+       </div>
+
+       <div class="from_name">
+Dev 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11966" onclick="return GoToMessage(11966)">this message</a>
+       </div>
+
+       <div class="text">
+This only applies if there was an mev opportunity for something with private state that is kept off chain, that the miner doesnt have access to right?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message11987">
+
+      <div class="body details">
+tux invited David
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11988">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+t
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.04.2021 18:31:30">
+18:31
+       </div>
+
+       <div class="from_name">
+tux 
+       </div>
+
+       <div class="text">
+Are there any overviews of existing random beacon schemes?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11989">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.04.2021 19:11:43">
+19:11
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11988" onclick="return GoToMessage(11988)">this message</a>
+       </div>
+
+       <div class="media_wrap clearfix">
+
+        <a class="photo_wrap clearfix pull_left" href="photos/photo_145@01-04-2021_19-11-43.jpg">
+
+         <img class="photo" src="photos/photo_145@01-04-2021_19-11-43_thumb.jpg" style="width: 260px; height: 159px"/>
+
+        </a>
+
+       </div>
+
+       <div class="text">
+If you mean SoK - I don’t think there is one yet. If you mean just a comparison - this table used to be popular.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11990">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+t
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.04.2021 19:14:44">
+19:14
+       </div>
+
+       <div class="from_name">
+tux 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11989" onclick="return GoToMessage(11989)">this message</a>
+       </div>
+
+       <div class="text">
+Ooh thanks!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11991">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.04.2021 19:16:04">
+19:16
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="text">
+(By popular I mean that same table was used, with updates for new results, in several consecutive works. However, I don’t recall seeing it in new papers )
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11992">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+t
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.04.2021 19:16:28">
+19:16
+       </div>
+
+       <div class="from_name">
+tux 
+       </div>
+
+       <div class="text">
+Also, is there any reason why the BLS constructions need a DKG protocol? Is it purely for the deterministic properties of the signature?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11993">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.04.2021 19:16:46">
+19:16
+       </div>
+
+       <div class="text">
+E.g. achieving finality on m signatures
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message11994">
+
+      <div class="body details">
+Michael Alebiosu joined group by link from Group
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11995">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.04.2021 20:49:00">
+20:49
+       </div>
+
+       <div class="from_name">
+Damian Straszak
+       </div>
+
+       <div class="text">
+You need a distributed VRF for these kind of constructions. One way to do that is via threshold BLS, because BLS is unique. For that in turn you need to generate keys for threshold BLS, hence DKG. <br>Nowadays, DKG is a slightly confusing term used for many kinds of protocols, that achieve different objectives.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11996">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.04.2021 20:50:06">
+20:50
+       </div>
+
+       <div class="text">
+here distributed VRF = a function F(seed) that is computed by a committe of nodes, and behaves &quot;randomly&quot;
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11997">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.04.2021 20:50:51">
+20:50
+       </div>
+
+       <div class="text">
+BLS_sk(seed) satisfies this, if sk is a secret key shared by the committee
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11998">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.04.2021 20:56:03">
+20:56
+       </div>
+
+       <div class="text">
+also &quot;V&quot; in VRF stands for verifiable, and BLS signatures can be indeed verified given the public key, check!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11999">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+E
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.04.2021 20:56:49">
+20:56
+       </div>
+
+       <div class="from_name">
+Elichai 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11981" onclick="return GoToMessage(11981)">this message</a>
+       </div>
+
+       <div class="text">
+Cool!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message12000">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+t
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.04.2021 21:16:29">
+21:16
+       </div>
+
+       <div class="from_name">
+tux 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11995" onclick="return GoToMessage(11995)">this message</a>
+       </div>
+
+       <div class="text">
+Yeah, I understand the VRF part. I&apos;m just wondering about BLS signatures specifically. Why must we use threshold BLS signatures? It seems to me that if you wanted to avoid the issue with DKG entirely, some method of consensus around constructing a quorum of signers w/ finality on a set of <code>n</code> aggregated signatures could be used. Am I missing another reason for using DKG?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message12001">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.04.2021 21:18:56">
+21:18
+       </div>
+
+       <div class="from_name">
+Damian Straszak
+       </div>
+
+       <div class="text">
+normally you want some kind of robustness, i.e., t of n committee nodes working properly should be enough, to recover the randomness from a given round. Yours is more or less equivalent to n-of-n, which unfortunately requires all the nodes to be honest.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message12002">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.04.2021 21:19:14">
+21:19
+       </div>
+
+       <div class="text">
+if you want t of n, then you need threshold BLS, with a non-trivial threshold
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message12003">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.04.2021 21:19:21">
+21:19
+       </div>
+
+       <div class="text">
+generating keys for that = DKG
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message12004">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.04.2021 21:21:18">
+21:21
+       </div>
+
+       <div class="text">
+On the other hand, if you try to do something like: nodes reveal their signatures for round R, then there is consensus on a subset of them which are correct/should be aggregated, then such randomness can be easily biased by bad guys.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message12005">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+KG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.04.2021 21:22:30">
+21:22
+       </div>
+
+       <div class="from_name">
+Kobi Gurkan
+       </div>
+
+       <div class="text">
+Exactly. If you just use multisignstures + bitmaps, for example, you can potentially exclude/include elements to bias the random value
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message12006">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.04.2021 21:23:45">
+21:23
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11999" onclick="return GoToMessage(11999)">this message</a>
+       </div>
+
+       <div class="text">
+Moved to <a href="eprint.kobi.one">eprint.kobi.one</a> :)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message12007">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+M
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.04.2021 22:35:32">
+22:35
+       </div>
+
+       <div class="from_name">
+Mikerah 
+       </div>
+
+       <div class="text">
+Anybody here has experience with Cairo?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message12008">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+LG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.04.2021 22:38:52">
+22:38
+       </div>
+
+       <div class="from_name">
+Louis Guthmann | Starkware
+       </div>
+
+       <div class="text">
+Sure can help a bit or at least redirect to the right people
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message12009">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+M
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.04.2021 22:43:18">
+22:43
+       </div>
+
+       <div class="from_name">
+Mikerah 
+       </div>
+
+       <div class="text">
+Are there any larger examples beyond the ones in the Cairo tutorial?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message12010">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.04.2021 22:43:29">
+22:43
+       </div>
+
+       <div class="text">
+Trying to develop a better intuition about how to integrate this into an application
+       </div>
+
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </body>
+
+</html>

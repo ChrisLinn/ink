@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Exported Data</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <script src="js/script.js" type="text/javascript">
+
+  </script>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <div class="content">
+
+     <div class="text bold">
+iden3 
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+23 March 2021
+      </div>
+
+     </div>
+
+     <div class="message service" id="message3687">
+
+      <div class="body details">
+Alexander Arlt invited Alexander Arlt
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message3688">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+SB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="23.03.2021 17:51:27">
+17:51
+       </div>
+
+       <div class="from_name">
+Simon Brown
+       </div>
+
+       <div class="text">
+A question on data availability on Hermez:<br><br>Is Hermez similar to other zk-rollups with regards to data availability, in that transactions data is posted as calldata in compressed form with each batch?  If so, is there an issue with verifying the integrity of the data?  For example: if a coordinator creates a batch of transactions and submits it to the rollup contract, which verifies the proof and then updates the state roots, the tx data gets stored in calldata.  What if a couple of transactions in the calldata are encoded incorrectly?  Then the next coordinator to try to create a batch won&apos;t be able to construct the pre-state correctly.  How is this scenario handled in Hermez?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message3689">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="23.03.2021 22:39:43">
+22:39
+       </div>
+
+       <div class="from_name">
+Jordi Baylina
+       </div>
+
+       <div class="text">
+All the transactions in tha CALL data ara hashed (sha256) onchain and in the circuit. This warantieas that the processed TX in the state matches the data availability.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message3690">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+SB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="23.03.2021 22:50:37">
+22:50
+       </div>
+
+       <div class="from_name">
+Simon Brown
+       </div>
+
+       <div class="text">
+So wait, the on-chain contract hashes each TX in the CALL and merkle-izes them?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-2">
+
+      <div class="body details">
+24 March 2021
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message3691">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="24.03.2021 05:55:18">
+05:55
+       </div>
+
+       <div class="from_name">
+Jordi Baylina
+       </div>
+
+       <div class="text">
+They are not merkelized. They are just linear hashed.  (To save gas)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message3692">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+MP
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="24.03.2021 09:46:35">
+09:46
+       </div>
+
+       <div class="from_name">
+Michelle Plur
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message3676" onclick="return GoToMessage(3676)">this message</a>
+       </div>
+
+       <div class="text">
+❤️💪🏻
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message3693">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+SB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="24.03.2021 18:57:41">
+18:57
+       </div>
+
+       <div class="from_name">
+Simon Brown
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message3691" onclick="return GoToMessage(3691)">this message</a>
+       </div>
+
+       <div class="text">
+I see, so are the txs linear hashed in that circuit, and then on-chain aswell? I&apos;m just trying to figure out how the batch of compressed txs are verified for integrity. Sorry for all the questions, I&apos;m just trying to understand the Hermez implementation a little better
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message3694">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="24.03.2021 19:01:32">
+19:01
+       </div>
+
+       <div class="from_name">
+Jordi Baylina
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message3693" onclick="return GoToMessage(3693)">this message</a>
+       </div>
+
+       <div class="text">
+Yes!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message3695">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="24.03.2021 19:02:07">
+19:02
+       </div>
+
+       <div class="text">
+BTW, all the software in Hermez, including circuits and smart contracts are open source you chan check!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message3696">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+W
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="24.03.2021 19:14:46">
+19:14
+       </div>
+
+       <div class="from_name">
+WJ 
+       </div>
+
+       <div class="text">
+Hi! How can I verify that <code>powersOfTau28_hez_final_17.ptau</code> is correctly truncated from <code>powersOfTau28_hez_final.ptau</code>?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message3697">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="24.03.2021 19:15:34">
+19:15
+       </div>
+
+       <div class="text">
+Or is <code>powersoftau verify powersOfTau28_hez_final_17.ptau</code> sufficient to check that it&apos;s valid?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message3698">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="24.03.2021 19:18:06">
+19:18
+       </div>
+
+       <div class="from_name">
+Jordi Baylina
+       </div>
+
+       <div class="text">
+It should be sufficient..   But you can also recompute the <code>powersOfTau28_hez_final_17.ptau</code> from the big one..
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message3699">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+W
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="24.03.2021 19:18:20">
+19:18
+       </div>
+
+       <div class="from_name">
+WJ 
+       </div>
+
+       <div class="text">
+thank you!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message3700">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="24.03.2021 19:39:13">
+19:39
+       </div>
+
+       <div class="from_name">
+Jordi Baylina
+       </div>
+
+       <div class="text">
+<a href="https://blog.hermez.io/hermez-network-mainnet-launch/">https://blog.hermez.io/hermez-network-mainnet-launch/</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message3701">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+W
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="24.03.2021 20:01:09">
+20:01
+       </div>
+
+       <div class="from_name">
+WJ 
+       </div>
+
+       <div class="text">
+Congrats!!!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message3702">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+E
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="24.03.2021 20:06:51">
+20:06
+       </div>
+
+       <div class="from_name">
+Edward F 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message3700" onclick="return GoToMessage(3700)">this message</a>
+       </div>
+
+       <div class="text">
+Congratulations!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message3703">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+SB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="24.03.2021 20:11:41">
+20:11
+       </div>
+
+       <div class="from_name">
+Simon Brown
+       </div>
+
+       <div class="text">
+Congratulations Jordi and everyone. Well done!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message3704">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+A
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="24.03.2021 22:55:24">
+22:55
+       </div>
+
+       <div class="from_name">
+Anjan 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message3700" onclick="return GoToMessage(3700)">this message</a>
+       </div>
+
+       <div class="text">
+Congratulations 👏
+       </div>
+
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </body>
+
+</html>

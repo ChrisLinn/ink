@@ -1,0 +1,1806 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Exported Data</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <script src="js/script.js" type="text/javascript">
+
+  </script>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <div class="content">
+
+     <div class="text bold">
+ZenGo X 
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+17 March 2021
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11752">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+KG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 01:59:54">
+01:59
+       </div>
+
+       <div class="from_name">
+Kobi Gurkan
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11717" onclick="return GoToMessage(11717)">this message</a>
+       </div>
+
+       <div class="text">
+At first glance:<br>- new pvss for field elements that uses Schnorr style nizks and a new forward secure pairing based encryption scheme<br>- reshaping algorithm with the same methods <br><br>Nice techniques that seem useful in other cases as well<br><br>Not sure about the efficiency characteristics vs Fouque-Stern for the dkg itself. Also seems to me that verification is quadratic
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11754">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+YS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 08:36:01">
+08:36
+       </div>
+
+       <div class="from_name">
+Yonatan Sompolinsky
+       </div>
+
+       <div class="text">
+Does someone know how exactly timelock encryption can solve MEV/frontrunning?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11755">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+LG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 08:42:51">
+08:42
+       </div>
+
+       <div class="from_name">
+Louis Guthmann | Starkware
+       </div>
+
+       <div class="text">
+Timelock encryption is like an non interactive commit reveal. The idea is then for user to send a timelocked encrypted Tx with a ZKP of correctness of the encrypted Tx to miners for inclusion then later the Tx  is revealed (either through an interactive process with the user or by decryption) and executed
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11756">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+YS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 08:46:00">
+08:46
+       </div>
+
+       <div class="from_name">
+Yonatan Sompolinsky
+       </div>
+
+       <div class="text">
+How does this solve frontrunning? The txn can&apos;t alter the state in retrospect, it can alter the state only when it&apos;s decrypted
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11757">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 08:46:40">
+08:46
+       </div>
+
+       <div class="text">
+.. which pushes the problem from the first miner to the later one
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11758">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+LG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 11:53:11">
+11:53
+       </div>
+
+       <div class="from_name">
+Louis Guthmann | Starkware
+       </div>
+
+       <div class="text">
+Because the Tx ordering is already committed. The thing is that as a user you would know first that you got included and in a second step, if your Tx will succeed or fail.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11759">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+SM
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 13:36:41">
+13:36
+       </div>
+
+       <div class="from_name">
+Susil Kumar Mohanty
+       </div>
+
+       <div class="media_wrap clearfix">
+
+        <div class="media clearfix pull_left media_file">
+
+         <div class="fill pull_left">
+
+         </div>
+
+         <div class="body">
+
+          <div class="title bold">
+ICISS_brochure_page-0001.jpg
+          </div>
+
+          <div class="description">
+Not included, change data exporting settings to download.
+          </div>
+
+          <div class="status details">
+1.2 MB
+          </div>
+
+         </div>
+
+        </div>
+
+       </div>
+
+       <div class="text">
+ICISS 2021 - DEADLINE: 15 June, 2021 (AoE) - CFP <br>17th International Conference on Information Systems Security<br>December 17-19, 2021, Indian Institute of Technology, Patna, India. <br><a href="https://iitp.ac.in/~iciss2021/">https://iitp.ac.in/~iciss2021/</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11761">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+YS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 15:59:53">
+15:59
+       </div>
+
+       <div class="from_name">
+Yonatan Sompolinsky
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11758" onclick="return GoToMessage(11758)">this message</a>
+       </div>
+
+       <div class="text">
+In what order are txns *executed*? If by order of inclusion, this is an attack vector, allowing one to selectively decrypt txns and reverse the state. If by order of decryption, how does this solve frontrunning?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11762">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+LG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 16:16:50">
+16:16
+       </div>
+
+       <div class="from_name">
+Louis Guthmann | Starkware
+       </div>
+
+       <div class="text">
+It should be by order of inclusion. I don&apos;t see what you mean by reverting the state. In Ethereum, if a tx is valid (which is provided by the ZKP of the said tx), only the tx can revert
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11763">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+YS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 16:28:51">
+16:28
+       </div>
+
+       <div class="from_name">
+Yonatan Sompolinsky
+       </div>
+
+       <div class="text">
+Between the inclusion and the decryption, is the state locked? If not, how are others supposed to interact with the state if it is encrypted?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11764">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+E
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 17:40:15">
+17:40
+       </div>
+
+       <div class="from_name">
+Elvis 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11761" onclick="return GoToMessage(11761)">this message</a>
+       </div>
+
+       <div class="text">
+A recent paper on Delay Encryption <a href="https://eprint.iacr.org/2020/638.pdf">https://eprint.iacr.org/2020/638.pdf</a> may solve this problem. In the delay encryption scheme, deriving the secret key (used for decryption) from the public key is time-locked, rather than decrypting the ciphertext. To apply delay encryption in this inclusion-decryption scenario, the contract can collect all encrypted txs in a fixed time period, then everyone can start revealing the secret key (which is time-locked). As secret key will eventually be known by everyone and decryption is fast, selectively decrypting txs won&apos;t lead to attacks.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11765">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+LG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 17:51:22">
+17:51
+       </div>
+
+       <div class="from_name">
+Louis Guthmann | Starkware
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11763" onclick="return GoToMessage(11763)">this message</a>
+       </div>
+
+       <div class="text">
+No it is not. It is executed on a rolling block basis. TLDR: you have to wait until all timelocked are unlocked to know the new state
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11766">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 17:51:37">
+17:51
+       </div>
+
+       <div class="text">
+<a href="https://t.me/yaeldoweck">@yaeldoweck</a> spoke about it on the MEV Roaster
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11767">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 17:51:43">
+17:51
+       </div>
+
+       <div class="text">
+Let me send the video to you
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11768">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 17:51:56">
+17:51
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11764" onclick="return GoToMessage(11764)">this message</a>
+       </div>
+
+       <div class="text">
+the problem is still the ZKP of correctness of the tx
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11769">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+YS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 17:53:59">
+17:53
+       </div>
+
+       <div class="from_name">
+Yonatan Sompolinsky
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11765" onclick="return GoToMessage(11765)">this message</a>
+       </div>
+
+       <div class="text">
+This seems to kill the usability for the very use cases it aims for
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11770">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+LG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 17:54:40">
+17:54
+       </div>
+
+       <div class="from_name">
+Louis Guthmann | Starkware
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11769" onclick="return GoToMessage(11769)">this message</a>
+       </div>
+
+       <div class="text">
+Yes 🙂
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11771">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+E
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 17:55:08">
+17:55
+       </div>
+
+       <div class="from_name">
+Elvis 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11768" onclick="return GoToMessage(11768)">this message</a>
+       </div>
+
+       <div class="text">
+Maybe this depends on how the contract treats encrypted txs that are invalid or incorrectly formatted?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11772">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+LG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 17:55:34">
+17:55
+       </div>
+
+       <div class="from_name">
+Louis Guthmann | Starkware
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11771" onclick="return GoToMessage(11771)">this message</a>
+       </div>
+
+       <div class="text">
+If it incorrectly formatted you won&apos;t know until you decrypt
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11773">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 17:55:40">
+17:55
+       </div>
+
+       <div class="text">
+Which is a DDoS vector
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11774">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+E
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 17:56:58">
+17:56
+       </div>
+
+       <div class="from_name">
+Elvis 
+       </div>
+
+       <div class="text">
+If applying some NIZK over the tx&apos;s correctness (e.g., SNARKs or verifiable encryption stuff), will such proofs be a DDoS vector instead?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11775">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 17:58:58">
+17:58
+       </div>
+
+       <div class="text">
+I&apos;m no expert on this, but indeed treating invalid txs wrongly may open some DDoS vectors
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11776">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+LG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 18:00:47">
+18:00
+       </div>
+
+       <div class="from_name">
+Louis Guthmann | Starkware
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11774" onclick="return GoToMessage(11774)">this message</a>
+       </div>
+
+       <div class="text">
+No, because there are very fast to verify but long to generate
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11777">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+E
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 18:01:05">
+18:01
+       </div>
+
+       <div class="from_name">
+Elvis 
+       </div>
+
+       <div class="text">
+i see
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11778">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+YS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 18:02:48">
+18:02
+       </div>
+
+       <div class="from_name">
+Yonatan Sompolinsky
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11771" onclick="return GoToMessage(11771)">this message</a>
+       </div>
+
+       <div class="text">
+The main challenge IMO is with valid txns. Users need to know the state in order to plan their interaction with it. The construction you suggested leaves room for gamblers only, for most users it undermines the whole concept
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11779">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+LG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 18:03:33">
+18:03
+       </div>
+
+       <div class="from_name">
+Louis Guthmann | Starkware
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11778" onclick="return GoToMessage(11778)">this message</a>
+       </div>
+
+       <div class="text">
+So you are correct. That said, notice that even the top Uniswap pool (except ETH/USDt) is only traded once every 2m.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11780">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 18:04:04">
+18:04
+       </div>
+
+       <div class="text">
+I think that Timelock front running resistance only makes sense on extremlely short blocktime
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11781">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+YS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 18:06:04">
+18:06
+       </div>
+
+       <div class="from_name">
+Yonatan Sompolinsky
+       </div>
+
+       <div class="text">
+Interesting points
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11782">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 18:06:38">
+18:06
+       </div>
+
+       <div class="text">
+If state is locked, this practically pushes is to a more UTXO-like smart contract system, ie, allowing the user to specify and condition on the input state
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11783">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+n
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 18:22:45">
+18:22
+       </div>
+
+       <div class="from_name">
+nikkolasg 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11768" onclick="return GoToMessage(11768)">this message</a>
+       </div>
+
+       <div class="text">
+Although do we need to have such a ZKP ? Can&apos;t we deal with this with incentives ? Ex: I&apos;m submitting an encrypted tx and I put a collateral equivalent to the amount of gas necessary to decrypt. Once my tx can be decrypted either it&apos;s valid and it is executed as regular tx, or it is invalid and I loose my collateral.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11784">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 18:23:42">
+18:23
+       </div>
+
+       <div class="text">
+Given it&apos;s a special type of tx, makes sense to pay a bit more for it as well.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11785">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+KG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 18:28:31">
+18:28
+       </div>
+
+       <div class="from_name">
+Kobi Gurkan
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11783" onclick="return GoToMessage(11783)">this message</a>
+       </div>
+
+       <div class="text">
+The usual optimistic vs zkp dilemma :)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11786">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+LG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 19:51:32">
+19:51
+       </div>
+
+       <div class="from_name">
+Louis Guthmann | Starkware
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11785" onclick="return GoToMessage(11785)">this message</a>
+       </div>
+
+       <div class="text">
+Hahaha
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11787">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 19:55:49">
+19:55
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11783" onclick="return GoToMessage(11783)">this message</a>
+       </div>
+
+       <div class="text">
+Why not? But as usual, it is easier to reason with ZKP. The designs are always cleaner
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11788">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+M
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 19:56:40">
+19:56
+       </div>
+
+       <div class="from_name">
+Mamy 
+       </div>
+
+       <div class="text">
+&quot;it is easier to reason with ZKP&quot; You are part of the 0.01% who gets ZKP ;)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11789">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+LG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 19:59:11">
+19:59
+       </div>
+
+       <div class="from_name">
+Louis Guthmann | Starkware
+       </div>
+
+       <div class="text">
+Hahaha
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11790">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 19:59:29">
+19:59
+       </div>
+
+       <div class="text">
+The main advantage of ZKP is that you can treat them as black box
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11791">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 20:00:02">
+20:00
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11788" onclick="return GoToMessage(11788)">this message</a>
+       </div>
+
+       <div class="text">
+I do get that&apos;s fair point 🙂
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11792">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+KG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 20:00:47">
+20:00
+       </div>
+
+       <div class="from_name">
+Kobi Gurkan
+       </div>
+
+       <div class="text">
+I think non zkp just sounds simple and hides many dragons that are more vicious than zkp math
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11793">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+n
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 20:01:30">
+20:01
+       </div>
+
+       <div class="from_name">
+nikkolasg 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11785" onclick="return GoToMessage(11785)">this message</a>
+       </div>
+
+       <div class="text">
+Yes and no<br> In this case security is not compromised by using incentives, simply ddos
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11794">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+PM
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 20:02:06">
+20:02
+       </div>
+
+       <div class="from_name">
+Pratyush Mishra
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11793" onclick="return GoToMessage(11793)">this message</a>
+       </div>
+
+       <div class="text">
+Right, you&apos;re basically paying the fee anyway, so might as well ensure that your transaction is correct
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11795">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+KG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 20:02:30">
+20:02
+       </div>
+
+       <div class="from_name">
+Kobi Gurkan
+       </div>
+
+       <div class="text">
+Fair :)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11796">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JD
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 22:24:04">
+22:24
+       </div>
+
+       <div class="from_name">
+Justin Drake
+       </div>
+
+       <div class="media_wrap clearfix">
+
+        <a class="media clearfix pull_left block_link media_photo" href="photos/photo_142@17-03-2021_22-24-04.jpg">
+
+         <div class="fill pull_left">
+
+         </div>
+
+         <div class="body">
+
+          <div class="title bold">
+Photo
+          </div>
+
+          <div class="status details">
+1190x142
+          </div>
+
+         </div>
+
+        </a>
+
+       </div>
+
+       <div class="text">
+Does anyone know of an implementation (or even a simple algorithm description) to efficiently compute a batch multiexponentation. By batch multiexponentation I mean that you have to compute <code>n &gt; 1</code> multiexponentiations, each of size <code>k</code>, and each multiexponentiation shares the same base (e.g. the same Bulletproof basis, or the same powers of Tau).<br><br>I know that, at least asymptotically, Pippenger&apos;s algorithm computes an <code>(n, k)</code> batch multiexponentiation at roughly the same cost of a single multiexponentiation of size <code>n*k</code>. This claim stems from the first page of the Bernstein paper (see screenshot) on Pippenger&apos;s algorithm <a href="https://cr.yp.to/papers/pippenger.ps">https://cr.yp.to/papers/pippenger.ps</a>. (There is an extra term involving <code>min{n, k}</code> but it is dominated by the term involving <code>n*k/log(n*k)</code>.)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11797">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+M
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 22:27:08">
+22:27
+       </div>
+
+       <div class="from_name">
+Mamy 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11796" onclick="return GoToMessage(11796)">this message</a>
+       </div>
+
+       <div class="text">
+This other Bernstein paper explored all multiexp/multiscalarmul that existed but they were all subset of Pippenger: <a href="https://eprint.iacr.org/2012/549">https://eprint.iacr.org/2012/549</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11798">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 22:28:29">
+22:28
+       </div>
+
+       <div class="text">
+code is here: <a href="http://cr.yp.to/badbatch.html">http://cr.yp.to/badbatch.html</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11799">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JD
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 22:31:57">
+22:31
+       </div>
+
+       <div class="from_name">
+Justin Drake
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11798" onclick="return GoToMessage(11798)">this message</a>
+       </div>
+
+       <div class="text">
+Great, thank you for the pointer <a href="https://t.me/mratsim">@mratsim</a> :)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11800">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.03.2021 22:36:26">
+22:36
+       </div>
+
+       <div class="text">
+I&apos;m told (by Daira from Zcash) that <a href="https://github.com/ConsenSys/gurvy">https://github.com/ConsenSys/gurvy</a> also implements the algorithm from section 4 of that paper, and also recommends looking at the links at <a href="https://github.com/arkworks-rs/algebra/issues/60">https://github.com/arkworks-rs/algebra/issues/60</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message11801">
+
+      <div class="body details">
+M H joined group by link from Group
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-2">
+
+      <div class="body details">
+18 March 2021
+      </div>
+
+     </div>
+
+     <div class="message service" id="message11802">
+
+      <div class="body details">
+ap0g_ joined group by link from Group
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11803">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+Y
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="18.03.2021 01:34:55">
+01:34
+       </div>
+
+       <div class="from_name">
+Youssef 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11796" onclick="return GoToMessage(11796)">this message</a>
+       </div>
+
+       <div class="text">
+The number of group law is the same but I think the memory cost is not. Each of the n multiexp will use 2^c memory (n*2^c) while a big n*k multiexp will use just 2^c. Of course c will change but, at least asymptotically, c_big=c_small+log(k).
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message11804">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="18.03.2021 01:36:17">
+01:36
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11800" onclick="return GoToMessage(11800)">this message</a>
+       </div>
+
+       <div class="text">
+Yes, gurvy implements section 4 with few additional tricks related to the elliptic curve group structure.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11805">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JD
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="18.03.2021 01:54:47">
+01:54
+       </div>
+
+       <div class="from_name">
+Justin Drake
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11803" onclick="return GoToMessage(11803)">this message</a>
+       </div>
+
+       <div class="text">
+Thank you for that note :)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message11807">
+
+      <div class="body details">
+Easwar joined group by link from Group
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11808">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="18.03.2021 04:39:13">
+04:39
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="text">
+CT-RSA papers: <a href="https://sites.google.com/site/ctrsa2021/accepted-papers">https://sites.google.com/site/ctrsa2021/accepted-papers</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11809">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="18.03.2021 16:13:42">
+16:13
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="text">
+Nice <a href="https://twitter.com/fermi_ma/status/1372358746622418954?s=21">https://twitter.com/fermi_ma/status/1372358746622418954?s=21</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11810">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+J
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="18.03.2021 17:04:53">
+17:04
+       </div>
+
+       <div class="from_name">
+JP 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11796" onclick="return GoToMessage(11796)">this message</a>
+       </div>
+
+       <div class="text">
+<a href="https://github.com/SarangNoether/monero/blob/bp-plus/src/ringct/multiexp.cc">https://github.com/SarangNoether/monero/blob/bp-plus/src/ringct/multiexp.cc</a> could help?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11812">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DK
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="18.03.2021 18:00:47">
+18:00
+       </div>
+
+       <div class="from_name">
+David Klein
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11716" onclick="return GoToMessage(11716)">this message</a>
+       </div>
+
+       <div class="text">
+Ha, just found out that is threshold keys (something playing with shamir&apos;s secret) and not helping on threshold signatures (which allow the keys to be in different devices); with tkey; the key would still be reconstructed in an unique point;
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11813">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+n
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="18.03.2021 18:41:07">
+18:41
+       </div>
+
+       <div class="from_name">
+nikkolasg 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message11794" onclick="return GoToMessage(11794)">this message</a>
+       </div>
+
+       <div class="text">
+although, would it be possible to do that without changing the &quot;chain&quot; codebase ? i.e. just do that in a smart contract ? can we decode &amp; execute transactions inside a transaction already now ? (valid questions regardless of the technique ZKP vs incentives).
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message11814">
+
+      <div class="body details">
+21321 joined group by link from Group
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message11815">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="18.03.2021 22:39:18">
+22:39
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="text">
+Non-interactive half-aggregation of EdDSA and variants of Schnorr signatures <a href="https://eprint.iacr.org/2021/350.pdf">https://eprint.iacr.org/2021/350.pdf</a> <a href="" onclick="return ShowMentionName()">Yash</a> !
+       </div>
+
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </body>
+
+</html>
