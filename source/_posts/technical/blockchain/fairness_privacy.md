@@ -174,6 +174,7 @@ Atomic Swap 的一些解释说明。论文rephrase可用。
     * https://github.com/google/private-join-and-compute
 * privacy enhancement
     * https://www.future-fis.com/the-pet-project.html
+    * https://github.com/katzenpost/core
 
 ## 如何安全地保存密码？
 + https://signal.org/blog/secure-value-recovery/
@@ -209,3 +210,4 @@ Atomic Swap 的一些解释说明。论文rephrase可用。
 
 ## Secure Messaging
 + [SoK: Secure Messaging](http://css.csail.mit.edu/6.858/2020/readings/secure-messaging.pdf)
++ https://katzenpost.mixnetworks.org/
