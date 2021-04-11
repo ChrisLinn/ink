@@ -82,6 +82,7 @@
     + [COSC 544 - Probabilistic Proof Systems](http://people.cs.georgetown.edu/jthaler/COSC544.html) from Georgetown University by Prof. Justin Thaler
     + [CS294: Foundations of Probabilistic Proofs (F2020)](https://people.eecs.berkeley.edu/~alexch/classes/CS294-F2020.html) from Berkeley by Alessandro Chiesa
     + [CMSC 652 --- Complexity Theory](http://www.cs.umd.edu/~jkatz/complexity/f11/)
+    + [Introduction to the Mathematical Foundations of Elliptic Curve Cryptography](https://hal.archives-ouvertes.fr/hal-01914807/document)
 - https://github.com/cpeikert/TheoryOfCryptography
 - [Applied cryptography](https://doc.lagout.org/network/3_Cryptography/Applied%20Cryptography%2C%202nd%20Edition.pdf)
 - [Privacy enhancing technologies reading list](https://crysp.uwaterloo.ca/courses/pet/F18/readinglist.html)
