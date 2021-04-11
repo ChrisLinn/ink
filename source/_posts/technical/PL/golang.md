@@ -99,6 +99,7 @@
 + https://github.com/gobyexample-cn/gobyexample
 + https://github.com/geektutu/7days-golang
 + http://github.com/shomali11/go-interview
++ https://github.com/docker/awesome-compose
 
 
 ## CSP 并发模型, communicating sequential processes
