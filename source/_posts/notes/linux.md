@@ -645,6 +645,7 @@ registry = "git://mirrors.ustc.edu.cn/crates.io-index"
     python -m SimpleHTTPServer 8000
     ```
 + Ops
+    * https://github.com/docker/awesome-compose
     * Container
         - Docker
             + docker build with proxy
