@@ -9,3 +9,4 @@
 
 ## Proxy re-encryption & Proxy re-signatures
 + https://eprint.iacr.org/2005/433.pdf
++ https://www.nucypher.com/proxy-re-encryption
