@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Exported Data</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <script src="js/script.js" type="text/javascript">
+
+  </script>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <div class="content">
+
+     <div class="text bold">
+ZK Study Club 
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+18 March 2021
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6454">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="18.03.2021 04:12:50">
+04:12
+       </div>
+
+       <div class="from_name">
+Joe Bebel
+       </div>
+
+       <div class="text">
+is anyone familiar with the zkcrypto/bls12-381 crate, and in particular, why the G2 implementation uses endo optimizations for &quot;clear_cofactor&quot; but not &quot;is_torsion_free&quot;?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6455">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="18.03.2021 08:37:08">
+08:37
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+I think there&apos;s no particularly profound reason, it just isn&apos;t implemented
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-2">
+
+      <div class="body details">
+19 March 2021
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6456">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="19.03.2021 05:07:54">
+05:07
+       </div>
+
+       <div class="from_name">
+Ariel Gabizon
+       </div>
+
+       <div class="text">
+Hey..this is a small note on how we handle public inputs in plonk, it&apos;s more efficient for prover and verifier than what&apos;s written in the original paper <a href="https://github.com/arielgabizon/plonk-addendum/blob/master/plonk-pubinputs.pdf">https://github.com/arielgabizon/plonk-addendum/blob/master/plonk-pubinputs.pdf</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6457">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="19.03.2021 11:30:43">
+11:30
+       </div>
+
+       <div class="from_name">
+Joe Bebel
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6455" onclick="return GoToMessage(6455)">this message</a>
+       </div>
+
+       <div class="text">
+thanks, that helps :)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6458">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="19.03.2021 16:31:43">
+16:31
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+Looking at the code, I think it&apos;s because clearing the cofactor is so simple (literally a one-liner for G_1, although it&apos;s more complicated for G_2). An optimised <code>is_torsion_free</code> would be very useful though, since that&apos;s what we actually use when converting from a compressed point, for Groth16 verification in Zcash
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6459">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="19.03.2021 17:10:38">
+17:10
+       </div>
+
+       <div class="from_name">
+Joe Bebel
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6458" onclick="return GoToMessage(6458)">this message</a>
+       </div>
+
+       <div class="text">
+we&apos;re doing lots of performance tweaking, we&apos;ll probably have an implementation for both G1 and G2
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6460">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="19.03.2021 17:11:20">
+17:11
+       </div>
+
+       <div class="text">
+actually I was thinking about how to optimize it even further, if it&apos;s possible, for batch subgroup checking of a list of G1/G2 points
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6461">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+KG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="19.03.2021 17:12:50">
+17:12
+       </div>
+
+       <div class="from_name">
+Kobi Gurkan
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6460" onclick="return GoToMessage(6460)">this message</a>
+       </div>
+
+       <div class="text">
+it&apos;s possible, <a href="https://t.me/chuangjon">@chuangjon</a> implemented a probablistic method in <a href="https://github.com/celo-org/zexe">https://github.com/celo-org/zexe</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6462">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="19.03.2021 17:14:26">
+17:14
+       </div>
+
+       <div class="from_name">
+Joe Bebel
+       </div>
+
+       <div class="text">
+oh, yeah, now that you mention that, I got the idea indirectly from them 😂thanks for making it more direct
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6463">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="19.03.2021 17:15:54">
+17:15
+       </div>
+
+       <div class="text">
+Dev told me about it, then I forgot (except that it was possible)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-3">
+
+      <div class="body details">
+20 March 2021
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6464">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+PV
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="20.03.2021 03:17:04">
+03:17
+       </div>
+
+       <div class="from_name">
+Psi Vesely
+       </div>
+
+       <div class="text">
+The technique is called the bucket test. It comes from <a href="https://cseweb.ucsd.edu/~mihir/papers/batch.pdf">https://cseweb.ucsd.edu/~mihir/papers/batch.pdf</a> . You can also do it recursively, but that’s generally only slightly more efficient and only for very, very large n.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6465">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic4" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JC
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="20.03.2021 11:40:28">
+11:40
+       </div>
+
+       <div class="from_name">
+Jon Chuang
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6464" onclick="return GoToMessage(6464)">this message</a>
+       </div>
+
+       <div class="text">
+Yes, I think even at 2^24 points or so it&apos;s only 1.5x faster than one level of random buckets; the analysis is somewhat complicated and easy to mess up, I don&apos;t think I&apos;ll write it up unless someone really needs it
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6466">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="20.03.2021 11:41:22">
+11:41
+       </div>
+
+       <div class="text">
+Further, at 2^16 - 2^24 points the verification is already pretty fast given the number of points
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6467">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+PV
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="20.03.2021 11:41:30">
+11:41
+       </div>
+
+       <div class="from_name">
+Psi Vesely
+       </div>
+
+       <div class="text">
+Yeah, a simplified analysis is not too hard, but a tight one is surprisingly complex
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6468">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="20.03.2021 15:28:43">
+15:28
+       </div>
+
+       <div class="from_name">
+Joe Bebel
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6465" onclick="return GoToMessage(6465)">this message</a>
+       </div>
+
+       <div class="text">
+thanks, that&apos;s really useful to know! and also great that it&apos;s all implemented already. now I just need to figure out how to wrangle all these rust dependencies (using arkworks-rs right now)
+       </div>
+
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </body>
+
+</html>
