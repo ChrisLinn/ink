@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Exported Data</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <script src="js/script.js" type="text/javascript">
+
+  </script>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <div class="content">
+
+     <div class="text bold">
+ZenGo X 
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+13 April 2021
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message12198">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="13.04.2021 16:28:51">
+16:28
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="text">
+Native rust Wesolowski VDF: <a href="https://github.com/ZenGo-X/vdf">https://github.com/ZenGo-X/vdf</a> <br>Issues, PRs are welcome
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message12199">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+GK
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="13.04.2021 16:37:00">
+16:37
+       </div>
+
+       <div class="from_name">
+Georgios Konstantopoulos
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message12198" onclick="return GoToMessage(12198)">this message</a>
+       </div>
+
+       <div class="text">
+<a href="https://github.com/ZenGo-X/vdf/blob/main/src/utilities.rs#L64">https://github.com/ZenGo-X/vdf/blob/main/src/utilities.rs#L64</a> is this a reasonable way to find a prime? (Genuinely asking, I do not know)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message12200">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="13.04.2021 16:37:08">
+16:37
+       </div>
+
+       <div class="text">
+Nice work! Looks quite clean and minimal
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message12201">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="13.04.2021 16:40:40">
+16:40
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message12199" onclick="return GoToMessage(12199)">this message</a>
+       </div>
+
+       <div class="text">
+Nothing unique there - <br>1) sample random number, <br>2) if its even I add one<br>3) check if prime, if not I add two <br>4) repeat 3 until prime is found <br>Happy to learn better ways (I think we discussed it once after I asked the same question)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message12202">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="13.04.2021 16:47:21">
+16:47
+       </div>
+
+       <div class="from_name">
+Adrian Hamelink
+       </div>
+
+       <div class="text">
+The original paper suggests doing rejection sampling until H(N,g,t,y) is prime  (find smallest i st H(N,g,t,y,i) is prime). This is slower though, so instead you can hash only once, and look for the primes nearby. The problem is that you have a bias toward primes that are “first”. Like if you have p1 and p2=p1+2, then p1 will have a higher chance of appearing than p2.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message12203">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="13.04.2021 16:49:20">
+16:49
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message12202" onclick="return GoToMessage(12202)">this message</a>
+       </div>
+
+       <div class="text">
+I’ll add this as a comment (with credit)!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message12204">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="13.04.2021 17:03:04">
+17:03
+       </div>
+
+       <div class="text">
+By <a href="https://t.me/dankrad">@dankrad</a> <a href="https://medium.com/platon-network/custody-game-in-eth-2-0-and-mpc-implementations-part-i-aff3b39451cd">https://medium.com/platon-network/custody-game-in-eth-2-0-and-mpc-implementations-part-i-aff3b39451cd</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message12205">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JT
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="13.04.2021 17:03:06">
+17:03
+       </div>
+
+       <div class="from_name">
+John Tromp
+       </div>
+
+       <div class="text">
+probability of picking a prime is proportional to preceding gap
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message12206">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="13.04.2021 17:03:34">
+17:03
+       </div>
+
+       <div class="text">
+in your example, p2 has minimal gap of 2
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message12207">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="13.04.2021 17:04:30">
+17:04
+       </div>
+
+       <div class="text">
+and p1 must have gap &gt;= 4, so at least twice as likely
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message12208">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="13.04.2021 17:46:04">
+17:46
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="text">
+Brutal : <a href="https://github.com/Defi-Cartel/salmonella">https://github.com/Defi-Cartel/salmonella</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message12209">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic4" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+A
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="13.04.2021 20:00:48">
+20:00
+       </div>
+
+       <div class="from_name">
+Alon 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message12208" onclick="return GoToMessage(12208)">this message</a>
+       </div>
+
+       <div class="text">
+wow…
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message12210">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+MH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="13.04.2021 20:14:14">
+20:14
+       </div>
+
+       <div class="from_name">
+M H
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message12208" onclick="return GoToMessage(12208)">this message</a>
+       </div>
+
+       <div class="text">
+Justice was served that day
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message12212">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="13.04.2021 21:43:41">
+21:43
+       </div>
+
+       <div class="from_name">
+Onur 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message12199" onclick="return GoToMessage(12199)">this message</a>
+       </div>
+
+       <div class="text">
+There is an interesting trick for hashing to prime for PoE in section 7 of <a href="https://eprint.iacr.org/2018/1188.pdf">https://eprint.iacr.org/2018/1188.pdf</a> where prover samples a nonce in a smaller set appends it to the transcript in order to hit a prime in the first test. If applicable it would reduce verifier work to a single primality check
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message12213">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+MH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="13.04.2021 21:44:25">
+21:44
+       </div>
+
+       <div class="from_name">
+M H
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message12202" onclick="return GoToMessage(12202)">this message</a>
+       </div>
+
+       <div class="text">
+(deleted previous message to rephrase) Can you perhaps resolve the mentioned issue by relying on the density of prime numbers. So let&apos;s say you want to pick an N-bit prime, you split the range from 2^(N-1) to 2^N  into equally sized segments of size N. According to prime density each segment should contain on average one prime, right? Next, you use the mentioned hash function to pick a segment at &quot;random&quot; and then look for all the prime numbers in that segment. If there are no numbers pick another random segment using the hash function with incrementing in i H(N,g,t,y,i) until you land on a segment with prime numbers. I guess it is some sort of compromising between efficiency in your suggestion and being less biased towards specific primes. Though I&apos;m not sure if this bias is even a problem. :)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message12214">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="13.04.2021 21:49:36">
+21:49
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message12212" onclick="return GoToMessage(12212)">this message</a>
+       </div>
+
+       <div class="text">
+This is very interesting!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message12215">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+TB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="13.04.2021 22:20:52">
+22:20
+       </div>
+
+       <div class="from_name">
+Tal B
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message12208" onclick="return GoToMessage(12208)">this message</a>
+       </div>
+
+       <div class="text">
+for a step by step analysis <a href="https://twitter.com/TalBeerySec/status/1373719338193190925?s=20">https://twitter.com/TalBeerySec/status/1373719338193190925?s=20</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message12216">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="13.04.2021 22:22:08">
+22:22
+       </div>
+
+       <div class="text">
+also see the newest kid in the block <a href="https://twitter.com/TalBeerySec/status/1381309597709918214?s=20">https://twitter.com/TalBeerySec/status/1381309597709918214?s=20</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-2">
+
+      <div class="body details">
+14 April 2021
+      </div>
+
+     </div>
+
+     <div class="message service" id="message12218">
+
+      <div class="body details">
+matt / jb joined group by link from Group
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message12219">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+m
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.04.2021 02:43:49">
+02:43
+       </div>
+
+       <div class="from_name">
+matt / jb 
+       </div>
+
+       <div class="text">
+Hey guys, are there any examples of btc key derivation using the multi-party-ecdsa repo?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message12220">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.04.2021 03:49:13">
+03:49
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message12219" onclick="return GoToMessage(12219)">this message</a>
+       </div>
+
+       <div class="text">
+Hi ! There’s a 2 party protocol example <a href="https://github.com/ZenGo-X/kms-secp256k1">here</a>   and a {t,n} party example <a href="https://github.com/cryptochill/tss-ecdsa-cli">here</a>. Note that both are not bip32 compatible (not saying its impossible, <a href="https://t.me/HAOYUatHZ">@HAOYUatHZ</a> has some proposal for it , and so does Unbound)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message12221">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="14.04.2021 04:41:26">
+04:41
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="text">
+<a href="https://joinmarket.me/blog/blog/the-soundness-of-musig/">https://joinmarket.me/blog/blog/the-soundness-of-musig/</a>
+       </div>
+
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </body>
+
+</html>
