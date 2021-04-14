@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Exported Data</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <script src="js/script.js" type="text/javascript">
+
+  </script>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <div class="content">
+
+     <div class="text bold">
+ZK Study Club 
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+10 March 2021
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6424">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+VB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="10.03.2021 06:17:08">
+06:17
+       </div>
+
+       <div class="from_name">
+Vitalik Buterin
+       </div>
+
+       <div class="text">
+Does anyone know of a pointer to a paper the describes the simplification of the bulletproofs protocol for the polynomial commitment case?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6425">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="10.03.2021 06:17:57">
+06:17
+       </div>
+
+       <div class="text">
+So no two commitments, just one commitment, and you&apos;re basically just doing a &quot;proof of sum&quot; protocol (any polynomial evaluation can be turned into a sum if you change the base from <code>[G0, G1, G2...]</code> to <code>[G0, G1/x, G2/x**2...]</code>)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6426">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+PM
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="10.03.2021 06:18:57">
+06:18
+       </div>
+
+       <div class="from_name">
+Pratyush Mishra
+       </div>
+
+       <div class="text">
+you can check out our paper, it has the simplification <a href="eprint.iacr.org/2020/499">eprint.iacr.org/2020/499</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6427">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="10.03.2021 06:19:13">
+06:19
+       </div>
+
+       <div class="text">
+but the Halo paper should also describe it
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6428">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+VB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="10.03.2021 06:19:40">
+06:19
+       </div>
+
+       <div class="from_name">
+Vitalik Buterin
+       </div>
+
+       <div class="text">
+thanks! happen to remember which section?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6429">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+PM
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="10.03.2021 06:20:14">
+06:20
+       </div>
+
+       <div class="from_name">
+Pratyush Mishra
+       </div>
+
+       <div class="text">
+appendix A
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6430">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+VB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="10.03.2021 06:21:39">
+06:21
+       </div>
+
+       <div class="from_name">
+Vitalik Buterin
+       </div>
+
+       <div class="text">
+got it
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6431">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="10.03.2021 06:21:56">
+06:21
+       </div>
+
+       <div class="text">
+And if I don&apos;t care about hiding, can just skip to step 8 and look at what&apos;s done with C&apos; which commits to p&apos;, right?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6432">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+PM
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="10.03.2021 06:22:19">
+06:22
+       </div>
+
+       <div class="from_name">
+Pratyush Mishra
+       </div>
+
+       <div class="text">
+yeah, just skip everything in blue
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6433">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+VB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="10.03.2021 06:29:50">
+06:29
+       </div>
+
+       <div class="from_name">
+Vitalik Buterin
+       </div>
+
+       <div class="text">
+thanks a lot!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6434">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+PM
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="10.03.2021 06:34:45">
+06:34
+       </div>
+
+       <div class="from_name">
+Pratyush Mishra
+       </div>
+
+       <div class="text">
+no prob!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6435">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+VB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="10.03.2021 07:16:12">
+07:16
+       </div>
+
+       <div class="from_name">
+Vitalik Buterin
+       </div>
+
+       <div class="text">
+I think if you use my trick above you can simplify the exposition further; z can be a constant instead of a vector!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-2">
+
+      <div class="body details">
+12 March 2021
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6436">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+BF
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="12.03.2021 02:51:31">
+02:51
+       </div>
+
+       <div class="from_name">
+Ben Fisch
+       </div>
+
+       <div class="text">
+<a href="https://t.me/vbuterin">@vbuterin</a> in our paper Section 6.1 (page 25 Fig 4) we give a succinct protocol for proving knowledge of the preimage of any homomorphism h:Z^n -&gt; G. I personally find this to be the simplest exposition of the “Bulletproofs” polynomial commitment scheme, which is captured as a special case. We also simplify the analysis and show it is a proof not just an argument (no computational assumptions required for extraction).
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6437">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="12.03.2021 02:51:35">
+02:51
+       </div>
+
+       <div class="text">
+<a href="https://eprint.iacr.org/2020/1536.pdf#page24">https://eprint.iacr.org/2020/1536.pdf#page24</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6438">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+VB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="12.03.2021 03:04:52">
+03:04
+       </div>
+
+       <div class="from_name">
+Vitalik Buterin
+       </div>
+
+       <div class="text">
+Yep I found the paper myself and I really love the exposition!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6439">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="12.03.2021 03:05:02">
+03:05
+       </div>
+
+       <div class="text">
+Especially the extension on page 29 to an evaluation proof
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6440">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="12.03.2021 03:11:45">
+03:11
+       </div>
+
+       <div class="text">
+Oh <a href="https://t.me/bfisch">@bfisch</a> one question
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6441">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="12.03.2021 03:11:57">
+03:11
+       </div>
+
+       <div class="text">
+The page 29 protocol is clever, but it&apos;s suboptimal, right, because every yL and yR becomes a (EC point, int) instead of just an EC point<br><br>I imagine you can compress it further by just making your new &quot;fake commitment scheme&quot; be C + H*int instead of (C, int)?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6442">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="12.03.2021 03:18:08">
+03:18
+       </div>
+
+       <div class="text">
+Ah sorry, end of page 29 and beginning of page 30
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6443">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+OA
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="12.03.2021 03:43:42">
+03:43
+       </div>
+
+       <div class="from_name">
+Oleg Andreev
+       </div>
+
+       <div class="text">
+When and why the term &quot;proof-carrying data&quot; was invented? Is it a new term for a phenomena that existed since forever, or it&apos;s a more specific terms for some novelty i&apos;m not aware of?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6444">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+PM
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="12.03.2021 03:49:50">
+03:49
+       </div>
+
+       <div class="from_name">
+Pratyush Mishra
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6443" onclick="return GoToMessage(6443)">this message</a>
+       </div>
+
+       <div class="text">
+It was coined in analogy to &quot;proof-carrying code&quot;, and as a generalization of a previous concept called incrementally verifiable computation: <a href="https://people.eecs.berkeley.edu/~alexch/docs/CT10.pdf">https://people.eecs.berkeley.edu/~alexch/docs/CT10.pdf</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6445">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+BF
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="12.03.2021 04:44:16">
+04:44
+       </div>
+
+       <div class="from_name">
+Ben Fisch
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6441" onclick="return GoToMessage(6441)">this message</a>
+       </div>
+
+       <div class="text">
+yes you are right!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-3">
+
+      <div class="body details">
+13 March 2021
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6446">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+VB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="13.03.2021 01:47:27">
+01:47
+       </div>
+
+       <div class="from_name">
+Vitalik Buterin
+       </div>
+
+       <div class="text">
+<a href="" onclick="return ShowMentionName()">Ariel</a> Just wanted to say thank you for this: <a href="https://hackmd.io/@arielg/HJoqBRL9U">https://hackmd.io/@arielg/HJoqBRL9U</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6447">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="13.03.2021 01:47:52">
+01:47
+       </div>
+
+       <div class="text">
+It&apos;s by far the cleanest exposition I&apos;ve found for how bulletproof accumulation works
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6448">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="13.03.2021 02:10:47">
+02:10
+       </div>
+
+       <div class="from_name">
+Ariel Gabizon
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6447" onclick="return GoToMessage(6447)">this message</a>
+       </div>
+
+       <div class="text">
+you&apos;ve made my day :))
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6449">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic4" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+BB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="13.03.2021 03:24:46">
+03:24
+       </div>
+
+       <div class="from_name">
+Benedikt Bünz
+       </div>
+
+       <div class="text">
+Since everyone is hyping their Halo inspired papers I&apos;ll also shamelessly plug <a href="https://eprint.iacr.org/2020/1618.pdf">https://eprint.iacr.org/2020/1618.pdf</a> which builds an accumulation scheme directly for R1CS. The recursive circit consists of just 3 curve scalar multiplication.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6450">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="13.03.2021 03:27:06">
+03:27
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6445" onclick="return GoToMessage(6445)">this message</a>
+       </div>
+
+       <div class="text">
+I think it changes the interactive protocol from a proof of knowledge to an argument of knowledge under DLOG. Not really of practical importance but still noteworthy
+       </div>
+
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </body>
+
+</html>
