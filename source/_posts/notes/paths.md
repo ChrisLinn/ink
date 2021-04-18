@@ -167,6 +167,8 @@ security的论文 实验和出成果都不难, 工业界比学术界领先, 论�
 + methodology
     * [SoK: Science, Security, and the Elusive Goal of Security as a Scientific Pursuit](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/03/scienceAndSecuritySoK.pdf)
     * [Science of Security: Combining Theory and Measurement to Reflect the Observable](https://people.scs.carleton.ca/~paulv/papers/science-security-SPmag-jan2018.pdf)
+    * https://github.com/margaretstorey/mixed-methods
+    * https://github.com/acmsigsoft/EmpiricalStandards
 + https://github.com/dair-ai/awesome-research-proposals-guide
 + directions
     * http://www.connectedpapers.com/
