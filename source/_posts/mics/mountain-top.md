@@ -45,4 +45,4 @@ Dovey 对 BTC 增速则更为乐观，见 https://weibo.com/2248200494/K7gTYwPAC
 <img src="https://github.com/ChrisLinn/ink/raw/master/source/_posts/img/mountain_top/btc_2028.png" style="width: 75%;">
 
 </br>
-我个人当然对这个增速喜闻乐见，这对整个加密货币市场也是好事。但值得注意的是，当市场增量不足时这个增速能否能到最好还是持谨慎保守态度。
+我个人当然对这个增速喜闻乐见，这对整个加密货币市场也是好事。但值得注意的是，当市场增量不足时最好还是对 这个增速能否达到 持谨慎保守态度。
