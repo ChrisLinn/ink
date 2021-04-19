@@ -22,6 +22,7 @@ title: 目录
 + Misc / 随笔
     * [Writing / 我也谈写作](/mics/writing)
     * [Shanghai Fortress / 《上海堡垒》读后感](/mics/once-upon-a-time-in-Shanghai)
+    * [Mountain Top / 站在又一轮小山岗，展望加密货币市场往后的牛熊周期](/mics/mountain-top)
 * Notes / 笔记
     - Programming / 编程
         + [API security / 安全 API 的设计模式](/notes/API_sec)
