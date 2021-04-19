@@ -24,7 +24,7 @@ BTC 已经用历史证明了自己：历史上，每一次熊市的底部都是�
 
 我的意思当然不是 BTC 就此进入横盘，不再上涨。货币放水是戒不掉的毒药，BTC 长期维度只能看涨。借用 [威廉的一段话](https://weibo.com/6252177350/K9NFnaDBb)：每一轮曲线都会有尽头，这大家都知道。但是你怎么知道你是否已经在另一条曲线的开头了呢？ ​​​​
 
-![](https://github.com/ChrisLinn/ink/raw/master/source/_posts/img/mountain_top/2nd_curve.PNG)
+![](https://github.com/ChrisLinn/ink/raw/master/source/_posts/img/mountain_top/2nd_curve.jpg)
 
 监管 BTC 不代表 BTC 就会失去活力， 1933 年黄金禁令 到 1974 年禁令解除，随后黄金进入了漫长的牛市，从 30 多一路飙升到 1000，暴涨 30 多倍。
 
@@ -41,6 +41,6 @@ BTC 已经用历史证明了自己：历史上，每一次熊市的底部都是�
 
 Dovey 对 BTC 增速则持有不同的观点，见 https://weibo.com/2248200494/K7gTYwPAC
 
-![](https://github.com/ChrisLinn/ink/raw/master/source/_posts/img/mountain_top/btc_2028.PNG)
+![](https://github.com/ChrisLinn/ink/raw/master/source/_posts/img/mountain_top/btc_2028.png)
 
 我个人当然乐于见到这个增速，这对整个加密货币市场也是好事，但当市场增量不足时我对这个增速能否实现抱保守观念。
