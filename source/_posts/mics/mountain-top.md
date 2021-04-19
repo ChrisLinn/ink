@@ -26,10 +26,11 @@ BTC 已经用历史证明了自己：历史上，每一次熊市的底部都是�
 
 ![](https://github.com/ChrisLinn/ink/raw/master/source/_posts/img/mountain_top/2nd_curve.jpg)
 
-监管 BTC 不代表 BTC 就会失去活力， 1933 年黄金禁令 到 1974 年禁令解除，随后黄金进入了漫长的牛市，从 30 多一路飙升到 1000，暴涨 30 多倍。
+并且监管 BTC 不代表 BTC 就会失去活力， 1933 年黄金禁令 到 1974 年禁令解除，随后黄金进入了漫长的牛市，从 30 多一路飙升到 1000，暴涨 30 多倍。
 
-![](http://img.zhitongcaijing.com/images/contentformat/3d664b6efa01cfa7a3eb9527868a9f99.jpg)
+<img src="http://img.zhitongcaijing.com/images/contentformat/3d664b6efa01cfa7a3eb9527868a9f99.jpg" style="width: 75%;">
 
+</br>
 值得注意的是，不可用黄金的逻辑来判断加密货币的走势和上涨空间。黄金作为储值资产用来跑赢物价跑赢购买力表现不俗，但如果想用来跑赢货币增发的速度跑赢其他优质资产（房产和美股）则力不从心。原因是经济周期有轮回，储值型资产只适合疲软周期时对冲放水政策，在经济复苏大举建设时并不划算。而加密货币其实和黄金的定位并不等同，加密货币兼具了 储值、建设（incentivization, fund raising）、投机 的属性，这也是加密货币令人着迷的地方。
 
 
@@ -41,6 +42,7 @@ BTC 已经用历史证明了自己：历史上，每一次熊市的底部都是�
 
 Dovey 对 BTC 增速则持有不同的观点，见 https://weibo.com/2248200494/K7gTYwPAC
 
-![](https://github.com/ChrisLinn/ink/raw/master/source/_posts/img/mountain_top/btc_2028.png)
+<img src="https://github.com/ChrisLinn/ink/raw/master/source/_posts/img/mountain_top/btc_2028.png" style="width: 75%;">
 
-我个人当然乐于见到这个增速，这对整个加密货币市场也是好事，但当市场增量不足时我对这个增速能否实现抱保守观念。
+</br>
+我个人当然对这个增速喜闻乐见，这对整个加密货币市场也是好事，但当市场增量不足时我对这个增速能否实现抱保守观念。
