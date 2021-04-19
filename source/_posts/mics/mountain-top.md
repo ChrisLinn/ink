@@ -40,7 +40,7 @@ BTC 已经用历史证明了自己：历史上，每一次熊市的底部都是�
 
 ## Dovey 关于 BTC 增速的不同的观点
 
-Dovey 对 BTC 增速则持有不同的观点，见 https://weibo.com/2248200494/K7gTYwPAC
+Dovey 对 BTC 增速则仍非常乐观，见 https://weibo.com/2248200494/K7gTYwPAC
 
 <img src="https://github.com/ChrisLinn/ink/raw/master/source/_posts/img/mountain_top/btc_2028.png" style="width: 75%;">
 
