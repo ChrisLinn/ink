@@ -38,6 +38,12 @@ BTC 已经用历史证明了自己：历史上，每一次熊市的底部都是�
 
 本轮牛市与以往牛市的另一个区别是，不仅 BTC 得到了机构的认可，ETH 也开始得到了主流机构的认可。加之 ETH 上承载了那么多的衍生品协议促使人投入进来理财，DeFi 生态已经自成一套体系。所以有观点认为，以后可能会有 BTC、ETH 的双周期，牛熊转换不再以 BTC 为唯一指标。
 
+<!-- 
+Arthur Hayes 谈对以太坊的估值：认为能 catch 5% 的 CeFi 交易量
++ https://blog.bitmex.com/yes-i-read-the-whitepaper/
++ https://www.chaincatcher.com/article/2061089
+ -->
+
 ## Dovey 的观点
 
 Dovey 对 BTC 增速则更为乐观，见 https://weibo.com/2248200494/K7gTYwPAC
