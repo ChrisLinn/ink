@@ -94,6 +94,7 @@
 + https://github.com/a8m/golang-cheat-sheet
 + https://github.com/xmge/gonote
 + https://github.com/teh-cmc/go-internals
++ https://github.com/golang-design/history
 + https://github.com/changkun/go-under-the-hood
 + https://github.com/chai2010/go-ast-book
 + https://github.com/gobyexample-cn/gobyexample
