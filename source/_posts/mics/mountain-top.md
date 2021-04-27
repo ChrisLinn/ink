@@ -51,6 +51,10 @@ Arthur Hayes 谈对以太坊的估值：认为能 catch 5% 的 CeFi 交易量
 + https://www.chaincatcher.com/article/2061089
  -->
 
+<!-- 
+PoS改造后，非常适合现在中美唯一共同认可的绿色经济政策（可持续发展）
+ -->
+
 ## Dovey 的观点
 
 Dovey 对 BTC 增速则更为乐观，见 https://weibo.com/2248200494/K7gTYwPAC
