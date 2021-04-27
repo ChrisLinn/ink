@@ -36,6 +36,7 @@ merkle tree
         - McEliece
         - RLCE
     * Supersingular elliptic curve isogeny cryptography
+        - [The Case for SIKE: A Decade of the Supersingular Isogeny Problem](https://eprint.iacr.org/2021/543)
     * Symmetric key quantum resistance
 
 ## snark-friendly hash
