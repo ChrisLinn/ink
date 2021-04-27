@@ -28,6 +28,7 @@ Learning With Error (LWE)
 
 ## Projects
 + https://github.com/MarbleHE/SoK
+    * [SoK: Fully Homomorphic Encryption Compilers](https://arxiv.org/abs/2101.07078)
 + HElib
 + TFHE
     * https://eprint.iacr.org/2014/816.pdf is a precursor for the popular [TFHE](https://tfhe.github.io/tfhe/)
