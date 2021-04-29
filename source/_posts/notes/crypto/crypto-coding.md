@@ -179,6 +179,7 @@ __TODO:__
 + https://www.chosenplaintext.ca/articles/beginners-guide-constant-time-cryptography.html
 + [The state of tooling for verifying constant-timeness of cryptographic implementations](https://neuromancer.sk/article/26)
 + https://github.com/mratsim/constantine/blob/master/docs/optimizations.md
++ https://github.com/pornin/CTTK
 
 ---
 __TODO:__
