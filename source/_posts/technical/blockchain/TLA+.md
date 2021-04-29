@@ -22,3 +22,5 @@
 * https://github.com/decanus/rutschblock
 * https://github.com/matklad/paxosnotes
 * https://mwhittaker.github.io/frankenpaxos/
+* https://github.com/tlaplus-community/tlaplus-standard
+* https://github.com/tlaplus-community/tlaplusdocs
