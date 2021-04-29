@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Exported Data</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <script src="js/script.js" type="text/javascript">
+
+  </script>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <div class="content">
+
+     <div class="text bold">
+ZK Study Club 
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+28 April 2021
+      </div>
+
+     </div>
+
+     <div class="message service" id="message6601">
+
+      <div class="body details">
+Anna invited Alexander Avd
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6602">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic4" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JC
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.04.2021 21:48:46">
+21:48
+       </div>
+
+       <div class="from_name">
+Jon Chuang
+       </div>
+
+       <div class="text">
+Hi all. May I know if anyone thus far has found an easy way of integrating plookups with R1CS? <br><br>One way I know of doing this is by taking random linear combinations of linear maps applied to the witness polynomial z, to obtain our plookup witness polynomial y, i.e. Sum_i=0..n  a^i M_i . z =?= y, where M_i is a matrix where each row contains a single 1 and is 0 everywhere else, which selects for the i-th table entry in a given table lookup, and where $a$ is a random value obtained via fiat-shamir. I&apos;m not clear this can be done off the bat using the techniques in groth16. However, this is possible to do in Marlin, but is quite costly, requiring at least 2 * k + 1 additional group elems in the proof, where k is the max number of lookup table columns, apart from the plookup witness y and the sorted witness y_s.<br><br>However, I think I&apos;ve discovered a way to do this cheaply using Marlin that apart from the plookup witness y and the sorted witness y_s, increases the proof size by at most 1 group elems if one is a bit lazier, and if one is willing to arrange the witness poly in a particular manner, increases by 0 elem (I need to check how these two schemes differ in their proving cost, however - I think for the latter MSM cost is lower but FFT cost is higher in the plookup prover phase).  <br><br>As far as I know, this is the only known relatively cheap way of integrating the two schemes and their data layouts.<br><br>But I would be happy to be corrected on this as I&apos;ve only heard mention of the possibility of integration but no actual description thus far. <br><br>I think the advantages of a cheap plookup for R1CS are that existing users of R1CS don&apos;t have to migrate to a new programming model (Plonk) to benefit from the efficiency gains of plookup. <br><br>That being said, Plonk does offer advantages in flexibility in gate configuration (Turbo Plonk). But, this method is highly circuit specific (quite like an ASIC) and is hard to do for a general purpose framework/compiler, whereas the programming model of a lookup table is much simpler.<br><br>Would love to hear others&apos; thoughts on this.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6603">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AV
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.04.2021 22:02:10">
+22:02
+       </div>
+
+       <div class="from_name">
+Alexander Vlasov
+       </div>
+
+       <div class="text">
+The scheme I had in mind is most likely one that you mentioned for Marlin. I assume that special layout of witness is that you have lookup participating variables copied at continuous ranges of indexes like [i,i+3) and you use a single masking/selection polynomial that is later opened at z, z*omega, … for a verification equation
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6604">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic4" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JC
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.04.2021 22:07:25">
+22:07
+       </div>
+
+       <div class="from_name">
+Jon Chuang
+       </div>
+
+       <div class="text">
+Hmm, actually no, I did think of that, but even more simply, one can JIT public inputs into a Marlin matrix, thereby allowing one to perform random linear combinations of arbitrary witness variables.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6605">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AV
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.04.2021 22:08:47">
+22:08
+       </div>
+
+       <div class="from_name">
+Alexander Vlasov
+       </div>
+
+       <div class="text">
+You need 1 more matrix for it, right?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6606">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic4" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JC
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.04.2021 22:08:55">
+22:08
+       </div>
+
+       <div class="from_name">
+Jon Chuang
+       </div>
+
+       <div class="text">
+Yes
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6607">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.04.2021 22:09:19">
+22:09
+       </div>
+
+       <div class="text">
+Or, you can combine into the existing matrix, and stride the outputs back into the witness poly
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6608">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.04.2021 22:10:02">
+22:10
+       </div>
+
+       <div class="text">
+Such that that poly when evaluated over the pow 2 subgroup leads only to those values
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6609">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.04.2021 22:10:23">
+22:10
+       </div>
+
+       <div class="text">
+I&apos;m currently writing this up but I&apos;d like to verify it/add some further analysis before releasing publically, you could DM me if you&apos;d like the link. Will be happy for extra pair of eyes
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6610">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AV
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.04.2021 22:11:23">
+22:11
+       </div>
+
+       <div class="from_name">
+Alexander Vlasov
+       </div>
+
+       <div class="text">
+For my case you would need either some post-synthesis processing or extra copy-constraints too, but masking is done just by another polynomial of the same degree as witness without extra matrix-into-poly encoding step. Approaches are very similar anyway
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6611">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.04.2021 22:11:40">
+22:11
+       </div>
+
+       <div class="text">
+Sure, just shoot into DM
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6612">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.04.2021 22:15:59">
+22:15
+       </div>
+
+       <div class="text">
+Do you only need one matrix or k different ones (where k is number of columns in lookup tables) to get a random linear combination like (<a href="" onclick="return ShowBotCommand(&quot;sum_&quot;)">/sum_</a>{i=1}^k alpha^i M_i) * witness ?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6613">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic4" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JC
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.04.2021 22:16:28">
+22:16
+       </div>
+
+       <div class="from_name">
+Jon Chuang
+       </div>
+
+       <div class="text">
+I&apos;ve had similar intuitions, but none of them panned out when I try to put them to paper, or would seem to be too expensive. Which is why the simplicity of this scheme really appealled to me when I thought of it.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6614">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="28.04.2021 22:16:53">
+22:16
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6612" onclick="return GoToMessage(6612)">this message</a>
+       </div>
+
+       <div class="text">
+It&apos;s just 1 matrix, due to the way marlin works
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-2">
+
+      <div class="body details">
+29 April 2021
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6615">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.04.2021 13:46:24">
+13:46
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+Lookups for Marlin would indeed be useful. However, I disagree with the premiss that custom gates in PLONK (or other systems supporting them) are too hard to integrate with a general-purpose framework/compiler
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6616">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.04.2021 13:52:13">
+13:52
+       </div>
+
+       <div class="text">
+This seems to me to be a bit like saying that the ability to link with functions written in assembler is too hard to integrate with a general-purpose compiler. But in fact native compilers from high-level languages are routinely expected to support that. In principle it&apos;s no more difficult for custom gates. You may or may not be able to define a new gate in your HLL, but you could certainly use them.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6617">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.04.2021 13:53:57">
+13:53
+       </div>
+
+       <div class="text">
+In any case, I believe that even standard 3-wire PLONK as described in the PLONK paper is already more efficient (for prover time) than Marlin. [Edit: see caveats below.]
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6618">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+KG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.04.2021 13:59:08">
+13:59
+       </div>
+
+       <div class="from_name">
+Kobi Gurkan
+       </div>
+
+       <div class="text">
+standard 3-wire PLONK with naive translation of R1CS to it?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6619">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.04.2021 13:59:59">
+13:59
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+No, direct compilation from an HLL to 3-wire PLONK
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6620">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+PM
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.04.2021 14:00:06">
+14:00
+       </div>
+
+       <div class="from_name">
+Pratyush Mishra
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6617" onclick="return GoToMessage(6617)">this message</a>
+       </div>
+
+       <div class="text">
+I.e just supporting arity-2 add/mul gates?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6621">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.04.2021 14:00:16">
+14:00
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+Yes
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6622">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.04.2021 14:01:12">
+14:01
+       </div>
+
+       <div class="text">
+In practice, custom gates have some of the characteristics of processor instructions (which is the analogy we use in the Halo 2 implementation), and they can provide similar performance improvements for commonly used operations. But like a function written in assembly, they&apos;re programmable.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6623">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+PM
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.04.2021 14:03:31">
+14:03
+       </div>
+
+       <div class="from_name">
+Pratyush Mishra
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6621" onclick="return GoToMessage(6621)">this message</a>
+       </div>
+
+       <div class="text">
+That can’t be more efficient than Marlin; at best equal. In Marlin you can rebalance the matrices so that they all have roughly the same number of non-zero gates, which in practice means that the cost of addition gates can be as low as num_addition_gates/3
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6624">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.04.2021 14:06:26">
+14:06
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+Section 1.4 of the PLONK paper has a concrete comparison to Marlin. Marlin only wins if you have high-fan-in addition, but that isn&apos;t common for real circuits
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6625">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.04.2021 14:07:21">
+14:07
+       </div>
+
+       <div class="text">
+In any case, if high-fan-in addition were common then you could use 4- or 5-wire PLONK
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6626">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.04.2021 14:08:42">
+14:08
+       </div>
+
+       <div class="text">
+You&apos;re right that I shouldn&apos;t have claimed that 3-wire PLONK specifically is always more efficient
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6627">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+PM
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.04.2021 14:09:10">
+14:09
+       </div>
+
+       <div class="from_name">
+Pratyush Mishra
+       </div>
+
+       <div class="text">
+In our circuits we often see density much higher than number of variables (at least 5 times), especially when using gadgets optimized for the standard R1CS cost model
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6628">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.04.2021 14:10:55">
+14:10
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+So don&apos;t optimize for the standard R1CS cost model
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6629">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+PM
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.04.2021 14:11:55">
+14:11
+       </div>
+
+       <div class="from_name">
+Pratyush Mishra
+       </div>
+
+       <div class="text">
+Right, and we have optimizations to “uninline” linear combinations, which reduces the weight, but in the end it’s still a non-trivial difference
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6630">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.04.2021 14:15:10">
+14:15
+       </div>
+
+       <div class="text">
+Also since the original version of PLONK and Marlin were published we optimized the protocol quite a bit to reduce the amount of prover work, so I think now there’s not too much difference between the two for standard circuits.<br><br>But anyway, I agree that it’s feasible to have a standardized way to talk about custom gates, probably something along the line of Noir’s model
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6631">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.04.2021 14:15:24">
+14:15
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+In our circuits we are able to do almost all of the additions in parallel on rows that are needed anyway. That said, we are making heavy manual use of custom gates. But that&apos;s to implement reusable abstractions like elliptic curve scalar multiplication and Poseidon.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6632">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic4" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JC
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.04.2021 16:10:10">
+16:10
+       </div>
+
+       <div class="from_name">
+Jon Chuang
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6616" onclick="return GoToMessage(6616)">this message</a>
+       </div>
+
+       <div class="text">
+Hmm, is there a push now to support these “custom function” calls from HLLs? I’m sure there’s cause for coordination across teams from Aztec/zcash/matter labs/others for this. <br><br>Maybe I should be looking into Noir’s model as hinted at by pratyush.<br><br>Just curious what’s the state of the art, as it also affects things like integrating plookups into R1CS. In fact the interface for doing plookups will end up being very similar across the R1CS/Plonk proving systems, so I think there’s reason to include lookups as a standard language feature too.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6633">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic4" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JC
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.04.2021 16:29:22">
+16:29
+       </div>
+
+       <div class="from_name">
+Jon Chuang
+       </div>
+
+       <div class="text">
+<a href="https://t.me/dairahopwood">@dairahopwood</a> Could I get a high-level intuition for how Halo2 handles table lookups of differing number of columns? Does it use a fixed number of wires for plonk across all circuits? Further, does it use a subgroup partitioning approach (requiring shifted evaluations) for the various turboplonk circuit polys or does it use a circuit multiplexing approach?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6634">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic4" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JC
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.04.2021 17:15:17">
+17:15
+       </div>
+
+       <div class="from_name">
+Jon Chuang
+       </div>
+
+       <div class="text">
+Oh wait, you can “implicitly multiplex” by setting the selector polys for a given Turboplonk layout to zero for a given row, right, and then have all the selector polys for different layouts coexist side by side. Since multiplexing would forbid the linearisation step for the prover, right?<br><br>Edit: If I recall this just increases the verifier scalar mul cost in a way related to the number of monomials required for all of the turboplonk gates. So it’s not completely free but not super expensive either.<br><br><a href="https://t.me/dairahopwood">@dairahopwood</a> My question then is whether halo2 circuit builder takes this into account, and detects “duplicate monomials” across circuits. Just as a sanity check.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6635">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AV
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.04.2021 17:53:25">
+17:53
+       </div>
+
+       <div class="from_name">
+Alexander Vlasov
+       </div>
+
+       <div class="text">
+You can just have all tables of the same width
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6636">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.04.2021 19:07:47">
+19:07
+       </div>
+
+       <div class="from_name">
+Ariel Gabizon
+       </div>
+
+       <div class="text">
+Some thoughts on R1CS that hopefully won&apos;t ruffle too many feathers (I&apos;m sort of rehearsing for a blog post I&apos;m writing on current arithmetization approaches): Its big advantage is that since it only involves degree 2 equations, we can use the &quot;check equation at a secret preprocessed point&quot; rather than the &quot;check equation at a random verifier point&quot; approach, given we only have bilinear and not trilinear maps for now.<br><br>(selector polynomial based artih as used in plonk, but also earlier - e.g. GKR, requires degree 3 equation for mult gates - a product of two witnesses multiplied by a preprocessed selector indicating if these are really wires of a mult gate, whereas the big thing in qap/r1cs is doing this in degree 2)<br> <br>This means you can get a SNARK without a random oracle, which is important theoretically. This advantage seems emphasized in Jens Groth&apos;s early SNARK work (see abstract of <a href="https://www.iacr.org/archive/asiacrypt2010/6477323/6477323.pdf">https://www.iacr.org/archive/asiacrypt2010/6477323/6477323.pdf</a>)<br>and also in the GGPR work that set us on the R1CS path.<br>And of course the paper that defined the SNARG SNARK acronyms is all about getting rid of random oracles <a href="https://eprint.iacr.org/2011/443.pdf">https://eprint.iacr.org/2011/443.pdf</a>. <br>(well the examples I give are perhaps ad hoc as a lot of crypto literature seems to be about getting rid of the ROs)<br><br>Side thought: Since the KZG commitment scheme was already out in 2010, I wonder if we would&apos;ve seen something more plonk-ish sooner if the snark research was more practically motivated a decade earlier.<br><br>However, in our typical contexts I wonder if this is still even a theoretical advantage, as we use the SNARK inside a system like Zcash that is gonna have a random oracle somewhere anyways, e.g. in a Schnorr signature.<br><br>Given that you swallowed using a random oracle (together with your algebraic assumptions like say the AGM), I don&apos;t know how natural it is to limit oneself to r1cs constraints; well there is the argument of being compatible with already existing infrastructure..
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6637">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.04.2021 19:12:55">
+19:12
+       </div>
+
+       <div class="text">
+Well what r1cs also has going for it, is that snarks without ROs might have better aggregation properties (as will be discussed today at the workshop)
+       </div>
+
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </body>
+
+</html>
