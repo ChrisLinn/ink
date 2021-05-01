@@ -49,6 +49,9 @@ BTC 已经用历史证明了自己：历史上，每一次熊市的底部都是�
 Arthur Hayes 谈对以太坊的估值：认为能 catch 5% 的 CeFi 交易量
 + https://blog.bitmex.com/yes-i-read-the-whitepaper/
 + https://www.chaincatcher.com/article/2061089
+
+Variant Fund投资人：10个迹象表明以太坊即将达到1万美元
++ https://www.chaincatcher.com/article/2061437
  -->
 
 <!-- 
