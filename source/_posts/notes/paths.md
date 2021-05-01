@@ -274,6 +274,9 @@ security的论文 实验和出成果都不难, 工业界比学术界领先, 论�
     * https://github.com/SebastianElvis/english-research-lint
     * https://sebastianelvis.github.io/categories/writing/
         - https://www.coursera.org/learn/sciwrite
+    * FoC style
+        - I have not been updated on the win.
+        - I am not willing to comment on what I don't know. I don't know what it's about and therefore I don't know how to respond.
 + 再看这篇文章怎么写
     * scope多大
     * focus在哪
