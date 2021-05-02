@@ -190,3 +190,15 @@ __TODO:__
 
 + [PacktPublishing/Security-with-Go 的 Cryptography 章节代码](https://github.com/PacktPublishing/Security-with-Go/tree/master/Chapter06)
     * [目录](https://www.packtpub.com/networking-and-servers/security-go)
+
+---
+
+## git 存储 credentials
++ https://opensource.com/article/19/2/secrets-management-tools-git
++ https://stackoverflow.com/questions/48330742/file-encryption-in-git-repository
++ https://superuser.com/questions/1162907/setting-up-an-encrypted-git-repository
++ https://github.com/sobolevn/git-secret
++ https://github.com/AGWA/git-crypt
++ https://github.com/StackExchange/blackbox
++ https://embeddedartistry.com/blog/2018/03/15/safely-storing-secrets-in-git/
++ 
