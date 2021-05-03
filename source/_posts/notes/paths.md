@@ -149,6 +149,7 @@
 + Luca de Feo
 + Lefteris Kokoris-Kogias
 + [Carsten Baum](http://www.carstenbaum.com/)
++ [Srinath Setty](http://srinathsetty.net/)
 + Seres István András
 + heming cui
 + junfeng yang
