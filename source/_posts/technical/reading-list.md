@@ -38,6 +38,7 @@
     - https://decentralizedthoughts.github.io/
     - https://github.com/chainrg/reading
     - https://github.com/matthewdgreen/blockchains
+    - https://ellipticnews.wordpress.com/
     - https://github.com/solegga/blockchaincourse
     - https://openmined.org/
     - https://zkcapital.substack.com/
