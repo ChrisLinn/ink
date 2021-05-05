@@ -38,6 +38,8 @@ merkle tree
     * Supersingular elliptic curve isogeny cryptography
         - [The Case for SIKE: A Decade of the Supersingular Isogeny Problem](https://eprint.iacr.org/2021/543)
     * Symmetric key quantum resistance
++ [Post-Quantum Cryptography: Current state and quantum mitigation](https://www.enisa.europa.eu/publications/post-quantum-cryptography-current-state-and-quantum-mitigation)
++ [Post-Quantum Cryptography: Q&A with Jean-Philippe Aumasson](https://www.infoq.com/news/2021/04/post-quantum-crypto-aumasson-qa/)
 
 ## snark-friendly hash
 SHA?
