@@ -52,6 +52,15 @@ Arthur Hayes 谈对以太坊的估值：认为能 catch 5% 的 CeFi 交易量
 
 Variant Fund投资人：10个迹象表明以太坊即将达到1万美元
 + https://www.chaincatcher.com/article/2061437
+
+@SquishChaos:
++ How Ethereum can achieve $150,000 by 2023 and Ethereum bulls to dream bigger dreams
+
+@BanklessHQ & @drakefjustin: Modeling Ultra Sound Money
++ https://twitter.com/trustlessstate/status/1387427174265745413?s=21
++ https://twitter.com/ryansadams/status/1387393918740934659?s=21
+
+
  -->
 
 <!-- 
