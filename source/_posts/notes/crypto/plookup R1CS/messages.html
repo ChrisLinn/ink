@@ -1019,6 +1019,1322 @@ Well what r1cs also has going for it, is that snarks without ROs might have bett
 
      </div>
 
+     <div class="message service" id="message6638">
+
+      <div class="body details">
+LIPENG YUE | Patract joined group by link from Group
+      </div>
+
+     </div>
+
+     <div class="message service" id="message6639">
+
+      <div class="body details">
+Marcel (🌈, 🌈) joined group by link from Group
+      </div>
+
+     </div>
+
+     <div class="message service" id="message6640">
+
+      <div class="body details">
+George joined group by link from Group
+      </div>
+
+     </div>
+
+     <div class="message service" id="message6641">
+
+      <div class="body details">
+Kev joined group by link from Group
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-3">
+
+      <div class="body details">
+30 April 2021
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6642">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="30.04.2021 17:21:15">
+17:21
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6633" onclick="return GoToMessage(6633)">this message</a>
+       </div>
+
+       <div class="text">
+We handle multiple columns in the same way as Plookup, with an optimisation to support polynomial expressions rather than requiring all of the columns involved in the lookup to be explicitly reified: <a href="https://zcash.github.io/halo2/design/proving-system/lookup.html#generalizations">https://zcash.github.io/halo2/design/proving-system/lookup.html#generalizations</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6643">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="30.04.2021 17:21:42">
+17:21
+       </div>
+
+       <div class="text">
+Note that the underlying subset argument is *not* the same as Plookup (it&apos;s described earlier on that page, although the description is slightly out-of-date in respect of how the code handles zero knowledge)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6644">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="30.04.2021 17:24:29">
+17:24
+       </div>
+
+       <div class="text">
+We also support (and use, in the Orchard circuit) multiple lookups per row. These can share some or all table columns, or use independent tables. Table columns don&apos;t have to be fixed.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6645">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic4" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JC
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="30.04.2021 17:28:37">
+17:28
+       </div>
+
+       <div class="from_name">
+Jon Chuang
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6644" onclick="return GoToMessage(6644)">this message</a>
+       </div>
+
+       <div class="text">
+I see, that&apos;s very interesting and not quite what I expected! I&apos;ll definitely make the gitbook my bedtime reading for the next few days 🙂 will get back to you with qns
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6646">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="30.04.2021 17:29:08">
+17:29
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+I don&apos;t understand the question about detecting duplicate monomials across circuits. All circuits are treated independently.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6647">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="30.04.2021 17:32:12">
+17:32
+       </div>
+
+       <div class="text">
+Another interesting thing we support is table inclusion: e.g. say you have a lookup with k-bit input, you can cheaply use subsets of that table with a less-than-k-bit input (actually, *any* pre-labelled subset)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6648">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="30.04.2021 17:32:59">
+17:32
+       </div>
+
+       <div class="text">
+This is used in our SHA-256 gadget, for example
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6649">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic4" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JC
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="30.04.2021 17:33:37">
+17:33
+       </div>
+
+       <div class="from_name">
+Jon Chuang
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6646" onclick="return GoToMessage(6646)">this message</a>
+       </div>
+
+       <div class="text">
+Would you say that the evaluations are batched then? I was thinking conceptually, a single circuit is simpler, but I&apos;ll definitely be trying to understand why the approach taken in halo2 may concretely be better
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6650">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="30.04.2021 17:35:41">
+17:35
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+If I&apos;m understanding your question about subgroup partitioning correctly, yes we use that
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6651">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="30.04.2021 17:38:51">
+17:38
+       </div>
+
+       <div class="text">
+On the question about random oracles, with my cryptographic engineer hat on, I&apos;m slightly bemused by the attention the literature pays to this. As you say Ariel, practical systems always end up relying on random oracles somewhere. Always.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6652">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="30.04.2021 17:43:12">
+17:43
+       </div>
+
+       <div class="text">
+(That said, I don&apos;t quite accept the implicit argument that if you have a random oracle anywhere, you might as well use them everywhere. Non-RO security definitions are often nicer in other ways.)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6653">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="30.04.2021 21:31:23">
+21:31
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6652" onclick="return GoToMessage(6652)">this message</a>
+       </div>
+
+       <div class="text">
++1
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6654">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+M
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="30.04.2021 23:19:25">
+23:19
+       </div>
+
+       <div class="from_name">
+Mary 
+       </div>
+
+       <div class="text">
+There are many different flavours of random oracles as well.  Like if you are just using a random oracle for signing then that’s very different to using a random oracle for knowledge extraction (at least theoretically).
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-4">
+
+      <div class="body details">
+1 May 2021
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6655">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+PM
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.05.2021 01:01:55">
+01:01
+       </div>
+
+       <div class="from_name">
+Pratyush Mishra
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6654" onclick="return GoToMessage(6654)">this message</a>
+       </div>
+
+       <div class="text">
+Yes, random oracles also complicate security proofs non-trivially, and furthermore these proof guarantees go out the window when you have non-blackbox use of your primitive (Eg: recursion)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-5">
+
+      <div class="body details">
+2 May 2021
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6656">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="02.05.2021 17:09:47">
+17:09
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+Do they though? You would have instantiated the random oracle anyway; you&apos;re just instantiating it (also) at a different stage. It doesn&apos;t seem to me that instantiating an RO more than once is less heuristically valid, or more likely to be vulnerable to any feasible attack, than instantiating it once.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6658">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="02.05.2021 17:11:49">
+17:11
+       </div>
+
+       <div class="text">
+The point of the proof(s) was to rule out specific classes of plausible vulnerability, not all possible vulnerabilities. In other words, your proof guarantees were never inside the window in the first place, and that&apos;s fine.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-6">
+
+      <div class="body details">
+3 May 2021
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6659">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+PM
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2021 04:11:57">
+04:11
+       </div>
+
+       <div class="from_name">
+Pratyush Mishra
+       </div>
+
+       <div class="text">
+Maybe saying that the guarantees &quot;go out the window&quot; is a bit strong, but the point is that we don&apos;t have a model where we have an end-to-end secure construction of accumulation-based PCD
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6660">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2021 14:32:04">
+14:32
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+We do have a model. The random oracle paradigm says that you&apos;re allowed to instantiate schemes using random oracles and use those instantiations in other protocols. That&apos;s what everyone does in practice.<br><br>In most cases, since the uses are black-box, you can shake out the instantiations to the outer protocol. But does anyone seriously argue that the security of the heuristic depends on that? Why would it?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6661">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2021 14:36:22">
+14:36
+       </div>
+
+       <div class="text">
+The heuristic is saying, &quot;We&apos;ve proven that any feasible attack on this protocol would have to be dependent on exploiting non-RO properties of the specific instantiation. We think that there are no exploitable non-RO properties of $specific_hash_function, and therefore it&apos;s safe to deploy with that hash function.&quot;
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6662">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2021 14:37:17">
+14:37
+       </div>
+
+       <div class="text">
+I don&apos;t see how this reasoning doesn&apos;t also apply when you have to instantiate more than once.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6663">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2021 14:41:32">
+14:41
+       </div>
+
+       <div class="text">
+Said another way: yes, the attacker can, in practice, use the definition of $specific_hash_function in an attack. They can do that even if the RO is only instantiated once.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6664">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.05.2021 14:50:02">
+14:50
+       </div>
+
+       <div class="text">
+It&apos;s very similar to the algebraic group model, which we&apos;re also using in many of these proofs. Obviously the attacker isn&apos;t literally obligated to provide the representations of group elements; that&apos;s just a way of formalizing that the proof is only directly covering attacks that make black-box use of the group. Then we heuristically argue that ruling out those attacks and using a well-understood group instantiation gives us a protocol that is safe to deploy.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-7">
+
+      <div class="body details">
+5 May 2021
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6665">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="05.05.2021 23:15:29">
+23:15
+       </div>
+
+       <div class="from_name">
+Ariel Gabizon
+       </div>
+
+       <div class="text">
+Question for someone from starkware: what is the degree (i.e. the degree of the constraints) in the AIR in Cairo?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6666">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="05.05.2021 23:16:37">
+23:16
+       </div>
+
+       <div class="text">
+I guess it&apos;s slightly more nuanced: I mean the part of the constraint where the witness is substituted inside, rather than just the program counter
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6667">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+LG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="05.05.2021 23:25:23">
+23:25
+       </div>
+
+       <div class="from_name">
+Louis Guthmann | Starkware
+       </div>
+
+       <div class="text">
+<a href="https://t.me/elibensasson">@elibensasson</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6668">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+EB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="05.05.2021 23:48:27">
+23:48
+       </div>
+
+       <div class="from_name">
+Eli Ben-Sasson
+       </div>
+
+       <div class="text">
+2
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6669">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="05.05.2021 23:49:10">
+23:49
+       </div>
+
+       <div class="text">
+not sure I understood the 2nd part (more nuanced) but Cairo AIR is currently at degree 2
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6670">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="05.05.2021 23:49:29">
+23:49
+       </div>
+
+       <div class="text">
+(currently, because some future version may increase. I promise it won&apos;t decrease, though 😉
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6671">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="05.05.2021 23:50:00">
+23:50
+       </div>
+
+       <div class="from_name">
+Ariel Gabizon
+       </div>
+
+       <div class="text">
+thanks! you know maybe the width/num of registers?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6672">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="05.05.2021 23:50:22">
+23:50
+       </div>
+
+       <div class="text">
+reg more nuanced - I&apos;m guessing this deg 2 thing is multiplied by some lagrange thing that chooses the program counter value
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6673">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+EB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="05.05.2021 23:50:50">
+23:50
+       </div>
+
+       <div class="from_name">
+Eli Ben-Sasson
+       </div>
+
+       <div class="text">
+nope, no lagrange thingy 😊
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6674">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="05.05.2021 23:51:33">
+23:51
+       </div>
+
+       <div class="text">
+width is ~ 40-50 (I can get exact number). Notice the number of registers of Cairo is different, it&apos;s 3  (one pc, one allocation pointer and one frame pointer)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6675">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="05.05.2021 23:52:13">
+23:52
+       </div>
+
+       <div class="text">
+so 3 registers in cairo, and 40-50 &quot;columns&quot; or &quot;algebraic registers&quot; in the AIR. Why are you asking?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6676">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="05.05.2021 23:53:13">
+23:53
+       </div>
+
+       <div class="from_name">
+Ariel Gabizon
+       </div>
+
+       <div class="text">
+I&apos;m writing a blog post on plonk arithmetization and its relation to AIR comes up (tbh these specific numbers are not essential for the post, but it got me thinking about it and I was curious)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6677">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="05.05.2021 23:54:09">
+23:54
+       </div>
+
+       <div class="text">
+but if there&apos;s no lagrange thingy and it&apos;s total degree 2 how can you e.g. multiply or add according to the pc?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-8">
+
+      <div class="body details">
+6 May 2021
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6678">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+EB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2021 00:10:59">
+00:10
+       </div>
+
+       <div class="from_name">
+Eli Ben-Sasson
+       </div>
+
+       <div class="text">
+Pc just holds memory address. But any deg d constraints can be reduced to deg 2, right? So there&apos;s no theoretical issue
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6679">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2021 00:18:33">
+00:18
+       </div>
+
+       <div class="from_name">
+Ariel Gabizon
+       </div>
+
+       <div class="text">
+right no theoretical issue, though I guess you increase the width for each such degree reduction. For some reason I remember something about it being &quot;ok&quot; to have larger degree things in the pc; but I&apos;m confused about it right now..yeah in short you can of course decompose to degree 2
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6680">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2021 00:27:35">
+00:27
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+My intuition from optimizing circuits for Halo 2 is that it&apos;s beneficial to use a larger degree in order to reduce the number of advice columns, which reduces the proof size. Is that not the case for AIR?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6681">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2021 00:28:35">
+00:28
+       </div>
+
+       <div class="text">
+(e.g. the Orchard circuit has 10 advice columns and degree 9)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6682">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2021 00:37:14">
+00:37
+       </div>
+
+       <div class="from_name">
+Ariel Gabizon
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6681" onclick="return GoToMessage(6681)">this message</a>
+       </div>
+
+       <div class="text">
+so to construct the quotient you do an fft on a coset of size 8n?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6683">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+BT
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2021 00:38:04">
+00:38
+       </div>
+
+       <div class="from_name">
+Bobbin Threadbare
+       </div>
+
+       <div class="text">
+With AIR it depends on what you are optimizing for. E.g if you are optimizing for prover speed, more columns and lower degree can frequently yield better results. If you care about proof size, then higher degree with fewer columns might be better (though, that&apos;s not always the case).
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6684">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2021 00:43:39">
+00:43
+       </div>
+
+       <div class="from_name">
+Ariel Gabizon
+       </div>
+
+       <div class="text">
+Btw, Daira by advice column you mean preprocessed selectors not including witnesses?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6685">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+S
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2021 07:07:44">
+07:07
+       </div>
+
+       <div class="from_name">
+Sean Bowe | ECC 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6682" onclick="return GoToMessage(6682)">this message</a>
+       </div>
+
+       <div class="text">
+yup exactly
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6686">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2021 07:08:22">
+07:08
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6684" onclick="return GoToMessage(6684)">this message</a>
+       </div>
+
+       <div class="text">
+advice is our term for columns the prover sends, we use “fixed” for things like selectors
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6687">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+EB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2021 11:38:45">
+11:38
+       </div>
+
+       <div class="from_name">
+Eli Ben-Sasson
+       </div>
+
+       <div class="text">
+Checked, the width (number of columns in trace) is 22. Regarding degree, it&apos;s good (not necessary) to stick to powers of 2, for fft reasons. Indeed, degree may change in some future version of the Cairo air. Right now we&apos;re optimizing for getting functionality out there, not for prover or Verifier minimal running time.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message6688">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2021 11:39:08">
+11:39
+       </div>
+
+       <div class="text">
+<a href="" onclick="return ShowMentionName()">אריאל</a> ^
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6689">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2021 18:58:14">
+18:58
+       </div>
+
+       <div class="from_name">
+Ariel Gabizon
+       </div>
+
+       <div class="text">
+Thanks Eli!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message6690">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.05.2021 20:12:16">
+20:12
+       </div>
+
+       <div class="from_name">
+Ariel Gabizon
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message6688" onclick="return GoToMessage(6688)">this message</a>
+       </div>
+
+       <div class="text">
+(That is my name in Hebrew if someone was wondering :) )
+       </div>
+
+      </div>
+
+     </div>
+
     </div>
 
    </div>
