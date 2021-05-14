@@ -46,6 +46,7 @@
 <!-- 
 
 ## Slides
++ https://github.com/slidevjs/slidev
 + https://github.com/gnab/remark
 + https://github.com/yhatt/marp
 + https://github.com/hiroppy/fusuma
