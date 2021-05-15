@@ -74,3 +74,4 @@ use valgrind to help check constant-time & memory leak and so forth
 + https://cryptojedi.org/peter/data/cecc-20160622.pdf
 + https://arxiv.org/pdf/1808.01348.pdf
 + https://ieeexplore.ieee.org/document/7310828
++ [DY* : A Modular Symbolic Verification Framework for Executable Cryptographic Protocol Code](https://hal.inria.fr/hal-03178425/document)
