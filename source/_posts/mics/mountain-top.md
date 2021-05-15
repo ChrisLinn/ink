@@ -50,6 +50,9 @@ Arthur Hayes 谈对以太坊的估值：认为能 catch 5% 的 CeFi 交易量
 + https://blog.bitmex.com/yes-i-read-the-whitepaper/
 + https://www.chaincatcher.com/article/2061089
 
+Arthur Hayes 这篇我觉得很中肯：以太坊如果一直涨其实会杀死以太坊；法定货币本身没有工业用途的价值；技术比货币更有价值（货币只是提供了企业的计价单位），不过比特币在 ICO 和 抵押品 里也起到了计价单位的作用；前面提到以太坊如果只通过通缩一直涨其实会杀死以太坊，但是他上面承载的技术能让大家买单。文章中也提到了对狗币的思考。狗狗挑战了 传统金融、甚至挑战了价值货币的信仰者，但这一切的荒谬正说明很多东西都是荒谬的，早日抛弃对法币信用背书的迷信。
++ [正在逼近的恐惧：以太坊市值会超过比特币吗？](https://www.chaincatcher.com/article/2061765)
+
 Variant Fund投资人：10个迹象表明以太坊即将达到1万美元
 + https://www.chaincatcher.com/article/2061437
 
