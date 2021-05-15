@@ -63,6 +63,9 @@ Variant Fund投资人：10个迹象表明以太坊即将达到1万美元
 + https://twitter.com/trustlessstate/status/1387427174265745413?s=21
 + https://twitter.com/ryansadams/status/1387393918740934659?s=21
 
+万字说透为何 ETH 终将赢得价值储存之战？
++ https://www.chainnews.com/articles/271532319355.htm?utm_source=telegram
++ https://michaelmcguiness.com/essays/why-eth-will-win-store-of-value
 
  -->
 
