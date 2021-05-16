@@ -66,6 +66,10 @@ Variant Fund投资人：10个迹象表明以太坊即将达到1万美元
 万字说透为何 ETH 终将赢得价值储存之战？
 + https://www.chainnews.com/articles/271532319355.htm?utm_source=telegram
 + https://michaelmcguiness.com/essays/why-eth-will-win-store-of-value
+    * 美国通过石油美元体系创造了各国对美元的持续国际需求，从而迫使全球采用美元。
+        - 随着时间的推移，这个体系不断加强
+        - 非常强大的自我强化网络效应
+    - 一个类似的体系 -- 而且是良性循环 -- 正在围绕以太坊网络产生。
 
  -->
 
