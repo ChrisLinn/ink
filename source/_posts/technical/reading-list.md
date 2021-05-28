@@ -43,7 +43,6 @@
     - https://openmined.org/
     - https://zkcapital.substack.com/
     - https://distsys.substack.com/
-    - https://blog.cryptographyengineering.com/
     - https://alinush.github.io/about.html
     - https://www.benthamsgaze.org/
     + https://unenumerated.blogspot.com/
@@ -115,7 +114,6 @@
     - https://joinmarket.me/blog/
     - https://blog.patternsinthevoid.net/index.html
     - https://cathieyun.github.io/
-    - http://defeo.lu/
     - https://www.michaelstraka.com/
     - https://dankradfeist.de/
     - https://www.eff.org/about/staff/eva-galperin
@@ -251,6 +249,9 @@
     - https://github.com/lorin/systems-reading
     - https://github.com/asatarin/testing-distributed-systems
 - crypto
+    - https://blog.cryptographyengineering.com/
+    - https://buttondown.email/cryptography-dispatches/archive/
+    - http://defeo.lu/
     - https://www.cryptologie.net/
     - https://hdevalence.ca/blog/
     - https://asz.ink/
