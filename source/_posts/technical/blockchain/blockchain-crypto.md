@@ -179,3 +179,4 @@ JP Aumasson 也提到 the most exciting crypto  in real applications 是 [thresh
 + https://github.com/Chia-Network/vdf-competition/blob/master/classgroups.pdf
 + https://blog.goodaudience.com/deep-dive-on-rsa-accumulators-230bc84144d9?gi=b5fa21147b56
 + https://alinush.github.io/2020/11/24/RSA-accumulators.html
++ https://github.com/kilic/evmvdf
