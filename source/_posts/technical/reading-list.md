@@ -255,6 +255,7 @@
     - https://www.cryptologie.net/
     - https://hdevalence.ca/blog/
     - https://asz.ink/
+    - https://soatok.blog/
     - https://blog.csdn.net/mutourend/
     - http://blog.higashi.tech/
     - https://shashank-agrawal.com/
