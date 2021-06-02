@@ -16,6 +16,8 @@ title: When do we need cryptography in blockchain space?
 + lattice
     * 抗量子
     * 但是慢...
+    * https://twitter.com/claucece/status/1399752247937048582?s=20
+        - https://eprint.iacr.org/2015/939.pdf
 + misc
     * 其他一些新东西...
         - Isogeny based crypto
