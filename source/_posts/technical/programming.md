@@ -266,6 +266,7 @@ title: 如何学习编程
 + https://github.com/sophi-li/OKRs-self-learning
 + https://github.com/donnemartin/system-design-primer
 + https://github.com/justinamiller/SoftwareArchitect
++ https://github.com/mehdihadeli/awesome-software-architecture
 + https://ebi.readthedocs.io/en/latest/
 + https://github.com/veeral-patel/learn-security-engineering
 + https://github.com/smodnix/31-days-of-API-Security-Tips
