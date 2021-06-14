@@ -80,7 +80,9 @@
     + [Foundations of Privacy](https://course.ece.cmu.edu/~ece734/index.html) from CMU
     + [The Joy of Cryptography](http://web.engr.oregonstate.edu/~rosulekm/crypto/)
     + [COSC 544 - Probabilistic Proof Systems](http://people.cs.georgetown.edu/jthaler/COSC544.html) from Georgetown University by Prof. Justin Thaler
+        * http://people.cs.georgetown.edu/jthaler/ProofsArgsAndZK.pdf
     + [CS294: Foundations of Probabilistic Proofs (F2020)](https://people.eecs.berkeley.edu/~alexch/classes/CS294-F2020.html) from Berkeley by Alessandro Chiesa
+    + https://cyber.biu.ac.il/event/the-9th-biu-winter-school-on-cryptography/
     + [CMSC 652 --- Complexity Theory](http://www.cs.umd.edu/~jkatz/complexity/f11/)
     + [Introduction to the Mathematical Foundations of Elliptic Curve Cryptography](https://hal.archives-ouvertes.fr/hal-01914807/document)
 - https://github.com/cpeikert/TheoryOfCryptography
