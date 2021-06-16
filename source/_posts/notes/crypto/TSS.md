@@ -78,6 +78,9 @@ https://eprint.iacr.org/2020/767
     * With signature aggregation we have to rely on random number generator
         * we can’t choose random point R deterministically like we do in ECDSA
         * 如果你使用确定性K，它允许黑客获得我们的私钥
+        * In Schnorr-like multisignature schemes (or any kind of signature jointly constructed by multiple parties), generating nonces deterministically enables a replay attack that lets co-signers learn your private key.
+            - https://twitter.com/pwuille/status/1400943929051148292?s=21
+            - yeah that's well known, the reason is that schnorr is `s=k+ed` where `k` is the nonce, `d` is the privkey, and `e=H(P||R||M)`, so if you use deterministic nonces, I can abort the process in the middle, and when we retry I change *my* nonce such that there's a new R, so now you use the same nonce, and we get another equation `s'=k+e'd`, so we have 2 variables with 2 equations and we can solve this
     + 另有新 [FROST: Flexible Round-Optimized Schnorr Threshold Signatures](https://eprint.iacr.org/2020/852.pdf)
 
 ## survey
