@@ -71,6 +71,9 @@ Variant Fund投资人：10个迹象表明以太坊即将达到1万美元
         - 非常强大的自我强化网络效应
     - 一个类似的体系 -- 而且是良性循环 -- 正在围绕以太坊网络产生。
 
+Dragonfly Capital：重新梳理以太坊价值叙事和投资逻辑，为其粗略估值
+https://www.chaincatcher.com/article/2063073
+
  -->
 
 <!-- 
