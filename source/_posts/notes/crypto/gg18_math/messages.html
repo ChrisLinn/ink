@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Exported Data</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <script src="js/script.js" type="text/javascript">
+
+  </script>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <div class="content">
+
+     <div class="text bold">
+ZenGo X 
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+29 June 2021
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13050">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic4" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+FB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.06.2021 00:44:04">
+00:44
+       </div>
+
+       <div class="from_name">
+Fadi Barbàra
+       </div>
+
+       <div class="text">
+Hi everyone, I&apos;m trying the ZenGO repository on ECDSA threshold signatures, I hope this is the right place to ask for help. <br><br>As of now I have repurposed the demo file to sign a bitcoin ttransaction. From what I understand the signing mechanism must have the message as bytes as input. Since I&apos;m working in python in creating the signatures (this is because I&apos;m not yet good enough in Rust to write code by myself), I thought of writing the message in bytes in a file and have it read to the <a href="demo.sh">demo.sh</a> file. the salient part of the file would become like this:<br><br><pre><br>digest=&quot;`cat digest.txt`&quot;<br>for i in $(seq 1 $((t+1)));<br>do<br>    echo &quot;signing for client $i out of $((t+1))&quot;<br>    ./target/release/examples/gg18_sign_client http://127.0.0.1:8001 keys$i.store &quot;`printf $digest`&quot; &amp;<br>    sleep 3<br>done<br></pre><br><br><br>I get error:<br><br><pre><br>thread &apos;main&apos; panicked at &apos;called `Result::unwrap()` on an `Err` value: &quot;\u{1}\xEF\xD5a\u{5}\u{2}\xE1&lt;\xDE\u{5}\xA4)\x887\&quot;\xB5\xB5*\xB7\xD0\xF29\x99w\xB6SP&gt;~\xBD\xE7\xE8\xC4;\xB10)\xCE{\u{1f}U\x9E\xF5\xE7G\xFC\xACC\x9F\u{14}U\xA2\xEC|_&quot;&apos;, library/std/src/env.rs:775:51<br>note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace<br>thread &apos;main&apos; panicked at &apos;called `Result::unwrap()` on an `Err` value: &quot;\u{1}\xEF\xD5a\u{5}\u{2}\xE1&lt;\xDE\u{5}\xA4)\x887\&quot;\xB5\xB5*\xB7\xD0\xF29\x99w\xB6SP&gt;~\xBD\xE7\xE8\xC4;\xB10)\xCE{\u{1f}U\x9E\xF5\xE7G\xFC\xACC\x9F\u{14}U\xA2\xEC|_&quot;&apos;, library/std/src/env.rs:775:51<br>note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace<br></pre><br><br>I did it with rust_backtrace. Result here: <a href="https://pastebin.com/92WfgGj4">https://pastebin.com/92WfgGj4</a><br><br>What am I doing wrong? I guess there&apos;s some problem with bytes, but I don&apos;t know if it&apos;s bash&apos;s fault or if it&apos;s not supported by the program in Rust
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13051">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.06.2021 01:18:11">
+01:18
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message13050" onclick="return GoToMessage(13050)">this message</a>
+       </div>
+
+       <div class="text">
+Thanks for the question <a href="https://t.me/fadibarbara">@fadibarbara</a> ! It seems a very specific issue, let’s explore together in DM and we can update here if there will be any interesting findings
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13052">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic4" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+FB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.06.2021 01:37:06">
+01:37
+       </div>
+
+       <div class="from_name">
+Fadi Barbàra
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message13051" onclick="return GoToMessage(13051)">this message</a>
+       </div>
+
+       <div class="text">
+very good, thanks!
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13053">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+M
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.06.2021 14:59:05">
+14:59
+       </div>
+
+       <div class="from_name">
+Monkeyontheloose 
+       </div>
+
+       <div class="text">
+dono if this is the right place to ask this:<br>How is data availability going to work with the latest starkware products? are users going to have to write txns on chian?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13054">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.06.2021 15:23:03">
+15:23
+       </div>
+
+       <div class="from_name">
+Antonio Sanso
+       </div>
+
+       <div class="text">
+Introducing Bandersnatch: a fast elliptic curve built over the BLS12-381 scalar field: <a href="https://ethresear.ch/t/introducing-bandersnatch-a-fast-elliptic-curve-built-over-the-bls12-381-scalar-field/9957">https://ethresear.ch/t/introducing-bandersnatch-a-fast-elliptic-curve-built-over-the-bls12-381-scalar-field/9957</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13055">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+E
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.06.2021 16:48:34">
+16:48
+       </div>
+
+       <div class="from_name">
+Elichai 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message13054" onclick="return GoToMessage(13054)">this message</a>
+       </div>
+
+       <div class="text">
+Is there any (security?) downside of having multiple curves share the same group order?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13056">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.06.2021 16:49:08">
+16:49
+       </div>
+
+       <div class="from_name">
+Antonio Sanso
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message13055" onclick="return GoToMessage(13055)">this message</a>
+       </div>
+
+       <div class="text">
+group order or field size ?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13057">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+E
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.06.2021 16:51:08">
+16:51
+       </div>
+
+       <div class="from_name">
+Elichai 
+       </div>
+
+       <div class="text">
+oh it uses the BLS12-381 scalar field for its field size(x,y coordinates) or its scalar field(exponent of the generator)?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13058">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.06.2021 16:53:45">
+16:53
+       </div>
+
+       <div class="from_name">
+Antonio Sanso
+       </div>
+
+       <div class="text">
+the first
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message13059">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.06.2021 16:54:20">
+16:54
+       </div>
+
+       <div class="text">
+and to answer your first question no security downside are known
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13060">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+B
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.06.2021 17:42:31">
+17:42
+       </div>
+
+       <div class="from_name">
+Barak 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message13057" onclick="return GoToMessage(13057)">this message</a>
+       </div>
+
+       <div class="text">
+I don&apos;t get this distinction, what&apos;s an elliptic curve&apos;s _field size_?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13061">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JT
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.06.2021 17:48:40">
+17:48
+       </div>
+
+       <div class="from_name">
+John Tromp
+       </div>
+
+       <div class="text">
+the size of the field from which coordinates are chosen
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13062">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+B
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.06.2021 17:59:02">
+17:59
+       </div>
+
+       <div class="from_name">
+Barak 
+       </div>
+
+       <div class="text">
+So the parentheses should be flipped around?<br><br>Anyway, there is a unique (up to isomorphism) field of a certain order p^k. In other words, for fields F1,F2 s.t. <a href="" onclick="return ShowHashtag(&quot;F1&quot;)">#F1</a>=<a href="" onclick="return ShowHashtag(&quot;F2&quot;)">#F2</a>, we have F1=F2.<br>So if 2 elliptic curves share the same &quot;field size&quot; they actually share the same field of definition.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13063">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.06.2021 18:01:13">
+18:01
+       </div>
+
+       <div class="from_name">
+Antonio Sanso
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message13062" onclick="return GoToMessage(13062)">this message</a>
+       </div>
+
+       <div class="text">
+and :) ? what&apos;s your point ?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13064">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+B
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.06.2021 18:10:14">
+18:10
+       </div>
+
+       <div class="from_name">
+Barak 
+       </div>
+
+       <div class="text">
+see my previous message: just clarifying that it&apos;s the same thing.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13065">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.06.2021 18:13:53">
+18:13
+       </div>
+
+       <div class="from_name">
+Antonio Sanso
+       </div>
+
+       <div class="text">
+the field size and the curve order is not the same thing (just saying)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13066">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+E
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.06.2021 18:21:03">
+18:21
+       </div>
+
+       <div class="from_name">
+Elichai 
+       </div>
+
+       <div class="text">
+Yeah the group order(or the scalar field size) also depends on the curve equation, not just on the coordinates fields
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13067">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+K
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.06.2021 18:27:39">
+18:27
+       </div>
+
+       <div class="from_name">
+Kev 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message13066" onclick="return GoToMessage(13066)">this message</a>
+       </div>
+
+       <div class="text">
+Does this sentence imply that the group order and scalar field  have the same<br>size?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13068">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.06.2021 18:28:16">
+18:28
+       </div>
+
+       <div class="from_name">
+Antonio Sanso
+       </div>
+
+       <div class="text">
+No
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13069">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+JT
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.06.2021 18:31:31">
+18:31
+       </div>
+
+       <div class="from_name">
+John Tromp
+       </div>
+
+       <div class="text">
+there&apos;s also a cofactor
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message13070">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.06.2021 18:32:41">
+18:32
+       </div>
+
+       <div class="text">
+which can be 1, as in secp256k1
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13071">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+K
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.06.2021 18:35:39">
+18:35
+       </div>
+
+       <div class="from_name">
+Kev 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message13069" onclick="return GoToMessage(13069)">this message</a>
+       </div>
+
+       <div class="text">
+Yep, It was a reading error; I read the bracketed section as implying that they were the same size.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13072">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+js
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.06.2021 21:59:14">
+21:59
+       </div>
+
+       <div class="from_name">
+jagdeep sidhu
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message13053" onclick="return GoToMessage(13053)">this message</a>
+       </div>
+
+       <div class="text">
+Maybe people can use “avail” of polygon or lazyledger for availability in the voilition model
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13073">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+M
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.06.2021 22:09:52">
+22:09
+       </div>
+
+       <div class="from_name">
+Monkeyontheloose 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message13072" onclick="return GoToMessage(13072)">this message</a>
+       </div>
+
+       <div class="text">
+Voilition?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13074">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic4" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+MZ
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.06.2021 22:09:53">
+22:09
+       </div>
+
+       <div class="from_name">
+Max Zab
+       </div>
+
+       <div class="text">
+I have a question, I am not sure I fully understand this Lagrange transformation here<br><br><a href="https://github.com/ZenGo-X/multi-party-ecdsa/blob/master/src/protocols/multi_party_ecdsa/gg_2018/party_i.rs#L397">https://github.com/ZenGo-X/multi-party-ecdsa/blob/master/src/protocols/multi_party_ecdsa/gg_2018/party_i.rs#L397</a><br><a href="https://github.com/ZenGo-X/curv/blob/master/src/cryptographic_primitives/secret_sharing/feldman_vss.rs#L235">https://github.com/ZenGo-X/curv/blob/master/src/cryptographic_primitives/secret_sharing/feldman_vss.rs#L235</a><br><br>If I have a 1-2 tss (2 parties out of 2), what will be my li for party 1 and for party 2?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13075">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+js
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.06.2021 22:10:30">
+22:10
+       </div>
+
+       <div class="from_name">
+jagdeep sidhu
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message13073" onclick="return GoToMessage(13073)">this message</a>
+       </div>
+
+       <div class="text">
+sorry. mean Volition: <a href="https://medium.com/starkware/volition-and-the-emerging-data-availability-spectrum-87e8bfa09bb">https://medium.com/starkware/volition-and-the-emerging-data-availability-spectrum-87e8bfa09bb</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13076">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic4" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+MZ
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.06.2021 22:14:50">
+22:14
+       </div>
+
+       <div class="from_name">
+Max Zab
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message13074" onclick="return GoToMessage(13074)">this message</a>
+       </div>
+
+       <div class="text">
+we&apos;ve implemented TSS extension that supports Bitcoin and Ethereum. It generates a valid signature but for another, random account. We&apos;ve tried this signature and it works. <br><br><a href="https://ropsten.etherscan.io/address/0x36775441aed8ca0d7b3d52d50747b5c779ce1e67">https://ropsten.etherscan.io/address/0x36775441aed8ca0d7b3d52d50747b5c779ce1e67</a><br><br>Now I am debugging our implementation and would really appreciate any help on that. Checking every part related to generation of <code>r</code> and <code>s</code>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13077">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.06.2021 22:44:59">
+22:44
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message13076" onclick="return GoToMessage(13076)">this message</a>
+       </div>
+
+       <div class="text">
+DM :)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13078">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+E
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.06.2021 22:48:26">
+22:48
+       </div>
+
+       <div class="from_name">
+Elichai 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message13074" onclick="return GoToMessage(13074)">this message</a>
+       </div>
+
+       <div class="text">
+IIRC<br><code>li</code> is your share multiplied by the Lagrange coefficient<br>so if there&apos;s 1-of-2 tss, and your share is <code>y_1</code> and your index is <code>1<br></code>then you do li = <code>(0-2)/(1-2)*y_1</code> (the Lagrange coefficient for index 1 is: <code>(x-x_2)/(x_1-x_2)*y_1</code> )
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message13079">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="29.06.2021 22:50:31">
+22:50
+       </div>
+
+       <div class="text">
+in other words, it converts the point (x,y) to the actual additive share s.t. if you sum all the shares up you get the secret (and for that it needs to know your (x,y) pair, and the x of all the other parties)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-2">
+
+      <div class="body details">
+30 June 2021
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13081">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="30.06.2021 23:10:25">
+23:10
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="text">
+<a href="https://github.com/TNO-MPC/protocols.distributed_keygen">https://github.com/TNO-MPC/protocols.distributed_keygen</a> threshold decryption in python
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13082">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+V
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="30.06.2021 23:11:22">
+23:11
+       </div>
+
+       <div class="from_name">
+Vasiliy 
+       </div>
+
+       <div class="text">
+how stable it is?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13083">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="30.06.2021 23:49:02">
+23:49
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message13082" onclick="return GoToMessage(13082)">this message</a>
+       </div>
+
+       <div class="text">
+Here’s the answer from TNO:<br>1) It is based on <a href="https://eprint.kobi.one/2019/1136">https://eprint.kobi.one/2019/1136</a><br>2) It is not audited. The current solutions that we provide are being improved, tested and extended internally on a continuous basis. However, there are no guarantees. Its main purpose is to serve as building blocks towards proof-of-concepts, demonstrators and pilots.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-3">
+
+      <div class="body details">
+1 July 2021
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13085">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+M
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.07.2021 19:14:30">
+19:14
+       </div>
+
+       <div class="from_name">
+Monkeyontheloose 
+       </div>
+
+       <div class="text">
+A General Purpose Transpiler for Fully Homomorphic Encryption<br><a href="https://eprint.iacr.org/2021/811.pdf">https://eprint.iacr.org/2021/811.pdf</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message13086">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.07.2021 19:16:17">
+19:16
+       </div>
+
+       <div class="text">
+Is anyone up to date on the latest state of FHE?<br>Couldn&apos;t understand if you can run any function, and what the runtimes are
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13087">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+b
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.07.2021 19:31:35">
+19:31
+       </div>
+
+       <div class="from_name">
+bazzilic 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message13086" onclick="return GoToMessage(13086)">this message</a>
+       </div>
+
+       <div class="text">
+They transpile any C++ program into a program that executes fully homomorphically. It&apos;s an interesting idea, but it&apos;s slow af. I tried it couple of weeks ago.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13088">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+M
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.07.2021 19:33:53">
+19:33
+       </div>
+
+       <div class="from_name">
+Monkeyontheloose 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message13087" onclick="return GoToMessage(13087)">this message</a>
+       </div>
+
+       <div class="text">
+too slow to do anything usefull with it?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13089">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+b
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.07.2021 19:34:32">
+19:34
+       </div>
+
+       <div class="from_name">
+bazzilic 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message13088" onclick="return GoToMessage(13088)">this message</a>
+       </div>
+
+       <div class="text">
+Way too slow. Their fibonacci example (output first 5 fib numbers) took like 5 minutes to execute
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13090">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+V
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.07.2021 19:34:45">
+19:34
+       </div>
+
+       <div class="from_name">
+Vasiliy 
+       </div>
+
+       <div class="text">
+on a single machine?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13091">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+b
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.07.2021 19:38:34">
+19:38
+       </div>
+
+       <div class="from_name">
+bazzilic 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message13090" onclick="return GoToMessage(13090)">this message</a>
+       </div>
+
+       <div class="text">
+yeah, it&apos;s FHE, not SMPC
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13092">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+z
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="01.07.2021 20:09:39">
+20:09
+       </div>
+
+       <div class="from_name">
+zknark 
+       </div>
+
+       <div class="text">
+Does anyone know of good resources / papers for designing MPC protocols over gossip networks? Only one that comes to mind is agg DKG
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-4">
+
+      <div class="body details">
+2 July 2021
+      </div>
+
+     </div>
+
+     <div class="message service" id="message13095">
+
+      <div class="body details">
+Tudor Cebere joined group by link from Group
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13096">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+V
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="02.07.2021 17:00:20">
+17:00
+       </div>
+
+       <div class="from_name">
+Vasiliy 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message13092" onclick="return GoToMessage(13092)">this message</a>
+       </div>
+
+       <div class="text">
+<a href="https://github.com/ConsenSys/handel">https://github.com/ConsenSys/handel</a> comes to mind
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-5">
+
+      <div class="body details">
+3 July 2021
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13097">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+R
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.07.2021 02:30:32">
+02:30
+       </div>
+
+       <div class="from_name">
+Rand 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message13086" onclick="return GoToMessage(13086)">this message</a>
+       </div>
+
+       <div class="text">
+We run a monthly meetup on FHE if you’re interested in being up to date: Check out <a href="FHE.org">FHE.org</a> - Homomorphic Encryption &amp; Secure Computation on Meetup <a href="https://meetu.ps/c/267xK/3b9sX/a">https://meetu.ps/c/267xK/3b9sX/a</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13098">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+M
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.07.2021 03:39:47">
+03:39
+       </div>
+
+       <div class="from_name">
+Monkeyontheloose 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message13097" onclick="return GoToMessage(13097)">this message</a>
+       </div>
+
+       <div class="text">
+Nice, thanks
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message13099">
+
+      <div class="body details">
+Oskar joined group by link from Group
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13100">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.07.2021 17:35:12">
+17:35
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="text">
+Oracles MEV <br><br><a href="https://forum.makerdao.com/t/response-to-chainlinkgod-accusations/9112">https://forum.makerdao.com/t/response-to-chainlinkgod-accusations/9112</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13101">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic4" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+MZ
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.07.2021 21:20:18">
+21:20
+       </div>
+
+       <div class="from_name">
+Max Zab
+       </div>
+
+       <div class="media_wrap clearfix">
+
+        <a class="photo_wrap clearfix pull_left" href="photos/photo_151@03-07-2021_21-20-18.jpg">
+
+         <img class="photo" src="photos/photo_151@03-07-2021_21-20-18_thumb.jpg" style="width: 260px; height: 184px"/>
+
+        </a>
+
+       </div>
+
+       <div class="text">
+I have a question  regarding tss schema for 2-of-2 case. After we generated <code>u_i</code>, we should run Feldman VSS on this value to get <code>x_i</code> and then, calculate <code>omega_i</code> value to be equal <code>x_i * l_i</code> . Say we calculated Feldman for <code>f(1)</code> and <code>f(2)</code> , and kept first value and gave second one to opponent. Once we calculate Lagrange coefficient it will be <code>-1</code> and <code>2</code> respectively. Isn&apos;t this transformation  exposes the <code>x</code> value in this case?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message13102">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="03.07.2021 21:26:49">
+21:26
+       </div>
+
+       <div class="text">
+Protocol runs just fine without this transformation, in case of 2-of-2, without exposing <code>x</code> value. We take <code>gamma_i = u_i</code>. I verified this and signature was calculated correctly.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-6">
+
+      <div class="body details">
+4 July 2021
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13103">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic4" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+MZ
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="04.07.2021 05:02:14">
+05:02
+       </div>
+
+       <div class="from_name">
+Max Zab
+       </div>
+
+       <div class="text">
+I am not 100% sure, but it looks to me that in case of n-of-n, dishonest n-1 parties may calculate the private key, due to Feldman VSS transformation. It seems to be easy to fix corner case with just skipping Feldman VSS step in case of n-of-n. I would be happy to hear any thoghts if this is the case or I am wrong in my conclusions.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13104">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+E
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="04.07.2021 05:34:23">
+05:34
+       </div>
+
+       <div class="from_name">
+Elichai 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message13101" onclick="return GoToMessage(13101)">this message</a>
+       </div>
+
+       <div class="text">
+&quot;it will be -1 and 2&quot;<br>What exactly will be -1 and 2 and why?<br><br>The Lagrange transformation doesn&apos;t reveal any value and is based only on public values, it just converts the point on the polynomial to an additive value for the point at f(0) (the secret).
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13105">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic4" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+MZ
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="04.07.2021 09:44:48">
+09:44
+       </div>
+
+       <div class="from_name">
+Max Zab
+       </div>
+
+       <div class="text">
+After carefull rethinking the whole situation, i realized my mistake. I think my mind is clouded by amount of calculatong, coding and debugging I made lately. Anyways, the answer to my own question is that:<br><br>In case of 2-of-2 threshold sig, after Feldman VSS step, each party end up with knowledge of 3 points out of 4. There is still countless amount of possibilities what 4th point, the one that opponent kept secret, could be. So, real secret key is following <code>x = -1*x_1 + 2*x_2</code> . So we only know what fraction do we contribute to real private key. We know what fraction is contributed by other party, but we still don&apos;t know x_2, since 4th point was kept secret from us.<br><br>How ever I still think that in case  of n-of-n schema, Feldman VSS step is unnecessary. It is only necessary for t-of-n cases, which is more general case.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-7">
+
+      <div class="body details">
+5 July 2021
+      </div>
+
+     </div>
+
+     <div class="message service" id="message13106">
+
+      <div class="body details">
+Ilay joined group by link from Group
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13107">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+TB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="05.07.2021 02:39:03">
+02:39
+       </div>
+
+       <div class="from_name">
+Tal B
+       </div>
+
+       <div class="text">
+<a href="https://twitter.com/FiloSottile/status/1411583960115814401?s=19">https://twitter.com/FiloSottile/status/1411583960115814401?s=19</a>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13109">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+MS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="05.07.2021 23:07:17">
+23:07
+       </div>
+
+       <div class="from_name">
+Mesbah Sabur
+       </div>
+
+       <div class="text">
+Hey guys, dalek&apos;s bulletproofs rust library seems to be getting rusty with not much happening for 2 years... Any hot alternatives that are at production level?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13110">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="05.07.2021 23:08:23">
+23:08
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message13109" onclick="return GoToMessage(13109)">this message</a>
+       </div>
+
+       <div class="text">
+<a href="https://github.com/ZenGo-X/bulletproofs">https://github.com/ZenGo-X/bulletproofs</a> includes bulletproofs+
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13111">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+MS
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="05.07.2021 23:11:26">
+23:11
+       </div>
+
+       <div class="from_name">
+Mesbah Sabur
+       </div>
+
+       <div class="text">
+Has there been a security audit?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message13112">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+O
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="05.07.2021 23:12:06">
+23:12
+       </div>
+
+       <div class="from_name">
+Omer 
+       </div>
+
+       <div class="text">
+Only for BP so far
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message13113">
+
+      <div class="body details">
+Mesbah Sabur invited Rudi Araújo
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </body>
+
+</html>
