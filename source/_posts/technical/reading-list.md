@@ -251,6 +251,7 @@
     - https://github.com/asatarin/testing-distributed-systems
 - crypto
     - https://blog.cryptographyengineering.com/
+    - https://www.imperialviolet.org/
     - https://buttondown.email/cryptography-dispatches/archive/
     - http://defeo.lu/
     - https://www.cryptologie.net/
