@@ -253,6 +253,7 @@
     - https://blog.cryptographyengineering.com/
     - https://www.imperialviolet.org/
     - https://buttondown.email/cryptography-dispatches/archive/
+    - https://github.com/miha-stopar/crypto-notes
     - http://defeo.lu/
     - https://www.cryptologie.net/
     - https://hdevalence.ca/blog/
