@@ -12,9 +12,8 @@
 + https://github.com/ScottWorks/ConsenSys-Academy-Notes
 + https://github.com/rustielin/Blockchain-Notes
 + https://github.com/matthewdgreen/blockchains
-+ https://cs251.stanford.edu/
-+ https://sites.google.com/view/cs598cal
-+ https://drive.google.com/drive/u/0/folders/1Vo3UPK4lamunGVtV9boVQbkteaiFLPaY
++ [CS 251: Cryptocurrencies and Blockchain Technologies](https://cs251.stanford.edu/) from Stanford
++ [Principles of Blockchains](https://courses.grainger.illinois.edu/ece598pv/sp2021/) from UIUC
 + https://github.com/dgryski/awesome-consensus
 + https://github.com/dmdque/blockchain-engineer
 + https://github.com/fccoelho/Curso_Blockchain

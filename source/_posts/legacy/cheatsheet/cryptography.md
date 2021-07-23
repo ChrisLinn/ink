@@ -156,6 +156,7 @@
 + [Distributing any Elliptic Curve Based Protocol](https://eprint.iacr.org/2019/768.pdf)
     * This (work) allows us to transform essentially any one-party protocol over an elliptic curve, into an n-party one
 + [Reliable and Secure Distributed Programming](https://github.com/ChrisLinn/chrislinn.ink/tree/master/assets/IntroductionToReliableAndSecur_Book_2011.pdf) (book)
+    * https://github.com/KevinB5/SEC25/raw/master/Book/Introduction%20to%20Reliable%20and%20Secure%20Distributed%20Programming.pdf
 + Coding Theory, Cryptography and Related Areas? (book)
 + https://www.binance.vision/security/threshold-signatures-explained
 + https://guutboy.github.io

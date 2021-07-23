@@ -3,6 +3,7 @@
 
 ## Curriculum
 
++ [Foundations of Distributed Consensus and Blockchains](https://www.distributedconsensus.net/) by Elaine Shi
 + https://github.com/SebastianElvis/sharding-bib
 + https://github.com/ChrisLinn/ink/tree/master/source/_posts/assets/IntroductionToReliableAndSecur_Book_2011.pdf
 + http://read.pudn.com/downloads95/ebook/386159/Distributed.Algorithms.pdf
@@ -44,6 +45,10 @@
 - Duke
     + https://sites.duke.edu/compsci590_04_f2019/schedule/
         * Consensus Protocols in Distributed Computing and Blockchains
++ UIUC
+    * CS598CAL (Consensus Algorithms)
+        - https://sites.google.com/view/cs598cal
+        - https://drive.google.com/drive/u/0/folders/1Vo3UPK4lamunGVtV9boVQbkteaiFLPaY
 - MPI-SWS
     + http://courses.mpi-sws.org/ds-ws16/schedule.html
         * Distributed Systems
