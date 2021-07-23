@@ -38,6 +38,8 @@
     - https://decentralizedthoughts.github.io/
     - https://github.com/chainrg/reading
     - https://github.com/matthewdgreen/blockchains
+    - [Distributed consensus reading list](https://github.com/heidihoward/distributed-consensus-reading-list) by Heidi Howard
+    - [Readings in Databases](https://github.com/rxin/db-readings) by Reynold Xin
     - https://ellipticnews.wordpress.com/
     - https://github.com/solegga/blockchaincourse
     - https://openmined.org/
@@ -226,6 +228,7 @@
     - https://github.com/dyweb/papers-notebook
     - https://github.com/developer-learning/paper-reading
     - https://github.com/brucechin/paper
+    - [Foundational distributed systems papers](https://muratbuffalo.blogspot.com/2021/02/foundational-distributed-systems-papers.html?m=1) by Murat Demirbas
 * Jobs
     - https://gitcoin.co/explorer
     - patreon
