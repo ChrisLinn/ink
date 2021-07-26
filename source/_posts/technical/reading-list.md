@@ -34,8 +34,9 @@
         + https://gitcoin.co/explorer
         + https://github.com/gitcoinco/beyondblockchainteams/issues
 * blockchain
-    - https://rebuttal.kas.pa/
     - https://decentralizedthoughts.github.io/
+    - https://github.com/vacp2p/research
+    - https://rebuttal.kas.pa/
     - https://github.com/chainrg/reading
     - https://github.com/matthewdgreen/blockchains
     - [Distributed consensus reading list](https://github.com/heidihoward/distributed-consensus-reading-list) by Heidi Howard
