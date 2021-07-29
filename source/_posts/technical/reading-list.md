@@ -36,6 +36,7 @@
 * blockchain
     - https://decentralizedthoughts.github.io/
     - https://github.com/vacp2p/research
+    - https://github.com/protocol/research
     - https://rebuttal.kas.pa/
     - https://github.com/chainrg/reading
     - https://github.com/matthewdgreen/blockchains
