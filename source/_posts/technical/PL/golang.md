@@ -56,6 +56,7 @@
     + https://github.com/Unknwon/go-fundamental-programming
 + hantmac / Mastering_Go_ZH_CN
     * 《Mastering GO》中文译本，暂时命名为《玩转 GO》。阅读本书之前，您应该阅读有关Go的介绍性书籍，或者已经完成了Go By Example。本书的内容包括但不限于并发、网络编程、垃圾回收、组合、GO UNIX系统编程、基本数据类型（Array,Slice,Map）、GO源码、反射，接口，类型方法等高级概念。阅读本书需要一定的编程经验。如果你在工作中使用Go或者业余时间爱好GO，那…
++ https://github.com/golang-design/Go-Questions
 + https://github.com/smallnest/dive-to-gosync-workshop
 + https://github.com/masnun/golang-distributed-task-processing
 + https://github.com/sasha-s/go-deadlock
