@@ -1,5 +1,7 @@
 # Hash
 
+https://github.com/zooko/hash-function-survey
+
 https://ethfans.org/posts/the-state-of-hashing-algorithms-the-why-the-how-and-the-future
 
 https://www.hyperelliptic.org/tanja/teaching/cryptoI14/Hash-Functions-Crypto1_part1.pdf
