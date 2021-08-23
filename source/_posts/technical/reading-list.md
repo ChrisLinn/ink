@@ -40,6 +40,7 @@
     - https://rebuttal.kas.pa/
     - https://github.com/chainrg/reading
     - https://github.com/matthewdgreen/blockchains
+    - https://ingo-weber.github.io/blockchain-architecture/index.html
     - [Distributed consensus reading list](https://github.com/heidihoward/distributed-consensus-reading-list) by Heidi Howard
     - [Readings in Databases](https://github.com/rxin/db-readings) by Reynold Xin
     - https://ellipticnews.wordpress.com/

@@ -20,3 +20,4 @@
 + https://www.udemy.com/build-blockchain
     * https://github.com/15Dkatz/sf-chain-guides
 + https://marabu.dev/
++ https://ingo-weber.github.io/blockchain-architecture/index.html
