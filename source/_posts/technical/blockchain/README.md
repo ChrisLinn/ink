@@ -48,6 +48,8 @@
 + https://github.com/dmdque/blockchain-engineer
 + [区块链技术指南](https://yeasy.gitbooks.io/blockchain_guide/content/)
 + btc
+    * https://github.com/bitcoin-problems/bitcoin-problems.github.io
+    * https://bitcoinops.org/en/newsletters
     * https://github.com/satoshilabs/slips
     * https://bitcointechtalk.com/
     * http://readingbitcoin.org

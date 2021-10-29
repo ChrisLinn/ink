@@ -21,3 +21,4 @@
     * https://github.com/15Dkatz/sf-chain-guides
 + https://marabu.dev/
 + https://ingo-weber.github.io/blockchain-architecture/index.html
++ https://github.com/bitcoin-problems/bitcoin-problems.github.io
