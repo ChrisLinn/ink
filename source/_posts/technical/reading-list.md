@@ -276,6 +276,7 @@
     - https://intensecrypto.org/public/index.html
         + https://www.boazbarak.org/cs127spring16/
     - https://github.com/cryptosubtlety/intuitive-advanced-cryptography
+    * https://joyofcryptography.com/
     - https://github.com/crypto-cypher/privacy-for-identities/
     * [Crypto 101](https://github.com/crypto101/book)
     * [Practical-Cryptography-for-Developers-Book](https://github.com/nakov/Practical-Cryptography-for-Developers-Book)
