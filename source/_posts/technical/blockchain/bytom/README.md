@@ -82,18 +82,20 @@
         - https://github.com/btcpayserver/BTCPayServer.Vault
         - https://github.com/binance-chain/DexVault
     * audit
-        - https://www.quarkslab.com
-        - https://www.kudelskisecurity.com
         - https://www.trailofbits.com
-        - https://www.x41-dsec.de/
+        - https://www.kudelskisecurity.com
+        - PeckShield
         - http://nccgroup.com/
+        - https://www.quarkslab.com
+        - Open Zeppelin
         - consensys
             + https://diligence.consensys.net/
-        - cure53
         - Least Authority
             + https://leastauthority.com/
         - chainsecurity
         - https://abdk.consulting/
+        - https://www.x41-dsec.de/
+        - cure53
     * Notary: A Device for Secure Transaction Approval 
         - http://delivery.acm.org/10.1145/3360000/3359661/p97-athalye.pdf?ip=49.127.13.214&id=3359661&acc=OA&key=4D4702B0C3E38B35%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35%2E959AAFAD2A5E8B5F&__acm__=1573089226_826c06c4ff788d06e38e76c6e969980b
     * DECIM, detect the leakage of private keys for secure messaging
