@@ -137,6 +137,8 @@
 + Jens Groth
 + Eli Ben-Sasson
 + Izaak Meckler
++ [Tim Roughgarden](http://www.timroughgarden.org/)
+    + 这教授有点意思
 * [David Evans](http://www.cs.virginia.edu/~evans/)
 + [Mike Rosulek](http://web.engr.oregonstate.edu/~rosulekm/)
     * https://eecs.oregonstate.edu/people/rosulek-mike
