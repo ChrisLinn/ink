@@ -96,6 +96,18 @@
         - https://abdk.consulting/
         - https://www.x41-dsec.de/
         - cure53
+    * [audit 评价](https://twitter.com/patrickd_de/status/1481646325082984450?s=12)
+        - @SpearbitDAO 的發現有點像他們和項目團隊之間的討論。它詳細描述了為什麼他們選擇以某種方式實現事物，他們如何修復它或為什麼他們選擇不這樣做
+        - trailofbits
+            + @trailofbits' 審計經常使用 fuzzing 並且報告有一個所有被測試的屬性的列表
+            + 近乎全部 @trailofbits ' 調查結果除了通常的描述和建議外，還有一個“利用場景”，這使得調查結果非常容易理解——誰的行為如何以及會發生什麼
+        - @OpenZeppelin 的報告對項目進行了很好的高級介紹，不僅對范圍內的內容非常準確，而且對存在但超出審計範圍的其他組成部分/文件/假設也非常準確
+        - 審計來自 @chain_security 走得更遠，給出一個非常廣泛的概述，這確實表明他們對項目的理解有多深入
+        - @ConsenSysAudits' 報告不使用 OWASP 方式來估計發現的嚴重性。嚴重性級別被簡化了，但我認為更容易理解和應用於智能合約的發現：
+        - @sigp_io 在審計期間創建自動化測試 - 最有趣的是 - 它包括模擬漏洞利用場景的測試：
+        - @certik_io 的審計總是指出存在集中化風險的特權角色——儘管它們通常是“設計使然”——這對協議的用戶來說應該是有價值的
+        - @HalbornSecurity 的報告有非常好的代碼片段，不僅顯示原始行號，還突出顯示受影響的行
+        - 在其中之一 @peckshield 的報告 在他們實施優化建議後，我看到了該項目與競爭協議的氣體消耗比較。這可能是一個概括的好主意......
     * Notary: A Device for Secure Transaction Approval 
         - http://delivery.acm.org/10.1145/3360000/3359661/p97-athalye.pdf?ip=49.127.13.214&id=3359661&acc=OA&key=4D4702B0C3E38B35%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35%2E959AAFAD2A5E8B5F&__acm__=1573089226_826c06c4ff788d06e38e76c6e969980b
     * DECIM, detect the leakage of private keys for secure messaging
