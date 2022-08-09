@@ -108,6 +108,7 @@
         - @certik_io 的審計總是指出存在集中化風險的特權角色——儘管它們通常是“設計使然”——這對協議的用戶來說應該是有價值的
         - @HalbornSecurity 的報告有非常好的代碼片段，不僅顯示原始行號，還突出顯示受影響的行
         - 在其中之一 @peckshield 的報告 在他們實施優化建議後，我看到了該項目與競爭協議的氣體消耗比較。這可能是一個概括的好主意......
+    * https://bowtiedisland.com/the-best-smart-contract-auditors-ranked/
     * Notary: A Device for Secure Transaction Approval 
         - http://delivery.acm.org/10.1145/3360000/3359661/p97-athalye.pdf?ip=49.127.13.214&id=3359661&acc=OA&key=4D4702B0C3E38B35%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35%2E959AAFAD2A5E8B5F&__acm__=1573089226_826c06c4ff788d06e38e76c6e969980b
     * DECIM, detect the leakage of private keys for secure messaging

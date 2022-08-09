@@ -22,6 +22,7 @@ He/him.
 
 ## Friends
 
++ [iczc (Alan)](https://www.iczc.me/)
 + [Runchao HAN](https://runchao.rocks/)
 + [Jyuwan WONG](https://www.douban.com/people/10566855/)
 + [Xiaoliang YU](https://github.com/yxliang01)
