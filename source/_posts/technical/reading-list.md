@@ -264,6 +264,7 @@
     - https://www.cryptologie.net/
     - https://hdevalence.ca/blog/
     - https://asz.ink/
+    - https://xn--2-umb.com/
     - https://soatok.blog/
     - https://blog.csdn.net/mutourend/
     - http://blog.higashi.tech/
