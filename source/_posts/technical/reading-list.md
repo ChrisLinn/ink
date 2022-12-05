@@ -39,6 +39,7 @@
     - https://github.com/protocol/research
     - https://rebuttal.kas.pa/
     - https://github.com/chainrg/reading
+    - https://jumpcrypto.github.io/crypto-reading-list/index.html
     - https://github.com/matthewdgreen/blockchains
     - https://ingo-weber.github.io/blockchain-architecture/index.html
     - [Distributed consensus reading list](https://github.com/heidihoward/distributed-consensus-reading-list) by Heidi Howard

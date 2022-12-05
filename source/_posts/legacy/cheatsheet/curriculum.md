@@ -1,6 +1,7 @@
 # Curriculum
 
 + https://github.com/chainrg/reading
++ https://jumpcrypto.github.io/crypto-reading-list/index.html
 + https://github.com/chaincodelabs/bitcoin-curriculum
 + https://github.com/solegga/blockchaincourse
 + https://github.com/bitcoinbook/bitcoinbook
