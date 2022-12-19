@@ -12,6 +12,7 @@
 
 ## list
 + https://github.com/golang/talks
++ https://github.com/golang-design/history
 + https://github.com/darjun/go-daily-lib
 + https://github.com/jakescript/go-bible
 + https://github.com/dgryski/go-perfbook
@@ -30,6 +31,7 @@
 + https://github.com/aclements/go-misc
     * Miscellaneous Go hacks
 + https://github.com/golang/go/wiki/CodeReviewComments
++ https://github.com/llitfkitfk/go-best-practice
 + https://github.com/dariubs/GoBooks
 + https://github.com/ardanlabs/gotraining
 + https://github.com/developer-learning/reading-go

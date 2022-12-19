@@ -189,6 +189,7 @@ title: 如何学习编程
     * https://github.com/go-critic/go-critic
     * https://dave.cheney.net/practical-go/presentations/qcon-china.html#_dont_name_your_variables_for_their_types
     * https://github.com/golang/go/wiki/CodeReviewComments
+    * https://github.com/llitfkitfk/go-best-practice
     * https://github.com/unknwon/go-code-convention
     * https://github.com/cristaloleg/go-advices
     * https://github.com/davecheney/the-zen-of-go

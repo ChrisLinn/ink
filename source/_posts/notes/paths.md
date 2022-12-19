@@ -137,6 +137,8 @@
 + Jens Groth
 + Eli Ben-Sasson
 + Izaak Meckler
++ [Tim Roughgarden](http://www.timroughgarden.org/)
+    + 这教授有点意思
 * [David Evans](http://www.cs.virginia.edu/~evans/)
 + [Mike Rosulek](http://web.engr.oregonstate.edu/~rosulekm/)
     * https://eecs.oregonstate.edu/people/rosulek-mike
@@ -361,6 +363,18 @@ http://www.conferenceranks.com/ ,randA & rankB
     * https://blockchain.kcl.ac.uk/ieee-sb2019/#top
     * https://econcs.pku.edu.cn/wine2020/index.htm
         - 这个还挺好玩的
+
+## meetings
++ https://github.com/PrimitivesLane/Lanes-Choice-Calendar
+    - [Bitcoin Core PR Review Club Meetings](https://bitcoincore.reviews/)
+    - [Bitcoin IRC Meetings](https://bitcoincore.org/en/meetings/)
+    - [Ethereum Protocol Call](https://calendar.google.com/calendar/u/0/embed?src=c_upaofong8mgrmrkegn7ic7hk5s@group.calendar.google.com&ctz=Asia/Shanghai)
+    - [IACR Calendar of Events in Cryptology](https://www.iacr.org/events/)
+    - [MakerDAO-Governance and Risk Meetings](https://forum.makerdao.com/c/governance/gnr/8)
+    - [MEV Ship](https://github.com/flashbots/pm)
+    - Online Ethereum Events listed on [Ethereum.org](https://ethereum.org/en/community/events/)
+    - [Protocol Labs Research Seminar Series](https://github.com/protocol/research/blob/master/research-events/research-seminars.md)
+    - [Wanxiang Blockchain Fengchao Online Meeting](https://www.blockchainlabs.org/fengchao.html)
 
 ### deadline
 + http://www.cs.technion.ac.il/~dan/index_sysvenues_deadline.html

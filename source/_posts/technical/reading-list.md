@@ -39,6 +39,7 @@
     - https://github.com/protocol/research
     - https://rebuttal.kas.pa/
     - https://github.com/chainrg/reading
+    - https://jumpcrypto.github.io/crypto-reading-list/index.html
     - https://github.com/matthewdgreen/blockchains
     - https://ingo-weber.github.io/blockchain-architecture/index.html
     - [Distributed consensus reading list](https://github.com/heidihoward/distributed-consensus-reading-list) by Heidi Howard
@@ -264,6 +265,7 @@
     - https://www.cryptologie.net/
     - https://hdevalence.ca/blog/
     - https://asz.ink/
+    - https://xn--2-umb.com/
     - https://soatok.blog/
     - https://blog.csdn.net/mutourend/
     - http://blog.higashi.tech/
@@ -276,6 +278,7 @@
     - https://intensecrypto.org/public/index.html
         + https://www.boazbarak.org/cs127spring16/
     - https://github.com/cryptosubtlety/intuitive-advanced-cryptography
+    * https://joyofcryptography.com/
     - https://github.com/crypto-cypher/privacy-for-identities/
     * [Crypto 101](https://github.com/crypto101/book)
     * [Practical-Cryptography-for-Developers-Book](https://github.com/nakov/Practical-Cryptography-for-Developers-Book)

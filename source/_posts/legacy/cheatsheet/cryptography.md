@@ -87,8 +87,11 @@
     + https://cyber.biu.ac.il/event/the-9th-biu-winter-school-on-cryptography/
     + [CMSC 652 --- Complexity Theory](http://www.cs.umd.edu/~jkatz/complexity/f11/)
     + [Introduction to the Mathematical Foundations of Elliptic Curve Cryptography](https://hal.archives-ouvertes.fr/hal-01914807/document)
+- https://xiao-liang.com/Resources/TheoreticalToys.pdf
+- https://kconrad.math.uconn.edu/blurbs/
 - https://github.com/cpeikert/TheoryOfCryptography
 - [Applied cryptography](https://doc.lagout.org/network/3_Cryptography/Applied%20Cryptography%2C%202nd%20Edition.pdf)
+- https://joyofcryptography.com/
 - https://github.com/miha-stopar/crypto-notes
 - [Privacy enhancing technologies reading list](https://crysp.uwaterloo.ca/courses/pet/F18/readinglist.html)
 - https://github.com/brucechin/paper
