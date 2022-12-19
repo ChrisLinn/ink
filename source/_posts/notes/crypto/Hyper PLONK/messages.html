@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Exported Data</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <script src="js/script.js" type="text/javascript">
+
+  </script>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <div class="content">
+
+     <div class="text bold">
+ZK Study Club 
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+4 November 2022
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8447">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="04.11.2022 17:57:05 UTC+08:00">
+17:57
+       </div>
+
+       <div class="from_name">
+Ariel Gabizon
+       </div>
+
+       <div class="media_wrap clearfix">
+
+        <a class="media clearfix pull_left block_link media_photo" href="photos/photo_71@04-11-2022_17-57-05.jpg">
+
+         <div class="fill pull_left">
+
+         </div>
+
+         <div class="body">
+
+          <div class="title bold">
+Photo
+          </div>
+
+          <div class="status details">
+960×73
+          </div>
+
+         </div>
+
+        </a>
+
+       </div>
+
+       <div class="text">
+A question relating to yesterday&apos;s talk. The hyperplonk paper quotes the number of prover field ops as depending only  on the complexity of the gate k, and not depending of its degree d. The former can be much smaller e.g. for the gate C(x1,..,x_t)=x_1^d, where k=log d.<br>I think there must be a dependence on d. The intermediate univariates computed will be of degree d, so their interpolation requires evaluating the gate at O(nd) locations I think? (As each value of the intermediate uni is a sum over n values)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8448">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+A
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="04.11.2022 18:00:41 UTC+08:00">
+18:00
+       </div>
+
+       <div class="from_name">
+Aurel 
+       </div>
+
+       <div class="text">
+Then the d is in the count of evaluations, but not in the cost of an individual evaluation?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8449">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="04.11.2022 18:01:01 UTC+08:00">
+18:01
+       </div>
+
+       <div class="from_name">
+Ariel Gabizon
+       </div>
+
+       <div class="text">
+yeah... the latter they denote k
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8450">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+BC
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="04.11.2022 21:20:43 UTC+08:00">
+21:20
+       </div>
+
+       <div class="from_name">
+Binyi Chen
+       </div>
+
+       <div class="text">
+Hi Ariel, yes, the right definition of k should be k = max(gate_degree, gate_depth_complexity). This is formally and more precisely written in Sec 3.1 in p17-18.<br><br>Also note for gate C(x1, ..., xt) = x1^d, the complexity is O(ndlogd) rather than O(ndlog^2d). This optimization is noted in the last sentence of p18.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8451">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+BC
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="04.11.2022 21:51:34 UTC+08:00">
+21:51
+       </div>
+
+       <div class="from_name">
+Binyi Chen
+       </div>
+
+       <div class="text">
+k=max(gate_complexity, gate_degree) *
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8452">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="04.11.2022 22:19:08 UTC+08:00">
+22:19
+       </div>
+
+       <div class="from_name">
+Ariel Gabizon
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message8450" onclick="return GoToMessage(8450)">this message</a>
+       </div>
+
+       <div class="text">
+If we define k to be *just* the gate complexity, and assume the number of witness polys t is constant, I think you can always get O(ndk). This retrieves the ndlogd, but is more general.<br>Say we are doing a sumcheck over Q(x)=P(f_1(x),..,f_t(x)) - i.e. P is the thing requiring k ops to compute and x here is a vector.<br>To compute the first  univariate you need to compute Q at (n/2)d points - where x_2,..,x_m range over the hypercube and x_1 ranges over some d values.<br> <br><br> you set all variables except the first to fixed values b_2,..,b_m in the cube and are left with some Q*(x)=P(L_1(x),..,L_t(x)) where now x is single element, and the L_i are linear.<br>You can in time O(td)=O(d) evaluate all the L_i at d points a1,..,a_d.<br>Now at each such point a_i you can evaluate in k ops Q*(a)=Q(a,b_2,..,b_m).
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-2">
+
+      <div class="body details">
+6 November 2022
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8453">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+BC
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.11.2022 00:47:11 UTC+08:00">
+00:47
+       </div>
+
+       <div class="from_name">
+Binyi Chen
+       </div>
+
+       <div class="text">
+Yes, in the case where k &lt;&lt; d, it can be more efficient to use the algorithm above to get O(ndk) complexity without any use of FFTs.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8454">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+BC
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.11.2022 01:18:33 UTC+08:00">
+01:18
+       </div>
+
+       <div class="from_name">
+Binyi Chen
+       </div>
+
+       <div class="text">
+Note that this is basically the state-of-the-art algorithm we mentioned in the paper that has complexity O(nd^2), but we just naively assume that k ~ d for the most general case.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8455">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic4" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+BB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.11.2022 02:11:14 UTC+08:00">
+02:11
+       </div>
+
+       <div class="from_name">
+Benedikt Bünz
+       </div>
+
+       <div class="text">
+I think in the end it’s the circuit complexity of symbolically evaluating n gate circuits. There are a lot of factors that play a role and it seems impossible to give one optimal algorithm. As Binyi and Ariel mentioned if I have a  x^d Gate (within the larger gate circuit) I can first evaluate the input x (which is a polynomial) at sufficiently many points. For a linear x this is just straight line eval for larger it might make sense to use an FFT. <br>Another interesting case is something like \prod_t (w_i^d+w_{i+1}). Here it makes sense to first evaluate each (w_i^d*w_{i+1}) term and then use pairwise polynomial multiplication to compute the final product. This takes time O(d log d*t log^2 t *n ) vs O(d log d t^2 n) for the evaluate everything at d*t points algorithm and then combines.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8456">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AG
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.11.2022 03:42:12 UTC+08:00">
+03:42
+       </div>
+
+       <div class="from_name">
+Ariel Gabizon
+       </div>
+
+       <div class="text">
+I feel perhaps sec 3.1 should be made more accurate - say even we assume d~k; in the intro you hint you can always get dlog^2d, but in sec 3.1 you only explicitly describe a gate that is a product of d factors, and say this can be generalized to low depth gates - what does low depth mean? and what are exactly the gates for which you get dlog^2d? (and more generally klog^2k, when you defined k as Binyi said)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8459">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic4" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+BB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="06.11.2022 04:48:01 UTC+08:00">
+04:48
+       </div>
+
+       <div class="from_name">
+Benedikt Bünz
+       </div>
+
+       <div class="text">
+Yup we‘ll a discussion on k
+       </div>
+
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </body>
+
+</html>
