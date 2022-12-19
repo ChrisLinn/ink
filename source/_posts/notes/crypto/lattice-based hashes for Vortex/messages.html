@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Exported Data</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <script src="js/script.js" type="text/javascript">
+
+  </script>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <div class="content">
+
+     <div class="text bold">
+ZK Study Club 
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+16 December 2022
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8659">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+M
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.12.2022 08:44:05 UTC+08:00">
+08:44
+       </div>
+
+       <div class="from_name">
+Mikerah | HashCloak 
+       </div>
+
+       <div class="text">
+So, does this mean that curves like curve25519 emit a cycle?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8660">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.12.2022 08:44:14 UTC+08:00">
+08:44
+       </div>
+
+       <div class="text">
+It has a cofactor of 8
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8661">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.12.2022 09:29:53 UTC+08:00">
+09:29
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+Remember that to be able to efficiently do arithmetic in the base field of a given curve on one side of a cycle, you don&apos;t necessarily need the cycle to include that curve.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8662">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.12.2022 09:37:19 UTC+08:00">
+09:37
+       </div>
+
+       <div class="text">
+In that case it would include a different curve with the same base field. Note, though, that we only know how to construct cryptographically relevant cycles for CM curves, and for a given prime field (with p ≡ 1 (mod 3)) there are at most 6 possible orders of curves over that field. If one is prime then we necessarily have a cycle, but it may happen that none of those orders are prime (and the density of primes around 2^255 implies that it&apos;s unlikely that they will be for a given field not specially constructed).
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8663">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.12.2022 09:39:22 UTC+08:00">
+09:39
+       </div>
+
+       <div class="text">
+I can&apos;t remember whether that is the case for 2^255 - 19. You can easily check it using sage: compute the orders of curves over GF(2^255 - 19) of the form y^2 = x^3 + b for different b until you have 6 of them.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8664">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.12.2022 09:43:28 UTC+08:00">
+09:43
+       </div>
+
+       <div class="text">
+2^255 - 19 is 1 (mod 3), so that part is okay. I&apos;m away from my computer so I can&apos;t do the other part
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8665">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+VB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.12.2022 21:04:19 UTC+08:00">
+21:04
+       </div>
+
+       <div class="from_name">
+Vitalik Buterin
+       </div>
+
+       <div class="text">
+Is anyone here really into lattice-based stuff?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8666">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.12.2022 21:13:25 UTC+08:00">
+21:13
+       </div>
+
+       <div class="text">
+Particularly trying to understand what the state is of lattice-based polynomial commitments
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8667">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.12.2022 21:29:11 UTC+08:00">
+21:29
+       </div>
+
+       <div class="from_name">
+Alexandre Belling
+       </div>
+
+       <div class="text">
+We are using lattice-based hashes for Vortex : <a href="https://ethresear.ch/t/vortex-building-a-prover-for-the-zk-evm/14427">https://ethresear.ch/t/vortex-building-a-prover-for-the-zk-evm/14427</a>. In a way, we rely on lattice for collision resistance but other works that go further with what is possible with lattices. For instance, <a href="https://eprint.iacr.org/2022/941">https://eprint.iacr.org/2022/941</a> proposes a set of new (non-falsifiable) assumptions that allows making that same kind of argument as what is possible with pairing-based curve. Also, <a href="https://eprint.iacr.org/2022/1515">https://eprint.iacr.org/2022/1515</a> proposes new assumptions that allows building functional commitment with lattices (falsifiable this time).
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8668">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+VB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.12.2022 21:31:29 UTC+08:00">
+21:31
+       </div>
+
+       <div class="from_name">
+Vitalik Buterin
+       </div>
+
+       <div class="text">
+Ooh okay so I was reading the vortex paper just now
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8669">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.12.2022 21:31:33 UTC+08:00">
+21:31
+       </div>
+
+       <div class="text">
+Question about the design in section 6.2
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8670">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.12.2022 21:31:38 UTC+08:00">
+21:31
+       </div>
+
+       <div class="text">
+So my basic understanding of the scheme is:
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8671">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.12.2022 21:31:48 UTC+08:00">
+21:31
+       </div>
+
+       <div class="text">
+You have N vectors <code>V_1 ... V_n</code> with hashes <code>h_1 ... h_n</code>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8672">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.12.2022 21:32:12 UTC+08:00">
+21:32
+       </div>
+
+       <div class="text">
+You erasure-code extend the vectors to add <code>V_{n+1} ... V_{n&apos;}</code>, and compute the extra hashes <code>h_{n+1} ... h_{n&apos;}</code>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8673">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.12.2022 21:32:31 UTC+08:00">
+21:32
+       </div>
+
+       <div class="text">
+And then to prove that <code>&lt;V_i, L&gt; = u_i</code> for a list of <code>u_i</code> values and a specific <code>L</code>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8674">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.12.2022 21:32:48 UTC+08:00">
+21:32
+       </div>
+
+       <div class="text">
+You prove the full erasure-code-extended list of values <code>u_1 ... u_{n&apos;}</code>
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8675">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.12.2022 21:33:26 UTC+08:00">
+21:33
+       </div>
+
+       <div class="text">
+And <code>t</code> random samples, and the verifier checks the samples
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8676">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.12.2022 21:33:28 UTC+08:00">
+21:33
+       </div>
+
+       <div class="text">
+My question is:
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8677">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.12.2022 21:33:39 UTC+08:00">
+21:33
+       </div>
+
+       <div class="text">
+What happens if the prover makes *just one* of the <code>u_i</code> values wrong?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8678">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.12.2022 21:33:47 UTC+08:00">
+21:33
+       </div>
+
+       <div class="text">
+A random sample check would almost certainly not catch this
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8679">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.12.2022 21:34:25 UTC+08:00">
+21:34
+       </div>
+
+       <div class="text">
+ooooh actually wait nvm, I saw that the verifier constructs the extra <code>u_{n+1} ... u_{n&apos;}</code> themselves, and so making one of the original <code>u_i</code> values wrong would make all the extra constructed values wrong
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8680">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.12.2022 21:34:43 UTC+08:00">
+21:34
+       </div>
+
+       <div class="text">
+I think then my question is: does this strictly require a lattice-based hash function?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8681">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.12.2022 21:34:51 UTC+08:00">
+21:34
+       </div>
+
+       <div class="text">
+This feels like it&apos;s basically a variant of a single round of FRI
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8682">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.12.2022 21:35:10 UTC+08:00">
+21:35
+       </div>
+
+       <div class="text">
+And so any hash would work
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8683">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.12.2022 21:47:54 UTC+08:00">
+21:47
+       </div>
+
+       <div class="from_name">
+Alexandre Belling
+       </div>
+
+       <div class="text">
+Yes, any hash would work. The PC can be seen a variant of Brakedown (or single round FRI). The usefulness of lattices shows in section 8.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8684">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+VB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.12.2022 23:31:33 UTC+08:00">
+23:31
+       </div>
+
+       <div class="from_name">
+Vitalik Buterin
+       </div>
+
+       <div class="text">
+I see
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8685">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.12.2022 23:31:37 UTC+08:00">
+23:31
+       </div>
+
+       <div class="text">
+Is the core idea that the hash being linear makes it very low constraint-count
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8686">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.12.2022 23:31:42 UTC+08:00">
+23:31
+       </div>
+
+       <div class="text">
+?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8687">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.12.2022 23:34:05 UTC+08:00">
+23:34
+       </div>
+
+       <div class="text">
+Aha seems like a clever batch evaluation trick
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8688">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+NL
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="16.12.2022 23:48:16 UTC+08:00">
+23:48
+       </div>
+
+       <div class="from_name">
+Nicolas Liochon
+       </div>
+
+       <div class="text">
+<a href="https://t.me/ARR072">@ARR072</a> is it possible to add <a href="https://t.me/Zazam193">@Zazam193</a> in the group? She&apos;s the coauthor of the Vortex paper.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-2">
+
+      <div class="body details">
+17 December 2022
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8689">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+A
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.12.2022 00:03:02 UTC+08:00">
+00:03
+       </div>
+
+       <div class="from_name">
+Anna 
+       </div>
+
+       <div class="text">
+Sure
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message8690">
+
+      <div class="body details">
+Anna invited Azam | ConsenSys
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8691">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.12.2022 02:21:25 UTC+08:00">
+02:21
+       </div>
+
+       <div class="from_name">
+Alexandre Belling
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message8685" onclick="return GoToMessage(8685)">this message</a>
+       </div>
+
+       <div class="text">
+Yes, although is depends a lot of the concrete SIS instance in play. In a nutshell, SIS hashes are somewhat &quot;arithmetic friendly&quot; because we can use lookup arguments for the range checks and the linear part is easy to batch. On another end, they have a fast running time. On the negative side, they can require a large output space. But they are still applicable to use-cases where you need to hash large strings.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix joined" id="message8692">
+
+      <div class="body">
+
+       <div class="pull_right date details" title="17.12.2022 02:22:01 UTC+08:00">
+02:22
+       </div>
+
+       <div class="text">
+Also they should not be used as a random oracle instantiation for the same reason as for Pedersen hashes
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message service" id="message-3">
+
+      <div class="body details">
+18 December 2022
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8693">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+VB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="18.12.2022 02:32:17 UTC+08:00">
+02:32
+       </div>
+
+       <div class="from_name">
+Vitalik Buterin
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message8667" onclick="return GoToMessage(8667)">this message</a>
+       </div>
+
+       <div class="text">
+What does it mean for a cryptographic assumption to be non-falsifiable? If you have a protocol that&apos;s provably secure given that assumption, then can&apos;t you falsify the assumption by breaking the protocol?
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8694">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+K
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="18.12.2022 02:42:53 UTC+08:00">
+02:42
+       </div>
+
+       <div class="from_name">
+Kev 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message8693" onclick="return GoToMessage(8693)">this message</a>
+       </div>
+
+       <div class="text">
+For a good definition/intuition on falsifiable assumptions, you can check out <a href="https://eprint.iacr.org/2010/610.pdf">https://eprint.iacr.org/2010/610.pdf</a> pg2 (section Falsifiable Assumptions)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8695">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic2" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="18.12.2022 02:44:24 UTC+08:00">
+02:44
+       </div>
+
+       <div class="from_name">
+Alexandre Belling
+       </div>
+
+       <div class="text">
+I am certainly not the most legitimate person to answer this question, so please, anyone, do not hesitate to correct me. But as I understand it, an assumption is falsifiable if you can concretely make an experiment that shows everyone that the assumption has been broken if you manage to break it. For instance, you could convince me that you broke the collision resistance of a hash function by showing me to preimage that give the same result. On another hand, some EC pairing assumptions (like KoE or the AGM) are of the form &quot;you can&apos;t obtain *this* result unless you did *that*&quot;, which are mostly used to assess &quot;knowledge soundness&quot; of some protocols. In this case, you can&apos;t really disprove it. As I understand, it is not really possible to estimate their security.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8696">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic7" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+VB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="18.12.2022 02:44:49 UTC+08:00">
+02:44
+       </div>
+
+       <div class="from_name">
+Vitalik Buterin
+       </div>
+
+       <div class="text">
+ok I think I maybe see...
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8697">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic1" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+K
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="18.12.2022 03:03:34 UTC+08:00">
+03:03
+       </div>
+
+       <div class="from_name">
+Kev 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message8695" onclick="return GoToMessage(8695)">this message</a>
+       </div>
+
+       <div class="text">
+This is consistent with my understanding (not completely sure about the security estimation point though). So using the DLP as an example, we can roughly specify the security game to define the DLP as follows:<br><br>- Charlie sends a random group element G to adversary<br>- Charlie generates a random field element, x, and computes H = xG<br>- Charlie sends H to the adversary<br>- The adversary returns x&apos;<br>- The adversary wins if x&apos; equals x (This is easy to decide)<br><br>Which matches with the notes from the eprint:<br><br>A falsiable assumption is one that can be modeled as an interactive game where:<br><br>- There is an efficient challenger (runs in polynomial time) and an adversary<br>- The challenger must be able to efficiently decide if the adversary won the game<br><br>All efficient (polynomial time) adversaries should have a negligible chance of winning (or else the assumption is broken/falsified)
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8698">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic4" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+BB
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="18.12.2022 03:32:10 UTC+08:00">
+03:32
+       </div>
+
+       <div class="from_name">
+Benedikt Bünz
+       </div>
+
+       <div class="text">
+Two concrete examples: if a protocol is secure in the RO but then the protocol instantiated with sha256 gets broken. This doesn’t necessarily mean the protocol itself is insecure just that sha256 isn’t a random oracle (which we knew before). Similar for the agm instantiated with a specific group.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8699">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AT
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="18.12.2022 14:47:21 UTC+08:00">
+14:47
+       </div>
+
+       <div class="from_name">
+Alin Tomescu
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message8693" onclick="return GoToMessage(8693)">this message</a>
+       </div>
+
+       <div class="text">
+The most insightful paper I’ve read on this is:<br><br>[Naor03] On Cryptographic Assumptions and Challenges; by Naor, Moni; in Advances in Cryptology - CRYPTO 2003; 2003 (<a href="https://link.springer.com/chapter/10.1007/978-3-540-45146-4_6">https://link.springer.com/chapter/10.1007/978-3-540-45146-4_6</a>)<br><br>But, real quickly, the easiest (but not fully-nuanced) way I think about them is:<br><br>With a <strong>falsifiable</strong> assumption, one can easily create a random _challenge_ for people to break the assumption and post this on a website. Then, anyone can post a solution claiming to have broken the assumption. Importantly, everyone will be able to verify the solution against the challenge. <br><br>For example, consider the discrete log assumption: I can post a random challenge (g, g^a) and wait for the solution ‘a’. Everyone can verify that this is the correct ‘a’.<br><br>A **non**-falsifiable assumption simply does not allow for something like this. [Naor03] formalizes this well, I think, if you want more detail.<br><br>But an example here could make this point clearer: The knowledge of exponent (KoE) assumption says that given (g, g^x), an adversary who outputs (g^y, g^{xy}) must “know” y. This is modeled as \forall adversaries A, \exists an extractor E that would output y. To falsify this assumption, one would try and prove that \exists an adversary A, \forall extractors E, the extractor E cannot output the correct y. In other words, one must prove that \exists an adversary A for which there is no extractor. So there’s no challenge posted on a website that one can break. One must simply prove the assumption false.<br><br>A beautiful example of how a **non**falsifiable assumption can actually be falsified using the strategy above can be found in:<br><br>[BP04] The Knowledge-of-Exponent Assumptions and 3-Round Zero-Knowledge Protocols; by Bellare, Mihir and Palacio, Adriana; in Advances in Cryptology -- CRYPTO 2004; 2004 (<a href="https://eprint.iacr.org/2004/008.pdf">https://eprint.iacr.org/2004/008.pdf</a>)<br><br>Here, the authors show that if the knowledge-of-exponent-assumption-2 (KEA2) holds, then discrete log is easy.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8700">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic5" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+J
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="18.12.2022 20:59:36 UTC+08:00">
+20:59
+       </div>
+
+       <div class="from_name">
+Jeff 
+       </div>
+
+       <div class="reply_to details">
+In reply to <a href="#go_to_message8652" onclick="return GoToMessage(8652)">this message</a>
+       </div>
+
+       <div class="text">
+If you accept sampling with replacement then EC VRF suffices, so no fancy crypto
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8701">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic8" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+R
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="18.12.2022 22:20:24 UTC+08:00">
+22:20
+       </div>
+
+       <div class="from_name">
+Robin 
+       </div>
+
+       <div class="text">
+lmao <a href="https://twitter.com/ebfull/status/1604282994566475778">https://twitter.com/ebfull/status/1604282994566475778</a>
+       </div>
+
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </body>
+
+</html>
