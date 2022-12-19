@@ -2,7 +2,7 @@
   "name": "inner-universe",
   "version": "0.0.1",
   "hexo": {
-    "version": "4.2.1"
+    "version": "6.3.0"
   },
   "dependencies": {
     "hexo": "^6.3.0",
