@@ -304,6 +304,7 @@
     * https://github.com/rust-lang
         + https://github.com/rust-lang/book
             * + https://prev.rust-lang.org/en-US/documentation.html
+* https://github.com/mre/idiomatic-rust
 * 死灵书
     - https://doc.rust-lang.org/nomicon/
 * https://github.com/ferrous-systems/elements-of-rust
