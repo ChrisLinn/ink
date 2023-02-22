@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+
+  <meta charset="utf-8"/>
+<title>Exported Data</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <script src="js/script.js" type="text/javascript">
+
+  </script>
+
+ </head>
+
+ <body onload="CheckLocation();">
+
+  <div class="page_wrap">
+
+   <div class="page_header">
+
+    <div class="content">
+
+     <div class="text bold">
+ZK Study Club 
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="page_body chat_page">
+
+    <div class="history">
+
+     <div class="message service" id="message-1">
+
+      <div class="body details">
+21 December 2022
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8704">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+DH
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="21.12.2022 08:32:29 UTC+08:00">
+08:32
+       </div>
+
+       <div class="from_name">
+Daira Hopwood
+       </div>
+
+       <div class="text">
+&gt; With a falsifiable assumption, one can easily create a random _challenge_ for people to break the assumption and post this on a website. Then, anyone can post a solution claiming to have broken the assumption. Importantly, everyone will be able to verify the solution against the challenge. <br>&gt;<br>&gt; For example, consider the discrete log assumption: I can post a random challenge (g, g^a) and wait for the solution ‘a’. Everyone can verify that this is the correct ‘a’.<br><br>This doesn&apos;t quite work for a public challenge, because I could post a challenge (g, g^a) for *known* a and then give a to an accomplice who immediately solves it.<br><br>This problem is usually addressed by making the challenge point g^a the result of a hash to the group. But note that the obvious way to do this relies on the random oracle model, which begs the question a little. You can reasonably relax the definition of falsifiability to assume the existence of shared random coins, I guess.<br><br>In general, succinct noninteractive proof systems typically rely on Fiat–Shamir or similar, so it&apos;s more interesting to ask *how* such a proof system relies on non-falsifiable assumptions or models, rather than *whether* it does.
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="message default clearfix" id="message8705">
+
+      <div class="pull_left userpic_wrap">
+
+       <div class="userpic userpic6" style="width: 42px; height: 42px">
+
+        <div class="initials" style="line-height: 42px">
+AT
+        </div>
+
+       </div>
+
+      </div>
+
+      <div class="body">
+
+       <div class="pull_right date details" title="21.12.2022 10:59:32 UTC+08:00">
+10:59
+       </div>
+
+       <div class="from_name">
+Alin Tomescu
+       </div>
+
+       <div class="text">
+Ah, yes, what a cool point! :D <br><br>This is somewhat reminiscent of designated-verifier proofs versus publicly-verifiable proofs.<br><br>The designated verifier setting makes sense if a challenger is proposing a new assumption A and wants to challenge others to break A so that the challenger (and only the challenger) is convinced of the assumption’s (non)hardness. In this case, the challenger can pick (g, g^a) and discard ‘a’ (for A = discrete log).<br><br>The publicly-verifiable setting seems much more powerful though, as you point out. Here, the challenger can post (g=H(1), h=H(2)). Any solution to this challenge convinces not only the challenger but also everyone else, assuming H is a random oracle, which in turn is non-falsifiable (or better, assuming shared random coins as you mention).
+       </div>
+
+      </div>
+
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </body>
+
+</html>
