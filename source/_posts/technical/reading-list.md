@@ -309,6 +309,7 @@
     - https://doc.rust-lang.org/nomicon/
 * https://github.com/ferrous-systems/elements-of-rust
 * https://github.com/tweedegolf/101-rs
+* https://github.com/Dhghomon/easy_rust
 * https://github.com/dtolnay/rust-quiz
 * 《Too Many Linked Lists》:一本学习Rust的好书
     - https://rust-unofficial.github.io/too-many-lists/index.html
